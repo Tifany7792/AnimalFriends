@@ -10,6 +10,8 @@ public class AnimalFriendsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AnimalFriendsApplication.class, args);
 		
+		System.out.print("Hola mundo");
+		
 	}
 
 }
