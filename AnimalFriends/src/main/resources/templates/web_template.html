@@ -1,0 +1,36 @@
+<html>
+<body>
+
+	//codigo de prueba para probar booleanos en html
+	{{#hello}}
+	<p>Hello,</p>
+	{{/hello}}
+	
+	{{^hello}}
+	<p>Goodbye,</p>
+	{{/hello}}
+	
+	//codigo de prueba de una variable
+	<p>{{name}}</p>
+	
+	//codigo de prueba de una lista de animales
+	<p>Animales en la lista:</p>
+	<ul>
+		{{#animales}}
+			<li>{{.}}</li>
+		{{/animales}}
+	</ul>
+	<p>Animales en la tabla:</p>
+	<table>
+		{{#animales}}
+			<tr>
+			<td>{{-index}}</td>
+			<td>{{.}}</td>
+		 	</tr>
+		 {{/animales}}
+	 </table>
+	
+	
+	
+</body>
+</html>
