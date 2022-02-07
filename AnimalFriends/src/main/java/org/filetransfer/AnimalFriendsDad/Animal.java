@@ -1,12 +1,12 @@
 package org.filetransfer.AnimalFriendsDad;
 
-public class Animales {
+public class Animal {
 	
-	String tipo;
-	int Id;
-	String descripcion;
+	private String tipo;
+	private int Id;
+	private String descripcion;
 	
-	public Animales(String tipo) {
+	public Animal(String tipo) {
 		this.Id = 0;
 		this.tipo = tipo;
 		this.descripcion = " ";

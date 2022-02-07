@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,6 +33,14 @@ public class WebController {
 		List<String> animales = Arrays.asList("Perro","Gato","Erizo");
 		model.addAttribute("animales", animales);
 		
+		//prueba de una iteracion de objetos
+		List<Animal> lAnimales = new ArrayList<>();
+		lAnimales.add(new Animal("Perro"));
+		lAnimales.add(new Animal("Gato"));
+		lAnimales.add(new Animal("Erizo"));
+		model.addAttribute("lAnimales", lAnimales);
+
+
 		 
 		return "web_template";
 	}

@@ -1,6 +1,5 @@
-<html>
-<body>
-
+	{{>header}}
+	
 	//codigo de prueba para probar booleanos en html
 	{{#hello}}
 	<p>Hello,</p>
@@ -30,7 +29,11 @@
 		 {{/animales}}
 	 </table>
 	
-	
-	
-</body>
-</html>
+	//codigo para una iteracion de objetos
+	<p>Animales en la lista:</p>
+	<ul>
+		{{#lAnimales}}
+			<li>{{tipo}}</li>
+		{{/lAnimales}}
+		
+	{{>footer}}
