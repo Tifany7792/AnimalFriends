@@ -1,4 +1,4 @@
-	{{>header}}
+{{>header}}
 	
 	//codigo de prueba para probar booleanos en html
 	{{#hello}}
@@ -10,7 +10,7 @@
 	{{/hello}}
 	
 	//codigo de prueba de una variable
-	<p>{{name}}</p>
+	<p>Hola {{name}}</p>
 	
 	//codigo de prueba de una lista de animales
 	<p>Animales en la lista:</p>
@@ -36,4 +36,15 @@
 			<li>{{tipo}}</li>
 		{{/lAnimales}}
 		
-	{{>footer}}
+	//formulario que saluda con tu nombre
+	<form method="post" action="Nombre">
+
+		<p>Saludar a:</p>
+ 		<input type='text' name='name'/>
+ 		<input type='submit' value='Enviar'/>
+ 		
+	</form>
+		
+		
+		
+{{>footer}}
