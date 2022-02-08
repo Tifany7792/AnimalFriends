@@ -1,16 +1,22 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import javax.persistence.*;
+
+@Entity
 public class Localizaciones {
 	
-	String nombreSitio;
-	int id;
-	String tipo;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	
+	@Column
+	private String nombreSitio;
+	@Column
+	private String tipo;
 	
-	public Localizaciones(String nombreSitio, int id, String tipo) {
+	public Localizaciones(String nombreSitio, String tipo) {
 		super();
 		this.nombreSitio = nombreSitio;
-		this.id = id;
 		this.tipo = tipo;
 	}
 
@@ -25,7 +31,7 @@ public class Localizaciones {
 	}
 
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

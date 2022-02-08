@@ -1,18 +1,25 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import javax.persistence.*;
+
+@Entity
 public class Usuarios {
 	
-	String nombre;
-	String pasword;
-	int id;
+	@Column
+	private String nombre;
+	@Column
+	private String pasword;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	
 	public Usuarios(String n, String p) {
 		this.nombre = n;
 		this.pasword = p;
-		this.id = 0;
 	}
 	
-	public int getId() {
+	public long getId() {
 		return this.id;
 	}
 
@@ -32,7 +39,7 @@ public class Usuarios {
 		this.pasword = pasword;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

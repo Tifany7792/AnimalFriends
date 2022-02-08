@@ -1,9 +1,16 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import javax.persistence.*;
+
+@Entity
 public class Animal {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long Id;
+	@Column
 	private String tipo;
-	private int Id;
+	@Column
 	private String descripcion;
 	
 	public Animal(String tipo) {
@@ -12,7 +19,7 @@ public class Animal {
 		this.descripcion = " ";
 	}
 	
-	public int getId() {
+	public long getId() {
 		return this.Id;
 	}
 	
