@@ -35,6 +35,13 @@ public class Usuarios {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	@Override
+	public String toString() {
+		return "Usuarios [nombre=" + nombre + ", pasword=" + pasword + "]";
+	}
+	
+	
 	
 	
 	

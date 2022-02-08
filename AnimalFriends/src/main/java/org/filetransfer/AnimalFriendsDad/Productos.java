@@ -29,7 +29,11 @@ public class Productos {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Productos [nombre=" + nombre + ", tipo=" + tipo + "]";
+	}
 	
 
 }

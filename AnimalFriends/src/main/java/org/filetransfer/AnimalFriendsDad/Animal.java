@@ -36,4 +36,11 @@ public class Animal {
 		this.descripcion = d;
 	}
 
+	@Override
+	public String toString() {
+		return "Animal [tipo=" + tipo + ", descripcion=" + descripcion + "]";
+	}
+	
+	
+
 }

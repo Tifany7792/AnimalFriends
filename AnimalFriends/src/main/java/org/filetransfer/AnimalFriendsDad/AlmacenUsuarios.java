@@ -48,7 +48,7 @@ public class AlmacenUsuarios implements Serializable{
 	}
 	
 	
-	public void setAlmacenU(ArrayList<Usuarios> almacenU) {
+	public void setAlmacenUsuarios(ArrayList<Usuarios> almacenU) {
 		this.almacenU = almacenU;
 	}
 }

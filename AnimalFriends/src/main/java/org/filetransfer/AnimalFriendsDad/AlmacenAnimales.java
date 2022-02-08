@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class AlmacenAnimales implements Serializable {
 	
-private ArrayList<Animal> almacenAnimales;
+	private ArrayList<Animal> almacenAnimales;
 	
 	public AlmacenAnimales() {
 		this.almacenAnimales = new ArrayList<Animal>();
@@ -25,7 +25,7 @@ private ArrayList<Animal> almacenAnimales;
 
 
 
-	public void mostrarListaUsuarios(){
+	public void mostrarListaAnimales(){
 	    System.out.println("----------------------------------------");
 	    System.out.println("Numero de animales registrados: " + numeroAnimales());
 	
@@ -48,7 +48,7 @@ private ArrayList<Animal> almacenAnimales;
 	}
 	
 	
-	public void setAlmacenU(ArrayList<Animal> almacenA) {
+	public void setAlmacenAnimales(ArrayList<Animal> almacenA) {
 		this.almacenAnimales = almacenA;
 	}
 
