@@ -25,19 +25,19 @@ public class WebController {
 
 
 		
-		bbdd.getUsuarios();
-		bbdd.toString();
+		bbdd.init();
 		
 		System.out.print(bbdd.toString());
 		
 		return "web_template";
 	}
 	
+	/*
 	@RequestMapping("/bbdd")
 	public String nombre(Model model, @RequestParam long name) {
 		model.addAttribute("name", bbdd.getItem(name));
 		return "nombre";
-	}
+	}*/
 }
 
 /*

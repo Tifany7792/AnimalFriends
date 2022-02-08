@@ -8,8 +8,10 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,6 +28,36 @@ public class DataBaseUsage{
 		repository.save(new Usuarios("Pepito","1264984"));
 	}
 	
+	@GetMapping("/")
+	public String tablon(Model model, Pageable page) {
+
+		model.addAttribute("usuarios", repository.findAll(page));
+
+		return "tablon";
+	}
+
+	@PostMapping("/usuario/nuevo")
+	public String nuevoAnuncio(Model model, Usuarios usu) {
+
+		repository.save(usu);
+
+		return "usuario_guardado";
+
+	}
+
+	@GetMapping("/usuario/{id}")
+	public String verAnuncio(Model model, @PathVariable long id) {
+		
+		Optional<Usuarios> usu = repository.findById(id);
+
+		if(usu.isPresent()) {
+			model.addAttribute("usuario", usu.get());
+		}
+
+		return "ver_usuario";
+	}
+	
+	/*
 	@GetMapping("/")
 	public Collection<Usuarios> getUsuarios(){
 		return repository.findAll();
@@ -52,6 +84,8 @@ public class DataBaseUsage{
 		Usuarios newUsu = repository.saveAndFlush(usu);
 		return new ResponseEntity<>(newUsu,HttpStatus.CREATED);
 	}*/
+	
+	/*
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Usuarios> getItem(@PathVariable long id) {
