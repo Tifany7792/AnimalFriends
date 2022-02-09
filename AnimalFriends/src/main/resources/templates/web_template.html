@@ -1,50 +1,16 @@
 {{>header}}
-	
-	//codigo de prueba para probar booleanos en html
-	{{#hello}}
-	<p>Hello,</p>
-	{{/hello}}
-	
-	{{^hello}}
-	<p>Goodbye,</p>
-	{{/hello}}
-	
-	//codigo de prueba de una variable
-	<p>Hola {{name}}</p>
-	
-	//codigo de prueba de una lista de animales
-	<p>Animales en la lista:</p>
-	<ul>
-		{{#animales}}
-			<li>{{.}}</li>
-		{{/animales}}
-	</ul>
-	<p>Animales en la tabla:</p>
-	<table>
-		{{#animales}}
-			<tr>
-			<td>{{-index}}</td>
-			<td>{{.}}</td>
-		 	</tr>
-		 {{/animales}}
-	 </table>
-	
-	//codigo para una iteracion de objetos
-	<p>Animales en la lista:</p>
-	<ul>
-		{{#lAnimales}}
-			<li>{{tipo}}</li>
-		{{/lAnimales}}
-		
-	//formulario que saluda con tu nombre
-	<form method="post" action="Nombre">
 
-		<p>Saludar a:</p>
- 		<input type='text' name='name'/>
+	<form action="greeting">
+ 		<p>
+ 			Nombre: <input type='text' name='userName'/>
+ 		</p>
+ 		<p>
+ 			Asunto: <input type='text' name='re'/>
+ 		</p>
+ 		<p>
+ 			Mensaje: <textarea name='body' rows=5 cols=40> Texto del mensaje </textarea>
+ 		</p>
  		<input type='submit' value='Enviar'/>
- 		
 	</form>
-		
-		
 		
 {{>footer}}
