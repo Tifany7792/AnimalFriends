@@ -15,11 +15,18 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class DataBaseUsage implements CommandLineRunner{
 
+	@Override
+	public void run(String... args) throws Exception {
+		
+
+	}	
 	
 	@Autowired
 	private RepositorioUsuarios repository;
 	
-	public void run(String... args) throws Exception{
+	@PostConstruct
+	public void init() {
+
 		repository.save(new Usuarios("Estefania","771992"));
 		repository.save(new Usuarios("Pepito","1264984"));
 		
@@ -30,5 +37,4 @@ public class DataBaseUsage implements CommandLineRunner{
 		
 		//repository.delete(bauers.get(0));
 	}
-
 }

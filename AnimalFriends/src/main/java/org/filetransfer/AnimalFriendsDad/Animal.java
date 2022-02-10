@@ -8,15 +8,14 @@ public class Animal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long Id;
-	@Column
+	//@Column
 	private String tipo;
-	@Column
+	//@Column
 	private String descripcion;
 	
 	private String user;
 	
 	public Animal(String user, String tipo) {
-		this.Id = 0;
 		this.tipo = tipo;
 		this.descripcion = " ";
 		this.user = user;
