@@ -5,14 +5,19 @@ import javax.persistence.*;
 @Entity
 public class Usuarios {
 	
-	@Column
+	
 	private String nombre;
-	@Column
+	
 	private String pasword;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
+	@OneToOne
+	private Animal animal;
+	
+	protected Usuarios() {};
 	
 	public Usuarios(String n, String p) {
 		this.nombre = n;
