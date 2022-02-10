@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Animal {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long Id;
 	@Column
 	private String tipo;
