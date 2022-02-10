@@ -11,24 +11,24 @@ Proyecto de desarrollo de aplicaciones distribuidas, en el que vamos a crear una
 
 PRACTICA DISEÑO APLICACIONES DISTRIBUIDAS
 
-##Nombre de la aplicación web
+## Nombre de la aplicación web
 ----------------------------
 
 amigosanimales
 
-##Descripción
+## Descripción
 -------------
 
 En esta aplicación los usuarios podrán buscar destinos vacacionales, como por ejemplo playas, hoteles y demás alojamientos y servicios, a los que podrán acceder con animales. Además, los usuarios registrados podrán reservar habitaciones en dichos hoteles y acceder a un catálogo de cursos y productos con posibles descuentos exclusivos.
 
-##Funcionamiento de la aplicación
+## Funcionamiento de la aplicación
 ---------------------------------
 
-###Parte Pública
+### Parte Pública
 
 Playas a las que poder ir con nuestro perro (Público), Hoteles que aceptan mascotas (público), cuidados para nuestra mascota (público), cuidadores y alojamientos para perros (público)
 
-###Parte Privada
+### Parte Privada
 
 Gestión de reservas, altas y bajas para establecimiento, sección proveedores para ofertas (privado, proveedor. Necesita registro)
 
@@ -38,7 +38,7 @@ Cursos de adiestramiento y agilidad (privado, cliente, para socios con ofertas, 
 
 Descuentos exclusivos en accesorios y piensos para mascotas (privado, cliente. Necesita registro)
 
-##Entidades
+## Entidades
 -----------
 
 Usuario: pueden ser proveedores o clientes. Los proveedores pueden publicar o bien sus establecimientos (hoteles) y gestionar las reservas o productos para animales a la venta, pudiendo añadir ofertas a los mismos. Los clientes pueden reservar habitaciones en ellos, así como acceder a un catálogo de ofertas
@@ -49,7 +49,7 @@ Productos: los proveedores pueden publicarlos y decidir distintas categorías pa
 
 Localizaciones: Habrá tanto hoteles a los que se podrá acceder desde la parte privada como lugares como playas a los que se podrá acceder de forma pública
 
-##Funcionalidades del servicio interno
+## Funcionalidades del servicio interno
 --------------------------------------
 
 gestion de reservas
