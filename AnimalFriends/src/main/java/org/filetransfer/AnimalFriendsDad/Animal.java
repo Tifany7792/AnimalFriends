@@ -13,18 +13,21 @@ public class Animal {
 	@Column
 	private String descripcion;
 	
-	public Animal(String tipo) {
+	private String user;
+	
+	public Animal(String user, String tipo) {
 		this.Id = 0;
 		this.tipo = tipo;
 		this.descripcion = " ";
+		this.user = user;
 	}
 	
 	public long getId() {
 		return this.Id;
 	}
 	
-	public void setId(int i) {
-		this.Id = i;
+	public void setId(long id2) {
+		this.Id = id2;
 	}
 	
 	public String getTipo() {
@@ -43,6 +46,14 @@ public class Animal {
 		this.descripcion = d;
 	}
 
+	public String getUser() {
+		return user;
+	}
+	
+	public void setUser(String user) {
+		this.user = user;
+	}
+	
 	@Override
 	public String toString() {
 		return "Animal [tipo=" + tipo + ", descripcion=" + descripcion + "]";

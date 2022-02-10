@@ -1,8 +1,8 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,19 +12,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class WebController {
 
-	private List<Animal> animales = new ArrayList<>();
+	@Autowired
+	private AnimalService animalService;
 	
-	public WebController() {
-		
-		animales.add(new Animal("Perro"));
-		animales.add(new Animal("Gato"));
-		
-	}
+	@Autowired
+	private UserSession userSession;
 	
 	@GetMapping("/")
-	public String showAnimals(Model model) {
+	public String showAnimals(Model model, HttpSession session) {
 		
-		model.addAttribute("animales", animales);
+		model.addAttribute("animales", animalService.findAll());
+		model.addAttribute("welcome", session.isNew());
 		
 		return "index";
 	}
@@ -38,26 +36,30 @@ public class WebController {
 	@PostMapping("/animal/new")
 	public String newAnimal(Model model, Animal animal) {
 
-		animales.add(animal);
+		animalService.save(animal);
+		
+		userSession.setUser(animal.getUser());
+		userSession.incNumAnimals();
+		
+		model.addAttribute("numPosts", userSession.getNumAnimals());
 
 		return "saved_animal";
 	}
 
-	@GetMapping("/animal/{numAnimal}")
-	public String showAnimal(Model model, @PathVariable int numAnimal) {
+	@GetMapping("/animal/{id}")
+	public String showAnimal(Model model, @PathVariable long id) {
 
-		Animal animal = animales.get(numAnimal - 1);
+		Animal animal = animalService.findById(id);
 		
 		model.addAttribute("animal", animal);
-		model.addAttribute("numAnimal", numAnimal);
 
 		return "show_animal";
 	}
 	
-	@GetMapping("/animal/{numAnimal}/delete")
-	public String deleteAnimal(Model model, @PathVariable int numAnimal) {
+	@GetMapping("/animal/{id}/delete")
+	public String deleteAnimal(Model model, @PathVariable long id) {
 
-		animales.remove(numAnimal - 1);
+		animalService.deleteById(id);
 
 		return "deleted_animal";
 	}
