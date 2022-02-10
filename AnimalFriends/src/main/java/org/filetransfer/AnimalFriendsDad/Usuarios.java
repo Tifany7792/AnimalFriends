@@ -5,14 +5,15 @@ import javax.persistence.*;
 @Entity
 public class Usuarios {
 	
-	
-	private String nombre;
-	
-	private String pasword;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
+	//@Column
+	private String nombre;
+	//@Column
+	private String pasword;
 	
 	@OneToOne
 	private Animal animal;
