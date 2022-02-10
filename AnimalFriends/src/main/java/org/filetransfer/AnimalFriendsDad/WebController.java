@@ -1,38 +1,65 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class WebController {
 
-	private Logger log = LoggerFactory.getLogger(WebController.class);	
+	private List<Animal> animales = new ArrayList<>();
 	
-	@GetMapping("/")
-	public String page(Model model) {
+	public WebController() {
 		
-		log.trace("A TRACE Message");
-		log.debug("A DEBUG Message");
-		log.info("An INFO Message");
-		log.warn("A WARN Message");
-		log.error("An ERROR Message");
+		animales.add(new Animal("Perro"));
+		animales.add(new Animal("Gato"));
 		
-		return "web_template";
 	}
 	
-	@RequestMapping("/greeting")
-	public String greeting(Model model, @RequestParam String userName, @RequestParam String re, @RequestParam String body) {
+	@GetMapping("/")
+	public String showAnimals(Model model) {
 		
-		model.addAttribute("name", userName);
-		model.addAttribute("asunto", re);
-		model.addAttribute("cuerpo", body);
+		model.addAttribute("animales", animales);
 		
-		return "tablon";
+		return "index";
+	}
+
+	@GetMapping("/new_animal")
+	public String newAnimal(Model model) {
+
+		return "new_animal";
+	}
+	
+	@PostMapping("/animal/new")
+	public String newAnimal(Model model, Animal animal) {
+
+		animales.add(animal);
+
+		return "saved_animal";
+	}
+
+	@GetMapping("/animal/{numAnimal}")
+	public String showAnimal(Model model, @PathVariable int numAnimal) {
+
+		Animal animal = animales.get(numAnimal - 1);
+		
+		model.addAttribute("animal", animal);
+		model.addAttribute("numAnimal", numAnimal);
+
+		return "show_animal";
+	}
+	
+	@GetMapping("/animal/{numAnimal}/delete")
+	public String deleteAnimal(Model model, @PathVariable int numAnimal) {
+
+		animales.remove(numAnimal - 1);
+
+		return "deleted_animal";
 	}
 	
 }
