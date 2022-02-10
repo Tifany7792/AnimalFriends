@@ -10,6 +10,7 @@ Proyecto de desarrollo de aplicaciones distribuidas, en el que vamos a crear una
 PRACTICA DISEÑO APLICACIONES DISTRIBUIDAS
 
 ##Nombre de la aplicación web
+----------------------------
 
 amigosanimales
 
