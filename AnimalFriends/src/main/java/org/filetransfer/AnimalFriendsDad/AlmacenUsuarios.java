@@ -22,8 +22,7 @@ public class AlmacenUsuarios implements Serializable{
             return true;
         return false;
     }
-
-
+	
 
 	public void mostrarListaUsuarios(){
 	    System.out.println("----------------------------------------");
@@ -51,6 +50,36 @@ public class AlmacenUsuarios implements Serializable{
 	public void setAlmacenUsuarios(ArrayList<Usuarios> almacenU) {
 		this.almacenU = almacenU;
 	}
+	
+	public boolean Registrar(Usuarios u){
+        boolean insertado = false;
+        for(Usuarios c : getAlmacenU()){
+            if(almacenU.equals(u))
+                return insertado;
+        }
+        insertado = almacenU.add(u);
+        if(insertado)
+            u.setId(++Usuarios.nUsuarios);
+        return insertado;
+    }
+	
+	public Usuarios estaRegistrado(String nom,String pwd){
+        Usuarios usu = new Usuarios(nom,pwd);
+        if(this.almacenU.contains(usu)){
+            int i = this.almacenU.indexOf(usu);
+            usu = (Usuarios) this.almacenU.get(i);
+        }else{
+            usu = null;
+        }
+        return usu;
+    }
+	
+	  public Usuarios identificar(String nom,String pwd){
+
+	        Usuarios usuario = estaRegistrado(nom,pwd);
+
+	        return usuario;
+	    }
 }
 
 
