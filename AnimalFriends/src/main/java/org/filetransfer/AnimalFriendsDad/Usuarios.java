@@ -18,6 +18,25 @@ public class Usuarios {
 	@OneToOne
 	private Animal animal;
 	
+
+	public static int nUsuarios;
+	
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
+
+	public static int getnUsuarios() {
+		return nUsuarios;
+	}
+
+	public static void setnUsuarios(int nUsuarios) {
+		Usuarios.nUsuarios = nUsuarios;
+	}
+
 	protected Usuarios() {};
 	
 	public Usuarios(String n, String p) {
@@ -54,6 +73,11 @@ public class Usuarios {
 		return "Usuarios [nombre=" + nombre + ", pasword=" + pasword + "]";
 	}
 	
+	public int compareTo(Object o) {
+        Usuarios u;
+        u = (Usuarios) o;
+        return getNombre().compareTo(u.getNombre());
+    }
 	
 	
 	
