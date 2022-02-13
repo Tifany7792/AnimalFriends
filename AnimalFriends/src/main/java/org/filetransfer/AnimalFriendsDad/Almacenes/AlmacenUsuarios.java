@@ -3,7 +3,7 @@ package org.filetransfer.AnimalFriendsDad.Almacenes;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import org.filetransfer.AnimalFriendsDad.Usuarios;
+import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 
 public class AlmacenUsuarios implements Serializable{
 	

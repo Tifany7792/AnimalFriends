@@ -1,0 +1,12 @@
+{{>header}}
+
+	<form action="usuario/new" method="post">
+		<p>Usuario: </p>	
+		<input type='text' name='user' value='{{#user}}{{.}}{{/user}}'/>
+		
+		<p>Contraseña: </p>
+		<input type='text' name='pasword' value='{{#pasword}}{{.}}{{/pasword}}'/>
+		<input type='submit' value='Save'/>
+	</form>
+		
+{{>footer}}

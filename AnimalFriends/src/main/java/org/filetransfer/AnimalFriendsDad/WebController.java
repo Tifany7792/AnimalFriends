@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,9 @@ public class WebController{
 
 	@Autowired
 	private AnimalService animalService;
+	
+	@Autowired
+	private UserService userService;
 	
 	@Autowired
 	private UserSession userSession;
@@ -38,6 +43,12 @@ public class WebController{
 		return "new_animal";
 	}
 	
+	@GetMapping("/login")
+	public String newUsu(Model model) {
+
+		return "login";
+	}
+	
 	@PostMapping("/animal/new")
 	public String newAnimal(Model model, Animal animal) {
 
@@ -50,15 +61,28 @@ public class WebController{
 
 		return "saved_animal";
 	}
+	
+	@PostMapping("/usu/new")
+	public String newUsu(Model model, Usuarios usu) {
 
-	@GetMapping("/animal/{id}")
-	public String showAnimal(Model model, @PathVariable long id) {
-
-		Animal animal = animalService.findById(id);
+		userService.save(usu);
 		
-		model.addAttribute("animal", animal);
+		userSession.setUser(usu.getNombre());
+		userSession.incNumAnimals();
+		
+		model.addAttribute("numPosts", userSession.getNumAnimals());
 
-		return "show_animal";
+		return "saved_user";
+	}
+
+	@GetMapping("/usu/{id}")
+	public String showUsu(Model model, @PathVariable long id) {
+
+		Usuarios usu = userService.findById(id);
+		
+		model.addAttribute("nombre", usu);
+
+		return "show_usuario";
 	}
 	
 	@GetMapping("/animal/{id}/delete")
