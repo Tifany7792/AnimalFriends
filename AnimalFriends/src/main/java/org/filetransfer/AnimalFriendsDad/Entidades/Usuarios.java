@@ -1,19 +1,37 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+@Table(name = Usuarios.T_USUARIOS)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Usuarios {
 	
+	public static final String T_USUARIOS = "Usuarios";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	//@Column
+	public static final String C_USUARIO = "usuario";
+	@Column(name = C_USUARIO, unique = true)
 	private String nombre;
-	//@Column
+	
+	public static final String C_CONTRASEÑA = "contraseña";
+	@Column(name = C_CONTRASEÑA)
 	private String pasword;
+	
+	
+	public static final String C_HABILITADO = "habilitado";
+	@Column(name = C_HABILITADO)
+	@Builder.Default
+	private boolean enabled = true;
 	
 	@OneToOne
 	private Animal animal;
@@ -78,8 +96,11 @@ public class Usuarios {
         u = (Usuarios) o;
         return getNombre().compareTo(u.getNombre());
     }
-	
-	
+
+	public static Object builder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 
