@@ -60,7 +60,7 @@ public class WebController{
 		return "saved_animal";
 	}
 	
-	@PostMapping("/usu/new")
+	@PostMapping("/usuario/new")
 	public String newUsu(Model model, Usuarios usu) {
 
 		userService.save(usu);
