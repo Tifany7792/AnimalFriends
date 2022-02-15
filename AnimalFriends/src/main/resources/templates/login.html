@@ -1,12 +1,26 @@
 {{>header}}
 
-	<form action="usuario/new" method="post">
-		<p>Usuario: </p>	
-		<input type='text' name='user' value='{{#user}}{{.}}{{/user}}'/>
-		
-		<p>Contraseña: </p>
-		<input type='text' name='pasword' value='{{#pasword}}{{.}}{{/pasword}}'/>
-		<input type='submit' value='Save'/>
-	</form>
+	<body class="loginbg">
+        <div class="vertical-flex-wrapper">
+            <div class="login-content">
+            <form name="f" th:action="@{/login}" method="post">
+
+                <legend>Identifícate</legend>
+                <div th:if="${param.error}" class="alert alert-error">
+                    Usuario y/o contraseña inválidos.
+                </div>
+                <div th:if="${param.logout}" class="alert alert-success">
+                    Has cerrado sesión.
+                </div>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Usuario"/>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"/>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+            </div>
+            <footer th:replace="fragments/footer :: creditFooter"/>
+        </div>
+    </body>
 		
 {{>footer}}
