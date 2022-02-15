@@ -1,4 +1,8 @@
+<<<<<<< HEAD:AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Usuarios.java
 package org.filetransfer.AnimalFriendsDad;
+=======
+package org.filetransfer.AnimalFriendsDad.Entidades;
+>>>>>>> parent of a90dad4 (Intento 1 html usuarios):AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java
 
 import javax.persistence.*;
 
