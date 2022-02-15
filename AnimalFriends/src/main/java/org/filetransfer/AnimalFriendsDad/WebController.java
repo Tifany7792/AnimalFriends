@@ -43,10 +43,10 @@ public class WebController{
 		return "new_animal";
 	}
 	
-	@GetMapping("/login")
-	public String newUsu(Model model) {
+	@GetMapping("/new_usuario")
+	public String newUsuario(Model model) {
 
-		return "login";
+		return "new_usuario";
 	}
 	
 	@PostMapping("/animal/new")
@@ -62,15 +62,17 @@ public class WebController{
 		return "saved_animal";
 	}
 	
-	@PostMapping("/usu/new")
+	@PostMapping("/usuario/new")
 	public String newUsu(Model model, Usuarios usu) {
 
+		if (userService.existeUsuario(usu.getNombre())) {
+			return "/new_usuario";
+		}
 		userService.save(usu);
 		
 		userSession.setUser(usu.getNombre());
-		userSession.incNumAnimals();
 		
-		model.addAttribute("numPosts", userSession.getNumAnimals());
+		model.addAttribute("numAni", userSession.getNumAnimals());
 
 		return "saved_user";
 	}
