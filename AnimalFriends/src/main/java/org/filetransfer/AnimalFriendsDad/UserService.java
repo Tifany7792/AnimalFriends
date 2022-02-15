@@ -27,6 +27,17 @@ public class UserService {
 	public Usuarios findById(long id) {
 		return usuarios.get(id);
 	}
+	
+	public boolean existeUsuario(String name) {
+		if (usuarios.size() > 0) {
+			for (long i = 0; i < usuarios.size(); i++) {
+				if (usuarios.get(i).getNombre() == name)
+					return true;
+			}
+		}
+		
+		return false;
+	}
 
 	public void save(Usuarios usu) {
 
