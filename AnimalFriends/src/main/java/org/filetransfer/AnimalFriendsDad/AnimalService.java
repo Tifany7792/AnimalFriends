@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.springframework.stereotype.Service;
 
 @Service
