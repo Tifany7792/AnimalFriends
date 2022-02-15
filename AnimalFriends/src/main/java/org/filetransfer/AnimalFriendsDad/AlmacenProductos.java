@@ -1,9 +1,7 @@
-package org.filetransfer.AnimalFriendsDad.Almacenes;
+package org.filetransfer.AnimalFriendsDad;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 
 public class AlmacenProductos implements Serializable {
 	

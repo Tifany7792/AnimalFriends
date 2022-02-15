@@ -4,8 +4,6 @@ import java.util.Collection;
 
 import javax.annotation.PostConstruct;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
