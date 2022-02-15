@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad;
+package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import javax.persistence.*;
 
