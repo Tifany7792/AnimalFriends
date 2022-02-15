@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.domain.Pageable;
