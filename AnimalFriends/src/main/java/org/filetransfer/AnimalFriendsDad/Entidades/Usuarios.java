@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad;
+package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

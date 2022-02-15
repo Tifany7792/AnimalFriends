@@ -1,6 +1,7 @@
-package org.filetransfer.AnimalFriendsDad;
+package org.filetransfer.AnimalFriendsDad.Repositorios;
 import java.util.List;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
