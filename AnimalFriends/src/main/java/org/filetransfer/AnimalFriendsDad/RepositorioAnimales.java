@@ -1,6 +1,5 @@
-package org.filetransfer.AnimalFriendsDad.Repositorios;
+package org.filetransfer.AnimalFriendsDad;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RepositorioAnimales extends JpaRepository<Animal, Long>{

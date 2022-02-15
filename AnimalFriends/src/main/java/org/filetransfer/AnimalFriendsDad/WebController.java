@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
