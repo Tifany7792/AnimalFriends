@@ -5,9 +5,6 @@ package org.filetransfer.AnimalFriendsDad.Entidades;
 <<<<<<< HEAD:AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Usuarios.java
 <<<<<<< HEAD:AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Usuarios.java
 <<<<<<< HEAD:AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Usuarios.java
-<<<<<<< HEAD:AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Usuarios.java
->>>>>>> parent of a90dad4 (Intento 1 html usuarios):AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java
-=======
 >>>>>>> parent of a90dad4 (Intento 1 html usuarios):AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java
 =======
 >>>>>>> parent of a90dad4 (Intento 1 html usuarios):AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java
