@@ -27,6 +27,22 @@ public class UserService {
 	public Usuarios findById(long id) {
 		return usuarios.get(id);
 	}
+	
+	public boolean existeUsuario(String name) {
+		if (usuarios.size() > 0) {
+			Collection<Usuarios> u = findAll();
+			Object[] a = u.toArray();
+			
+			for (int i = 0; i < usuarios.size(); i++) {
+				System.out.print(a[i].getClass().getName());
+				if (a[i].getClass().getName() == name)
+					
+					return true;
+			}
+		}
+		
+		return false;
+	}
 
 	public void save(Usuarios usu) {
 
