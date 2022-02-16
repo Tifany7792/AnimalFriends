@@ -39,6 +39,7 @@ public class Usuarios {
 
 	public static int nUsuarios;
 	
+	
 	public Animal getAnimal() {
 		return animal;
 	}

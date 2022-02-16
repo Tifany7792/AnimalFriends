@@ -3,10 +3,15 @@ package org.filetransfer.AnimalFriendsDad.Almacenes;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 
 public class AlmacenUsuarios implements Serializable{
 	
+	//@OneToMany(cascade=CascadeType.ALL)
 	private ArrayList<Usuarios> almacenU;
 	
 	public AlmacenUsuarios() {
