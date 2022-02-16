@@ -30,8 +30,13 @@ public class UserService {
 	
 	public boolean existeUsuario(String name) {
 		if (usuarios.size() > 0) {
-			for (long i = 0; i < usuarios.size(); i++) {
-				if (usuarios.get(i).getNombre() == name)
+			Collection<Usuarios> u = findAll();
+			Object[] a = u.toArray();
+			
+			for (int i = 0; i < usuarios.size(); i++) {
+				System.out.print(a[i].getClass().getName());
+				if (a[i].getClass().getName() == name)
+					
 					return true;
 			}
 		}
