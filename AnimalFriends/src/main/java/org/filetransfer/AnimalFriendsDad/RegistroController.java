@@ -46,8 +46,8 @@ public class RegistroController {
 			return "registro";
 		}
 		
-		Usuarios usu = new Usuarios("Pepe","123");
-		//Usuarios usu = usuario.findByNombre1(nombre);
+		//Usuarios usu = new Usuarios("Pepe","123");
+		Usuarios usu = usuario.findByNombre(nombre);
 		
 		if(usu != null) {
 			mensaje = "Usuario ya está registrado";

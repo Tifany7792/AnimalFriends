@@ -32,10 +32,10 @@ public class DataBaseUsage implements CommandLineRunner{
 		repository.save(new Usuarios("Estefania","771992"));
 		repository.save(new Usuarios("Pepito","1264984"));
 		
-		List<Usuarios> bauers = repository.findByNombre("Estefania");
-		for (Usuarios bauer : bauers) {
+		//List<Usuarios> bauers = repository.findByNombre("Estefania");
+		/*for (Usuarios bauer : bauers) {
 			System.out.println(bauer);
-		}
+		}*/
 		
 		//repository.delete(bauers.get(0));
 	}
