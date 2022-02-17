@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Table(name = Usuarios.T_USUARIOS)
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Entity
 public class Usuarios {
 	
@@ -30,7 +28,7 @@ public class Usuarios {
 	
 	public static final String C_HABILITADO = "habilitado";
 	@Column(name = C_HABILITADO)
-	@Builder.Default
+	
 	private boolean enabled = true;
 	
 	@OneToOne
