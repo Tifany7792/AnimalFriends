@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 
 import jakarta.persistence.*;
-
+//prueba
 
 
 @Entity
