@@ -1,0 +1,12 @@
+{{>header}}
+
+	<form action="animal/new" method="post">
+		<p>Animal: </p>	
+		<input type='text' name='tipo'/>
+		<p>Usuario: </p>
+		<input type='text' name='user' value='{{#user}}{{.}}{{/user}}'/>
+
+		<input type='submit' value='Save'/>
+	</form>
+		
+{{>footer}}

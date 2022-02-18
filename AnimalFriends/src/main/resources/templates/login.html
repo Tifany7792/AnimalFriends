@@ -1,0 +1,30 @@
+{{>header}}
+
+	<title>Inicio de sesión</title>
+	<style type ="text/css">
+	A:link, A:visited{text-decoration:none}
+	A{color:black}
+	body {
+    	color: white;
+		background-color:coral;
+   	 background-size: cover;}
+	</style>
+	
+	<body>
+		<h1>AnimalFriends</h1>
+		<h3>Inicio de sesión</h3>
+		<form action='/login' method="post">
+			<p>
+				Nombre de Usuario: <input type='text' name='nombre'>
+			</p>
+			<p>
+				Contraseña: <input type='password' name='contraseña'>
+			</p>
+			<input type='submit'value='Iniciar sesion'>
+			<input type='hidden' name='_csrf' value='{{token}}'>
+		</form>
+		<br>
+		<a href='/'>Cancelar</a>
+	</body>
+		
+{{>footer}}
