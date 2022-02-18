@@ -29,8 +29,8 @@ public class DataBaseUsage implements CommandLineRunner{
 	@PostConstruct
 	public void init() {
 
-		repository.save(new Usuarios("Estefania","771992"));
-		repository.save(new Usuarios("Pepito","1264984"));
+		//repository.save(new Usuarios("Estefania","771992"));
+		//repository.save(new Usuarios("Pepito","1264984"));
 		
 		//List<Usuarios> bauers = repository.findByNombre("Estefania");
 		/*for (Usuarios bauer : bauers) {
