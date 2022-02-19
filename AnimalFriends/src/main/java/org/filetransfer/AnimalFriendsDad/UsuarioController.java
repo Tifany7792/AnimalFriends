@@ -1,6 +1,5 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
