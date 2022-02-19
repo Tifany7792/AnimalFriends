@@ -14,16 +14,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RequestMapping("/animales")
 public class AnimalController {
 
 	@Autowired
 	private RepositorioAnimales animales;
 	
 	@PostConstruct
-	public void init() {
+    public void init() {
+
+    }
+	
+	@RequestMapping("/animales/nuevoAnimal")
+	public void nuevoAnimal() {
 		animales.save(new Animal(null, "Mono"));
 		animales.save(new Animal(null, "Erizo"));
+		
+		//return "animal_nuevo"
 	}
 	
 	@GetMapping("/")

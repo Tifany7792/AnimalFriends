@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad;
+/*package org.filetransfer.AnimalFriendsDad;
 
 import javax.annotation.PostConstruct;
 
@@ -63,4 +63,4 @@ public class RegistroController {
 		return "index";
 				
 	}
-}
+}*/

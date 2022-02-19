@@ -10,7 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface RepositorioUsuarios extends JpaRepository<Usuarios,Long>{
 	
 
-	//List<Usuarios> findByNombre(String nombre);
+	List<Usuarios> findByNombre(String nombre);
 	//List<Usuarios> findByPasword(String pasword);
-	Usuarios findByNombre(String nombre);
+	//Usuarios findByNombre(String nombre);
 }

@@ -15,6 +15,10 @@ public class Animal {
 	
 	private String user;
 	
+	public Animal() {
+		
+	}
+	
 	public Animal(String user, String tipo) {
 		this.tipo = tipo;
 		this.descripcion = " ";
