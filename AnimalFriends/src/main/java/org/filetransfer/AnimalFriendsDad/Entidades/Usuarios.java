@@ -1,5 +1,9 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 
@@ -13,7 +17,7 @@ public class Usuarios {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	public static final String C_USUARIO = "usuario";
+	public static final String C_USUARIO = "nombre";
 	@Column(name = C_USUARIO, unique = true)
 	private String nombre;
 	
