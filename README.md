@@ -2,14 +2,7 @@
 
 
 Proyecto Diseño de aplicaciones distribuidas en el que vamos a implementar una web para los amantes de los animales.
-amigos de los animales
-Proyecto de aplicaciones distribuidas en el que creamos una web para los amantes de los animales.
 
-amigosanimales
-
-Proyecto de desarrollo de aplicaciones distribuidas, en el que vamos a crear una web para los amantes de los animales.
-
-PRACTICA DISEÑO APLICACIONES DISTRIBUIDAS
 
 ## Nombre de la aplicación web
 ----------------------------
