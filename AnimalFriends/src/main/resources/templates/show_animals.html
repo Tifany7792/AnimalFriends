@@ -1,0 +1,26 @@
+<html>
+
+	<head>
+		<title>Animales</title>
+		<link type="text/css" rel="stylesheet" />
+	</head>
+	
+	
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+		<h2>Animales</h2>
+	</div>
+	
+	<body>
+		{{#animales}}
+		<a href="/animal/{{id}}">{{tipo}}</a><br>
+		{{/animales}}
+		
+		{{^animales}}
+		<p>No hay animales</p>
+		{{/animales}}
+
+		
+
+	</body>
+</html>

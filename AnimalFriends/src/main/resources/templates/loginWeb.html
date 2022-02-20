@@ -6,19 +6,21 @@
 </head>
 
 <div class="header">
-	<h1>¡Animal Friends!</h1>
+	<h1>¡Animal Friendss!</h1>
 	<h2>Iniciar Sesión</h2>
 	<div class="header-right">
 		<!-- button that takes you back to the home screen-->
 		<a href="/"> Principal</a>
-		<a> </a>
-		<a> </a>
-		<a> </a>
-		<a> </a>
-		<!-- button that loads the register html -->
-		<a href="/registrar">Registrar</a>
 	</div>
 </div>
+
+	{{#incorrecto}}
+	<h1>Nombre o contraseña incorrectos</h1>
+	{{/incorrecto}}
+	
+	{{^incorrecto}}
+	<h2>Introduce tu nombre y contraseña</h2>
+	{{/incorrecto}}
 
 <form method='post' action="/loginUsuario">
 	<br>
