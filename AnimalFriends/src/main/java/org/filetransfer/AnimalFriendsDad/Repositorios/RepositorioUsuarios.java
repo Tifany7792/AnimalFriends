@@ -2,7 +2,6 @@ package org.filetransfer.AnimalFriendsDad.Repositorios;
 
 import java.util.Optional;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.data.jpa.repository.JpaRepository;
 
