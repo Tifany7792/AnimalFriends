@@ -1,5 +1,7 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import javax.servlet.http.HttpSession;
+
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,17 +21,20 @@ public class WebController {
 	private AnimalService animalService;*/
 
 	@GetMapping("/")
-	public String ventanaPrincipal(Model model) {
+	public String ventanaPrincipal(Model model, HttpSession session) {
 
 		model.addAttribute("usuarios", userService.getAllUsers());
 		Usuarios miUsuario = userService.getMiUsuario();
 		model.addAttribute("usuarioEntidad", miUsuario);
-
+		if (session.getAttribute("logged") == "yes") {
+			model.addAttribute("Usuarios", true);
+		}
 		return "principal";
 	}
 
 	@GetMapping("/login")
-	public String goToLogin() {
+	public String goToLogin(Model model) {
+		model.addAttribute("incorrecto", false);
 		return "loginWeb";
 	}
 
@@ -39,12 +44,15 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/loginUsuario")
-	public String login(@RequestParam String nombre, @RequestParam String psw) {
+	public String login(Model model, @RequestParam String nombre, @RequestParam String psw, HttpSession session) {
 		boolean result = userService.login(nombre, psw);
 		if (result) {
+			session.setAttribute("nombre", nombre);
+			session.setAttribute("logged", "yes");
 			return "redirect:/";
 		} else {
-			return "redirect:/login";
+			model.addAttribute("incorrecto", true);
+			return "loginWeb";
 		}
 	}
 
