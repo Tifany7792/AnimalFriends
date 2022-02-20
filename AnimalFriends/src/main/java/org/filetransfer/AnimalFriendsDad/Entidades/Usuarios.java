@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 public class Usuarios {
 	
-	public static final String T_USUARIOS = "Usuarios";
+	//public static final String T_USUARIOS = "Usuarios";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,29 +22,38 @@ public class Usuarios {
 	private String nombre;
 	
 	public static final String C_CONTRASEÑA = "contraseña";
-	@Column(name = C_CONTRASEÑA)
-	private String pasword;
+	@Column(name = C_CONTRASEÑA,nullable = false)
+	private String password;
 	
 	
-	public static final String C_HABILITADO = "habilitado";
-	@Column(name = C_HABILITADO)
+	//public static final String C_HABILITADO = "habilitado";
+	//@Column(name = C_HABILITADO)
 	
-	private boolean enabled = true;
+	//private boolean enabled = true;
 	
-	@OneToOne
-	private Animal animal;
+	///@OneToOne
+	//private Animal animal;
 	
 
 	public static int nUsuarios;
 	
 	
+	public Usuarios() {};
+	
+	public Usuarios(String n, String p) {
+		this.nombre = n;
+		this.password = p;
+	}
+	
+	
+	/*
 	public Animal getAnimal() {
 		return animal;
 	}
 
 	public void setAnimal(Animal animal) {
 		this.animal = animal;
-	}
+	}*/
 
 	public static int getnUsuarios() {
 		return nUsuarios;
@@ -54,13 +63,6 @@ public class Usuarios {
 		Usuarios.nUsuarios = nUsuarios;
 	}
 
-	protected Usuarios() {};
-	
-	public Usuarios(String n, String p) {
-		this.nombre = n;
-		this.pasword = p;
-	}
-	
 	public long getId() {
 		return this.id;
 	}
@@ -74,11 +76,11 @@ public class Usuarios {
 	}
 
 	public String getPasword() {
-		return pasword;
+		return password;
 	}
 
 	public void setPasword(String pasword) {
-		this.pasword = pasword;
+		this.password = pasword;
 	}
 
 	public void setId(long id) {
@@ -87,20 +89,8 @@ public class Usuarios {
 
 	@Override
 	public String toString() {
-		return "Usuarios [nombre=" + nombre + ", pasword=" + pasword + "]";
+		return "Usuarios [nombre=" + nombre + ", pasword=" + password + "]";
 	}
-	
-	public int compareTo(Object o) {
-        Usuarios u;
-        u = (Usuarios) o;
-        return getNombre().compareTo(u.getNombre());
-    }
-
-	public static Object builder() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 	
 
 }

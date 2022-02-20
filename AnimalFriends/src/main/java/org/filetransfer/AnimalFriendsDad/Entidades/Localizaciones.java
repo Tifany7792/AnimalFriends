@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad.Entidades;
+/*package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import javax.persistence.*;
 
@@ -59,4 +59,4 @@ public class Localizaciones {
 	
 	
 
-}
+}*/

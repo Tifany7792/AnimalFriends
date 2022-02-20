@@ -1,23 +1,15 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import javax.servlet.http.HttpSession;
-
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UsuarioController {
 	
-	@Autowired
+	/*@Autowired
 	private RepositorioUsuarios usuarios;
-	
+	/*
 	@GetMapping("/login")
 	public String login() {
 		return "login";
@@ -37,7 +29,7 @@ public class UsuarioController {
 		sesion.setAttribute("idUsuario", usuario.getId());
 		model.addAttribute("nombre", usuario.getNombre());
 		return "sesion_iniciada";
-	}*/
+	}*//*
 
 	@GetMapping("/registroUsuario")
 	public String registroUsuario() {
@@ -59,5 +51,20 @@ public class UsuarioController {
 			return "fallo";
 		}
 	}
+	
+	@PostConstruct
+	public void init() {
+		usuarios.save(new Usuarios("Estefania","771992"));
+		usuarios.save(new Usuarios("Pepito","451992"));
+	}
+	
+	@GetMapping("/")
+	public Page<Usuarios> getUsuarios(@RequestParam(required = false)String user,Pageable page){
+		if(user != null) {
+			return usuarios.findByUser(user,page);
+		}else {
+			return usuarios.findAll(page);
+		}
+	}*/
 
 }

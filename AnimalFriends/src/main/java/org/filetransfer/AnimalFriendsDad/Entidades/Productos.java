@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad.Entidades;
+/*package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -48,4 +48,4 @@ public class Productos {
 	}
 	
 
-}
+}*/

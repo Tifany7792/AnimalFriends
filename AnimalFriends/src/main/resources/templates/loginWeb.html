@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<title>Inicio de sesión</title>
+	<link type="text/css" rel="stylesheet" />
+</head>
+
+<div class="header">
+	<h1>¡Animal Friends!</h1>
+	<h2>Iniciar Sesión</h2>
+	<div class="header-right">
+		<!-- button that takes you back to the home screen-->
+		<a href="/"> Principal</a>
+		<a> </a>
+		<a> </a>
+		<a> </a>
+		<a> </a>
+		<!-- button that loads the register html -->
+		<a href="/registrar">Registrar</a>
+	</div>
+</div>
+
+<form method='post' action="/loginUsuario">
+	<br>
+	<div class="request">
+		<label for="nombre"><b>Nombre</b></label>
+		<br>
+		<input type="text" placeholder="Ingresar nombre" name="nombre" id="nombre" required>
+		<br>
+		<br>
+		<label for="password"><b>Contraseña</b></label>
+		<br>
+		<input type="password" placeholder="Ingresar Contraseña" name="psw" id="psw" required>
+		<br>
+		<p>¿No está registrado? <a href="/registrar"> Registrar </a></p>
+	</div>
+
+	<!-- Submit data button -->
+	<br>
+	<button type="submit" class="registerbtn"> Iniciar Sesión</button>
+
+</form>
+
+
+<footer th:fragment="creditFooter" class="credit">
+	</body>
+
+</html>
