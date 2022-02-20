@@ -56,6 +56,6 @@ gestion de reservas
 
 Altas en servicios
 
-Altos usuarios
+Altas de usuarios
 
 Compras (productos con descuentos)
