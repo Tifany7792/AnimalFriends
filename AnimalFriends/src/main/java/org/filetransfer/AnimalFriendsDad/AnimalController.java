@@ -45,18 +45,30 @@ public class AnimalController {
 		
 		model.addAttribute("animales", animales.findAll());
 		
-		return "show_animals";
+		return "list_animals";
 	}
 	
 	@GetMapping("/animal/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {
 
 		
-		Optional<Animal> ani = animales.findById(id);
+		Animal ani = animales.getById(id);
 		
-		model.addAttribute("animal", ani.get());
+		model.addAttribute("animal", ani);
 
 		return "show_animal";
+	}
+	
+	
+	
+	@GetMapping("/animal/{id}/delete")
+	public String deleteAnimal(Model model, @PathVariable long id) {
+
+		
+		animales.deleteById(id);
+		
+
+		return "deleted_animal";
 	}
 	
 }

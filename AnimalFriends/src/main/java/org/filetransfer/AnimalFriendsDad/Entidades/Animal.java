@@ -50,7 +50,7 @@ public class Animal {
 	}
 
 	public String getUser() {
-		return user;
+		return this.user;
 	}
 	
 	public void setUser(String user) {
