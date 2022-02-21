@@ -2065,8 +2065,8 @@
     <stereotypes xmi:id="_X80oopNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
       <modelElement href="AnimalFriends.uml#_UaP5wJNqEeyfSsz1I9Lthw"/>
     </stereotypes>
-    <stereotypes xmi:id="_kIEgsJNuEeyfSsz1I9Lthw" name="Patch">
-      <modelElement href="AnimalFriends.uml#_kIDSkJNuEeyfSsz1I9Lthw"/>
+    <stereotypes xmi:id="_rqg-cJNuEeyfSsz1I9Lthw" name="Patch">
+      <modelElement href="AnimalFriends.uml#_rqgXYJNuEeyfSsz1I9Lthw"/>
     </stereotypes>
     <visibility xmi:id="_X80opJNqEeyfSsz1I9Lthw" label="+"/>
     <attributes xmi:id="_X80opZNqEeyfSsz1I9Lthw" name="id">

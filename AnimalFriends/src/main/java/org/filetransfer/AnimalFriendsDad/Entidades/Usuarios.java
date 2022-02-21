@@ -3,7 +3,7 @@ package org.filetransfer.AnimalFriendsDad.Entidades;
 import java.util.List;
 
 import javax.persistence.*;
-
+//
 @Entity
 public class Usuarios {
 
