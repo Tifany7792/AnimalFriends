@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_Tz7goJNqEeyfSsz1I9Lthw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_Tz8HsJNqEeyfSsz1I9Lthw" source="codegen">
         <details xmi:id="_Tz8HsZNqEeyfSsz1I9Lthw" key="codegenDirectory" value="/AnimalFriends/src/main/java"/>
-        <details xmi:id="_X6JIEJNqEeyfSsz1I9Lthw" key="AssociatedSourceCode" value="/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalController.java;709552944/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalService.java;3213353294/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Animal.java;3092000474/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Localizaciones.java;1812087776/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Productos.java;1833450732/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionController.java;3680937485/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionService.java;4292047368/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductService.java;3243444752/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductosController.java;848809659/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioAnimales.java;2483453069/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioLocalizaciones.java;3863303366/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioProductos.java;2723950802/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioUsuarios.java;1782216799/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/UserService.java;940879993/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/WebController.java;2292151464/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java;2952740714/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplication.java;3320614041/1;/AnimalFriends/src/test/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplicationTests.java;779928669/1;"/>
+        <details xmi:id="_X6JIEJNqEeyfSsz1I9Lthw" key="AssociatedSourceCode" value="/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalController.java;709552944/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalService.java;3213353294/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Animal.java;3092000474/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Localizaciones.java;1812087776/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Productos.java;1833450732/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionController.java;3680937485/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionService.java;4292047368/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductService.java;3243444752/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductosController.java;848809659/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioAnimales.java;2483453069/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioLocalizaciones.java;3863303366/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioProductos.java;2723950802/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioUsuarios.java;1782216799/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/UserService.java;940879993/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/WebController.java;551547251/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java;287576211/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplication.java;3320614041/1;/AnimalFriends/src/test/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplicationTests.java;779928669/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_UWv50JNqEeyfSsz1I9Lthw">
@@ -1413,6 +1413,7 @@
               <ownedParameter xmi:id="_UkKqwZNqEeyfSsz1I9Lthw" name="model" type="_UdXfMJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkKqwpNqEeyfSsz1I9Lthw" name="session" type="_Uf-HQJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkKqw5NqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1425,6 +1426,7 @@
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_UkLR0JNqEeyfSsz1I9Lthw" name="goToLogin" specification="_UiLGsJNqEeyfSsz1I9Lthw">
               <ownedParameter xmi:id="_UkLR0ZNqEeyfSsz1I9Lthw" name="model" type="_UdXfMJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkLR0pNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1434,6 +1436,7 @@
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_UkLR05NqEeyfSsz1I9Lthw" name="goToRegister" specification="_UZ8-0JNqEeyfSsz1I9Lthw">
               <ownedParameter xmi:id="_UkLR1JNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1450,6 +1453,7 @@
               </ownedParameter>
               <ownedParameter xmi:id="_UkL45JNqEeyfSsz1I9Lthw" name="session" type="_Uf-HQJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkL45ZNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1478,6 +1482,7 @@
               </ownedParameter>
               <ownedParameter xmi:id="_UkMf9ZNqEeyfSsz1I9Lthw" name="session" type="_Uf-HQJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkMf9pNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1501,7 +1506,9 @@
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_UkMf95NqEeyfSsz1I9Lthw" name="logout" specification="_UiTpkJNqEeyfSsz1I9Lthw">
               <ownedParameter xmi:id="_UkMf-JNqEeyfSsz1I9Lthw" name="model" type="_UdXfMJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkMf-ZNqEeyfSsz1I9Lthw" name="session" type="_Uf-HQJNqEeyfSsz1I9Lthw"/>
-              <ownedParameter xmi:id="_UkMf-pNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return"/>
+              <ownedParameter xmi:id="_UkMf-pNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>session.setAttribute(&quot;logged&quot;, &quot;no&quot;);&#xD;
 		model.addAttribute(&quot;sesion&quot;, false);&#xD;
@@ -1514,16 +1521,22 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <ownedParameter xmi:id="_UkNHA5NqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
-              <body>model.addAttribute(&quot;usuario&quot;, userService.getUsuario(nombre));&#xD;
+              <body>Usuarios u = userService.getUsuario(nombre);&#xD;
+		model.addAttribute(&quot;usuario&quot;, u);&#xD;
+		model.addAttribute(&quot;mascotas&quot;,u.getMascotas());&#xD;
+		model.addAttribute(&quot;reservas&quot;,u.getReservas());&#xD;
+		model.addAttribute(&quot;compra&quot;,u.getListaCompra());&#xD;
 		return &quot;show_usuario&quot;;&#xD;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_UkNHBJNqEeyfSsz1I9Lthw" name="editarUsuario" specification="_UiXT8JNqEeyfSsz1I9Lthw">
               <ownedParameter xmi:id="_UkNHBZNqEeyfSsz1I9Lthw" name="model" type="_UdXfMJNqEeyfSsz1I9Lthw"/>
               <ownedParameter xmi:id="_UkNHBpNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -1538,10 +1551,16 @@
               <ownedParameter xmi:id="_UkNuE5NqEeyfSsz1I9Lthw" name="nombre">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_UkNuFJNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return"/>
+              <ownedParameter xmi:id="_UkNuFJNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>userService.registrarMascota(nombre, masc);&#xD;
-		model.addAttribute(&quot;usuario&quot;, userService.getUsuario(nombre));&#xD;
+		Usuarios u = userService.getUsuario(nombre);&#xD;
+		model.addAttribute(&quot;usuario&quot;, u);&#xD;
+		model.addAttribute(&quot;mascotas&quot;,u.getMascotas());&#xD;
+		model.addAttribute(&quot;reservas&quot;,u.getReservas());&#xD;
+		model.addAttribute(&quot;compra&quot;,u.getListaCompra());&#xD;
 		return new ModelAndView(&quot;show_usuario&quot;);&#xD;
 		&#xD;
 	</body>
@@ -1554,10 +1573,16 @@
               <ownedParameter xmi:id="_UkNuGJNqEeyfSsz1I9Lthw" name="nombre">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_UkNuGZNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return"/>
+              <ownedParameter xmi:id="_UkNuGZNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>userService.registrarReserva(nombre, lugar);&#xD;
-		model.addAttribute(&quot;usuario&quot;, userService.getUsuario(nombre));&#xD;
+		Usuarios u = userService.getUsuario(nombre);&#xD;
+		model.addAttribute(&quot;usuario&quot;, u);;&#xD;
+		model.addAttribute(&quot;mascotas&quot;,u.getMascotas());&#xD;
+		model.addAttribute(&quot;reservas&quot;,u.getReservas());&#xD;
+		model.addAttribute(&quot;compra&quot;,u.getListaCompra());&#xD;
 		return new ModelAndView(&quot;show_usuario&quot;);&#xD;
 		&#xD;
 	</body>
@@ -1570,10 +1595,16 @@
               <ownedParameter xmi:id="_UkOVI5NqEeyfSsz1I9Lthw" name="nombre">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_UkOVJJNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return"/>
+              <ownedParameter xmi:id="_UkOVJJNqEeyfSsz1I9Lthw" type="_UgS3YZNqEeyfSsz1I9Lthw" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>userService.registrarProducto(nombre, producto);&#xD;
-		model.addAttribute(&quot;usuario&quot;, userService.getUsuario(nombre));&#xD;
+		Usuarios u = userService.getUsuario(nombre);&#xD;
+		model.addAttribute(&quot;usuario&quot;, u);&#xD;
+		model.addAttribute(&quot;mascotas&quot;,u.getMascotas());&#xD;
+		model.addAttribute(&quot;reservas&quot;,u.getReservas());&#xD;
+		model.addAttribute(&quot;compra&quot;,u.getListaCompra());&#xD;
 		return new ModelAndView(&quot;show_usuario&quot;);&#xD;
 		&#xD;
 	</body>
@@ -1931,7 +1962,7 @@
   <UMLLabProfile:Annotations xmi:id="_UZ9l4JNqEeyfSsz1I9Lthw" base_Element="_UZ8-0JNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UZ9l4ZNqEeyfSsz1I9Lthw" name="GetMapping">
       <annotationParameters xmi:id="_UZ9l4pNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkbwgZNqEeyfSsz1I9Lthw" value="&quot;/registrar&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CwlgpNuEeyfSsz1I9Lthw" value="&quot;/registrar&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2089,14 +2120,14 @@
   <UMLLabProfile:Annotations xmi:id="_UiKfoJNqEeyfSsz1I9Lthw" base_Element="_UiJ4kJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiKfoZNqEeyfSsz1I9Lthw" name="GetMapping">
       <annotationParameters xmi:id="_UiKfopNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkbJcJNqEeyfSsz1I9Lthw" value="&quot;/&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CwlgJNuEeyfSsz1I9Lthw" value="&quot;/&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UiLtwZNqEeyfSsz1I9Lthw" base_Element="_UiLGsJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiLtwpNqEeyfSsz1I9Lthw" name="GetMapping">
       <annotationParameters xmi:id="_UiLtw5NqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkbwgJNqEeyfSsz1I9Lthw" value="&quot;/login&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CwlgZNuEeyfSsz1I9Lthw" value="&quot;/login&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2109,7 +2140,7 @@
   <UMLLabProfile:Annotations xmi:id="_UiOxEJNqEeyfSsz1I9Lthw" base_Element="_UiMU0JNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiOxEZNqEeyfSsz1I9Lthw" name="RequestMapping">
       <annotationParameters xmi:id="_UiOxEpNqEeyfSsz1I9Lthw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkbwgpNqEeyfSsz1I9Lthw" value="&quot;/loginUsuario&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMkJNuEeyfSsz1I9Lthw" value="&quot;/loginUsuario&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2125,49 +2156,49 @@
   <UMLLabProfile:Annotations xmi:id="_UiTCgJNqEeyfSsz1I9Lthw" base_Element="_UiPYIJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiTCgZNqEeyfSsz1I9Lthw" name="RequestMapping">
       <annotationParameters xmi:id="_UiTCgpNqEeyfSsz1I9Lthw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_Ukbwg5NqEeyfSsz1I9Lthw" value="&quot;/registrarUsuario&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMkZNuEeyfSsz1I9Lthw" value="&quot;/registrarUsuario&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UiU3sJNqEeyfSsz1I9Lthw" base_Element="_UiTpkJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiVewJNqEeyfSsz1I9Lthw" name="GetMapping">
       <annotationParameters xmi:id="_UiVewZNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkcXkJNqEeyfSsz1I9Lthw" value="&quot;/logout&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMkpNuEeyfSsz1I9Lthw" value="&quot;/logout&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UiWs4JNqEeyfSsz1I9Lthw" base_Element="_UiVewpNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiWs4ZNqEeyfSsz1I9Lthw" name="PostMapping">
       <annotationParameters xmi:id="_UiWs4pNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkcXkZNqEeyfSsz1I9Lthw" value="&quot;/verUsuario&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMk5NuEeyfSsz1I9Lthw" value="&quot;/verUsuario&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UiX7AZNqEeyfSsz1I9Lthw" base_Element="_UiXT8JNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiX7ApNqEeyfSsz1I9Lthw" name="GetMapping">
       <annotationParameters xmi:id="_UiYiEJNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkcXkpNqEeyfSsz1I9Lthw" value="&quot;/editarUsuario&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMlJNuEeyfSsz1I9Lthw" value="&quot;/editarUsuario&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UiZwMJNqEeyfSsz1I9Lthw" base_Element="_UiYiEZNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UiaXQJNqEeyfSsz1I9Lthw" name="PostMapping">
       <annotationParameters xmi:id="_UiaXQZNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_UkcXk5NqEeyfSsz1I9Lthw" value="&quot;/aniadirMascota&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxMlZNuEeyfSsz1I9Lthw" value="&quot;/aniadirMascota&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UicMcJNqEeyfSsz1I9Lthw" base_Element="_Uia-UJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UicMcZNqEeyfSsz1I9Lthw" name="PostMapping">
       <annotationParameters xmi:id="_UicMcpNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_Ukc-oJNqEeyfSsz1I9Lthw" value="&quot;/aniadirReserva&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxzoJNuEeyfSsz1I9Lthw" value="&quot;/aniadirReserva&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Annotations xmi:id="_UieBoJNqEeyfSsz1I9Lthw" base_Element="_UiczgJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UieBoZNqEeyfSsz1I9Lthw" name="PostMapping">
       <annotationParameters xmi:id="_UieBopNqEeyfSsz1I9Lthw" skipName="true" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_Ukc-oZNqEeyfSsz1I9Lthw" value="&quot;/aniadirProducto&quot;"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="__CxzoZNuEeyfSsz1I9Lthw" value="&quot;/aniadirProducto&quot;"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2255,7 +2286,7 @@
   <UMLLabProfile:Annotations xmi:id="_UjwbEJNqEeyfSsz1I9Lthw" base_Element="_UjvM8pNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UjwbEZNqEeyfSsz1I9Lthw" name="Column">
       <annotationParameters xmi:id="_UjwbE5NqEeyfSsz1I9Lthw" name="nullable" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_rIAuUJNuEeyfSsz1I9Lthw" value="false"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_-V9J4JNuEeyfSsz1I9Lthw" value="false"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2296,5 +2327,5 @@
   <UMLLabProfile:Reference xmi:id="_UmXDIJNqEeyfSsz1I9Lthw" base_Element="_UmPuYZNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:Reference xmi:id="_UmfmAJNqEeyfSsz1I9Lthw" base_Element="_UmXDIZNqEeyfSsz1I9Lthw"/>
   <Persistency:Column xmi:id="_jhxVsJNuEeyfSsz1I9Lthw" base_Property="_UjsJopNqEeyfSsz1I9Lthw" unique="true"/>
-  <UMLLabProfile:Patch xmi:id="_rqgXYJNuEeyfSsz1I9Lthw" base_Element="_UaOroJNqEeyfSsz1I9Lthw" patchText="@@ -511,16 +511,19 @@&#xA; () %7B%0D%0A%09%7D&#xA;+;%0D%0A&#xA; %0D%0A%09publi&#xA;" conflicting="false"/>
+  <UMLLabProfile:Patch xmi:id="_-zSmIJNuEeyfSsz1I9Lthw" base_Element="_UaOroJNqEeyfSsz1I9Lthw" patchText="@@ -509,16 +509,19 @@&#xA; () %7B%0D%0A%09%7D&#xA;+;%0D%0A&#xA; %0D%0A%09publi&#xA;" conflicting="false"/>
 </xmi:XMI>
