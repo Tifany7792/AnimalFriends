@@ -9,5 +9,5 @@ public interface RepositorioAnimales extends JpaRepository<Animal, Long>{
 	
 	Optional<Animal> findByTipo(String tipo);
 	Optional<Animal> findById(Long id);
-	
+	Optional<Animal> findByUser(String user);
 }

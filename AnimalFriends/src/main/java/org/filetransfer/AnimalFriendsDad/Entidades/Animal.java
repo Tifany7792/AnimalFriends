@@ -8,12 +8,13 @@ public class Animal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long Id;
-	//@Column
-	private String tipo;
-	//@Column
-	private String descripcion;
-	
+	@Column
 	private String user;
+	@Column
+	private String tipo;
+	@Column
+	private String descripcion;
+
 	
 	public Animal() {
 		
@@ -49,14 +50,15 @@ public class Animal {
 		this.descripcion = d;
 	}
 
+
 	public String getUser() {
-		return user;
+		return this.user;
 	}
-	
+
 	public void setUser(String user) {
 		this.user = user;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Animal [tipo=" + tipo + ", descripcion=" + descripcion + "]";

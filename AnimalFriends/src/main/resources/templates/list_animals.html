@@ -13,13 +13,15 @@
 	
 	<body>
 		{{#animales}}
-		<a href="/animal/{{id}}">{{tipo}}</a><br>
+		<a href="animal/{{id}}">{{tipo}}</a><br>
 		{{/animales}}
 		
 		{{^animales}}
 		<p>No hay animales</p>
 		{{/animales}}
-
+	
+		<br>
+		<a href="new_animal">Nuevo animal</a>
 		
 
 	</body>

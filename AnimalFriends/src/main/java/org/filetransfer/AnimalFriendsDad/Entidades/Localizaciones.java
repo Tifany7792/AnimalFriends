@@ -24,20 +24,13 @@ public class Localizaciones {
 		this.tipo = tipo;
 	}
 
+
 	public String getNombreSitio() {
-		return this.nombreSitio;
+		return nombreSitio;
 	}
 
 	public void setNombreSitio(String nombreSitio) {
 		this.nombreSitio = nombreSitio;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getTipo() {
@@ -47,6 +40,15 @@ public class Localizaciones {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getId() {
+		return id;
+	}
+
 
 	@Override
 	public String toString() {
