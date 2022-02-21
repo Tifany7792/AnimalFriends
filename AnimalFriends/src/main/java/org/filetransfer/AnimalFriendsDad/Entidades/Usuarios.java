@@ -1,6 +1,9 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
 
+import java.util.List;
+import java.util.Optional;
+
 import javax.persistence.*;
 
 
@@ -22,14 +25,14 @@ public class Usuarios {
 	@Column(name = C_CONTRASEÑA,nullable = false)
 	private String password;
 	
+	@OneToMany
+	private List<Localizaciones> reservas;
 	
-	//public static final String C_HABILITADO = "habilitado";
-	//@Column(name = C_HABILITADO)
+	@OneToMany
+	private List<Animal> mascotas;
 	
-	//private boolean enabled = true;
-	
-	///@OneToOne
-	//private Animal animal;
+	@ManyToMany
+	private List<Productos> listaP;
 	
 
 	public static int nUsuarios;
@@ -38,20 +41,36 @@ public class Usuarios {
 	public Usuarios() {};
 	
 	public Usuarios(String n, String p) {
+		super();
 		this.nombre = n;
 		this.password = p;
 	}
 	
+	public Usuarios(String n, String p, List<Localizaciones >l) {
+		super();
+		this.nombre = n;
+		this.password = p;
+		this.reservas = l;
+	}
 	
-	/*
-	public Animal getAnimal() {
-		return animal;
+	
+	public List<Localizaciones> getReservas() {
+		return reservas;
 	}
 
-	public void setAnimal(Animal animal) {
-		this.animal = animal;
-	}*/
+	public void setReservas(List<Localizaciones> reservas) {
+		this.reservas = reservas;
+	}
 
+	/*public List<Animal> getMascotas() {
+		return mascotas;
+	}
+
+	public void setMascotas(List<Animal> mascotas) {
+		this.mascotas = mascotas;
+	}
+*/
+	
 	public static int getnUsuarios() {
 		return nUsuarios;
 	}

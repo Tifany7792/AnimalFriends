@@ -19,7 +19,7 @@ public class Localizaciones {
 	}
 
 	public Localizaciones(String nombreSitio, String tipo) {
-		
+		super();
 		this.nombreSitio = nombreSitio;
 		this.tipo = tipo;
 	}

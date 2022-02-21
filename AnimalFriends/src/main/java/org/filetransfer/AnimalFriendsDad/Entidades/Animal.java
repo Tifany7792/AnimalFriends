@@ -21,6 +21,7 @@ public class Animal {
 	}
 	
 	public Animal(String user, String tipo) {
+		super();
 		this.tipo = tipo;
 		this.descripcion = " ";
 		this.user = user;

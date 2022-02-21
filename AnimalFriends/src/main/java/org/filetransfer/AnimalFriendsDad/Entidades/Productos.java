@@ -21,6 +21,7 @@ public class Productos {
 	private String user;
 	
 	public Productos(String nombre, String tipo) {
+		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
 	}
