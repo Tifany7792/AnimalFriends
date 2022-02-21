@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_Tz7goJNqEeyfSsz1I9Lthw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_Tz8HsJNqEeyfSsz1I9Lthw" source="codegen">
         <details xmi:id="_Tz8HsZNqEeyfSsz1I9Lthw" key="codegenDirectory" value="/AnimalFriends/src/main/java"/>
-        <details xmi:id="_X6JIEJNqEeyfSsz1I9Lthw" key="AssociatedSourceCode" value="/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalController.java;709552944/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalService.java;3213353294/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Animal.java;3092000474/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Localizaciones.java;1812087776/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Productos.java;1833450732/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionController.java;3680937485/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionService.java;4292047368/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductService.java;3243444752/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductosController.java;848809659/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioAnimales.java;2483453069/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioLocalizaciones.java;3863303366/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioProductos.java;2723950802/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioUsuarios.java;1782216799/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/UserService.java;940879993/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/WebController.java;2292151464/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java;287576211/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplication.java;3320614041/1;/AnimalFriends/src/test/java/org/filetransfer/AnimalFriendsDad/AnimalFriendsApplicationTests.java;779928669/1;"/>
+        <details xmi:id="_X6JIEJNqEeyfSsz1I9Lthw" key="AssociatedSourceCode" value="/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalController.java;709552944/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/AnimalService.java;3213353294/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Animal.java;3092000474/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Localizaciones.java;1812087776/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Productos.java;1833450732/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionController.java;3680937485/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/LocalizacionService.java;4292047368/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductService.java;3243444752/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/ProductosController.java;848809659/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioAnimales.java;2483453069/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioLocalizaciones.java;3863303366/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioProductos.java;2723950802/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Repositorios/RepositorioUsuarios.java;1782216799/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/UserService.java;940879993/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/WebController.java;2292151464/1;/AnimalFriends/src/main/java/org/filetransfer/AnimalFriendsDad/Entidades/Usuarios.java;354475649/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_UWv50JNqEeyfSsz1I9Lthw">
@@ -531,24 +531,6 @@
               </ownedParameter>
             </ownedOperation>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_UW9VMJNqEeyfSsz1I9Lthw" name="AnimalFriendsApplication">
-            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Uj6MEJNqEeyfSsz1I9Lthw" name="main" specification="_UW-jUJNqEeyfSsz1I9Lthw">
-              <ownedParameter xmi:id="_Uj6MEZNqEeyfSsz1I9Lthw" name="args">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Uj6MEpNqEeyfSsz1I9Lthw" value="*"/>
-              </ownedParameter>
-              <language>java</language>
-              <body>SpringApplication.run(AnimalFriendsApplication.class, args);&#xD;
-		&#xD;
-	</body>
-            </ownedBehavior>
-            <ownedOperation xmi:id="_UW-jUJNqEeyfSsz1I9Lthw" name="main" isStatic="true" method="_Uj6MEJNqEeyfSsz1I9Lthw">
-              <ownedParameter xmi:id="_UW-jUZNqEeyfSsz1I9Lthw" name="args">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UW_KYZNqEeyfSsz1I9Lthw" value="*"/>
-              </ownedParameter>
-            </ownedOperation>
-          </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_UW_xcpNqEeyfSsz1I9Lthw" name="AnimalService">
             <ownedAttribute xmi:id="_UinyoJNqEeyfSsz1I9Lthw" name="animales" visibility="private" type="_UYQ8wJNqEeyfSsz1I9Lthw" association="_UkvSgZNqEeyfSsz1I9Lthw"/>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Uj6zIJNqEeyfSsz1I9Lthw" name="registrarAnimal" specification="_UXA_kJNqEeyfSsz1I9Lthw">
@@ -630,14 +612,6 @@
               </ownedParameter>
               <ownedParameter xmi:id="_UefgkJNqEeyfSsz1I9Lthw" type="_UXFRAJNqEeyfSsz1I9Lthw" direction="return"/>
             </ownedOperation>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_UXjyIJNqEeyfSsz1I9Lthw" name="AnimalFriendsApplicationTests" visibility="package">
-            <eAnnotations xmi:id="_UXkZMJNqEeyfSsz1I9Lthw" source="http://ns.yatta.de/umllab">
-              <contents xmi:type="ecore:EAnnotation" xmi:id="_UXkZMZNqEeyfSsz1I9Lthw" source="codegen">
-                <details xmi:id="_UXkZMpNqEeyfSsz1I9Lthw" key="codegenDirectory" value="/AnimalFriends/src/test/java"/>
-              </contents>
-            </eAnnotations>
-            <ownedOperation xmi:id="_UXlAQZNqEeyfSsz1I9Lthw" name="contextLoads" visibility="package"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_UXm1cJNqEeyfSsz1I9Lthw" name="LocalizacionController">
             <ownedAttribute xmi:id="_UjgjcJNqEeyfSsz1I9Lthw" name="localizaciones" visibility="private" type="_UYfmQJNqEeyfSsz1I9Lthw" association="_Uk2AMZNqEeyfSsz1I9Lthw"/>
@@ -1840,11 +1814,6 @@
   <UMLLabProfile:Annotations xmi:id="_UW2ngJNqEeyfSsz1I9Lthw" base_Element="_UWtdkJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UW2ngZNqEeyfSsz1I9Lthw" name="Controller"/>
   </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_UW98QJNqEeyfSsz1I9Lthw" base_Element="_UW9VMJNqEeyfSsz1I9Lthw"/>
-  <UMLLabProfile:StyledElement xmi:id="_UW_KYJNqEeyfSsz1I9Lthw" base_Element="_UW-jUJNqEeyfSsz1I9Lthw"/>
-  <UMLLabProfile:Annotations xmi:id="_UW_xcJNqEeyfSsz1I9Lthw" base_Element="_UW9VMJNqEeyfSsz1I9Lthw">
-    <annotations xmi:id="_UW_xcZNqEeyfSsz1I9Lthw" name="SpringBootApplication"/>
-  </UMLLabProfile:Annotations>
   <Persistency:JPA1StyledElement xmi:id="_UXHGMJNqEeyfSsz1I9Lthw" base_Element="_UXFRAJNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_UXJicJNqEeyfSsz1I9Lthw" base_Element="_UXIUUJNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:StyledElement xmi:id="_UXKwk5NqEeyfSsz1I9Lthw" base_Element="_UXKJgJNqEeyfSsz1I9Lthw"/>
@@ -1865,13 +1834,6 @@
   <UMLLabProfile:LegacyStyledElement xmi:id="_UXgHwJNqEeyfSsz1I9Lthw" base_Element="_UXfgsJNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:Annotations xmi:id="_UXgHwZNqEeyfSsz1I9Lthw" base_Element="_UXfgsJNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UXgHwpNqEeyfSsz1I9Lthw" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_UXlAQJNqEeyfSsz1I9Lthw" base_Element="_UXjyIJNqEeyfSsz1I9Lthw"/>
-  <UMLLabProfile:Annotations xmi:id="_UXlnUJNqEeyfSsz1I9Lthw" base_Element="_UXlAQZNqEeyfSsz1I9Lthw">
-    <annotations xmi:id="_UXlnUZNqEeyfSsz1I9Lthw" name="Test"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:Annotations xmi:id="_UXmOYJNqEeyfSsz1I9Lthw" base_Element="_UXjyIJNqEeyfSsz1I9Lthw">
-    <annotations xmi:id="_UXmOYZNqEeyfSsz1I9Lthw" name="SpringBootTest"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="_UXoDkJNqEeyfSsz1I9Lthw" base_Element="_UXm1cJNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:Annotations xmi:id="_UXpRsJNqEeyfSsz1I9Lthw" base_Element="_UXoqoJNqEeyfSsz1I9Lthw">
@@ -2255,7 +2217,7 @@
   <UMLLabProfile:Annotations xmi:id="_UjwbEJNqEeyfSsz1I9Lthw" base_Element="_UjvM8pNqEeyfSsz1I9Lthw">
     <annotations xmi:id="_UjwbEZNqEeyfSsz1I9Lthw" name="Column">
       <annotationParameters xmi:id="_UjwbE5NqEeyfSsz1I9Lthw" name="nullable" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_jiB0YJNuEeyfSsz1I9Lthw" value="false"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_fNuN8JNrEeyfSsz1I9Lthw" value="false"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -2295,6 +2257,6 @@
   <UMLLabProfile:Reference xmi:id="_UmPuYJNqEeyfSsz1I9Lthw" base_Element="_UmJAsZNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:Reference xmi:id="_UmXDIJNqEeyfSsz1I9Lthw" base_Element="_UmPuYZNqEeyfSsz1I9Lthw"/>
   <UMLLabProfile:Reference xmi:id="_UmfmAJNqEeyfSsz1I9Lthw" base_Element="_UmXDIZNqEeyfSsz1I9Lthw"/>
-  <Persistency:Column xmi:id="_jhxVsJNuEeyfSsz1I9Lthw" base_Property="_UjsJopNqEeyfSsz1I9Lthw" unique="true"/>
-  <UMLLabProfile:Patch xmi:id="_kIDSkJNuEeyfSsz1I9Lthw" base_Element="_UaOroJNqEeyfSsz1I9Lthw" patchText="@@ -509,16 +509,19 @@&#xA; () %7B%0D%0A%09%7D&#xA;+;%0D%0A&#xA; %0D%0A%09publi&#xA;" conflicting="false"/>
+  <Persistency:Column xmi:id="_fNgLgJNrEeyfSsz1I9Lthw" base_Property="_UjsJopNqEeyfSsz1I9Lthw" unique="true"/>
+  <UMLLabProfile:Patch xmi:id="_ggmLEJNrEeyfSsz1I9Lthw" base_Element="_UaOroJNqEeyfSsz1I9Lthw" patchText="@@ -525,16 +525,19 @@&#xA; ios() %7B%7D&#xA;+;%0D%0A&#xA; %09%0D%0A%09publ&#xA;" conflicting="false"/>
 </xmi:XMI>

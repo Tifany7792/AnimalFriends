@@ -1,33 +1,38 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
+
 import java.util.List;
 
 import javax.persistence.*;
 
+
+
 @Entity
 public class Usuarios {
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	@Column(unique = true)
 	private String nombre;
 
 	@Column(nullable = false)
 	private String password;
-
+	
 	@OneToMany
 	private List<Localizaciones> reservas;
-
+	
 	@OneToMany
 	private List<Animal> mascotas;
-
+	
 	@ManyToMany
 	private List<Productos> listaCompra;
-
-	public Usuarios() {
-	};
-
+	
+	
+	public Usuarios() {};
+	
 	public Usuarios(String n, String p) {
 		super();
 		this.nombre = n;
@@ -39,7 +44,8 @@ public class Usuarios {
 		List<Productos> c = null;
 		this.listaCompra = c;
 	}
-
+	
+	
 	public List<Localizaciones> getReservas() {
 		return reservas;
 	}
@@ -55,19 +61,19 @@ public class Usuarios {
 	public void setMascotas(List<Animal> mascotas) {
 		this.mascotas = mascotas;
 	}
-
+	
 	public void addMascotas(Animal m) {
 		this.mascotas.add(m);
 	}
-
+	
 	public void addReserva(Localizaciones l) {
 		this.reservas.add(l);
 	}
-
+	
 	public void addProducto(Productos p) {
 		this.listaCompra.add(p);
 	}
-
+	
 	public long getId() {
 		return this.id;
 	}
@@ -96,5 +102,6 @@ public class Usuarios {
 	public String toString() {
 		return "Usuarios [nombre=" + nombre + ", pasword=" + password + "]";
 	}
+	
 
 }
