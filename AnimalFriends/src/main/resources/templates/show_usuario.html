@@ -11,11 +11,11 @@
 <body>	
 	<p>Nombre Usuario: {{usuario.nombre}}</p>
 	<br>
-	<p>Mascotas: {{#usuario}}{{mascotas}},{{/usuario}}</p>
+	<p>Mascotas: {{#mascotas}}{{tipo}}, {{/mascotas}}</p>
 	<br>
-	<p>Reservas: {{#usuario}}{{reservas}},{{/usuario}}</p>
+	<p>Reservas: {{#reservas}}{{nombreSitio}}, {{/reservas}}</p>
 	<br>
-	<p>Lista de la compra: {{#usuario}}{{listaCompra}},{{/usuario}}</p>
+	<p>Lista de la compra: {{#compra}}{{nombre}}, {{/compra}}</p>
 		
 	<a href="/">Volver</a>
 </body>

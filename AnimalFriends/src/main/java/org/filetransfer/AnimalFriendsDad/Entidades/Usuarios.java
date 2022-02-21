@@ -48,6 +48,14 @@ public class Usuarios {
 	}
 	
 	
+	public List<Productos> getListaCompra() {
+		return listaCompra;
+	}
+
+	public void setListaCompra(List<Productos> listaCompra) {
+		this.listaCompra = listaCompra;
+	}
+
 	public List<Localizaciones> getReservas() {
 		return reservas;
 	}
