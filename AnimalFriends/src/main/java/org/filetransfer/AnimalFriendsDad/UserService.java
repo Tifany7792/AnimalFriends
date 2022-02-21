@@ -11,6 +11,8 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 //import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 //import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
 //import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
@@ -24,15 +26,12 @@ public class UserService {
 
 	@Autowired
 	private RepositorioUsuarios usuarios;
-	
 	@Autowired
 	private RepositorioAnimales mascotas;
-	/*
 	@Autowired
 	private RepositorioLocalizaciones reservas;
-	
 	@Autowired 
-	private RepositorioProductos listaCompra;*/
+	private RepositorioProductos listaCompra;
 
 	private Usuarios miUsuario;
 	
@@ -131,11 +130,53 @@ public class UserService {
 			animal = a.get();
 		}
 		if (!u.isPresent()) {
-			usuario = new Usuarios(user,"");
+			usuario = new Usuarios(user,"0000");
 		}else {
 			usuario = u.get();
 		}
 		usuario.addMascotas(animal);
+		usuarios.save(usuario);
+		return true;
+	}
+	
+	public boolean registrarProducto(String user, String producto) {
+		Optional<Productos> p = listaCompra.findByNombre(producto);
+		Optional<Usuarios> u = usuarios.findByNombre(user);
+		Productos prod;
+		Usuarios usuario;
+		if (!p.isPresent()) {
+			prod = new Productos(producto,"generico");
+			listaCompra.save(prod);
+		}else {
+			prod = p.get();
+		}
+		if (!u.isPresent()) {
+			usuario = new Usuarios(user,"0000");
+		}else {
+			usuario = u.get();
+		}
+		usuario.addProducto(prod);
+		usuarios.save(usuario);
+		return true;
+	}
+	
+	public boolean registrarReserva(String user, String lugar) {
+		Optional<Localizaciones> l = reservas.findByNombreSitio(lugar);
+		Optional<Usuarios> u = usuarios.findByNombre(user);
+		Localizaciones local;
+		Usuarios usuario;
+		if (!l.isPresent()) {
+			local = new Localizaciones(lugar,"generico");
+			reservas.save(local);
+		}else {
+			local = l.get();
+		}
+		if (!u.isPresent()) {
+			usuario = new Usuarios(user,"0000");
+		}else {
+			usuario = u.get();
+		}
+		usuario.addReserva(local);
 		usuarios.save(usuario);
 		return true;
 	}

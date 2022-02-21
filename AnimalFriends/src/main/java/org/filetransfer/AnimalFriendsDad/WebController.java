@@ -96,8 +96,24 @@ public class WebController {
 	}
 	
 	@PostMapping("/aniadirMascota")
-	public ModelAndView añadirMascota(Model model, String masc, String nombre) {
+	public ModelAndView aniadirMascota(Model model, String masc, String nombre) {
 		userService.registrarMascota(nombre, masc);
+		model.addAttribute("usuario", userService.getUsuario(nombre));
+		return new ModelAndView("show_usuario");
+		
+	}
+	
+	@PostMapping("/aniadirReserva")
+	public ModelAndView aniadirReserva(Model model, String lugar, String nombre) {
+		userService.registrarReserva(nombre, lugar);
+		model.addAttribute("usuario", userService.getUsuario(nombre));
+		return new ModelAndView("show_usuario");
+		
+	}
+	
+	@PostMapping("/aniadirProducto")
+	public ModelAndView aniadirProducto(Model model, String producto, String nombre) {
+		userService.registrarProducto(nombre, producto);
 		model.addAttribute("usuario", userService.getUsuario(nombre));
 		return new ModelAndView("show_usuario");
 		
