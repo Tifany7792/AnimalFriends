@@ -37,7 +37,7 @@ public class LocalizacionController {
 		
 		model.addAttribute("localizaciones", localizaciones.findAll());
 		
-		return "show_localizaciones";
+		return "list_localizaciones";
 	}
 	
 	@GetMapping("/localizaciones/{id}")

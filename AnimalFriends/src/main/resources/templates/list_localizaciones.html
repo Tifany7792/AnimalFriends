@@ -1,0 +1,28 @@
+<html>
+
+	<head>
+		<title>Localizaciones</title>
+		<link type="text/css" rel="stylesheet" />
+	</head>
+	
+	
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+		<h2>Localizaciones</h2>
+	</div>
+	
+	<body>
+		{{#localizaciones}}
+		<a href="localizacion/{{id}}">{{nombreSitio}}</a><br>
+		{{/localizaciones}}
+		
+		{{^localizaciones}}
+		<p>No hay localizaciones</p>
+		{{/localizaciones}}
+	
+		<br>
+		<a href="new_localizacion">Nueva localizacion</a>
+		
+
+	</body>
+</html>
