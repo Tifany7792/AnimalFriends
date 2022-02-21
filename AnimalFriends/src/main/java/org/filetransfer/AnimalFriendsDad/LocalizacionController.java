@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -26,11 +28,6 @@ public class LocalizacionController {
 		localizaciones.save(new Localizaciones("Piscinas PetFriends", "Ocio"));
     }
 	
-	@RequestMapping("/localizaciones/nuevaLocalizacion")
-	public void nuevaLocalización() {
-		
-
-	}
 	
 	@GetMapping("/localizaciones")
 	public String verLocalizaciones(Model model) {
@@ -49,6 +46,30 @@ public class LocalizacionController {
 		model.addAttribute("local", loc);
 
 		return "show_localizacion";
+	}
+	
+	@GetMapping("/local/{id}/delete")
+	public String deleteLocalizacion(Model model, @PathVariable long id) {
+
+		
+		localizaciones.deleteById(id);
+		
+
+		return "deleted_localizacion";
+	}
+	
+	@GetMapping("/newLocalizacion")
+	public String deleteAnimal() {
+
+		return "new_localizacion";
+	}
+	
+	@PostMapping("/localizacion/new")
+	public String newAnimal(Localizaciones loc) {
+
+		localizaciones.save(loc);
+		
+		return "saved_localizacion";
 	}
 	
 }
