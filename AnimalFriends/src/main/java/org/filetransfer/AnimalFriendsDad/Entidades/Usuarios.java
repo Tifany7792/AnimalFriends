@@ -15,12 +15,10 @@ public class Usuarios {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	public static final String C_USUARIO = "nombre";
-	@Column(name = C_USUARIO, unique = true)
+	@Column(unique = true)
 	private String nombre;
-	
-	public static final String C_CONTRASEÑA = "contraseña";
-	@Column(name = C_CONTRASEÑA,nullable = false)
+
+	@Column(nullable = false)
 	private String password;
 	
 	@OneToMany

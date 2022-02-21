@@ -1,0 +1,2656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_Trk14JNqEeyfSsz1I9Lthw">
+  <modelElement href="AnimalFriends.uml#_UT0hopNqEeyfSsz1I9Lthw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X6lM8JNqEeyfSsz1I9Lthw" sourceAnchor="135.0,0.0" targetAnchor="272.0,46.0" target="_X9SisJNqEeyfSsz1I9Lthw" source="_X6l0AJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UkvSgZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YY_AMJNqEeyfSsz1I9Lthw" sourceY="-120" targetX="603"/>
+    <stereotypes xmi:id="_X6lM8ZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_Uk2AMJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X6lM8pNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZD4sJNqEeyfSsz1I9Lthw" position="-11.22752009245977,-2.927317699902517"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X6lM85NqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UkvSgpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZDRoZNqEeyfSsz1I9Lthw" position="2.6372099471968227,-68.97297036435754"/>
+      <visibility xmi:id="_X6lM9JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6lM9ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X6lM9pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="animales" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UinyoJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZD4sZNqEeyfSsz1I9Lthw" position="583.2744954779618,-92.1684890848172"/>
+      <visibility xmi:id="_X6lM95NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X6lM-JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X6tv0JNqEeyfSsz1I9Lthw" sourceAnchor="365.0,83.0" targetAnchor="168.0,109.0" target="_X9ZQYJNqEeyfSsz1I9Lthw" source="_X6uW6JNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_Uk2AMZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YY_nQJNqEeyfSsz1I9Lthw" sourceX="246" targetY="129"/>
+    <stereotypes xmi:id="_X6uW4JNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_Uk8G0JNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X6uW4ZNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZEfwZNqEeyfSsz1I9Lthw" position="-188.49943856067603,-2.006524632613605"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X6uW4pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_Uk2AMpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZEfwJNqEeyfSsz1I9Lthw" position="39.37466266314527,-11.922161710468757"/>
+      <visibility xmi:id="_X6uW45NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uW5JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X6uW5ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="localizaciones" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjgjcJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZFG0JNqEeyfSsz1I9Lthw" position="-177.69432454505704,117.25829615059803"/>
+      <visibility xmi:id="_X6uW5pNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X6uW55NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X64u8JNqEeyfSsz1I9Lthw" sourceAnchor="0.0,67.0" targetAnchor="314.0,54.0" target="_X9L1AJNqEeyfSsz1I9Lthw" source="_X64u-ZNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlZZ0ZNqEeyfSsz1I9Lthw"/>
+    <stereotypes xmi:id="_X64u8ZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlgukJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X64u8pNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZGU8JNqEeyfSsz1I9Lthw" position="-12.655357821893546,-14.514470137154888"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X64u85NqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlZZ0pNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZFt4JNqEeyfSsz1I9Lthw" position="-54.403659715980325,-32.4498978446444"/>
+      <visibility xmi:id="_X64u9JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64u9ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X64u9pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="productos" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjkN0JNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZG8AJNqEeyfSsz1I9Lthw" position="16.527752945174626,-32.56452195262955"/>
+      <visibility xmi:id="_X64u95NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X64u-JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7BR0JNqEeyfSsz1I9Lthw" sourceAnchor="0.0,65.0" targetAnchor="187.0,109.0" target="_X9L1AJNqEeyfSsz1I9Lthw" source="_X7E8MJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlKwUJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YY_nQZNqEeyfSsz1I9Lthw" sourceX="-143" targetY="204"/>
+    <stereotypes xmi:id="_X7Cf85NqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlReAJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7Cf8JNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZIKIJNqEeyfSsz1I9Lthw" position="84.03046819570545,-15.911917926251363"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7Cf8ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlKwUZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZHjEJNqEeyfSsz1I9Lthw" position="-54.48527188740036,-33.159244699061446"/>
+      <visibility xmi:id="_X7DuEZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7DuEJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7Cf8pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="productos" navigable="true">
+      <modelElement href="AnimalFriends.uml#_Uji_sJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZIxMJNqEeyfSsz1I9Lthw" position="67.16592015878848,170.58771685110923"/>
+      <visibility xmi:id="_X7DuE5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7DuEpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7BR0ZNqEeyfSsz1I9Lthw" sourceAnchor="0.0,95.0" targetAnchor="0.0,89.0" target="_X8obYJNqEeyfSsz1I9Lthw" source="_X7E8MJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlSFEJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YY_nQpNqEeyfSsz1I9Lthw" sourceX="-496" targetX="-1628" targetY="1178"/>
+    <bendpoints xmi:id="_YY_nQ5NqEeyfSsz1I9Lthw" sourceX="-496" sourceY="-1178" targetX="-1628"/>
+    <stereotypes xmi:id="_X7DHAZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlZZ0JNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7Cf9JNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZJYQJNqEeyfSsz1I9Lthw" position="477.5466081666101,572.6132250246254"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7Cf9ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlSFEZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZIxMZNqEeyfSsz1I9Lthw" position="-56.17960554263499,-33.51025021314672"/>
+      <visibility xmi:id="_X7DuF5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7DuFpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7DHAJNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="miProducto" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjjmwpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZJYQZNqEeyfSsz1I9Lthw" position="-1131.1290825517954,1144.2554891440204"/>
+      <visibility xmi:id="_X7DuGZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7DuGJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7Lp4JNqEeyfSsz1I9Lthw" sourceAnchor="388.0,65.0" targetAnchor="198.0,109.0" target="_X9ZQYJNqEeyfSsz1I9Lthw" source="_X7RJcJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_Uk8G0ZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZAOUJNqEeyfSsz1I9Lthw" sourceX="118" targetY="370"/>
+    <stereotypes xmi:id="_X7OGIpNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlDbkJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7NfEJNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZKmYJNqEeyfSsz1I9Lthw" position="-81.93218032238178,-1.487805243109733"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7OGIJNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_Uk8G0pNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZJ_UJNqEeyfSsz1I9Lthw" position="39.438943844262894,-11.640695481321359"/>
+      <visibility xmi:id="_X7PUQJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7OtMZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7OGIZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="localizaciones" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjhxkJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZKmYZNqEeyfSsz1I9Lthw" position="-93.46905051818385,358.5471676280654"/>
+      <visibility xmi:id="_X7PUQpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7PUQZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7Lp4ZNqEeyfSsz1I9Lthw" sourceAnchor="388.0,95.0" targetAnchor="207.0,158.0" target="_X8fRcJNqEeyfSsz1I9Lthw" source="_X7RJcJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlDbkZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZAOUZNqEeyfSsz1I9Lthw" sourceX="406" targetY="150"/>
+    <stereotypes xmi:id="_X7OtMJNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlKJQJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7OGI5NqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZLNcZNqEeyfSsz1I9Lthw" position="-396.42283553372454,-15.571067811865476"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7OGJJNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlDbkpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZLNcJNqEeyfSsz1I9Lthw" position="46.74011537017759,-33.106601717798185"/>
+      <visibility xmi:id="_X7P7UpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7P7UZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7OGJZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="miLocalizacion" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjiYopNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZL0gJNqEeyfSsz1I9Lthw" position="-456.389087296526,116.53984489160854"/>
+      <visibility xmi:id="_X7P7VJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7P7U5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7XQEJNqEeyfSsz1I9Lthw" sourceAnchor="0.0,83.0" targetAnchor="136.0,90.0" target="_X9SisJNqEeyfSsz1I9Lthw" source="_X7a6cZNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_Ukn9wJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZAOUpNqEeyfSsz1I9Lthw" sourceX="-206" targetY="109"/>
+    <stereotypes xmi:id="_X7ZsUpNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UkvSgJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7ZFQJNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZMbkJNqEeyfSsz1I9Lthw" position="184.3925695432671,-14.957654869478674"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7ZsUJNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_Ukn9wZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZL0gZNqEeyfSsz1I9Lthw" position="-54.324535497656484,-33.29524946105302"/>
+      <visibility xmi:id="_X7aTYZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7aTYJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7ZsUZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="animales" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UimkgJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZMbkZNqEeyfSsz1I9Lthw" position="208.469701464352,75.99717264624411"/>
+      <visibility xmi:id="_X7aTY5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7aTYpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7kEYJNqEeyfSsz1I9Lthw" sourceAnchor="0.0,149.0" targetAnchor="0.0,45.0" target="_X9SisJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlpRcZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZA1YJNqEeyfSsz1I9Lthw" sourceX="-1300" targetX="-45" targetY="1045"/>
+    <bendpoints xmi:id="_YZA1YZNqEeyfSsz1I9Lthw" sourceX="-1300" sourceY="-1045" targetX="-45"/>
+    <stereotypes xmi:id="_X7oV05NqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_Ulx0UJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7oV0JNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZNCoZNqEeyfSsz1I9Lthw" position="1177.149511723851,519.6341770066846"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7oV0ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_Ulp4gJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZNCoJNqEeyfSsz1I9Lthw" position="-64.34435212722155,-12.987806524688722"/>
+      <visibility xmi:id="_X7rZIZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7rZIJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7oV0pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="mascotas" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjmDApNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZNpsJNqEeyfSsz1I9Lthw" position="1073.0652570256532,1032.151917405161"/>
+      <visibility xmi:id="_X7sAMZNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7sAMJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7kEYZNqEeyfSsz1I9Lthw" sourceAnchor="382.0,149.0" targetAnchor="337.0,55.0" target="_X9ZQYJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlybYJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZA1YpNqEeyfSsz1I9Lthw" sourceX="1425" targetX="764" targetY="1073"/>
+    <bendpoints xmi:id="_YZA1Y5NqEeyfSsz1I9Lthw" sourceX="1425" sourceY="-1073" targetX="764"/>
+    <stereotypes xmi:id="_X7o84JNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_Ul5wIJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7oV1JNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZPe4JNqEeyfSsz1I9Lthw" position="-1359.308987550005,524.0630553330252"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7oV1ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlybYZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZO30JNqEeyfSsz1I9Lthw" position="49.265002928531885,-31.49918115017124"/>
+      <visibility xmi:id="_X7sANJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7sAM5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7oV1pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="reservas" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjmqEJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZQF8JNqEeyfSsz1I9Lthw" position="-581.2619255103327,1042.2239399062432"/>
+      <visibility xmi:id="_X7snQJNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7sANZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7kEYpNqEeyfSsz1I9Lthw" sourceAnchor="0.0,119.0" targetAnchor="157.0,109.0" target="_X9L1AJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_Ul5wIZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZBccJNqEeyfSsz1I9Lthw" sourceX="-947" targetY="589"/>
+    <stereotypes xmi:id="_X7o85JNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UmBE4JNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7o84ZNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZRUEJNqEeyfSsz1I9Lthw" position="804.7874683736509,-4.036476491862004"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7o84pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_Ul5wIpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZQtAJNqEeyfSsz1I9Lthw" position="-65.18840353170378,-13.365875958540641"/>
+      <visibility xmi:id="_X7snQ5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7snQpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7o845NqEeyfSsz1I9Lthw" aggregationKind="NONE" name="listaCompra" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjnRIJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZRUEZNqEeyfSsz1I9Lthw" position="719.4239982464087,575.3616723436822"/>
+      <visibility xmi:id="_X7tOUJNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7snRJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7kEY5NqEeyfSsz1I9Lthw" sourceAnchor="0.0,89.0" targetAnchor="112.0,158.0" target="_X9CrEJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UmJAsZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZBccZNqEeyfSsz1I9Lthw" sourceX="-205" targetY="144"/>
+    <stereotypes xmi:id="_X7pj8ZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UmPuYJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7o85ZNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZSiMJNqEeyfSsz1I9Lthw" position="65.7486274990739,-0.4101357625718265"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7o85pNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UmJAspNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZR7IJNqEeyfSsz1I9Lthw" position="-59.72672791818451,-11.189408389920345"/>
+      <visibility xmi:id="_X7tOU5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7tOUpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7pj8JNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="animal" navigable="true">
+      <modelElement href="AnimalFriends.uml#_Ujn4MZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZSiMZNqEeyfSsz1I9Lthw" position="-3.4554475480620113,132.85376489925738"/>
+      <visibility xmi:id="_X7tOVZNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7tOVJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7vqkJNqEeyfSsz1I9Lthw" sourceAnchor="191.0,0.0" targetAnchor="0.0,73.0" target="_X9hMMJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UlhVoJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZCDgJNqEeyfSsz1I9Lthw" sourceY="-273" targetX="-240"/>
+    <stereotypes xmi:id="_X7vqkZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UlpRcJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7vqkpNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZUXYJNqEeyfSsz1I9Lthw" position="-23.920607211379775,192.02160999677255"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7vqk5NqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UlhVoZNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZTJQJNqEeyfSsz1I9Lthw" position="-16.817876875481602,-78.46138999822438"/>
+      <visibility xmi:id="_X7vqlJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7vqlZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7vqlpNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="usuarios" navigable="true">
+      <modelElement href="AnimalFriends.uml#_Ujlb8JNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZUXYZNqEeyfSsz1I9Lthw" position="-279.2045107707298,165.38641430006146"/>
+      <visibility xmi:id="_X7vql5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7vqmJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X7wRoJNqEeyfSsz1I9Lthw" sourceAnchor="382.0,179.0" targetAnchor="280.0,153.0" target="_X80ooJNqEeyfSsz1I9Lthw" source="_X7w4sJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UmBE4ZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZCDgZNqEeyfSsz1I9Lthw" sourceX="1455" targetX="45" targetY="1297"/>
+    <bendpoints xmi:id="_YZCDgpNqEeyfSsz1I9Lthw" sourceX="1455" sourceY="-1297" targetX="45"/>
+    <stereotypes xmi:id="_X7wRoZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UmJAsJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X7wRopNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZWMkJNqEeyfSsz1I9Lthw" position="-1359.4004222918727,632.4101008837698"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X7wRo5NqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UmBE4pNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZU-cJNqEeyfSsz1I9Lthw" position="42.57404560191219,-33.18436216588236"/>
+      <visibility xmi:id="_X7wRpJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7wRpZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X7wRppNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="miUsuario" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjnRI5NqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZWMkZNqEeyfSsz1I9Lthw" position="-1274.9897797515778,1263.8292689884943"/>
+      <visibility xmi:id="_X7wRp5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7wRqJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X8Fo0JNqEeyfSsz1I9Lthw" sourceAnchor="473.0,261.0" targetAnchor="161.0,0.0" target="_X7w4sJNqEeyfSsz1I9Lthw" source="_X8OLsJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UmPuYZNqEeyfSsz1I9Lthw"/>
+    <stereotypes xmi:id="_X8HeAZNqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UmXDIJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X8G28JNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZYBwJNqEeyfSsz1I9Lthw" position="-19.28358693837629,6.301996253167431"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X8G28ZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UmPuYpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZWzoJNqEeyfSsz1I9Lthw" position="-14.099543325435889,18.107216450967144"/>
+      <visibility xmi:id="_X8LvcZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8LvcJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X8HeAJNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="userService" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjofQJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZYBwZNqEeyfSsz1I9Lthw" position="-42.94655421012226,-33.658691355493374"/>
+      <visibility xmi:id="_X8Lvc5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X8LvcpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X8bnEJNqEeyfSsz1I9Lthw" sourceAnchor="414.0,79.0" targetAnchor="140.0,306.0" target="_X80ooJNqEeyfSsz1I9Lthw" source="_X8fRcJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UkR_gZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZCqkJNqEeyfSsz1I9Lthw" sourceX="253" targetY="266"/>
+    <nameVisual xmi:id="_X8dcQJNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZaeAJNqEeyfSsz1I9Lthw" position="-195.65488541607283,0.858775962538985"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X8dcQZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="reservas" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjwbFJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZZP4JNqEeyfSsz1I9Lthw" position="19.288616867983365,-11.624030401243232"/>
+      <visibility xmi:id="_X8eDUZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8eDUJNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X8dcQpNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UkR_gJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZaeAZNqEeyfSsz1I9Lthw" position="-191.124356286266,254.39246083393303"/>
+      <visibility xmi:id="_X8eqYZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8eqYJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X8lYEJNqEeyfSsz1I9Lthw" sourceAnchor="140.0,0.0" targetAnchor="347.0,89.0" target="_X8obYJNqEeyfSsz1I9Lthw" source="_X80ooJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UmXDIZNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZCqkZNqEeyfSsz1I9Lthw" sourceY="-143" targetX="947"/>
+    <stereotypes xmi:id="_X8mmM5NqEeyfSsz1I9Lthw" name="Reference">
+      <modelElement href="AnimalFriends.uml#_UmfmAJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_X8mmMJNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZbsIJNqEeyfSsz1I9Lthw" position="-28.04609331375559,56.674763074708835"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X8mmMZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UmXDIpNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZbFEJNqEeyfSsz1I9Lthw" position="-17.37350015976608,-75.99638975249673"/>
+      <visibility xmi:id="_X8n0UZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8n0UJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X8mmMpNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="listaCompra" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjyQQJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZbsIZNqEeyfSsz1I9Lthw" position="897.9098326877433,9.29815363811906"/>
+      <stereotypes xmi:id="_X8n0VJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_Ujy3UJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X8n0VZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjzeYJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8n0U5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X8n0UpNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_X8vJEJNqEeyfSsz1I9Lthw" sourceAnchor="224.0,109.0" targetAnchor="170.0,306.0" target="_X80ooJNqEeyfSsz1I9Lthw" source="_X9CrEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UkTNoJNqEeyfSsz1I9Lthw"/>
+    <bendpoints xmi:id="_YZDRoJNqEeyfSsz1I9Lthw" sourceX="1775" targetY="861"/>
+    <nameVisual xmi:id="_X8yMYJNqEeyfSsz1I9Lthw" text="">
+      <visualProperties xmi:id="_YZdhUJNqEeyfSsz1I9Lthw" position="-1689.6772525947936,-17.97251570439903"/>
+    </nameVisual>
+    <sourceRole xmi:id="_X8yMYZNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="mascotas" navigable="true">
+      <modelElement href="AnimalFriends.uml#_UjxpMJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZcTMJNqEeyfSsz1I9Lthw" position="14.062084237116437,-33.384498679115836"/>
+      <visibility xmi:id="_X80BkZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80BkJNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_X8yMYpNqEeyfSsz1I9Lthw" aggregationKind="NONE" name="">
+      <modelElement href="AnimalFriends.uml#_UkSmkJNqEeyfSsz1I9Lthw"/>
+      <visualProperties xmi:id="_YZeIYJNqEeyfSsz1I9Lthw" position="-1657.1670545355746,828.0046304871447"/>
+      <visibility xmi:id="_X80Bk5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80BkpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X6l0AJNqEeyfSsz1I9Lthw" name="AnimalService" associationsOut="_X6lM8JNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UW_xcpNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X6l0AZNqEeyfSsz1I9Lthw" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X6l0ApNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X6l0A5NqEeyfSsz1I9Lthw" name="animales">
+      <modelElement href="AnimalFriends.uml#_UinyoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6l0BJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UioZsJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X6l0BZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UipAwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6l0BpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X6l0B5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X6l0CJNqEeyfSsz1I9Lthw" name="RepositorioAnimales">
+        <modelElement href="AnimalFriends.uml#_UYQ8wJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X6l0CZNqEeyfSsz1I9Lthw" name="registrarAnimal">
+      <modelElement href="AnimalFriends.uml#_UXA_kJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X6l0CpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6l0C5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6l0DJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXA_kpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6l0DZNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6l0DpNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UXA_kZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6l0D5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6l0EJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X6l0EZNqEeyfSsz1I9Lthw" name="getAllAnimals">
+      <modelElement href="AnimalFriends.uml#_UXBmoJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X6l0EpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6l0E5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X6l0FJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXBmoZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6l0FZNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X6l0FpNqEeyfSsz1I9Lthw" name="getAnimal">
+      <modelElement href="AnimalFriends.uml#_UXCNsJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X6l0F5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6l0GJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6l0GZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Uee5gJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6l0GpNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6l0G5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UXCNsZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6l0HJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6l0HZNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X6l0HpNqEeyfSsz1I9Lthw" name="getAnimal">
+      <modelElement href="AnimalFriends.uml#_UXC0wJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X6l0H5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6l0IJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6l0IZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UefgkJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6l0IpNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6l0I5NqEeyfSsz1I9Lthw" name="name">
+        <modelElement href="AnimalFriends.uml#_UXC0wZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6l0JJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6l0JZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X6uW6JNqEeyfSsz1I9Lthw" name="LocalizacionController" associationsOut="_X6tv0JNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UXm1cJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X6uW6ZNqEeyfSsz1I9Lthw" position="808.0,-19.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X6uW6pNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UXoDkJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X6uW65NqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UXtjIJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X6uW7JNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X6uW7ZNqEeyfSsz1I9Lthw" name="localizaciones">
+      <modelElement href="AnimalFriends.uml#_UjgjcJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uW7pNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjhKgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uW75NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X6uW8JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X6uW8ZNqEeyfSsz1I9Lthw" name="RepositorioLocalizaciones">
+        <modelElement href="AnimalFriends.uml#_UYfmQJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X6uW8pNqEeyfSsz1I9Lthw" name="init">
+      <modelElement href="AnimalFriends.uml#_UXoqoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uW85NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXpRsJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uW9JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uW9ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X6uW9pNqEeyfSsz1I9Lthw" name="añadirLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UXrG4JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uW95NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXsVAJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uW-JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uW-ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6uW-pNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXrt8JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6uW-5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X6uW_JNqEeyfSsz1I9Lthw" name="newLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UfUnAJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uW_ZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UfVOEZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uW_pNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uW_5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6uXAJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UfVOEJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6uXAZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6uXApNqEeyfSsz1I9Lthw" name="loc">
+        <modelElement href="AnimalFriends.uml#_UfUnAZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXA5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXBJNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X6uXBZNqEeyfSsz1I9Lthw" name="verLocalizaciones">
+      <modelElement href="AnimalFriends.uml#_UguVMJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uXBpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UgvjUZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uXB5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uXCJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6uXCZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UgvjUJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6uXCpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6uXC5NqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ugu8QJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXDJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXDZNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X6uXDpNqEeyfSsz1I9Lthw" name="showLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UgwKYZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uXD5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ugx_kJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uXEJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uXEZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6uXEpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UgwxcZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6uXE5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6uXFJNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UgwKYpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXFZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXFpNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X6uXF5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UgwxcJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXGJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXGZNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X6uXGpNqEeyfSsz1I9Lthw" name="deleteLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UgymoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X6uXG5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ugz0wJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X6uXHJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X6uXHZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X6uXHpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ugymo5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X6uXH5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X6uXIJNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UgymoZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXIZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXIpNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X6uXI5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UgymopNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X6uXJJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X6uXJZNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X64u-ZNqEeyfSsz1I9Lthw" name="ProductosController" associationsOut="_X64u8JNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UYEIcJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X64u-pNqEeyfSsz1I9Lthw" position="-169.0,213.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X64u-5NqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UYFWkJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X64u_JNqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UYK2IJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X64u_ZNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X64u_pNqEeyfSsz1I9Lthw" name="productos">
+      <modelElement href="AnimalFriends.uml#_UjkN0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64u_5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ujk04JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vAJNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X64vAZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X64vApNqEeyfSsz1I9Lthw" name="RepositorioProductos">
+        <modelElement href="AnimalFriends.uml#_UY7EEJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X64vA5NqEeyfSsz1I9Lthw" name="init">
+      <modelElement href="AnimalFriends.uml#_UYF9oJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vBJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UYGksJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vBZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vBpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X64vB5NqEeyfSsz1I9Lthw" name="añadirProducto">
+      <modelElement href="AnimalFriends.uml#_UYIZ4JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vCJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UYJoAJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vCZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vCpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X64vC5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UYJA8JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X64vDJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X64vDZNqEeyfSsz1I9Lthw" name="newProducto">
+      <modelElement href="AnimalFriends.uml#_Ufb7wJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vDpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UfdJ4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vD5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vEJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X64vEZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ufci0JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X64vEpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X64vE5NqEeyfSsz1I9Lthw" name="prod">
+        <modelElement href="AnimalFriends.uml#_Ufb7wZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vFJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vFZNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X64vFpNqEeyfSsz1I9Lthw" name="verProductos">
+      <modelElement href="AnimalFriends.uml#_Ug1p8JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vF5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ug24EJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vGJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vGZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X64vGpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ug2RAJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X64vG5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X64vHJNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ug1p8ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vHZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vHpNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X64vH5NqEeyfSsz1I9Lthw" name="showProducto">
+      <modelElement href="AnimalFriends.uml#_Ug24E5NqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vIJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ug4GMpNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vIZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vIpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X64vI5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ug3fIZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X64vJJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X64vJZNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ug24FJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vJpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vJ5NqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X64vKJNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_Ug3fIJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vKZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vKpNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X64vK5NqEeyfSsz1I9Lthw" name="deleteProducto">
+      <modelElement href="AnimalFriends.uml#_Ug4tQJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X64vLJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ug57YJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X64vLZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X64vLpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X64vL5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ug5UUJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X64vMJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X64vMZNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ug4tQZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vMpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vM5NqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X64vNJNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_Ug4tQpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X64vNZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X64vNpNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X7E8MJNqEeyfSsz1I9Lthw" name="ProductService" associationsOut="_X7BR0JNqEeyfSsz1I9Lthw _X7BR0ZNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UX8MoJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X7E8MZNqEeyfSsz1I9Lthw" position="-229.0,474.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X7E8MpNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X7E8M5NqEeyfSsz1I9Lthw" name="productos">
+      <modelElement href="AnimalFriends.uml#_Uji_sJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7E8NJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_Uji_sZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X7E8NZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjjmwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7E8NpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7E8N5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7E8OJNqEeyfSsz1I9Lthw" name="RepositorioProductos">
+        <modelElement href="AnimalFriends.uml#_UY7EEJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7E8OZNqEeyfSsz1I9Lthw" name="miProducto">
+      <modelElement href="AnimalFriends.uml#_UjjmwpNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8OpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8O5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7E8PJNqEeyfSsz1I9Lthw" name="Productos">
+        <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X7E8PZNqEeyfSsz1I9Lthw" name="login">
+      <modelElement href="AnimalFriends.uml#_UX9awJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8PpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8P5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7E8QJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UX-B0pNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7E8QZNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7E8QpNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UX-B0JNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7E8Q5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7E8RJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7E8RZNqEeyfSsz1I9Lthw" name="usuario">
+        <modelElement href="AnimalFriends.uml#_UX-B0ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7E8RpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7E8R5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7E8SJNqEeyfSsz1I9Lthw" name="registrarProducto">
+      <modelElement href="AnimalFriends.uml#_UX-o4JNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8SZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8SpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7E8S5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UX_P8pNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7E8TJNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7E8TZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UX_P8JNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7E8TpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7E8T5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7E8UJNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UX_P8ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7E8UZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7E8UpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7E8U5NqEeyfSsz1I9Lthw" name="logout">
+      <modelElement href="AnimalFriends.uml#_UX_3AJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8VJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8VZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X7E8VpNqEeyfSsz1I9Lthw" name="getAllProducts">
+      <modelElement href="AnimalFriends.uml#_UX_3AZNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8V5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8WJNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7E8WZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UYAeEJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7E8WpNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X7E8W5NqEeyfSsz1I9Lthw" name="getProducto">
+      <modelElement href="AnimalFriends.uml#_UYBFIJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7E8XJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7E8XZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7E8XpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UfaGkJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7E8X5NqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7E8YJNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UYBFIZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7E8YZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7E8YpNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X7RJcJNqEeyfSsz1I9Lthw" name="LocalizacionService" associationsOut="_X7Lp4JNqEeyfSsz1I9Lthw _X7Lp4ZNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UXzCsJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X7RJcZNqEeyfSsz1I9Lthw" position="943.0,240.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X7RJcpNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X7RJc5NqEeyfSsz1I9Lthw" name="localizaciones">
+      <modelElement href="AnimalFriends.uml#_UjhxkJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7RJdJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UjhxkZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X7RJdZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjiYoJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7RJdpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7RJd5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7RJeJNqEeyfSsz1I9Lthw" name="RepositorioLocalizaciones">
+        <modelElement href="AnimalFriends.uml#_UYfmQJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7RJeZNqEeyfSsz1I9Lthw" name="miLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UjiYopNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJepNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJe5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7RJfJNqEeyfSsz1I9Lthw" name="Localizaciones">
+        <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X7RJfZNqEeyfSsz1I9Lthw" name="existe">
+      <modelElement href="AnimalFriends.uml#_UX034JNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJfpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJf5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7RJgJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UX1e8JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7RJgZNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7RJgpNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UX034ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7RJg5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7RJhJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7RJhZNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UX034pNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7RJhpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7RJh5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7RJiJNqEeyfSsz1I9Lthw" name="registrarLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UX2GAJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJiZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJipNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7RJi5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UX2tEZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7RJjJNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7RJjZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UX2GAZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7RJjpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7RJj5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7RJkJNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UX2tEJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7RJkZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7RJkpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7RJk5NqEeyfSsz1I9Lthw" name="logout">
+      <modelElement href="AnimalFriends.uml#_UX3UIJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJlJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJlZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X7RJlpNqEeyfSsz1I9Lthw" name="getAllLocalizaciones">
+      <modelElement href="AnimalFriends.uml#_UX37MJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJl5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJmJNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7RJmZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UX37MZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7RJmpNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X7RJm5NqEeyfSsz1I9Lthw" name="getLocalizacion">
+      <modelElement href="AnimalFriends.uml#_UX5JUJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7RJnJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7RJnZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7RJnpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UfZfgJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7RJn5NqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7RJoJNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UX5JUZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7RJoZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7RJopNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X7a6cZNqEeyfSsz1I9Lthw" name="AnimalController" associationsOut="_X7XQEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UWtdkJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X7a6cpNqEeyfSsz1I9Lthw" position="-368.0,-20.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X7a6c5NqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UWvSwJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X7a6dJNqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UW2ngJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X7a6dZNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X7a6dpNqEeyfSsz1I9Lthw" name="animales">
+      <modelElement href="AnimalFriends.uml#_UimkgJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7a6d5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UinLkJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7a6eJNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7a6eZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7a6epNqEeyfSsz1I9Lthw" name="RepositorioAnimales">
+        <modelElement href="AnimalFriends.uml#_UYQ8wJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X7a6e5NqEeyfSsz1I9Lthw" name="init">
+      <modelElement href="AnimalFriends.uml#_UWxH8JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7a6fJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UWxvAJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7a6fZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7a6fpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X7a6f5NqEeyfSsz1I9Lthw" name="deleteAnimal">
+      <modelElement href="AnimalFriends.uml#_UW0LQJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7a6gJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UW1ZYJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7a6gZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7a6gpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7a6g5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UW0yUJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7a6hJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X7a6hZNqEeyfSsz1I9Lthw" name="newAnimal">
+      <modelElement href="AnimalFriends.uml#_Ud0yMJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7a6hpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ud1ZQJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7a6h5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7a6iJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7a6iZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ud0yMpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7bhgJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7bhgZNqEeyfSsz1I9Lthw" name="animal">
+        <modelElement href="AnimalFriends.uml#_Ud0yMZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bhgpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhg5NqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7bhhJNqEeyfSsz1I9Lthw" name="verAnimales">
+      <modelElement href="AnimalFriends.uml#_UgnngJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7bhhZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UgoOkZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7bhhpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7bhh5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7bhiJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UgoOkJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7bhiZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7bhipNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UgnngZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bhi5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhjJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7bhjZNqEeyfSsz1I9Lthw" name="showAnimal">
+      <modelElement href="AnimalFriends.uml#_Ugo1oJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7bhjpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UgqDwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7bhj5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7bhkJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7bhkZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UgpcsJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7bhkpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7bhk5NqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ugo1oZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bhlJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhlZNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7bhlpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_Ugo1opNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bhl5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhmJNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7bhmZNqEeyfSsz1I9Lthw" name="deleteAnimal">
+      <modelElement href="AnimalFriends.uml#_Ugqq0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7bhmpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_Ugr48JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7bhm5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7bhnJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7bhnZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Ugqq05NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7bhnpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7bhn5NqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Ugqq0ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bhoJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhoZNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7bhopNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_Ugqq0pNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7bho5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7bhpJNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X7w4sJNqEeyfSsz1I9Lthw" name="UserService" associationsIn="_X8Fo0JNqEeyfSsz1I9Lthw" associationsOut="_X7kEYJNqEeyfSsz1I9Lthw _X7kEYZNqEeyfSsz1I9Lthw _X7kEYpNqEeyfSsz1I9Lthw _X7kEY5NqEeyfSsz1I9Lthw _X7vqkJNqEeyfSsz1I9Lthw _X7wRoJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UZhhAJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X7w4sZNqEeyfSsz1I9Lthw" position="545.0,805.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X7w4spNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UZiIEJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X7w4s5NqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UZxYoJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X7w4tJNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X7w4tZNqEeyfSsz1I9Lthw" name="usuarios">
+      <modelElement href="AnimalFriends.uml#_Ujlb8JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4tpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjmDAJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4t5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w4uJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w4uZNqEeyfSsz1I9Lthw" name="RepositorioUsuarios">
+        <modelElement href="AnimalFriends.uml#_UZS3gJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7w4upNqEeyfSsz1I9Lthw" name="mascotas">
+      <modelElement href="AnimalFriends.uml#_UjmDApNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4u5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjmDA5NqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4vJNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w4vZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w4vpNqEeyfSsz1I9Lthw" name="RepositorioAnimales">
+        <modelElement href="AnimalFriends.uml#_UYQ8wJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7w4v5NqEeyfSsz1I9Lthw" name="reservas">
+      <modelElement href="AnimalFriends.uml#_UjmqEJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4wJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjmqEZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4wZNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w4wpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w4w5NqEeyfSsz1I9Lthw" name="RepositorioLocalizaciones">
+        <modelElement href="AnimalFriends.uml#_UYfmQJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7w4xJNqEeyfSsz1I9Lthw" name="listaCompra">
+      <modelElement href="AnimalFriends.uml#_UjnRIJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4xZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjnRIZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4xpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w4x5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w4yJNqEeyfSsz1I9Lthw" name="RepositorioProductos">
+        <modelElement href="AnimalFriends.uml#_UY7EEJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7w4yZNqEeyfSsz1I9Lthw" name="miUsuario">
+      <modelElement href="AnimalFriends.uml#_UjnRI5NqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4ypNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_Ujn4MJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4y5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w4zJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w4zZNqEeyfSsz1I9Lthw" name="Usuarios">
+        <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X7w4zpNqEeyfSsz1I9Lthw" name="animal">
+      <modelElement href="AnimalFriends.uml#_Ujn4MZNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X7w4z5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w40JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X7w40ZNqEeyfSsz1I9Lthw" name="Animal">
+        <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X7w40pNqEeyfSsz1I9Lthw" name="addAdmin">
+      <modelElement href="AnimalFriends.uml#_UZjWMJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w405NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UZj9QJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w41JNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X7w41ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X7w41pNqEeyfSsz1I9Lthw" name="login">
+      <modelElement href="AnimalFriends.uml#_UZkkUJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w415NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZkkVJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w42JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w42ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w42pNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZkkU5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w425NqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w43JNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UZkkUZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w43ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w43pNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7w435NqEeyfSsz1I9Lthw" name="password">
+        <modelElement href="AnimalFriends.uml#_UZkkUpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w44JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w44ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w44pNqEeyfSsz1I9Lthw" name="registrar">
+      <modelElement href="AnimalFriends.uml#_UZlLYJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w445NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZlycZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w45JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w45ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w45pNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZlycJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w455NqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w46JNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UZlLYZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w46ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w46pNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7w465NqEeyfSsz1I9Lthw" name="password">
+        <modelElement href="AnimalFriends.uml#_UZlLYpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w47JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w47ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w47pNqEeyfSsz1I9Lthw" name="logout">
+      <modelElement href="AnimalFriends.uml#_UZlycpNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w475NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZmZgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w48JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w48ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_X7w48pNqEeyfSsz1I9Lthw" name="getAllUsers">
+      <modelElement href="AnimalFriends.uml#_UZmZgZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w485NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZnAkZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w49JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w49ZNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7w49pNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZmZgpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w495NqEeyfSsz1I9Lthw" name="Usuarios">
+          <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X7w4-JNqEeyfSsz1I9Lthw" name="getUsuario">
+      <modelElement href="AnimalFriends.uml#_UZnnoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w4-ZNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZoOsJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w4-pNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w4-5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w4_JNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Uf7D8JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w4_ZNqEeyfSsz1I9Lthw" name="Usuarios">
+          <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w4_pNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UZnnoZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w4_5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5AJNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5AZNqEeyfSsz1I9Lthw" name="getUsuario">
+      <modelElement href="AnimalFriends.uml#_UZo1wJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5ApNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZo1wpNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5A5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5BJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w5BZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Uf7D8ZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5BpNqEeyfSsz1I9Lthw" name="Usuarios">
+          <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5B5NqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UZo1wZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5CJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5CZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5CpNqEeyfSsz1I9Lthw" name="getMascotas">
+      <modelElement href="AnimalFriends.uml#_UZpc0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5C5NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZqD4pNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5DJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5DZNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7w5DpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZqD4JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5D5NqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5EJNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UZpc0ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5EZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5EpNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5E5NqEeyfSsz1I9Lthw" name="getReservas">
+      <modelElement href="AnimalFriends.uml#_UZqq8JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5FJNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZr5EJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5FZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5FpNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7w5F5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZrSAZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5GJNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5GZNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UZrSAJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5GpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5G5NqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5HJNqEeyfSsz1I9Lthw" name="getListaCompra">
+      <modelElement href="AnimalFriends.uml#_UZsgIJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5HZNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZtHMZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5HpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5H5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X7w5IJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZsgIpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5IZNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5IpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UZsgIZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5I5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5JJNqEeyfSsz1I9Lthw" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5JZNqEeyfSsz1I9Lthw" name="registrarMascota">
+      <modelElement href="AnimalFriends.uml#_UZuVUJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5JpNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZu8YJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5J5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5KJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w5KZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZuVU5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5KpNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5K5NqEeyfSsz1I9Lthw" name="user">
+        <modelElement href="AnimalFriends.uml#_UZuVUZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5LJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5LZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7w5LpNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UZuVUpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5L5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5MJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5MZNqEeyfSsz1I9Lthw" name="registrarProducto">
+      <modelElement href="AnimalFriends.uml#_UZu8YZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5MpNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZwKgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5M5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5NJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w5NZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZvjcpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5NpNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5N5NqEeyfSsz1I9Lthw" name="user">
+        <modelElement href="AnimalFriends.uml#_UZvjcJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5OJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5OZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7w5OpNqEeyfSsz1I9Lthw" name="producto">
+        <modelElement href="AnimalFriends.uml#_UZvjcZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5O5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5PJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X7w5PZNqEeyfSsz1I9Lthw" name="registrarReserva">
+      <modelElement href="AnimalFriends.uml#_UZwKgZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X7w5PpNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UZwxkpNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X7w5P5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X7w5QJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X7w5QZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZwxkZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X7w5QpNqEeyfSsz1I9Lthw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X7w5Q5NqEeyfSsz1I9Lthw" name="user">
+        <modelElement href="AnimalFriends.uml#_UZwKgpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5RJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5RZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X7w5RpNqEeyfSsz1I9Lthw" name="lugar">
+        <modelElement href="AnimalFriends.uml#_UZwxkJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X7w5R5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X7w5SJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X8OLsJNqEeyfSsz1I9Lthw" name="WebController" associationsOut="_X8Fo0JNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UZ6ikJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X8OLsZNqEeyfSsz1I9Lthw" position="233.0,249.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X8OLspNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UZ7JoJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X8OLs5NqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UaCeYJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X8OLtJNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X8OLtZNqEeyfSsz1I9Lthw" name="userService">
+      <modelElement href="AnimalFriends.uml#_UjofQJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OLtpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjpGUJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OLt5NqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X8OLuJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8OLuZNqEeyfSsz1I9Lthw" name="UserService">
+        <modelElement href="AnimalFriends.uml#_UZhhAJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X8OLupNqEeyfSsz1I9Lthw" name="goToRegister">
+      <modelElement href="AnimalFriends.uml#_UZ8-0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OLu5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UZ9l4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OLvJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OLvZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OLvpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UZ8-0ZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OLv5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X8OLwJNqEeyfSsz1I9Lthw" name="ventanaPrincipal">
+      <modelElement href="AnimalFriends.uml#_UiJ4kJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OLwZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiKfoJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OLwpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OLw5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OLxJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiJ4k5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OLxZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OLxpNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiJ4kZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OLx5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OLyJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OLyZNqEeyfSsz1I9Lthw" name="session">
+        <modelElement href="AnimalFriends.uml#_UiJ4kpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OLypNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OLy5NqEeyfSsz1I9Lthw" name="HttpSession">
+          <modelElement href="AnimalFriends.uml#_Uf-HQJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OLzJNqEeyfSsz1I9Lthw" name="goToLogin">
+      <modelElement href="AnimalFriends.uml#_UiLGsJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OLzZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiLtwZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OLzpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OLz5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OL0JNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiLtwJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OL0ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OL0pNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiLGsZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL05NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL1JNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OL1ZNqEeyfSsz1I9Lthw" name="login">
+      <modelElement href="AnimalFriends.uml#_UiMU0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OL1pNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiOxEJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OL15NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OL2JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OL2ZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiNi8JNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OL2pNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OL25NqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiMU0ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL3JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL3ZNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL3pNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UiM74JNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL35NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL4JNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL4ZNqEeyfSsz1I9Lthw" name="psw">
+        <modelElement href="AnimalFriends.uml#_UiM74ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL4pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL45NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL5JNqEeyfSsz1I9Lthw" name="session">
+        <modelElement href="AnimalFriends.uml#_UiM74pNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL5ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL5pNqEeyfSsz1I9Lthw" name="HttpSession">
+          <modelElement href="AnimalFriends.uml#_Uf-HQJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OL55NqEeyfSsz1I9Lthw" name="registrar">
+      <modelElement href="AnimalFriends.uml#_UiPYIJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OL6JNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiTCgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OL6ZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OL6pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OL65NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiQmQpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OL7JNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OL7ZNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiP_MJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL7pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL75NqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL8JNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UiP_MZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL8ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL8pNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL85NqEeyfSsz1I9Lthw" name="psw">
+        <modelElement href="AnimalFriends.uml#_UiP_MpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL9JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL9ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL9pNqEeyfSsz1I9Lthw" name="pswRepeat">
+        <modelElement href="AnimalFriends.uml#_UiQmQJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL95NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL-JNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OL-ZNqEeyfSsz1I9Lthw" name="session">
+        <modelElement href="AnimalFriends.uml#_UiQmQZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OL-pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OL-5NqEeyfSsz1I9Lthw" name="HttpSession">
+          <modelElement href="AnimalFriends.uml#_Uf-HQJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OL_JNqEeyfSsz1I9Lthw" name="logout">
+      <modelElement href="AnimalFriends.uml#_UiTpkJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OL_ZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiU3sJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OL_pNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OL_5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMAJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiUQoZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMAZNqEeyfSsz1I9Lthw" name="ModelAndView">
+          <modelElement href="AnimalFriends.uml#_UgS3YZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMApNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiTpkZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMA5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMBJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMBZNqEeyfSsz1I9Lthw" name="session">
+        <modelElement href="AnimalFriends.uml#_UiUQoJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMBpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMB5NqEeyfSsz1I9Lthw" name="HttpSession">
+          <modelElement href="AnimalFriends.uml#_Uf-HQJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OMCJNqEeyfSsz1I9Lthw" name="visualizarUsuario">
+      <modelElement href="AnimalFriends.uml#_UiVewpNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OMCZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiWs4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OMCpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OMC5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMDJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiWF0pNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMDZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMDpNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiWF0JNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMD5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMEJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMEZNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UiWF0ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMEpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OME5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OMFJNqEeyfSsz1I9Lthw" name="editarUsuario">
+      <modelElement href="AnimalFriends.uml#_UiXT8JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OMFZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiX7AZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OMFpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OMF5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMGJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiX7AJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMGZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMGpNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiXT8ZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMG5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMHJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OMHZNqEeyfSsz1I9Lthw" name="aniadirMascota">
+      <modelElement href="AnimalFriends.uml#_UiYiEZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OMHpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UiZwMJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OMH5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OMIJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMIZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiZJI5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMIpNqEeyfSsz1I9Lthw" name="ModelAndView">
+          <modelElement href="AnimalFriends.uml#_UgS3YZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMI5NqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiZJIJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMJJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMJZNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMJpNqEeyfSsz1I9Lthw" name="masc">
+        <modelElement href="AnimalFriends.uml#_UiZJIZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMJ5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMKJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMKZNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UiZJIpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMKpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMK5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OMLJNqEeyfSsz1I9Lthw" name="aniadirReserva">
+      <modelElement href="AnimalFriends.uml#_Uia-UJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OMLZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UicMcJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OMLpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OML5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMMJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiblYJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMMZNqEeyfSsz1I9Lthw" name="ModelAndView">
+          <modelElement href="AnimalFriends.uml#_UgS3YZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMMpNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_Uia-UZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMM5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMNJNqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMNZNqEeyfSsz1I9Lthw" name="lugar">
+        <modelElement href="AnimalFriends.uml#_Uia-UpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMNpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMN5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMOJNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_Uia-U5NqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMOZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMOpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8OMO5NqEeyfSsz1I9Lthw" name="aniadirProducto">
+      <modelElement href="AnimalFriends.uml#_UiczgJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8OMPJNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UieBoJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8OMPZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8OMPpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8OMP5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UidakJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8OMQJNqEeyfSsz1I9Lthw" name="ModelAndView">
+          <modelElement href="AnimalFriends.uml#_UgS3YZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8OMQZNqEeyfSsz1I9Lthw" name="model">
+        <modelElement href="AnimalFriends.uml#_UiczgZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMQpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMQ5NqEeyfSsz1I9Lthw" name="Model">
+          <modelElement href="AnimalFriends.uml#_UdXfMJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMRJNqEeyfSsz1I9Lthw" name="producto">
+        <modelElement href="AnimalFriends.uml#_UiczgpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMRZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMRpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8OMR5NqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_Uiczg5NqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8OMSJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8OMSZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X8fRcJNqEeyfSsz1I9Lthw" name="Localizaciones" associationsIn="_X7Lp4ZNqEeyfSsz1I9Lthw" associationsOut="_X8bnEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X8fRcZNqEeyfSsz1I9Lthw" position="1530.0,27.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X8fRcpNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
+      <modelElement href="AnimalFriends.uml#_UXQ3MJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X8fRc5NqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X8fRdJNqEeyfSsz1I9Lthw" name="id">
+      <modelElement href="AnimalFriends.uml#_Ui-_AJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8fRdZNqEeyfSsz1I9Lthw" name="PrimaryKey">
+        <modelElement href="AnimalFriends.uml#_Ui_mEJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X8fRdpNqEeyfSsz1I9Lthw" name="GeneratedValueMapping">
+        <modelElement href="AnimalFriends.uml#_UjANIJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRd5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fReJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8fReZNqEeyfSsz1I9Lthw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X8fRepNqEeyfSsz1I9Lthw" name="nombreSitio">
+      <modelElement href="AnimalFriends.uml#_UjA0MJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8fRe5NqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_UjII8JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRfJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fRfZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8fRfpNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X8fRf5NqEeyfSsz1I9Lthw" name="tipo">
+      <modelElement href="AnimalFriends.uml#_UjIwAJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8fRgJNqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_UjNBcJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRgZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fRgpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8fRg5NqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X8fRhJNqEeyfSsz1I9Lthw" name="Localizaciones">
+      <modelElement href="AnimalFriends.uml#_UXSsYJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X8fRhZNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X8fRhpNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXTTcpNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRh5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fRiJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8fRiZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXTTc5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8fRipNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X8fRi5NqEeyfSsz1I9Lthw" name="Localizaciones">
+      <modelElement href="AnimalFriends.uml#_UXT6gJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X8fRjJNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X8fRjZNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UXUhk5NqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRjpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fRj5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8fRkJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXUhkpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8fRkZNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8fRkpNqEeyfSsz1I9Lthw" name="nombreSitio">
+        <modelElement href="AnimalFriends.uml#_UXT6gZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8fRk5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8fRlJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8fRlZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UXT6gpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8fRlpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8fRl5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8fRmJNqEeyfSsz1I9Lthw" name="toString">
+      <modelElement href="AnimalFriends.uml#_UXVIoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8fRmZNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXVvsZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X8fRmpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXWWwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8fRm5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8fRnJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8fRnZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXVvsJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8fRnpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X8obYJNqEeyfSsz1I9Lthw" name="Productos" associationsIn="_X7BR0ZNqEeyfSsz1I9Lthw _X8lYEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X8obYZNqEeyfSsz1I9Lthw" position="903.0,-698.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X8obYpNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
+      <modelElement href="AnimalFriends.uml#_UXaBIJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X8obY5NqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X8obZJNqEeyfSsz1I9Lthw" name="id">
+      <modelElement href="AnimalFriends.uml#_UjOPkJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8obZZNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UjOPkZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X8obZpNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjQEwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obZ5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obaJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8obaZNqEeyfSsz1I9Lthw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X8obapNqEeyfSsz1I9Lthw" name="nombre">
+      <modelElement href="AnimalFriends.uml#_UjQExJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8oba5NqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_UjU9QJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obbJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obbZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8obbpNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X8obb5NqEeyfSsz1I9Lthw" name="tipo">
+      <modelElement href="AnimalFriends.uml#_UjWLYJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8obcJNqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_Ujac0JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obcZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obcpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8obc5NqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X8obdJNqEeyfSsz1I9Lthw" name="user">
+      <modelElement href="AnimalFriends.uml#_UjbD4JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8obdZNqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_UjfVUJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obdpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obd5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X8obeJNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X8obeZNqEeyfSsz1I9Lthw" name="Productos">
+      <modelElement href="AnimalFriends.uml#_UXdEcJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X8obepNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X8obe5NqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UXdrg5NqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obfJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obfZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8obfpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXdrgpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8obf5NqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X8obgJNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UXdEcZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8obgZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8obgpNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X8obg5NqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UXdEcpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8obhJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X8obhZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X8obhpNqEeyfSsz1I9Lthw" name="Productos">
+      <modelElement href="AnimalFriends.uml#_UXeSkJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X8obh5NqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X8obiJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXe5oJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obiZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obipNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8obi5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXe5oZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8objJNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X8objZNqEeyfSsz1I9Lthw" name="toString">
+      <modelElement href="AnimalFriends.uml#_UXfgsJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8objpNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXgHwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X8obj5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXgHwZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8obkJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8obkZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X8obkpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXfgsZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X8obk5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X80ooJNqEeyfSsz1I9Lthw" name="Usuarios" associationsIn="_X8bnEJNqEeyfSsz1I9Lthw _X7wRoJNqEeyfSsz1I9Lthw _X8vJEJNqEeyfSsz1I9Lthw" associationsOut="_X8lYEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X80ooZNqEeyfSsz1I9Lthw" position="2057.0,-466.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X80oopNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
+      <modelElement href="AnimalFriends.uml#_UaP5wJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_ggmyIJNrEeyfSsz1I9Lthw" name="Patch">
+      <modelElement href="AnimalFriends.uml#_ggmLEJNrEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X80opJNqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X80opZNqEeyfSsz1I9Lthw" name="id">
+      <modelElement href="AnimalFriends.uml#_UjqUcJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80oppNqEeyfSsz1I9Lthw" name="PrimaryKey">
+        <modelElement href="AnimalFriends.uml#_Ujq7gJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X80op5NqEeyfSsz1I9Lthw" name="GeneratedValueMapping">
+        <modelElement href="AnimalFriends.uml#_Ujq7gZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80oqJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80oqZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X80oqpNqEeyfSsz1I9Lthw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X80osJNqEeyfSsz1I9Lthw" name="nombre">
+      <modelElement href="AnimalFriends.uml#_UjsJopNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80ospNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjtXwZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_fSA4EJNrEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_fNgLgJNrEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80os5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80otJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X80otZNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X80ou5NqEeyfSsz1I9Lthw" name="password">
+      <modelElement href="AnimalFriends.uml#_UjvM8pNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80ovJNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_Ujv0AJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X80ovZNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UjwbEJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80ovpNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X80ov5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X80owJNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X80owZNqEeyfSsz1I9Lthw" name="reservas">
+      <modelElement href="AnimalFriends.uml#_UjwbFJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X80owpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80ow5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_X80oxJNqEeyfSsz1I9Lthw" name="Localizaciones">
+        <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X80oxZNqEeyfSsz1I9Lthw" name="mascotas">
+      <modelElement href="AnimalFriends.uml#_UjxpMJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X80oxpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80ox5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_X80oyJNqEeyfSsz1I9Lthw" name="Animal">
+        <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X80oyZNqEeyfSsz1I9Lthw" name="listaCompra">
+      <modelElement href="AnimalFriends.uml#_UjyQQJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X80oypNqEeyfSsz1I9Lthw" label="-"/>
+      <cardinality xmi:id="_X80oy5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_X80ozJNqEeyfSsz1I9Lthw" name="Productos">
+        <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X80ozZNqEeyfSsz1I9Lthw" name="Usuarios">
+      <modelElement href="AnimalFriends.uml#_UaS9EJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X80ozpNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X80oz5NqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UaTkIJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o0JNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o0ZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X80o0pNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UaTkIZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X80o05NqEeyfSsz1I9Lthw" name="Usuarios">
+          <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X80o1JNqEeyfSsz1I9Lthw" name="Usuarios">
+      <modelElement href="AnimalFriends.uml#_UaULMJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X80o1ZNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X80o1pNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UaVZUJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o15NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o2JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X80o2ZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UaUyQ5NqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X80o2pNqEeyfSsz1I9Lthw" name="Usuarios">
+          <modelElement href="AnimalFriends.uml#_UaOroJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X80o25NqEeyfSsz1I9Lthw" name="n">
+        <modelElement href="AnimalFriends.uml#_UaULMZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X80o3JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X80o3ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_X80o3pNqEeyfSsz1I9Lthw" name="p">
+        <modelElement href="AnimalFriends.uml#_UaUyQJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X80o35NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X80o4JNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X80o4ZNqEeyfSsz1I9Lthw" name="getPasword">
+      <modelElement href="AnimalFriends.uml#_UaWAYJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80o4pNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UaWncJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o45NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o5JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X80o5ZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UaWAYZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X80o5pNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X80o55NqEeyfSsz1I9Lthw" name="setPasword">
+      <modelElement href="AnimalFriends.uml#_UaWncZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80o6JNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UaXOgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o6ZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o6pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_X80o65NqEeyfSsz1I9Lthw" name="pasword">
+        <modelElement href="AnimalFriends.uml#_UaWncpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X80o7JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X80o7ZNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X80o7pNqEeyfSsz1I9Lthw" name="toString">
+      <modelElement href="AnimalFriends.uml#_UaXOgZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80o75NqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UaYcoJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X80o8JNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UaYcoZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o8ZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o8pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X80o85NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UaX1kJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X80o9JNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X80o9ZNqEeyfSsz1I9Lthw" name="addMascotas">
+      <modelElement href="AnimalFriends.uml#_UgcoYJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80o9pNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UgdPcJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X80o95NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X80o-JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_X80o-ZNqEeyfSsz1I9Lthw" name="m">
+        <modelElement href="AnimalFriends.uml#_UgcoYZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X80o-pNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X80o-5NqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X81PsJNqEeyfSsz1I9Lthw" name="addReserva">
+      <modelElement href="AnimalFriends.uml#_UgdPcZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X81PsZNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_Ugd2gJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X81PspNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X81Ps5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_X81PtJNqEeyfSsz1I9Lthw" name="l">
+        <modelElement href="AnimalFriends.uml#_UgdPcpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X81PtZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X81PtpNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X81Pt5NqEeyfSsz1I9Lthw" name="addProducto">
+      <modelElement href="AnimalFriends.uml#_Ugd2gZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X81PuJNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_Ugd2g5NqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X81PuZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X81PupNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_X81Pu5NqEeyfSsz1I9Lthw" name="p">
+        <modelElement href="AnimalFriends.uml#_Ugd2gpNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X81PvJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X81PvZNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X9CrEJNqEeyfSsz1I9Lthw" name="Animal" associationsIn="_X7kEY5NqEeyfSsz1I9Lthw" associationsOut="_X8vJEJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9CrEZNqEeyfSsz1I9Lthw" position="228.0,592.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X9CrEpNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
+      <modelElement href="AnimalFriends.uml#_UXHGMJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X9CrE5NqEeyfSsz1I9Lthw" label="+"/>
+    <attributes xmi:id="_X9CrFJNqEeyfSsz1I9Lthw" name="Id">
+      <modelElement href="AnimalFriends.uml#_Uipn0JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9CrFZNqEeyfSsz1I9Lthw" name="PrimaryKey">
+        <modelElement href="AnimalFriends.uml#_UiqO4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X9CrFpNqEeyfSsz1I9Lthw" name="GeneratedValueMapping">
+        <modelElement href="AnimalFriends.uml#_UiqO4ZNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrF5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrGJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X9CrGZNqEeyfSsz1I9Lthw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X9CrGpNqEeyfSsz1I9Lthw" name="tipo">
+      <modelElement href="AnimalFriends.uml#_UirdAJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9CrG5NqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_Uiz_4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrHJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrHZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X9CrHpNqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_X9CrH5NqEeyfSsz1I9Lthw" name="descripcion">
+      <modelElement href="AnimalFriends.uml#_Ui1OAJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9CrIJNqEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_Ui9w4JNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrIZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrIpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <type xmi:id="_X9CrI5NqEeyfSsz1I9Lthw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_X9CrJJNqEeyfSsz1I9Lthw" name="Animal">
+      <modelElement href="AnimalFriends.uml#_UXIUUJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X9CrJZNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X9CrJpNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXJicJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrJ5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrKJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9CrKZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXJicZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9CrKpNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_X9CrK5NqEeyfSsz1I9Lthw" name="Animal">
+      <modelElement href="AnimalFriends.uml#_UXKJgJNqEeyfSsz1I9Lthw"/>
+      <keywords xmi:id="_X9CrLJNqEeyfSsz1I9Lthw" keyword="create"/>
+      <stereotypes xmi:id="_X9CrLZNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UXKwk5NqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrLpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrL5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9CrMJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXKwkpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9CrMZNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9CrMpNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UXKJgZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9CrM5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9CrNJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9CrNZNqEeyfSsz1I9Lthw" name="toString">
+      <modelElement href="AnimalFriends.uml#_UXLXoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9CrNpNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+        <modelElement href="AnimalFriends.uml#_UXL-sJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_X9CrN5NqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXMlwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9CrOJNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9CrOZNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9CrOpNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UXLXoZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9CrO5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_X9L1AJNqEeyfSsz1I9Lthw" name="RepositorioProductos" associationsIn="_X7BR0JNqEeyfSsz1I9Lthw _X64u8JNqEeyfSsz1I9Lthw _X7kEYpNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UY7EEJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9L1AZNqEeyfSsz1I9Lthw" position="-559.0,226.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X9L1ApNqEeyfSsz1I9Lthw" label="+"/>
+    <operations xmi:id="_X9L1A5NqEeyfSsz1I9Lthw" name="findByTipo">
+      <modelElement href="AnimalFriends.uml#_UY7rIJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9L1BJNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UZFcIJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9L1BZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9L1BpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9L1B5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhpiQZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9L1CJNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9L1CZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UY8SMJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9L1CpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9L1C5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9L1DJNqEeyfSsz1I9Lthw" name="findByNombre">
+      <modelElement href="AnimalFriends.uml#_UZGqQJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9L1DZNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UZQbQJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9L1DpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9L1D5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9L1EJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhyFIJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9L1EZNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9L1EpNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UZGqQZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9L1E5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9L1FJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9L1FZNqEeyfSsz1I9Lthw" name="findById">
+      <modelElement href="AnimalFriends.uml#_UhqJUJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9L1FpNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_Uhw3AJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9L1F5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9L1GJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9L1GZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Uhw3AZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9L1GpNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9L1G5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UhqJUZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9L1HJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9L1HZNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_X9SisJNqEeyfSsz1I9Lthw" name="RepositorioAnimales" associationsIn="_X7XQEJNqEeyfSsz1I9Lthw _X6lM8JNqEeyfSsz1I9Lthw _X7kEYJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UYQ8wJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9SisZNqEeyfSsz1I9Lthw" position="-710.0,-136.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X9SispNqEeyfSsz1I9Lthw" label="+"/>
+    <operations xmi:id="_X9Sis5NqEeyfSsz1I9Lthw" name="findByTipo">
+      <modelElement href="AnimalFriends.uml#_UYSK4JNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9SitJNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UYdKAJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9SitZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9SitpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9Sit5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhBQIJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9SiuJNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9SiuZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UYSx8JNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9SiupNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9Siu5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9SivJNqEeyfSsz1I9Lthw" name="findById">
+      <modelElement href="AnimalFriends.uml#_UhGIoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9SivZNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UhM2UJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9SivpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9TJwJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9TJwZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhM2UZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9TJwpNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9TJw5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UhGIoZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9TJxJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9TJxZNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_X9ZQYJNqEeyfSsz1I9Lthw" name="RepositorioLocalizaciones" associationsIn="_X6tv0JNqEeyfSsz1I9Lthw _X7Lp4JNqEeyfSsz1I9Lthw _X7kEYZNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UYfmQJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9ZQYZNqEeyfSsz1I9Lthw" position="1251.0,-174.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X9ZQYpNqEeyfSsz1I9Lthw" label="+"/>
+    <operations xmi:id="_X9ZQY5NqEeyfSsz1I9Lthw" name="findByTipo">
+      <modelElement href="AnimalFriends.uml#_UYg0YJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9ZQZJNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UYrzgJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9ZQZZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9ZQZpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9ZQZ5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhWnUZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9ZQaJNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9ZQaZNqEeyfSsz1I9Lthw" name="tipo">
+        <modelElement href="AnimalFriends.uml#_UYg0YZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9ZQapNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9ZQa5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9ZQbJNqEeyfSsz1I9Lthw" name="findByNombreSitio">
+      <modelElement href="AnimalFriends.uml#_UYsakJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9ZQbZNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UY4AwJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9ZQbpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9ZQb5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9ZQcJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhXOYJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9ZQcZNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9ZQcpNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UYsakZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9ZQc5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9ZQdJNqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9ZQdZNqEeyfSsz1I9Lthw" name="findById">
+      <modelElement href="AnimalFriends.uml#_UhXOYZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9ZQdpNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UhgYUJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9ZQd5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9ZQeJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9ZQeZNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UhgYUZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9ZQepNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9ZQe5NqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UhX1cJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9ZQfJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9ZQfZNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_X9hMMJNqEeyfSsz1I9Lthw" name="RepositorioUsuarios" associationsIn="_X7vqkJNqEeyfSsz1I9Lthw">
+    <modelElement href="AnimalFriends.uml#_UZS3gJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9hMMZNqEeyfSsz1I9Lthw" position="976.0,459.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_X9hMMpNqEeyfSsz1I9Lthw" label="+"/>
+    <operations xmi:id="_X9hMM5NqEeyfSsz1I9Lthw" name="findByNombre">
+      <modelElement href="AnimalFriends.uml#_UZUFoJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9hMNJNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UZdPkJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9hMNZNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9hMNpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9hMN5NqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_Uh-SYJNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9hMOJNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9hMOZNqEeyfSsz1I9Lthw" name="nombre">
+        <modelElement href="AnimalFriends.uml#_UZUFoZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9hMOpNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9hMO5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9hMPJNqEeyfSsz1I9Lthw" name="findById">
+      <modelElement href="AnimalFriends.uml#_Uh-5cJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9hMPZNqEeyfSsz1I9Lthw" name="Generics">
+        <modelElement href="AnimalFriends.uml#_UiFnIJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9hMPpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9hMP5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_X9hMQJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiFnIZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9hMQZNqEeyfSsz1I9Lthw" name="Optional">
+          <modelElement href="AnimalFriends.uml#_UeWWoZNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9hMQpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_Uh-5cZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9hMQ5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9hMRJNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9hMRZNqEeyfSsz1I9Lthw" name="findByReservasNombreSitio">
+      <modelElement href="AnimalFriends.uml#_UiGOMJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X9hMRpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9hMR5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X9hMSJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiGOMpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9hMSZNqEeyfSsz1I9Lthw" name="Localizaciones">
+          <modelElement href="AnimalFriends.uml#_UXPpEJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9hMSpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UiGOMZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9hMS5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9hMTJNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9hMTZNqEeyfSsz1I9Lthw" name="findByMascotasTipo">
+      <modelElement href="AnimalFriends.uml#_UiG1QZNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X9hMTpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9hMT5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X9hMUJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiHcUZNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9hMUZNqEeyfSsz1I9Lthw" name="Animal">
+          <modelElement href="AnimalFriends.uml#_UXFRAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9hMUpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UiHcUJNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9hMU5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9hMVJNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_X9hMVZNqEeyfSsz1I9Lthw" name="findByListaCompraNombre">
+      <modelElement href="AnimalFriends.uml#_UiIDYJNqEeyfSsz1I9Lthw"/>
+      <visibility xmi:id="_X9hMVpNqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X9hMV5NqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_X9hMWJNqEeyfSsz1I9Lthw">
+        <modelElement href="AnimalFriends.uml#_UiIDYpNqEeyfSsz1I9Lthw"/>
+        <type xmi:id="_X9hMWZNqEeyfSsz1I9Lthw" name="Productos">
+          <modelElement href="AnimalFriends.uml#_UXYzAJNqEeyfSsz1I9Lthw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_X9hMWpNqEeyfSsz1I9Lthw" name="id">
+        <modelElement href="AnimalFriends.uml#_UiIDYZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X9hMW5NqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+        <type xmi:id="_X9hMXJNqEeyfSsz1I9Lthw" name="Long">
+          <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
