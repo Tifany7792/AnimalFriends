@@ -1,0 +1,21 @@
+<html>
+
+	<head>
+		<title>Productos</title>
+		<link type="text/css" rel="stylesheet" />
+	</head>
+	
+	{{#prod}}
+	<a href="prod/{{id}}">{{nombre}}, {{tipo}}</a><br>
+	{{/prod}}
+	
+	{{^prod}}
+	<p>No hay productos</p>
+	{{/prod}}
+	
+	<br>
+	<a href="newProducto">Nuevo producto</a>
+	<br>
+	<a href="/">Volver</a>
+	
+</html>

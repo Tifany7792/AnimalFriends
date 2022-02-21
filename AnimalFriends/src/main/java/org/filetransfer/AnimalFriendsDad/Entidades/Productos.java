@@ -1,4 +1,4 @@
-/*package org.filetransfer.AnimalFriendsDad.Entidades;
+package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,10 +17,16 @@ public class Productos {
 	private String nombre;
 	@Column
 	private String tipo;
+	@Column
+	private String user;
 	
 	public Productos(String nombre, String tipo) {
 		this.nombre = nombre;
 		this.tipo = tipo;
+	}
+	
+	public Productos() {
+		
 	}
 	
 	public long getId() {
@@ -36,10 +42,16 @@ public class Productos {
 		this.nombre = nombre;
 	}
 	public String getTipo() {
-		return tipo;
+		return this.tipo;
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+	public String getUser() {
+		return this.user;
+	}
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 	@Override
@@ -48,4 +60,4 @@ public class Productos {
 	}
 	
 
-}*/
+}

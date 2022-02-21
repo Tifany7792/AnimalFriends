@@ -59,13 +59,13 @@ public class LocalizacionController {
 	}
 	
 	@GetMapping("/newLocalizacion")
-	public String deleteAnimal() {
+	public String añadirLocalizacion() {
 
 		return "new_localizacion";
 	}
 	
 	@PostMapping("/localizacion/new")
-	public String newAnimal(Localizaciones loc) {
+	public String newLocalizacion(Localizaciones loc) {
 
 		localizaciones.save(loc);
 		
