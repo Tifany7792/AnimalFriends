@@ -2,25 +2,24 @@
 
 <head>
 	<title>Registro Usuarios</title>
-	<link type="text/css" rel="stylesheet" />
+	<link href="plantilla.css" rel="stylesheet" />
 </head>
 
 
 <div class="header">
 	<h1>¡Animal Friends!</h1>
-	<h2>Registrarse</h2>
-	<div class="header-right">
-		<!-- button that takes you back to the home screen-->
-		<a href="/"> Principal</a>
+	<h1>Registrarse</h1>
+
+</div>
+	
 	</div>
 	{{#nombreUsado}}
-	<h1>Nombre ya usado</h1>
+	<h2>Nombre ya usado</h2>
 	{{/nombreUsado}}
 	
 	{{#contrasenaIncorrecta}}
 	<h2>Contraseña incorrecta</h2>
 	{{/contrasenaIncorrecta}}
-</div>
 
 <form method='post' action="/registrarUsuario">
 	<br>
@@ -38,13 +37,15 @@
 		<label for="psw-repeat"><b>Repetir Contraseña</b>
 			<br><label>
 				<input type="password" placeholder="Repetir Contraseña" name="pswRepeat" id="pswRepeat" required>
-				<p>¿Está ya registrado? <a href="/login"> Iniciar Sesión </a>.</p>
+				<p>¿Está ya registrado? <a href="/login"> Iniciar Sesión </a></p>
 	</div>
 
 	<!-- Submit data button -->
 	<br>
 	<button type="submit" class="registerbtn"> Registrar</button>
 	<br>
+	<br>
+	<a href="/"> Volver</a>
 
 </form>
 

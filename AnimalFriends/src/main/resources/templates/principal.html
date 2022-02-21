@@ -2,35 +2,15 @@
 
 <head>
 	<meta charset="UTF-8" />
-
 	<title>Animal Friends Principal</title>
-	<link type="text/css" rel="stylesheet" />
+	<link href="plantilla.css" rel="stylesheet" />
 </head>
-<!--
-	{{#welcome}}
-	<h1>Welcome!</h1>
-	{{/welcome}}
-
-	<h1>Animales</h1>
-	{{#animales}}
-	<a href="animal/{{id}}">{{tipo}} {{user}}</a><br>
-	{{/animales}}
-	
-	{{^animales}}
-	<p>No hay animales</p>
-	{{/animales}}
-
-	<br>
-	<a href="new_animal">Nuevo animal</a>
-	
-	<br>
-	<a href="new_usuario">Nuevo usuario</a>
-		
-	-->
 
 <div class="header">
 	<h1>¡Bienvenido a Animal Friends!</h1>
+</div>
 
+<body>
 	{{^sesion}}
 	<!-- button that loads the login html -->
 	<br>
@@ -55,13 +35,8 @@
 	<br>
 	<br>
 	<a href="/productos"> Ver productos</a>
-	
-	
-	
-</div>
 
+</body>
 
-<footer th:fragment="creditFooter" class="credit">
-	</body>
 
 </html>

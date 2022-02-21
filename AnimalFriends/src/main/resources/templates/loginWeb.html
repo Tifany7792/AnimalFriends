@@ -2,24 +2,21 @@
 
 <head>
 	<title>Inicio de sesión</title>
-	<link type="text/css" rel="stylesheet" />
+	<link href="plantilla.css" rel="stylesheet" />
 </head>
 
 <div class="header">
-	<h1>¡Animal Friendss!</h1>
-	<h2>Iniciar Sesión</h2>
-	<div class="header-right">
-		<!-- button that takes you back to the home screen-->
-		<a href="/"> Principal</a>
-	</div>
+	<h1>¡Animal Friends!</h1>
+	<h1>Iniciar Sesión</h1>
+	
 </div>
 
 	{{#incorrecto}}
-	<h1>Nombre o contraseña incorrectos</h1>
+	<h2>Nombre o contraseña incorrectos</h2>
 	{{/incorrecto}}
 	
 	{{^incorrecto}}
-	<h2>Introduce tu nombre y contraseña</h2>
+	<h1>Introduce tu nombre y contraseña</h1>
 	{{/incorrecto}}
 
 <form method='post' action="/loginUsuario">
@@ -34,13 +31,15 @@
 		<br>
 		<input type="password" placeholder="Ingresar Contraseña" name="psw" id="psw" required>
 		<br>
-		<p>¿No está registrado? <a href="/registrar"> Registrar </a></p>
+		<p>¿No está registrado? <a href="/registrar"> Registrarse </a></p>
 	</div>
 
-	<!-- Submit data button -->
-	<br>
 	<button type="submit" class="registerbtn"> Iniciar Sesión</button>
-
+	
+	<br>
+	<br>
+	<a href="/"> Volver</a>
+	
 </form>
 
 

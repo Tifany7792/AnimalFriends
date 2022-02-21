@@ -1,0 +1,23 @@
+body {
+  background-color: powderblue;
+  text-align:center;
+}
+
+.header{
+	background-color: rgb(218, 218, 218);
+	text-align:center;
+}
+
+h1 {
+  color: black;
+  text-align:center;
+}
+
+h2 {
+  color: red;
+  text-align:center;
+}
+p {
+  color: gray;
+  text-align:center;
+}
