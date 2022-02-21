@@ -96,6 +96,14 @@ public class UserService {
 			return null;
 	}
 	
+	public Usuarios getUsuario(String nombre) {
+		Optional<Usuarios> usu = usuarios.findByNombre(nombre);
+		if (usu.isPresent())
+			return usu.get();
+		else
+			return null;
+	}
+	
 	public List<Animal> getMascotas(long id){
 		return usuarios.findByMascotasTipo(id);
 	}

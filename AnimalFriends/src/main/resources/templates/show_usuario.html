@@ -1,13 +1,22 @@
-<!--{{>header}}
+<html>
 
-	<p>Usuario: {{usuarios.nombre}}</p>
-	<p>Pasword: {{usuarios.pasword}}</p>
-	<p>Id: {{usuarios.Id}}</p>
-	
-	<a href="/usuario/{{usuario.Id}}/delete">Borrar usuario</a>
-	
+	<head>
+		<title>Mascotas de usuarios</title>
+		<link href="plantilla.css" rel="stylesheet" />
+	</head>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+		<h1>Vista de usuario</h1>
+	</div>
+<body>	
+	<p>Nombre Usuario: {{usuario.nombre}}</p>
 	<br>
-	
+	<p>Mascotas: {{#usuario}}{{mascotas}},{{/usuario}}</p>
+	<br>
+	<p>Reservas: {{#usuario}}{{reservas}},{{/usuario}}</p>
+	<br>
+	<p>Lista de la compra: {{#usuario}}{{listaCompra}},{{/usuario}}</p>
+		
 	<a href="/">Volver</a>
-	
-{{>footer}}-->
+</body>
+</html>

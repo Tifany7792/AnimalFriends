@@ -1,16 +1,20 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,7 +24,8 @@ public class WebController {
 
 	@Autowired
 	private UserService userService;
-
+	@Autowired
+	private RepositorioAnimales animales;
 
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpSession session) {
@@ -49,7 +54,7 @@ public class WebController {
 			session.setAttribute("nombre", nombre);
 			session.setAttribute("logged", "yes");
 			model.addAttribute("sesion", true);
-			return "show_mascotas_usuario";
+			return "/";
 		} else {
 			model.addAttribute("incorrecto", true);
 			return "loginWeb";
@@ -84,32 +89,32 @@ public class WebController {
 		return new ModelAndView("redirect:/");
 	}
 	
-	@GetMapping("/loginUsuario/{id}")
-	public String showMascotas(Model model, @PathVariable long id) {
-		
-		List<Animal> mascotas = userService.getMascotas(id);
-		
-		model.addAttribute("mascotas", mascotas);
+	@PostMapping("/verUsuario")
+	public String visualizarUsuario(Model model, String nombre) {
 
-		return "show_mascotas_usuario";
+		model.addAttribute("usuario", userService.getUsuario(nombre));
+		return "show_usuario";
+	}
+	
+	@GetMapping("/editarUsuario")
+	public String editarUsuario(Model model) {
+
+		return "edit_usuario";
+	}
+	
+	@PostMapping("/añadirMascota")
+	public String añadirMascota(Model model, String nombre, String masc) {
+		Optional<Animal> a = animales.findByTipo(masc);
+		if (a.isEmpty()) {
+			
+		}else {
+			userService.getUsuario(nombre).addMascotas(a.get());
+			model.addAttribute("usuario", userService.getUsuario(nombre));
+		}
+		
+		return "show_usuario";
 	}
 	
 	
-	/*@RequestMapping(value = "/registrarAnimal")
-	public ModelAndView registrarAnimal(@RequestParam String tipo) {
-		
-		Usuarios miUsuario = userService.getMiUsuario();
-		
-		if (miUsuario.getAnimal().getTipo().equals(tipo)) {
-			boolean result = animalService.registrarAnimal(tipo,miUsuario.getNombre());
-			if (result) {
-				return new ModelAndView("redirect:/");
-			} else {
-				return new ModelAndView("redirect:/registrarAnimal");
-			}
-		} else {
-			return new ModelAndView("redirect:/registrarAnimal");
-		}
-	}*/
 
 }

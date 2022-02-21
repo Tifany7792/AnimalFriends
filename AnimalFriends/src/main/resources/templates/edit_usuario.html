@@ -1,0 +1,29 @@
+<html>
+
+	<head>
+		<title>Mascotas de usuarios</title>
+		<link href="plantilla.css" rel="stylesheet" />
+	</head>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+		<h1>Editar usuario</h1>
+	</div>
+<body>	
+	<br>
+	<form action="/añadirMascota" method="post">
+		<p>Usuario: <input type='text' name='nombre'/></p>	
+		<p>Nueva mascota: <input type='text' name='masc'/></p>
+		<input type='submit' value='añadir'/>
+	</form>
+	<br>
+	<form action="/añadirReserva" method="post">
+		<p>Nueva reserva: <input type='text' name='nombre'/> <input type='submit' value='añadir'/> </p>	
+	</form>
+	<br>
+	<form action="/verProducto" method="post">
+		<p>Nuevo producto: <input type='text' name='nombre'/> <input type='submit' value='añadir'/> </p>	
+	</form>
+	
+	<a href="/">Volver</a>
+</body>
+</html>

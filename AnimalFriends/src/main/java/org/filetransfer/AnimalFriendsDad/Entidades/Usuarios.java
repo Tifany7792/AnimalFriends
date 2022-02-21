@@ -44,13 +44,12 @@ public class Usuarios {
 		super();
 		this.nombre = n;
 		this.password = p;
-	}
-	
-	public Usuarios(String n, String p, List<Localizaciones >l) {
-		super();
-		this.nombre = n;
-		this.password = p;
+		List<Localizaciones> l = null;
 		this.reservas = l;
+		List<Animal> a = null;
+		this.mascotas = a;
+		List<Productos> c = null;
+		this.listaCompra = c;
 	}
 	
 	
@@ -62,14 +61,26 @@ public class Usuarios {
 		this.reservas = reservas;
 	}
 
-	/*public List<Animal> getMascotas() {
+	public List<Animal> getMascotas() {
 		return mascotas;
 	}
 
 	public void setMascotas(List<Animal> mascotas) {
 		this.mascotas = mascotas;
 	}
-*/
+	
+	public void addMascotas(Animal m) {
+		this.mascotas.add(m);
+	}
+	
+	public void addReserva(Localizaciones l) {
+		this.reservas.add(l);
+	}
+	
+	public void addProducto(Productos p) {
+		this.listaCompra.add(p);
+	}
+	
 	
 	public static int getnUsuarios() {
 		return nUsuarios;
