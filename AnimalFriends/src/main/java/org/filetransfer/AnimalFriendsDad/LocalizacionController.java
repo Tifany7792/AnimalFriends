@@ -35,20 +35,20 @@ public class LocalizacionController {
 	@GetMapping("/localizaciones")
 	public String verLocalizaciones(Model model) {
 		
-		model.addAttribute("localizaciones", localizaciones.findAll());
+		model.addAttribute("local", localizaciones.findAll());
 		
-		return "show_localizaciones";
+		return "list_localizaciones";
 	}
 	
-	@GetMapping("/localizaciones/{id}")
+	@GetMapping("/local/{id}")
 	public String showLocalizacion(Model model, @PathVariable long id) {
 
 		
-		Optional<Localizaciones> loc = localizaciones.findById(id);
+		Localizaciones loc = localizaciones.getById(id);
 		
-		model.addAttribute("localizaciones", loc.get());
+		model.addAttribute("local", loc);
 
-		return "show_localizaciones";
+		return "show_localizacion";
 	}
 	
 }

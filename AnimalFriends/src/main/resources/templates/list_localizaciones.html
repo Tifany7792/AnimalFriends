@@ -5,12 +5,16 @@
 		<link type="text/css" rel="stylesheet" />
 	</head>
 	
-	<p>Id: {{localizaciones.Id}}</p>
+		{{#local}}
+		<a href="local/{{id}}">{{nombreSitio}}, {{tipo}}</a><br>
+		{{/local}}
+		
+		{{^local}}
+		<p>No hay localizaciones</p>
+		{{/local}}
 	
-	<a href="/localizacion/{{localizaciones.Id}}/delete">Borrar localizacion</a>
 	
 	<br>
-	
 	<a href="/">Volver</a>
 	
 </html>

@@ -15,8 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
 
 ///
 
@@ -33,11 +32,12 @@ public class AnimalController {
 		animales.save(new Animal(null, "Erizo"));
     }
 	
-	@RequestMapping("/animales/nuevoAnimal")
-	public void nuevoAnimal() {
+	@PostMapping("/animal/new")
+	public String newAnimal(Animal animal) {
+
+		animales.save(animal);
 		
-		
-		//return "animal_nuevo"
+		return "saved_animal";
 	}
 	
 	@GetMapping("/animales")
@@ -69,6 +69,12 @@ public class AnimalController {
 		
 
 		return "deleted_animal";
+	}
+	
+	@GetMapping("/newAnimal")
+	public String deleteAnimal() {
+
+		return "new_animal";
 	}
 	
 }
