@@ -13,6 +13,13 @@
 		<!-- button that takes you back to the home screen-->
 		<a href="/"> Principal</a>
 	</div>
+	{{#nombreUsado}}
+	<h1>Nombre ya usado</h1>
+	{{/nombreUsado}}
+	
+	{{#contrasenaIncorrecta}}
+	<h2>Contraseña incorrecta</h2>
+	{{/contrasenaIncorrecta}}
 </div>
 
 <form method='post' action="/registrarUsuario">

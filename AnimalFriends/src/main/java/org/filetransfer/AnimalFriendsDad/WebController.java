@@ -23,9 +23,6 @@ public class WebController {
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpSession session) {
 
-		model.addAttribute("usuarios", userService.getAllUsers());
-		Usuarios miUsuario = userService.getMiUsuario();
-		model.addAttribute("usuarioEntidad", miUsuario);
 		if (session.getAttribute("logged") == "yes") {
 			model.addAttribute("Usuarios", true);
 		}
@@ -49,7 +46,8 @@ public class WebController {
 		if (result) {
 			session.setAttribute("nombre", nombre);
 			session.setAttribute("logged", "yes");
-			return "redirect:/";
+			model.addAttribute("sesion", true);
+			return "principal";
 		} else {
 			model.addAttribute("incorrecto", true);
 			return "loginWeb";
@@ -57,23 +55,30 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/registrarUsuario")
-	public ModelAndView registrar(@RequestParam String nombre, @RequestParam String psw,
-			@RequestParam String pswRepeat) {
+	public ModelAndView registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
+			@RequestParam String pswRepeat, HttpSession session) {
 		if (psw.equals(pswRepeat)) {
 			boolean result = userService.registrar(nombre, psw);
 			if (result) {
-				return new ModelAndView("redirect:/");
+				session.setAttribute("nombre", nombre);
+				session.setAttribute("logged", "yes");
+				model.addAttribute("sesion", true);
+				return new ModelAndView("principal");
 			} else {
-				return new ModelAndView("redirect:/registrar");
+				model.addAttribute("nombreUsado", true);
+				return new ModelAndView("registerWeb");
 			}
 		} else {
-			return new ModelAndView("redirect:/registrar");
+			model.addAttribute("contrasenaIncorrecta", true);
+			return new ModelAndView("registerWeb");
 		}
 	}
 
 	@GetMapping("/logout")
-	public ModelAndView logout() {
+	public ModelAndView logout(Model model, HttpSession session) {
 		userService.logout();
+		session.setAttribute("logged", "no");
+		model.addAttribute("sesion", false);
 		return new ModelAndView("redirect:/");
 	}
 	

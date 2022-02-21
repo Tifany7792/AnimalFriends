@@ -31,7 +31,7 @@
 <div class="header">
 	<h1>¡Bienvenido a Animal Friends!</h1>
 
-	{{^Usuarios}}
+	{{^sesion}}
 	<!-- button that loads the login html -->
 	<br>
 	<a href="/login"> Iniciar Sesión</a>
@@ -39,7 +39,12 @@
 	<!-- button that loads the register html -->
 	<br>
 	<a href="/registrar"> Registrar</a>
-	{{/Usuarios}}
+	{{/sesion}}
+	
+	{{#sesion}}
+	<br>
+	<a href="/logout"> Cerrar sesion</a>
+	{{/sesion}}
 	
 	<br>
 	<br>
