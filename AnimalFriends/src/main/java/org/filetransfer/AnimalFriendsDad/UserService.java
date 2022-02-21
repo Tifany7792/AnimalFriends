@@ -117,19 +117,27 @@ public class UserService {
 	public List<Productos> getListaCompra(long id){
 		return usuarios.findByListaCompraNombre(id);
 	}
-	
-	public boolean registrarMascota(String tipo) {
-		Optional<Animal> a = mascotas.findByTipo(tipo);
 
+	
+	public boolean registrarMascota(String user, String tipo) {
+		Optional<Animal> a = mascotas.findByTipo(tipo);
+		Optional<Usuarios> u = usuarios.findByNombre(user);
+		Animal animal;
+		Usuarios usuario;
 		if (!a.isPresent()) {
 			animal = new Animal(tipo);
-			miUsuario.addAnimal(tipo);
 			mascotas.save(animal);
-			return true;
-		} else {
-			miUsuario = null;
-			return false;
+		}else {
+			animal = a.get();
 		}
+		if (!u.isPresent()) {
+			usuario = new Usuarios(user,"");
+		}else {
+			usuario = u.get();
+		}
+		usuario.addMascotas(animal);
+		usuarios.save(usuario);
+		return true;
 	}
 
 }

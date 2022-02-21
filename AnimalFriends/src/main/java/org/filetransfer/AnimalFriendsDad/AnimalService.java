@@ -13,28 +13,9 @@ public class AnimalService {
 	@Autowired
 	private RepositorioAnimales animales;
 
-	private Animal miAnimal;
-
-
-	public boolean login(String tipo) {
-		Optional<Animal> a = animales.findByTipo(tipo);
-
-		if (a.isPresent()) {
-			if (a.get().getTipo().equals(tipo)) {
-				miAnimal = a.get();
-				return true;
-			} else {
-				miAnimal = null;
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}
-
 	public boolean registrarAnimal(String tipo) {
 		Optional<Animal> a = animales.findByTipo(tipo);
-
+		Animal miAnimal;
 		if (!a.isPresent()) {
 			miAnimal = new Animal(tipo);
 			animales.save(miAnimal);
@@ -45,20 +26,22 @@ public class AnimalService {
 		}
 	}
 
-	public void logout() {
-		miAnimal = null;
-	}
 
 	public List<Animal> getAllAnimals() {
 		return animales.findAll();
 	}
 
-	public Animal getMiAnimal() {
-		return miAnimal;
-	}
 
 	public Animal getAnimal(long id) {
 		Optional<Animal> aux = animales.findById(id);
+		if (aux.isPresent())
+			return aux.get();
+		else
+			return null;
+	}
+	
+	public Animal getAnimal(String name) {
+		Optional<Animal> aux = animales.findByTipo(name);
 		if (aux.isPresent())
 			return aux.get();
 		else

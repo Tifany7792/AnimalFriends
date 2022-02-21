@@ -32,9 +32,6 @@ public class Usuarios {
 	@ManyToMany
 	private List<Productos> listaCompra;
 	
-
-	public static int nUsuarios;
-	
 	
 	public Usuarios() {};
 	
@@ -71,11 +68,6 @@ public class Usuarios {
 		this.mascotas.add(m);
 	}
 	
-	public void addAnimal(String tipo) {
-		Animal a = new Animal(tipo);
-		this.mascotas.add(a);
-	}
-	
 	public void addReserva(Localizaciones l) {
 		this.reservas.add(l);
 	}
@@ -84,15 +76,6 @@ public class Usuarios {
 		this.listaCompra.add(p);
 	}
 	
-	
-	public static int getnUsuarios() {
-		return nUsuarios;
-	}
-
-	public static void setnUsuarios(int nUsuarios) {
-		Usuarios.nUsuarios = nUsuarios;
-	}
-
 	public long getId() {
 		return this.id;
 	}

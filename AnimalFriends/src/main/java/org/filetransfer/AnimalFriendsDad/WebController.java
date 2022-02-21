@@ -4,7 +4,7 @@ package org.filetransfer.AnimalFriendsDad;
 
 import javax.servlet.http.HttpSession;
 
-
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,7 +47,7 @@ public class WebController {
 			session.setAttribute("nombre", nombre);
 			session.setAttribute("logged", "yes");
 			model.addAttribute("sesion", true);
-			return "/";
+			return "principal";
 		} else {
 			model.addAttribute("incorrecto", true);
 			return "loginWeb";
@@ -55,7 +55,7 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/registrarUsuario")
-	public ModelAndView registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
+	public String registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
 			@RequestParam String pswRepeat, HttpSession session) {
 		if (psw.equals(pswRepeat)) {
 			boolean result = userService.registrar(nombre, psw);
@@ -63,20 +63,20 @@ public class WebController {
 				session.setAttribute("nombre", nombre);
 				session.setAttribute("logged", "yes");
 				model.addAttribute("sesion", true);
-				return new ModelAndView("principal");
+				return "principal";
 			} else {
 				model.addAttribute("nombreUsado", true);
-				return new ModelAndView("registerWeb");
+				return "registerWeb";
 			}
 		} else {
 			model.addAttribute("contrasenaIncorrecta", true);
-			return new ModelAndView("registerWeb");
+			return "registerWeb";
 		}
 	}
 
 	@GetMapping("/logout")
 	public ModelAndView logout(Model model, HttpSession session) {
-		userService.logout();
+		
 		session.setAttribute("logged", "no");
 		model.addAttribute("sesion", false);
 		return new ModelAndView("redirect:/");
@@ -96,17 +96,10 @@ public class WebController {
 	}
 	
 	@PostMapping("/aniadirMascota")
-	public ModelAndView añadirMascota(Model model,String masc,HttpSession session) {
-		boolean result = userService.registrarMascota(masc);
-		if (result) {
-			session.setAttribute("tipo", masc);
-			session.setAttribute("logged", "yes");
-			model.addAttribute("sesion", true);
-			return new ModelAndView("saved_sanimal");
-		} else {
-			model.addAttribute("nombreUsado", true);
-			return new ModelAndView("/");
-		}
+	public ModelAndView añadirMascota(Model model, String masc, String nombre) {
+		userService.registrarMascota(nombre, masc);
+		model.addAttribute("usuario", userService.getUsuario(nombre));
+		return new ModelAndView("show_usuario");
 		
 	}
 	
