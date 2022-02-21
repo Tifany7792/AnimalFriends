@@ -16,11 +16,11 @@ public class AnimalService {
 	private Animal miAnimal;
 
 
-	public boolean login(String tipo, String usuario) {
+	public boolean login(String tipo) {
 		Optional<Animal> a = animales.findByTipo(tipo);
 
 		if (a.isPresent()) {
-			if (a.get().getUser().equals(usuario)) {
+			if (a.get().getTipo().equals(tipo)) {
 				miAnimal = a.get();
 				return true;
 			} else {
@@ -32,11 +32,11 @@ public class AnimalService {
 		}
 	}
 
-	public boolean registrarAnimal(String tipo, String usuario) {
+	public boolean registrarAnimal(String tipo) {
 		Optional<Animal> a = animales.findByTipo(tipo);
 
 		if (!a.isPresent()) {
-			miAnimal = new Animal(tipo, usuario);
+			miAnimal = new Animal(tipo);
 			animales.save(miAnimal);
 			return true;
 		} else {
