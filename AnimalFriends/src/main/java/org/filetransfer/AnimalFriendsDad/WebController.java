@@ -17,8 +17,6 @@ public class WebController {
 	@Autowired
 	private UserService userService;
 
-	/*@Autowired
-	private AnimalService animalService;*/
 
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpSession session) {

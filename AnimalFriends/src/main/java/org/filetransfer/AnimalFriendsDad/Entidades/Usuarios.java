@@ -32,7 +32,7 @@ public class Usuarios {
 	private List<Animal> mascotas;
 	
 	@ManyToMany
-	private List<Productos> listaP;
+	private List<Productos> listaCompra;
 	
 
 	public static int nUsuarios;
