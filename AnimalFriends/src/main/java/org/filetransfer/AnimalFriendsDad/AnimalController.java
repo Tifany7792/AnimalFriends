@@ -1,11 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
-
 import javax.annotation.PostConstruct;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;

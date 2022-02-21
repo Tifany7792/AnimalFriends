@@ -1,10 +1,8 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 public class LocalizacionController {

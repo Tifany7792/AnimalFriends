@@ -2,7 +2,6 @@ package org.filetransfer.AnimalFriendsDad.Entidades;
 
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.persistence.*;
 
@@ -11,7 +10,6 @@ import javax.persistence.*;
 @Entity
 public class Usuarios {
 	
-	//public static final String T_USUARIOS = "Usuarios";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -71,6 +69,11 @@ public class Usuarios {
 	
 	public void addMascotas(Animal m) {
 		this.mascotas.add(m);
+	}
+	
+	public void addAnimal(String tipo) {
+		Animal a = new Animal(tipo);
+		this.mascotas.add(a);
 	}
 	
 	public void addReserva(Localizaciones l) {

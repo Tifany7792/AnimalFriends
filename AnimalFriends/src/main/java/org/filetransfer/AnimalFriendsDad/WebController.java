@@ -1,19 +1,14 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import java.util.List;
-import java.util.Optional;
+
 
 import javax.servlet.http.HttpSession;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,8 +19,6 @@ public class WebController {
 
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private RepositorioAnimales animales;
 
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpSession session) {
@@ -102,17 +95,19 @@ public class WebController {
 		return "edit_usuario";
 	}
 	
-	@PostMapping("/añadirMascota")
-	public String añadirMascota(Model model, String nombre, String masc) {
-		Optional<Animal> a = animales.findByTipo(masc);
-		if (a.isEmpty()) {
-			
-		}else {
-			userService.getUsuario(nombre).addMascotas(a.get());
-			model.addAttribute("usuario", userService.getUsuario(nombre));
+	@PostMapping("/aniadirMascota")
+	public ModelAndView añadirMascota(Model model,String masc,HttpSession session) {
+		boolean result = userService.registrarMascota(masc);
+		if (result) {
+			session.setAttribute("tipo", masc);
+			session.setAttribute("logged", "yes");
+			model.addAttribute("sesion", true);
+			return new ModelAndView("saved_sanimal");
+		} else {
+			model.addAttribute("nombreUsado", true);
+			return new ModelAndView("/");
 		}
 		
-		return "show_usuario";
 	}
 	
 	

@@ -11,8 +11,8 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 //import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
+//import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
+//import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -27,14 +27,16 @@ public class UserService {
 	
 	@Autowired
 	private RepositorioAnimales mascotas;
-	
+	/*
 	@Autowired
 	private RepositorioLocalizaciones reservas;
 	
 	@Autowired 
-	private RepositorioProductos listaCompra;
+	private RepositorioProductos listaCompra;*/
 
 	private Usuarios miUsuario;
+	
+	private Animal animal;
 	
 	@PostConstruct
 	private void addAdmin() {
@@ -114,6 +116,20 @@ public class UserService {
 	
 	public List<Productos> getListaCompra(long id){
 		return usuarios.findByListaCompraNombre(id);
+	}
+	
+	public boolean registrarMascota(String tipo) {
+		Optional<Animal> a = mascotas.findByTipo(tipo);
+
+		if (!a.isPresent()) {
+			animal = new Animal(tipo);
+			miUsuario.addAnimal(tipo);
+			mascotas.save(animal);
+			return true;
+		} else {
+			miUsuario = null;
+			return false;
+		}
 	}
 
 }

@@ -3,10 +3,7 @@ package org.filetransfer.AnimalFriendsDad;
 import java.util.List;
 import java.util.Optional;
 
-
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.springframework.beans.factory.annotation.Autowired;
 
