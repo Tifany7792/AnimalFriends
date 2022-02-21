@@ -5,7 +5,6 @@ package org.filetransfer.AnimalFriendsDad;
 import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -85,12 +84,8 @@ public class WebController {
 	
 	@PostMapping("/verUsuario")
 	public String visualizarUsuario(Model model, String nombre) {
-		
-		Usuarios u = userService.getUsuario(nombre);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+
+		model.addAttribute("usuario", userService.getUsuario(nombre));
 		return "show_usuario";
 	}
 	
@@ -103,11 +98,7 @@ public class WebController {
 	@PostMapping("/aniadirMascota")
 	public ModelAndView aniadirMascota(Model model, String masc, String nombre) {
 		userService.registrarMascota(nombre, masc);
-		Usuarios u = userService.getUsuario(nombre);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+		model.addAttribute("usuario", userService.getUsuario(nombre));
 		return new ModelAndView("show_usuario");
 		
 	}
@@ -115,11 +106,7 @@ public class WebController {
 	@PostMapping("/aniadirReserva")
 	public ModelAndView aniadirReserva(Model model, String lugar, String nombre) {
 		userService.registrarReserva(nombre, lugar);
-		Usuarios u = userService.getUsuario(nombre);
-		model.addAttribute("usuario", u);;
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+		model.addAttribute("usuario", userService.getUsuario(nombre));
 		return new ModelAndView("show_usuario");
 		
 	}
@@ -127,11 +114,7 @@ public class WebController {
 	@PostMapping("/aniadirProducto")
 	public ModelAndView aniadirProducto(Model model, String producto, String nombre) {
 		userService.registrarProducto(nombre, producto);
-		Usuarios u = userService.getUsuario(nombre);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+		model.addAttribute("usuario", userService.getUsuario(nombre));
 		return new ModelAndView("show_usuario");
 		
 	}
