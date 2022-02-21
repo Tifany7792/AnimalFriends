@@ -28,8 +28,8 @@ public class AnimalController {
 	
 	@PostConstruct
     public void init() {
-		animales.save(new Animal(null, "Mono"));
-		animales.save(new Animal(null, "Erizo"));
+		animales.save(new Animal("Mono"));
+		animales.save(new Animal("Erizo"));
     }
 	
 	@PostMapping("/animal/new")

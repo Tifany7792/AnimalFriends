@@ -5,8 +5,14 @@ import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
+import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 //import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,11 +24,18 @@ public class UserService {
 
 	@Autowired
 	private RepositorioUsuarios usuarios;
+	
+	@Autowired
+	private RepositorioAnimales mascotas;
+	
+	@Autowired
+	private RepositorioLocalizaciones reservas;
+	
+	@Autowired 
+	private RepositorioProductos listaCompra;
 
 	private Usuarios miUsuario;
 	
-	//private List<Animal> animales;
-
 	@PostConstruct
 	private void addAdmin() {
 		Usuarios aux = new Usuarios("admin", "admin");
@@ -74,9 +87,6 @@ public class UserService {
 		return miUsuario;
 	}
 	
-	/*public List<Animal> getMisAnimales() {
-		return animales;
-	}*/
 
 	public Usuarios getUsuario(long id) {
 		Optional<Usuarios> usu = usuarios.findById(id);
@@ -84,6 +94,18 @@ public class UserService {
 			return usu.get();
 		else
 			return null;
+	}
+	
+	public List<Animal> getMascotas(long id){
+		return usuarios.findByMascotasTipo(id);
+	}
+	
+	public List<Localizaciones> getReservas(long id){
+		return usuarios.findByReservasNombreSitio(id);
+	}
+	
+	public List<Productos> getListaCompra(long id){
+		return usuarios.findByListaCompraNombre(id);
 	}
 
 }
