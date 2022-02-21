@@ -2065,8 +2065,8 @@
     <stereotypes xmi:id="_X80oopNqEeyfSsz1I9Lthw" name="JPA1StyledElement">
       <modelElement href="AnimalFriends.uml#_UaP5wJNqEeyfSsz1I9Lthw"/>
     </stereotypes>
-    <stereotypes xmi:id="_ggmyIJNrEeyfSsz1I9Lthw" name="Patch">
-      <modelElement href="AnimalFriends.uml#_ggmLEJNrEeyfSsz1I9Lthw"/>
+    <stereotypes xmi:id="_kIEgsJNuEeyfSsz1I9Lthw" name="Patch">
+      <modelElement href="AnimalFriends.uml#_kIDSkJNuEeyfSsz1I9Lthw"/>
     </stereotypes>
     <visibility xmi:id="_X80opJNqEeyfSsz1I9Lthw" label="+"/>
     <attributes xmi:id="_X80opZNqEeyfSsz1I9Lthw" name="id">
@@ -2085,11 +2085,12 @@
     </attributes>
     <attributes xmi:id="_X80osJNqEeyfSsz1I9Lthw" name="nombre">
       <modelElement href="AnimalFriends.uml#_UjsJopNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X80osZNqEeyfSsz1I9Lthw"/>
       <stereotypes xmi:id="_X80ospNqEeyfSsz1I9Lthw" name="Annotations">
         <modelElement href="AnimalFriends.uml#_UjtXwZNqEeyfSsz1I9Lthw"/>
       </stereotypes>
-      <stereotypes xmi:id="_fSA4EJNrEeyfSsz1I9Lthw" name="Column">
-        <modelElement href="AnimalFriends.uml#_fNgLgJNrEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_jl614JNuEeyfSsz1I9Lthw" name="Column">
+        <modelElement href="AnimalFriends.uml#_jhxVsJNuEeyfSsz1I9Lthw"/>
       </stereotypes>
       <visibility xmi:id="_X80os5NqEeyfSsz1I9Lthw" label="+"/>
       <cardinality xmi:id="_X80otJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
@@ -2651,6 +2652,51 @@
           <modelElement href="AnimalFriends.uml#_UhBQIpNqEeyfSsz1I9Lthw"/>
         </type>
       </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X8DMkJNqEeyfSsz1I9Lthw" name="AnimalFriendsApplication">
+    <modelElement href="AnimalFriends.uml#_UW9VMJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X8DMkZNqEeyfSsz1I9Lthw" position="421.0,18.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X8DMkpNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UW98QJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X8DMk5NqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UW_xcJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X8DMlJNqEeyfSsz1I9Lthw" label="+"/>
+    <operations xmi:id="_X8DMlZNqEeyfSsz1I9Lthw" name="main" staticOperation="true">
+      <modelElement href="AnimalFriends.uml#_UW-jUJNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X8DMlpNqEeyfSsz1I9Lthw" name="StyledElement">
+        <modelElement href="AnimalFriends.uml#_UW_KYJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X8DMl5NqEeyfSsz1I9Lthw" label="+"/>
+      <cardinality xmi:id="_X8DMmJNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_X8DMmZNqEeyfSsz1I9Lthw" name="args">
+        <modelElement href="AnimalFriends.uml#_UW-jUZNqEeyfSsz1I9Lthw"/>
+        <cardinality xmi:id="_X8DMmpNqEeyfSsz1I9Lthw" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_X8DMm5NqEeyfSsz1I9Lthw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_X9n54JNqEeyfSsz1I9Lthw" name="AnimalFriendsApplicationTests">
+    <modelElement href="AnimalFriends.uml#_UXjyIJNqEeyfSsz1I9Lthw"/>
+    <visualProperties xmi:id="_X9n54ZNqEeyfSsz1I9Lthw" position="390.0,-148.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_X9n54pNqEeyfSsz1I9Lthw" name="LegacyStyledElement">
+      <modelElement href="AnimalFriends.uml#_UXlAQJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <stereotypes xmi:id="_X9n545NqEeyfSsz1I9Lthw" name="Annotations">
+      <modelElement href="AnimalFriends.uml#_UXmOYJNqEeyfSsz1I9Lthw"/>
+    </stereotypes>
+    <visibility xmi:id="_X9n55JNqEeyfSsz1I9Lthw" label="~"/>
+    <operations xmi:id="_X9n55ZNqEeyfSsz1I9Lthw" name="contextLoads">
+      <modelElement href="AnimalFriends.uml#_UXlAQZNqEeyfSsz1I9Lthw"/>
+      <stereotypes xmi:id="_X9n55pNqEeyfSsz1I9Lthw" name="Annotations">
+        <modelElement href="AnimalFriends.uml#_UXlnUJNqEeyfSsz1I9Lthw"/>
+      </stereotypes>
+      <visibility xmi:id="_X9n555NqEeyfSsz1I9Lthw" label="~"/>
+      <cardinality xmi:id="_X9n56JNqEeyfSsz1I9Lthw" label="1" max="1" min="1"/>
     </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
