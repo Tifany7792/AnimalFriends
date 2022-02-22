@@ -72,46 +72,46 @@ Compras (productos con descuentos)
 
 ## CAPTURAS DE PANTALLA
 
-1. Pantalla de inicio
+1. Pantalla de inicio: (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/inicio.png)
 
-2. Inicio de sesión
+2. Inicio de sesión (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion.png)
 
-3. Registro
+3. Registro (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/Registrarse.png)
 
-4. Ver Animales
+4. Ver Animales (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verAnimales.png)
 
-5. Ver datos del animal
+5. Ver datos del animal (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosAnimal.png)
 
-6. Crear un animal
+6. Crear un animal (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoAnimal.png)
 
-7. Ver localizaciones
+7. Ver localizaciones (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verlocalizaciones.png)
 
-8. Ver datos de la localizacion
+8. Ver datos de la localizacion (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosLocalizacion.png)
 
-9. Añadir localizacion
+9. Añadir localizacion (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevaLocalizacion.png)
 
-10. Ver Productos
+10. Ver Productos (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verProductos.png)
 
-11. Ver datos de un producto
+11. Ver datos de un producto (Público)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosProducto.png)
 
-12. Añadir Producto
+12. Añadir Producto (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoProducto.png)
 
-13. Ver un usuario
+13. Ver un usuario (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verUsuario.png)
 
-14. Editar un usuario
+14. Editar un usuario (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
 
 
