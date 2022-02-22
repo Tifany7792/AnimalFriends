@@ -72,10 +72,11 @@ Compras (productos con descuentos)
 
 ## CAPTURAS DE PANTALLA
 
-1. Pantalla de inicio: (Público)
+1. Pantalla de inicio: (Público) En esta pantalla podremos, loguearnos, registrarnos, o navegar para visualizar localizaciones, animales o productos.
+
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/inicio.png)
 
-2. Inicio de sesión (Público)
+2. Inicio de sesión (Público) 
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion.png)
 
 3. Registro (Público)
