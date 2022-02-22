@@ -52,3 +52,8 @@ Altas en servicios
 Altas de usuarios
 
 Compras (productos con descuentos)
+
+#FASE 2#
+---------
+##UML DE ENTIDADES PRINCIPALES##
+
