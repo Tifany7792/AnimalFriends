@@ -7,7 +7,7 @@ Proyecto Diseño de aplicaciones distribuidas en el que vamos a implementar una 
 ## Nombre de la aplicación web
 ----------------------------
 
-amigosanimales
+AnimalFriends
 
 ## Descripción
 -------------
