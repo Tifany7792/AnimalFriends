@@ -4,12 +4,14 @@
 	<title>Nuevo animal</title>
 	<link href="plantilla.css" rel="stylesheet" />
 </head>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+		<h1>Crear animal</h1>
+	</div>
 
 	<form action="animal/new" method="post">
 		<p>Animal: </p>	
 		<input type='text' name='tipo'/>
-		<p>Usuario: </p>
-		<input type='text' name='user' value='{{#user}}{{.}}{{/user}}'/>
 
 		<input type='submit' value='Save'/>
 	</form>
