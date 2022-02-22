@@ -47,7 +47,7 @@ Localizaciones: Habrá tanto hoteles a los que se podrá acceder desde la parte 
 
 gestion de reservas
 
-Altas en servicios
+Altas de mascotas
 
 Altas de usuarios
 
