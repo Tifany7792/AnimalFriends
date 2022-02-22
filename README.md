@@ -53,7 +53,9 @@ Altas de usuarios
 
 Compras (productos con descuentos)
 
-#FASE 2#
+# FASE 2
 ---------
-##UML DE ENTIDADES PRINCIPALES##
+## UML DE ENTIDADES PRINCIPALES 
+
+![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/AnimalFriendsEntidades.png)
 
