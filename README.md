@@ -73,46 +73,46 @@ Compras (productos con descuentos)
 ## CAPTURAS DE PANTALLA
 
 1. Pantalla de inicio
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/inicio)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/inicio.png)
 
 2. Inicio de sesión
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion.png)
 
 3. Registro
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/Registrarse)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/Registrarse.png)
 
 4. Ver Animales
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verAnimales)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verAnimales.png)
 
 5. Ver datos del animal
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosAnimal)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosAnimal.png)
 
 6. Crear un animal
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoAnimal)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoAnimal.png)
 
 7. Ver localizaciones
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verlocalizaciones)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verlocalizaciones.png)
 
 8. Ver datos de la localizacion
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosLocalizacion)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosLocalizacion.png)
 
 9. Añadir localizacion
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevaLocalizacion)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevaLocalizacion.png)
 
 10. Ver Productos
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verProductos)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verProductos.png)
 
 11. Ver datos de un producto
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosProducto)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/datosProducto.png)
 
 12. Añadir Producto
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoProducto)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/nuevoProducto.png)
 
 13. Ver un usuario
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verUsuario)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/verUsuario.png)
 
 14. Editar un usuario
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/editarUsuario)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
 
 
 
