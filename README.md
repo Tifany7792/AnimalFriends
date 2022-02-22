@@ -59,3 +59,7 @@ Compras (productos con descuentos)
 
 ![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/AnimalFriendsEntidades.png)
 
+## UML ENTIDAD - RELACIÓN
+
+![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/diagramaRelaciones.png)
+
