@@ -67,7 +67,7 @@ Compras (productos con descuentos)
 ![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/diagramaRelaciones.png)
 
 ## DIAGRAMA DE NAVEGACIÓN
-![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/capturas/diagramaNavegacion.jpg)
+![Image text](https://github.com/Tifany7792/animalfriends/blob/versionBuena/AnimalFriends/src/main/resources/raw/diagramaNavegacion.jpg)
 
 
 ## CAPTURAS DE PANTALLA
