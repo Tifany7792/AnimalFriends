@@ -14,14 +14,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		//Paginas publicas -- añadir todas las paginas publicas
 		http.authorizeRequests().antMatchers("/").permitAll();
 		http.authorizeRequests().antMatchers("/login").permitAll();
+		http.authorizeRequests().antMatchers("/loginUsuario").permitAll();
 		http.authorizeRequests().antMatchers("/registrar").permitAll();
+		http.authorizeRequests().antMatchers("/registrarUsuario").permitAll();
 		http.authorizeRequests().antMatchers("/animales").permitAll();
 		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
 		http.authorizeRequests().antMatchers("/productos").permitAll();
 		http.authorizeRequests().antMatchers("/animal/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/local/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/prod/{{id}}").permitAll();
-		http.authorizeRequests().antMatchers("/").permitAll();
+		
 		
 		
 		
@@ -48,7 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		// User
 		auth.inMemoryAuthentication()
-		.withUser("user").password("pass").roles("USER");
+		.withUser("Jose").password("1234").roles("USER");
 
 	}
 	
