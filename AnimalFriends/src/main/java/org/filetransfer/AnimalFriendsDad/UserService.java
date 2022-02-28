@@ -81,7 +81,7 @@ public class UserService {
 	}
 
 	public List<Usuarios> getAllUsers() {
-		return usuarios.findAll();
+		return (List<Usuarios>) usuarios.findAll();
 	}
 
 	public Usuarios getMiUsuario() {

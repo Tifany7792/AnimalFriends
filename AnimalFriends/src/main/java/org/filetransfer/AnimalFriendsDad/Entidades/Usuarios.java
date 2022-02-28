@@ -21,6 +21,17 @@ public class Usuarios {
 	@Column(nullable = false)
 	private String password;
 	
+	@ElementCollection(fetch = FetchType.EAGER)
+	private List<String> roles;
+	
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
 	@OneToMany
 	private List<Localizaciones> reservas;
 	

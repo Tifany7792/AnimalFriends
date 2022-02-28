@@ -2,11 +2,13 @@ package org.filetransfer.AnimalFriendsDad;
 
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,6 +41,15 @@ public class WebController {
 	@GetMapping("/registrar")
 	public String goToRegister() {
 		return "registerWeb";
+	}
+	
+	@RequestMapping("login")
+	public String loginn(Model model,HttpServletRequest request) {
+		
+		CsrfToken token =(CsrfToken) request.getAttribute("_csrf");
+		model.addAttribute("token", token.getToken());
+		
+		return "login";
 	}
 
 	@RequestMapping(value = "/loginUsuario")
