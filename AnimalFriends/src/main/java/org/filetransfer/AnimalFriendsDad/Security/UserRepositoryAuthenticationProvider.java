@@ -19,7 +19,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
-public abstract class UserRepositoryAuthenticationProvider implements AuthenticationProvider {
+public class UserRepositoryAuthenticationProvider implements AuthenticationProvider {
 	@Autowired
 	private RepositorioUsuarios userRepository;
 
@@ -41,6 +41,12 @@ public abstract class UserRepositoryAuthenticationProvider implements Authentica
 			roles.add(new SimpleGrantedAuthority(role));
 		}
 		return new UsernamePasswordAuthenticationToken(user.get().getNombre(), password, roles);
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

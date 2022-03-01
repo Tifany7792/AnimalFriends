@@ -1,49 +1,37 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
-
 import java.util.List;
 
 import javax.persistence.*;
 
-
-
 @Entity
 public class Usuarios {
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	@Column(unique = true)
 	private String nombre;
-	
+
 	@Column(nullable = false)
 	private String password;
-	
+
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
-	
-	public List<String> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<String> roles) {
-		this.roles = roles;
-	}
 
 	@OneToMany
 	private List<Localizaciones> reservas;
-	
+
 	@OneToMany
 	private List<Animal> mascotas;
-	
+
 	@ManyToMany
 	private List<Productos> listaCompra;
-	
-	
-	public Usuarios() {};
-	
+
+	public Usuarios() {
+	};
+
 	public Usuarios(String n, String p) {
 		super();
 		this.nombre = n;
@@ -55,6 +43,56 @@ public class Usuarios {
 		List<Productos> c = null;
 		this.listaCompra = c;
 	}
+
+	public Usuarios(String nombre, String password, String roles) {
+		super();
+		this.nombre = nombre;
+		this.password = password;
+		this.roles.add(roles);
+		List<Localizaciones> l = null;
+		this.reservas = l;
+		List<Animal> a = null;
+		this.mascotas = a;
+		List<Productos> c = null;
+		this.listaCompra = c;
+	}
+	
+	public Usuarios(String nombre, String password, String rolUser, String rolAdmin) {
+		super();
+		this.nombre = nombre;
+		this.password = password;
+		this.roles.add(rolUser);
+		this.roles.add(rolAdmin);
+		List<Localizaciones> l = null;
+		this.reservas = l;
+		List<Animal> a = null;
+		this.mascotas = a;
+		List<Productos> c = null;
+		this.listaCompra = c;
+	}
+
+
+	public Usuarios(String nombre, String password, List<String> roles) {
+		super();
+		this.nombre = nombre;
+		this.password = password;
+		this.roles = roles;
+		List<Localizaciones> l = null;
+		this.reservas = l;
+		List<Animal> a = null;
+		this.mascotas = a;
+		List<Productos> c = null;
+		this.listaCompra = c;
+	}
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
 	public List<Productos> getListaCompra() {
 		return listaCompra;
 	}
@@ -62,7 +100,7 @@ public class Usuarios {
 	public void setListaCompra(List<Productos> listaCompra) {
 		this.listaCompra = listaCompra;
 	}
-	
+
 	public List<Localizaciones> getReservas() {
 		return reservas;
 	}
@@ -78,19 +116,19 @@ public class Usuarios {
 	public void setMascotas(List<Animal> mascotas) {
 		this.mascotas = mascotas;
 	}
-	
+
 	public void addMascotas(Animal m) {
 		this.mascotas.add(m);
 	}
-	
+
 	public void addReserva(Localizaciones l) {
 		this.reservas.add(l);
 	}
-	
+
 	public void addProducto(Productos p) {
 		this.listaCompra.add(p);
 	}
-	
+
 	public long getId() {
 		return this.id;
 	}
@@ -119,6 +157,5 @@ public class Usuarios {
 	public String toString() {
 		return "Usuarios [nombre=" + nombre + ", pasword=" + password + "]";
 	}
-	
 
 }
