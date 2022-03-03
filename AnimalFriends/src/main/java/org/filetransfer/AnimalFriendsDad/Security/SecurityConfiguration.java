@@ -1,16 +1,30 @@
 package org.filetransfer.AnimalFriendsDad.Security;
 
+import java.security.SecureRandom;
+
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositoryUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
+	//@Autowired
+	//public UserRepositoryAuthenticationProvider authenticationProvider;
+	
 	@Autowired
-	public UserRepositoryAuthenticationProvider authenticationProvider;
+	RepositoryUserDetailsService userDetailsService;
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder(10, new SecureRandom());
+	}
 	
 	@Override
 	 protected void configure(HttpSecurity http) throws Exception {
@@ -32,7 +46,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		
 		//paginas privadas -- se añaden automaticamente
-		http.authorizeRequests().anyRequest().authenticated();
+		//http.authorizeRequests().anyRequest().authenticated();
+		http.authorizeRequests().antMatchers("/private").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
+
 		
 		//  login
 		http.formLogin().loginPage("/login");
@@ -46,7 +63,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.logout().logoutSuccessUrl("/");
 		
 		// Disable CSRF at the moment
-		http.csrf().disable();
+		//http.csrf().disable();
+		// Allow H2 console
+		http.authorizeRequests().antMatchers("/h2-console/**").permitAll();
+		http.headers().frameOptions().sameOrigin();
 	}
 		
 	@Override
@@ -58,7 +78,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		auth.inMemoryAuthentication().withUser("admin").password("adminpass").roles("USER","ADMIN");
 */
-		auth.authenticationProvider(authenticationProvider);
+		//auth.authenticationProvider(authenticationProvider);
+		
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 	
 	
