@@ -2,6 +2,7 @@ package org.filetransfer.AnimalFriendsDad;
 
 
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -24,8 +25,16 @@ public class WebController {
 	private UserService userService;
 
 	@GetMapping("/")
-	public String ventanaPrincipal(Model model, HttpSession session) {
+	public String ventanaPrincipal(Model model, HttpSession session, HttpServletRequest request ) {
 
+		if (model != null) {
+
+			CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+			if (token != null) {
+				model.addAttribute("token", token.getToken());
+			}
+		}
+		
 		if (session.getAttribute("logged") == "yes") {
 			model.addAttribute("Usuarios", true);
 		}
@@ -33,7 +42,14 @@ public class WebController {
 	}
 
 	@GetMapping("/login")
-	public String goToLogin(Model model) {
+	public String goToLogin(Model model, HttpServletRequest request) {
+		if (model != null) {
+
+			CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+			if (token != null) {
+				model.addAttribute("token", token.getToken());
+			}
+		}
 		model.addAttribute("incorrecto", false);
 		return "loginWeb";
 	}
@@ -41,15 +57,6 @@ public class WebController {
 	@GetMapping("/registrar")
 	public String goToRegister() {
 		return "registerWeb";
-	}
-	
-	@RequestMapping("login")
-	public String loginn(Model model,HttpServletRequest request) {
-		
-		CsrfToken token =(CsrfToken) request.getAttribute("_csrf");
-		model.addAttribute("token", token.getToken());
-		
-		return "login";
 	}
 
 	@RequestMapping(value = "/loginUsuario")

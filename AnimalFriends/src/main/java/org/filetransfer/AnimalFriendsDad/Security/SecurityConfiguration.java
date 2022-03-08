@@ -32,6 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		//Paginas publicas -- añadir todas las paginas publicas
 		http.authorizeRequests().antMatchers("/").permitAll();
+		http.authorizeRequests().antMatchers("/principal").permitAll();
 		http.authorizeRequests().antMatchers("/login").permitAll();
 		http.authorizeRequests().antMatchers("/loginUsuario").permitAll();
 		http.authorizeRequests().antMatchers("/registrar").permitAll();
@@ -47,9 +48,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		
 		//paginas privadas -- se añaden automaticamente
-		//http.authorizeRequests().anyRequest().authenticated();
-		http.authorizeRequests().antMatchers("/private").hasAnyRole("USER");
-		http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
+		http.authorizeRequests().anyRequest().authenticated();
+		//http.authorizeRequests().antMatchers("/").hasAnyRole("USER");
 
 		
 		//  login
@@ -64,10 +64,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.logout().logoutSuccessUrl("/");
 		
 		// Disable CSRF at the moment
-		http.csrf().disable();
-		// Allow H2 console
-		http.authorizeRequests().antMatchers("/h2-console/**").permitAll();
-		http.headers().frameOptions().sameOrigin();
+		//http.csrf().disable();
 	}
 		
 	@Override
