@@ -2,7 +2,6 @@ package org.filetransfer.AnimalFriendsDad.Security;
 
 import java.security.SecureRandom;
 
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositoryUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +19,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	RepositoryUserDetailsService userDetailsService;
+	
+	
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {

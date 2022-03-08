@@ -1,8 +1,16 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
-import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Usuarios {
@@ -44,11 +52,11 @@ public class Usuarios {
 		this.listaCompra = c;
 	}
 
-	public Usuarios(String nombre, String password, String roles) {
+	public Usuarios(String nombre, String password, String... roles) {
 		super();
 		this.nombre = nombre;
 		this.password = password;
-		this.roles.add(roles);
+		this.roles = List.of(roles);
 		List<Localizaciones> l = null;
 		this.reservas = l;
 		List<Animal> a = null;
@@ -57,7 +65,7 @@ public class Usuarios {
 		this.listaCompra = c;
 	}
 	
-	public Usuarios(String nombre, String password, String rolUser, String rolAdmin) {
+	/*public Usuarios(String nombre, String password, String rolUser, String rolAdmin) {
 		super();
 		this.nombre = nombre;
 		this.password = password;
@@ -69,7 +77,7 @@ public class Usuarios {
 		this.mascotas = a;
 		List<Productos> c = null;
 		this.listaCompra = c;
-	}
+	}*/
 
 
 	public Usuarios(String nombre, String password, List<String> roles) {

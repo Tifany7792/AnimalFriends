@@ -18,7 +18,7 @@ public class DatabaseUsersLoader {
 	private PasswordEncoder passwordEncoder;
 	
 	@PostConstruct
-	private void initDatabase() {
+	private void init() {
 		//usuarios.save(new Usuarios("user","pass","ROLE_USER"));
 		//usuarios.save(new Usuarios("admin","adminpass","ROLE_USER","ROLE_ADMIN"));
 		usuarios.save(new Usuarios("user", passwordEncoder.encode("pass"), "USER"));
