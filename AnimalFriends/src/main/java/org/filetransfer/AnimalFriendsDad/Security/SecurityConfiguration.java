@@ -43,6 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/animal/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/local/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/prod/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers("/plantilla.css").permitAll();
 		
 		
 		
