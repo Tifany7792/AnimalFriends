@@ -27,13 +27,13 @@ public class WebController {
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpSession session, HttpServletRequest request ) {
 
-		if (model != null) {
-
-			CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-			if (token != null) {
-				model.addAttribute("token", token.getToken());
-			}
-		}
+//		if (model != null) {
+//
+//			CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+//			if (token != null) {
+//				model.addAttribute("token", token.getToken());
+//			}
+//		}
 		
 		if (session.getAttribute("logged") == "yes") {
 			model.addAttribute("Usuarios", true);
