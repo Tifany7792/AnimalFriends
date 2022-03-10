@@ -11,15 +11,9 @@
 	
 </div>
 
-	{{#incorrecto}}
-	<h2>Nombre o contraseña incorrectos</h2>
-	{{/incorrecto}}
-	
-	{{^incorrecto}}
 	<h1>Introduce tu nombre y contraseña</h1>
-	{{/incorrecto}}
 
-<form method='post' action="/loginUsuario">
+<form method='post' action="/login">
 	<br>
 	
 	<label>Nombre:</label><input type="text" placeholder="Ingresar nombre" name="nombre" required/><br />
@@ -32,9 +26,9 @@
 	
 	<br>
 	<br>
-	<a href="/"> Volver</a>
-	
 </form>
+
+<a href="/"> Volver</a>
 
 
 <footer th:fragment="creditFooter" class="credit">

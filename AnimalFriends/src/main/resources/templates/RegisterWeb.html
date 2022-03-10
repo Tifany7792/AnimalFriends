@@ -23,31 +23,32 @@
 
 <form method='post' action="/registrarUsuario">
 	<br>
-	<div class="request">
-		<label for="nombre"><b>Nombre</b></label>
-		<br>
-		<input type="text" placeholder="Ingresar nombre" name="nombre" id="nombre" required>
-		<br>
-		<br>
-		<label for="password"><b>Contraseña</b></label>
-		<br>
-		<input type="password" placeholder="Ingresar Contraseña" name="psw" id="psw" required>
-		<br>
-		<br>
-		<label for="psw-repeat"><b>Repetir Contraseña</b>
-			<br><label>
-				<input type="password" placeholder="Repetir Contraseña" name="pswRepeat" id="pswRepeat" required>
-				<p>¿Está ya registrado? <a href="/login"> Iniciar Sesión </a></p>
-	</div>
+	<label for="nombre"><b>Nombre</b></label>
+	<br>
+	<input type="text" placeholder="Ingresar nombre" name="nombre" required>
+	<br>
+	<br>
+	<label for="password"><b>Contraseña</b></label>
+	<br>
+	<input type="password" placeholder="Ingresar Contraseña" name="psw" required>
+	<br>
+	<br>
+	<label for="psw-repeat"><b>Repetir Contraseña</b>
+	<br><label>
+	<input type="password" placeholder="Repetir Contraseña" name="pswRepeat" required>
+	<input type="hidden" name="_csrf" value="{{token}}"/>
+	<p>¿Está ya registrado? <a href="/login"> Iniciar Sesión </a></p>
+	
 
 	<!-- Submit data button -->
 	<br>
 	<button type="submit" class="registerbtn"> Registrar</button>
 	<br>
 	<br>
-	<a href="/"> Volver</a>
 
 </form>
+
+<a href="/"> Volver</a>
 
 <footer th:fragment="creditFooter" class="credit">
 	</body>
