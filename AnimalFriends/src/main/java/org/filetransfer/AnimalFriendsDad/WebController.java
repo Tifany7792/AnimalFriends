@@ -1,8 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
 
-
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -43,7 +41,8 @@ public class WebController {
 		}
 		
 		model.addAttribute("incorrecto", false);
-		return "loginWeb";
+		//return "loginWeb";
+		return "indexPrueba";
 	}
 
 	@GetMapping("/registrar")

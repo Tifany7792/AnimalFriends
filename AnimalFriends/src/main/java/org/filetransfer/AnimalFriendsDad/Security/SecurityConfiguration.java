@@ -44,9 +44,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/local/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/prod/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/plantilla.css").permitAll();
-		
-		
-		
+		http.authorizeRequests().antMatchers("/estilos.css").permitAll();
+		http.authorizeRequests().antMatchers("/fondo.jpg").permitAll();
+		http.authorizeRequests().antMatchers("/main.js").permitAll();
+		http.authorizeRequests().antMatchers("/indexPrueba").permitAll();
 		
 		//paginas privadas -- se añaden automaticamente
 		http.authorizeRequests().anyRequest().authenticated();
