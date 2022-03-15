@@ -15,6 +15,15 @@
 		<h1>¡Animal Friends!</h1>
 
 	</div>
+	
+	{{#nombreUsado}}
+	<h2>Nombre ya usado</h2>
+	{{/nombreUsado}}
+	
+	{{#contrasenaIncorrecta}}
+	<h2>Contraseña incorrecta</h2>
+	{{/contrasenaIncorrecta}}
+	
 	<div class="contenedor-form">
 		<div class="toggle">
 			<a href="/"> Volver</a>
@@ -22,13 +31,14 @@
 
 		<div class="formulario">
 			<h2>Crea tu Cuenta</h2>
-			<form method='post' action="/registrarUsuario">
+			<form method='post' action="/registrarUsuari">
 				<input type="text" placeholder="Usuario" name="nombre" required>
 
 				<input type="password" placeholder="Contraseña" name="psw" required>
 
 				<input type="password" placeholder="Repita la contraseña" name="pswRepeat" required>
 				
+				<input type="hidden" name="_csrf" value="{{token}}"/>
 				<input type="submit" value="Registrarse">
 			</form>
 		</div>
