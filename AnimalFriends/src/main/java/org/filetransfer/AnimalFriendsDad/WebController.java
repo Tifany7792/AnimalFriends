@@ -29,7 +29,7 @@ public class WebController {
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
 		model.addAttribute("sesion", null != request.getUserPrincipal());
-		return "principal";
+		return "principal1";
 	}
 
 	@GetMapping("/login")
