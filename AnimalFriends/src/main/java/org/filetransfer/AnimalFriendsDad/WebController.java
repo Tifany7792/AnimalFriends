@@ -1,6 +1,7 @@
 package org.filetransfer.AnimalFriendsDad;
 
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -29,6 +30,7 @@ public class WebController {
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
 		model.addAttribute("sesion", null != request.getUserPrincipal());
+		System.out.println("principal");
 		return "principal1";
 	}
 
@@ -44,10 +46,21 @@ public class WebController {
 		//return "loginWeb";
 		return "indexPrueba";
 	}
+	
+	@GetMapping("/logout")
+	public String logout(Model model, HttpServletRequest request) {
+		try {
+			request.logout();
+		} catch (ServletException e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("sesion", null != request.getUserPrincipal());
+		return "/principal1";
+	}
 
 	@GetMapping("/registrar")
 	public String goToRegister(Model model, HttpServletRequest request) {
-
+		System.out.println("registrar");
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
 			model.addAttribute("token", token.getToken());
@@ -56,14 +69,17 @@ public class WebController {
 		return "registerWeb";
 	}
 
-
-	@RequestMapping(value = "/registrarUsuario")
+	@RequestMapping(value = "/registrarUsuari")
 	public String registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
 			@RequestParam String pswRepeat, HttpSession session, HttpServletRequest request) {
+		System.out.println("Comprobando pass");
 		if (psw.equals(pswRepeat)) {
+			System.out.println("Creando usuario");
 			boolean result = userService.registrar(nombre, passwordEncoder.encode(psw));
 			if (result) {
-				return "/";
+				System.out.println("result = true");
+				model.addAttribute("sesion", null != request.getUserPrincipal());
+				return "/principal1";
 			} else {
 				model.addAttribute("nombreUsado", true);
 

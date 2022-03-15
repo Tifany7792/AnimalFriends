@@ -15,22 +15,25 @@
 
 			<h1>¡Bienvenido a Animal Friends!</h1>
 
-
-
 		</div>
+
 
 		<div class="contenedor-form" style="padding-top:10px;">
 			<div class="toggle">
 				<div class="inline-buttons">
 
+				{{^sesion}}
 					<a href="/indexPrueba"> Iniciar Sesión</a>
 
-
 					<a href="/registrar"> Registarse</a>
-
+				{{/sesion}}
+				
+				
+				{{#sesion}}
+					<a href="/logout"> Cerrar Sesion</a>
+				{{/sesion}}
 
 					<a href="/animales"> Ver animales</a>
-
 
 					<a href="/localizaciones"> Ver localizaciones</a>
 
@@ -45,8 +48,8 @@
 							<input type='submit' value='ver' />
 						</p>
 					</form>
+					
 				</div>
-
 			</div>
 		</div>
 	</div>

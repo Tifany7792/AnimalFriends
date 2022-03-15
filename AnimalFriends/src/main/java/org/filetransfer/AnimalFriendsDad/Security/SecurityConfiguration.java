@@ -33,16 +33,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		//Paginas publicas -- añadir todas las paginas publicas
 		http.authorizeRequests().antMatchers("/").permitAll();
 		http.authorizeRequests().antMatchers("/principal").permitAll();
+		
 		http.authorizeRequests().antMatchers("/login").permitAll();
 		http.authorizeRequests().antMatchers("/loginUsuario").permitAll();
+		
 		http.authorizeRequests().antMatchers("/registrar").permitAll();
 		http.authorizeRequests().antMatchers("/registrarUsuario").permitAll();
+		http.authorizeRequests().antMatchers("/registrarUsuari").permitAll();
+		http.authorizeRequests().antMatchers("/registerWeb").permitAll();
+		
 		http.authorizeRequests().antMatchers("/animales").permitAll();
 		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
 		http.authorizeRequests().antMatchers("/productos").permitAll();
+		
 		http.authorizeRequests().antMatchers("/animal/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/local/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers("/prod/{{id}}").permitAll();
+		
 		http.authorizeRequests().antMatchers("/plantilla.css").permitAll();
 		http.authorizeRequests().antMatchers("/estilos.css").permitAll();
 		http.authorizeRequests().antMatchers("/fondo.jpg").permitAll();
@@ -52,7 +59,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/animales.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/hoteles.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/collares.jpg").permitAll();
+
 		http.authorizeRequests().antMatchers("/paginaprincipal.css").permitAll();
+
+		http.authorizeRequests().antMatchers("/logout").permitAll();
+
 		
 		//paginas privadas -- se añaden automaticamente
 		http.authorizeRequests().anyRequest().authenticated();
