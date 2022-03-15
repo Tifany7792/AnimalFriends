@@ -24,9 +24,6 @@ public class Usuarios {
 
 	@Column(nullable = false)
 	private String password;
-	
-	@Column(nullable = false)
-	private String email;
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
@@ -47,7 +44,6 @@ public class Usuarios {
 		super();
 		this.nombre = n;
 		this.password = p;
-		this.email = "";
 		List<Localizaciones> l = null;
 		this.reservas = l;
 		List<Animal> a = null;
@@ -56,24 +52,11 @@ public class Usuarios {
 		this.listaCompra = c;
 	}
 
-	public Usuarios(String n, String p, String e) {
-		super();
-		this.nombre = n;
-		this.password = p;
-		this.email = e;
-		List<Localizaciones> l = null;
-		this.reservas = l;
-		List<Animal> a = null;
-		this.mascotas = a;
-		List<Productos> c = null;
-		this.listaCompra = c;
-	}
 
-	public Usuarios(String nombre, String password,String e, String... roles) {
+	public Usuarios(String nombre, String password, String... roles) {
 		super();
 		this.nombre = nombre;
 		this.password = password;
-		this.email = e;
 		//this.roles = List.of(roles);
 		List<Localizaciones> l = null;
 		this.reservas = l;
@@ -98,11 +81,10 @@ public class Usuarios {
 	}*/
 
 
-	public Usuarios(String nombre, String password, String e, List<String> roles) {
+	public Usuarios(String nombre, String password, List<String> roles) {
 		super();
 		this.nombre = nombre;
 		this.password = password;
-		this.email = e;
 		this.roles = roles;
 		List<Localizaciones> l = null;
 		this.reservas = l;
@@ -110,14 +92,6 @@ public class Usuarios {
 		this.mascotas = a;
 		List<Productos> c = null;
 		this.listaCompra = c;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public List<String> getRoles() {

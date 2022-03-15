@@ -7,7 +7,6 @@
 }
 
 body {
-	background:url(../raw/fondo.jpg);
 	background-image: fondo;
     background-size: cover;
     background-attachment: fixed;
@@ -62,8 +61,7 @@ body {
     line-height: 1;
 }
 .contenedor-form input[type="text"],
-.contenedor-form input[type="password"],
-.contenedor-form input[type="email"] {
+.contenedor-form input[type="password"]{
     outline: none;
     display: block;
     width: 100%;
@@ -82,8 +80,7 @@ body {
 }
 
 .contenedor-form input[type="text"]:focus,
-.contenedor-form input[type="password"]:focus,
-.contenedor-form input[type="email"]:focus {
+.contenedor-form input[type="password"]:focus{
     border-bottom: 4px solid #0075d9;
 }
 

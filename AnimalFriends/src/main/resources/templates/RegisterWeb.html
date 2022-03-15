@@ -22,13 +22,13 @@
 
 		<div class="formulario">
 			<h2>Crea tu Cuenta</h2>
-			<form action="#">
-				<input type="text" placeholder="Usuario" required>
+			<form method='post' action="/registrarUsuario">
+				<input type="text" placeholder="Usuario" name="nombre" required>
 
-				<input type="password" placeholder="Contraseña" required>
+				<input type="password" placeholder="Contraseña" name="psw" required>
 
-				<input type="password" placeholder="Repita la contraseña" required>
-
+				<input type="password" placeholder="Repita la contraseña" name="pswRepeat" required>
+				
 				<input type="submit" value="Registrarse">
 			</form>
 		</div>
