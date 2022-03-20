@@ -1,25 +1,38 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Animales</title>
-		<link href="plantilla.css" rel="stylesheet" />
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Animales vista</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
 
-	</head>
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
+
+<body>
+	<div class="container body-content">
+
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+					<p>Animal: {{animal.tipo}}</p>
+
+					<p>Id: {{animal.Id}}</p>
+
+
+					<a href="/animal/{{animal.Id}}/delete">Borrar animal</a>
+
+					<br>
+
+					<a href="/animales">Volver</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	<body>
-	
-		<p>Animal: {{animal.tipo}}</p>
-		
-		<p>Id: {{animal.Id}}</p>
-	
-		
-		<a href="/animal/{{animal.Id}}/delete">Borrar animal</a>
-		
-		<br>
-		
-		<a href="/animales">Volver</a>
-	</body>
+</body>
+
 </html>

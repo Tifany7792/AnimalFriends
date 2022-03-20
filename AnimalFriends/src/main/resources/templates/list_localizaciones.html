@@ -1,28 +1,46 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Localizaciones</title>
-		<link href="plantilla.css" rel="stylesheet" />
-	</head>
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Localizaciones</h1>
-	</div>
-	
-<body>	
-	{{#local}}
-	<a href="local/{{id}}">{{nombreSitio}}, {{tipo}}</a><br>
-	{{/local}}
-	
-	{{^local}}
-	<p>No hay localizaciones</p>
-	{{/local}}
-	
-	<br>
-	<a href="newLocalizacion">Nueva localizacion</a>
-	<br>
-	<br>
-	<a href="/">Volver</a>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Localizaciones</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container body-content">
+
+
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+			<h1>Localizaciones</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+
+					<a href="newLocalizacion">Nueva localizacion</a>
+
+					<a href="/">Volver</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="contenedor" style="padding-top:10px;">
+			<div class="toggle">
+
+				{{#local}}
+				<a href="local/{{id}}">{{nombreSitio}}, {{tipo}}</a><br>
+				{{/local}}
+
+				{{^local}}
+				<a>No hay localizaciones</a>
+				{{/local}}
+
+			</div>
+		</div>
 </body>
+
 </html>

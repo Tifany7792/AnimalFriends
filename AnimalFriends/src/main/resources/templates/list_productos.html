@@ -1,28 +1,62 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Productos</title>
-		<link href="plantilla.css" rel="stylesheet" />
-	</head>
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Productos</h1>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Productos</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div class="container body-content">
+
+
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+			<h1>Productos</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+
+					<body>
+						<a href="newProducto">Nuevo producto</a>
+
+						<a href="/">Volver</a>
+				</div>
+			</div>
+		</div>
+		<div class="contenedor" style="padding-top:10px;">
+			<div class="toggle">
+				{{#prod}}
+				<a href="prod/{{id}}">{{nombre}}, {{tipo}}</a><br>
+				{{/prod}}
+
+				{{^prod}}
+				<p>No hay productos</p>
+				{{/prod}}
+			</div>
+		</div>
 	</div>
-	
-<body>	
-	{{#prod}}
-	<a href="prod/{{id}}">{{nombre}}, {{tipo}}</a><br>
-	{{/prod}}
-	
-	{{^prod}}
-	<p>No hay productos</p>
-	{{/prod}}
-	
-	<br>
-	<a href="newProducto">Nuevo producto</a>
-	<br>
-	<br>
-	<a href="/">Volver</a>
-</body>	
+
+
+
+	<div class="row justify-content-start" style="padding-top:10px;">
+
+
+
+		<a href="prod/1"><img alt="Image html" width="90%" height="90%" style="max-height:500px;max-width:500px;"
+				src="pelota.jpg"></a>
+
+
+		<a href="prod/2"><img alt="Image html" width="90%" height="90%" style="max-height:500px;max-width:500px;"
+				src="piensosgatos.jpg" />
+
+
+	</div>
+</body>
+
 </html>

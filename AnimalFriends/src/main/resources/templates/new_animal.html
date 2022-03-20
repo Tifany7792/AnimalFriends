@@ -1,19 +1,35 @@
-<html>
+<html lang="es">
 
 <head>
-	<title>Nuevo animal</title>
-	<link href="plantilla.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Nuevo Animal</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
 </head>
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Crear animal</h1>
+
+
+<body>
+	<div class="container body-content">
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+			<h1>Crear Animal</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+					<a><input type='text' name='nombre' /></a>
+
+					<form action="animal/new" method="post">
+						<p>Animal: </p>
+						<input type='text' name='tipo' />
+
+						<input type='submit' value='Save' />
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<form action="animal/new" method="post">
-		<p>Animal: </p>	
-		<input type='text' name='tipo'/>
-
-		<input type='submit' value='Save'/>
-	</form>
 
 </html>

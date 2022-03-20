@@ -1,22 +1,38 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Mascotas de usuarios</title>
-		<link href="plantilla.css" rel="stylesheet" />
-	</head>
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Vista de usuario</h1>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Usuario vista</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div class="container body-content">
+
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+					<p>Nombre Usuario: {{usuario.nombre}}</p>
+					<br>
+					<p>Mascotas: {{#mascotas}}{{tipo}}, {{/mascotas}}</p>
+					<br>
+					<p>Reservas: {{#reservas}}{{nombreSitio}}, {{/reservas}}</p>
+					<br>
+					<p>Lista de la compra: {{#compra}}{{nombre}}, {{/compra}}</p>
+
+					<a href="/">Volver</a>
+				</div>
+			</div>
+		</div>
 	</div>
-<body>	
-	<p>Nombre Usuario: {{usuario.nombre}}</p>
-	<br>
-	<p>Mascotas: {{#mascotas}}{{tipo}}, {{/mascotas}}</p>
-	<br>
-	<p>Reservas: {{#reservas}}{{nombreSitio}}, {{/reservas}}</p>
-	<br>
-	<p>Lista de la compra: {{#compra}}{{nombre}}, {{/compra}}</p>
-		
-	<a href="/">Volver</a>
+
 </body>
+
 </html>

@@ -1,24 +1,39 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Productos</title>
-		<link href="plantilla.css" rel="stylesheet" />
-	</head>
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Producto vista</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div class="container body-content">
+
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+					<p>Producto: {{prod.nombre}}</p>
+
+					<p>Tipo: {{prod.tipo}}</p>
+
+
+					<a href="/prod/{{prod.id}}/delete">Borrar Producto</a>
+
+					<br>
+
+					<a href="/productos">Volver</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	<body>
-	<p>Producto: {{prod.nombre}}</p>
-	
-	<p>Tipo: {{prod.tipo}}</p>
 
-	
-	<a href="/prod/{{prod.id}}/delete">Borrar Producto</a>
-	
-	<br>
-	
-	<a href="/productos">Volver</a>
-	</body>
+</body>
+
 </html>
