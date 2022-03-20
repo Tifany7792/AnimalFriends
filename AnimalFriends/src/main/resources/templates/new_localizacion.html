@@ -1,25 +1,39 @@
-<html>
+<html lang="es">
 
 	<head>
-		<title>Nueva Localizacion</title>
-		<link href="plantilla.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Nueva Localización</title>
+		<link href="paginassecundarias.css" rel="stylesheet" />
 	</head>
-	
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Añadir localizacion</h1>
-	</div>
-	
-	<form action="/localizacion/new" method="post">
-		<p>Nombre: </p>	
-		<input type='text' name='nombreSitio'/>
-		<p>Tipo: </p>
-		<input type='text' name='tipo'/>
 
-		<input type='submit' value='Save'/>
-	</form>
-		
-	
+
+	<body>
+		<div class="container body-content">
+			<div class="header">
+
+				<h1>¡Animal Friends!</h1>
+				<h1>Añadir Localización</h1>
+
+			</div>
+
+			<div class="contenedor-form" style="padding-top:10px;">
+				<div class="toggle">
+					<div class="inline-buttons">
+						<form action="/localizacion/new" method="post">
+							<p>Nombre: </p>
+							<input type='text' name='nombreSitio' />
+							<p>Tipo: </p>
+							<input type='text' name='tipo' />
+
+							<input type='submit' value='Save' />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
 	</body>
-</html>
+
+	</html>

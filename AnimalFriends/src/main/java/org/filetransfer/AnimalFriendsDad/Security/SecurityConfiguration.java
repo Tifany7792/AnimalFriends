@@ -62,7 +62,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/capuchilo.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/erizo.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/pelota.jpg").permitAll();
-		http.authorizeRequests().antMatchers("piensosgatos.jpg").permitAll();
+		http.authorizeRequests().antMatchers("/piensosgatos.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/paginassecundarias.css").permitAll();
 		http.authorizeRequests().antMatchers("/paginaprincipal.css").permitAll();
 

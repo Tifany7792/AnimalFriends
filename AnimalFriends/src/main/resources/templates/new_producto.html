@@ -1,23 +1,36 @@
-<html>
+<html lang="es">
 
-	<head>
-		<title>Nuevo Producto</title>
-		<link href="plantilla.css" rel="stylesheet" />
-	</head>
-	
-	
-	<div class="header">
-		<h1>¡Animal Friends!</h1>
-		<h1>Añadir producto</h1>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Nuevo Producto</title>
+	<link href="paginassecundarias.css" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div class="container body-content">
+		<div class="header">
+
+			<h1>¡Animal Friends!</h1>
+			<h1>Añadir Producto</h1>
+
+		</div>
+
+		<div class="contenedor-form" style="padding-top:10px;">
+			<div class="toggle">
+				<div class="inline-buttons">
+
+					<form action="/producto/new" method="post">
+						<p>Nombre: </p>
+						<input type='text' name='nombre' />
+						<p>Tipo: </p>
+						<input type='text' name='tipo' />
+
+						<input type='submit' value='Save' />
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	<form action="/producto/new" method="post">
-		<p>Nombre: </p>	
-		<input type='text' name='nombre'/>
-		<p>Tipo: </p>
-		<input type='text' name='tipo'/>
 
-		<input type='submit' value='Save'/>
-	</form>
-		
 </html>
