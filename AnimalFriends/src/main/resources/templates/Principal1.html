@@ -22,12 +22,16 @@
 		<div class="contenedor-form" style="padding-top:10px;">
 			<div class="toggle">
 				<div class="inline-buttons">
-
+					
+					{{^sesion}}
 					<a href="/login"> Iniciar Sesión</a>
 
-
 					<a href="/registrar"> Registarse</a>
-
+					{{/sesion}}
+					
+					{{#sesion}}
+					<a href="/logout"> Cerrar Sesión</a>
+					{{/sesion}}
 
 					<a href="/animales"> Ver animales</a>
 

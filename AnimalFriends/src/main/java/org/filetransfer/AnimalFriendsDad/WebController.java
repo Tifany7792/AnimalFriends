@@ -78,7 +78,7 @@ public class WebController {
 			boolean result = userService.registrar(nombre, passwordEncoder.encode(psw));
 			if (result) {
 				System.out.println("result = true");
-				model.addAttribute("sesion", null != request.getUserPrincipal());
+				model.addAttribute("sesion", true);
 				return "/principal1";
 			} else {
 				model.addAttribute("nombreUsado", true);
