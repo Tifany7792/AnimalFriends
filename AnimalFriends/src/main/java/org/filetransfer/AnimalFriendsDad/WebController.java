@@ -108,17 +108,23 @@ public class WebController {
 	}
 	
 	
-	@PostMapping("/verUsuario")
-	public String visualizarUsuario(Model model, String nombre) {
-
-		model.addAttribute("usuario", userService.getUsuario(nombre));
+	@GetMapping("/verUsuario")
+	public String visualizarUsuario(Model model, HttpServletRequest request) {
 		
-		Usuarios u = userService.getUsuario(nombre);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return "show_usuario";
+		if(null != request.getUserPrincipal()) {
+			
+		
+			String name = request.getUserPrincipal().getName();
+			Usuarios u = userService.getUsuario(name);
+			
+			model.addAttribute("usuario", u);
+			model.addAttribute("mascotas",u.getMascotas());
+			model.addAttribute("reservas",u.getReservas());
+			model.addAttribute("compra",u.getListaCompra());
+			return "show_usuario";
+		}else {
+			return "/login";
+		}
 	}
 	
 

@@ -14,8 +14,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
-	//@Autowired
-	//public UserRepositoryAuthenticationProvider authenticationProvider;
+	@Autowired
+	public UserRepositoryAuthenticationProvider authenticationProvider;
 	
 	@Autowired
 	RepositoryUserDetailsService userDetailsService;
@@ -67,7 +67,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/paginaprincipal.css").permitAll();
 
 		http.authorizeRequests().antMatchers("/logout").permitAll();
-
+			
 		
 		//paginas privadas -- se añaden automaticamente
 		http.authorizeRequests().anyRequest().authenticated();
