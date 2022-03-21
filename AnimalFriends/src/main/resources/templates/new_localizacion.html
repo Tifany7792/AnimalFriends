@@ -20,12 +20,13 @@
 				<div class="toggle">
 					<div class="inline-buttons">
 						<form action="/localizacion/new" method="post">
-							<p>Nombre: </p>
+							<p>Lugar: </p>
 							<input type='text' name='nombreSitio' />
-							<p>Tipo: </p>
-							<input type='text' name='tipo' />
-
+							<textarea name='tipo' rows=5 cols=40>
+							Descripción del lugar </textarea>
+					
 							<input type='submit' value='Save' />
+							<input type="hidden" name="_csrf" value="{{token}}"/>
 						</form>
 					</div>
 				</div>

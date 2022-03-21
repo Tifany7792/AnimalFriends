@@ -2,10 +2,12 @@ package org.filetransfer.AnimalFriendsDad;
 
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -56,8 +58,11 @@ public class ProductosController {
 	}
 	
 	@GetMapping("/newProducto")
-	public String añadirProducto() {
-
+	public String añadirProducto(Model model, HttpServletRequest request) {
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
 		return "new_producto";
 	}
 	

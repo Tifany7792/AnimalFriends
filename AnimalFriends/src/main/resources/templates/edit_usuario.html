@@ -11,21 +11,21 @@
 <body>	
 	<br>
 	<form action="/aniadirMascota" method="post">
-		<p>Usuario: <input type='text' name='nombre'/></p>	
-		<p>Nueva mascota: <input type='text' name='masc'/></p>
+		<p>Nueva mascota: <input type='text' name='tipo'/></p>
 		<input type='submit' value='añadir'/>
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 	</form>
 	<br>
 	<form action="/aniadirReserva" method="post">
-		<p>Usuario: <input type='text' name='nombre'/></p>	
 		<p>Lugar: <input type='text' name='lugar'/></p>
 		<input type='submit' value='añadir'/>
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 	</form>
 	<br>
 	<form action="/aniadirProducto" method="post">
-		<p>Usuario: <input type='text' name='nombre'/></p>	
 		<p>Producto: <input type='text' name='producto'/></p>
 		<input type='submit' value='añadir'/>
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 	</form>
 	
 	<a href="/">Volver</a>

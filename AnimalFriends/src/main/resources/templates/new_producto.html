@@ -21,12 +21,13 @@
 				<div class="inline-buttons">
 
 					<form action="/producto/new" method="post">
-						<p>Nombre: </p>
+						<p>Producto: </p>
 						<input type='text' name='nombre' />
-						<p>Tipo: </p>
-						<input type='text' name='tipo' />
+						<textarea name='tipo' rows=5 cols=40>
+						Descripción del producto </textarea>
 
 						<input type='submit' value='Save' />
+						<input type="hidden" name="_csrf" value="{{token}}"/>
 					</form>
 				</div>
 			</div>

@@ -102,8 +102,11 @@ public class WebController {
 	}
 	
 	@GetMapping("/editarUsuario")
-	public String editarUsuario(Model model) {
-
+	public String editarUsuario(Model model, HttpServletRequest request) {
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
 		return "edit_usuario";
 	}
 	
@@ -129,12 +132,10 @@ public class WebController {
 	
 
 	@PostMapping("/aniadirMascota")
-	public ModelAndView aniadirMascota(Model model,HttpServletRequest request, String tipo, String descripcion) {
+	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo) {
 		String nombre = request.getUserPrincipal().getName();
-		
-		userService.registrarMascota(nombre, tipo, descripcion);
-		model.addAttribute("usuario", userService.getUsuario(nombre));
 		Usuarios u = userService.getUsuario(nombre);
+		userService.registrarMascota(nombre, tipo, "");
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
@@ -144,10 +145,10 @@ public class WebController {
 	}
 
 	@PostMapping("/aniadirReserva")
-	public ModelAndView aniadirReserva(Model model, String lugar, String nombre) {
-		userService.registrarReserva(nombre, lugar);
-		model.addAttribute("usuario", userService.getUsuario(nombre));
+	public ModelAndView aniadirReserva(Model model, HttpServletRequest request, String lugar) {
+		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
+		userService.registrarReserva(nombre, lugar);
 		model.addAttribute("usuario", u);;
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
@@ -157,10 +158,10 @@ public class WebController {
 	}
 
 	@PostMapping("/aniadirProducto")
-	public ModelAndView aniadirProducto(Model model, String producto, String nombre) {
-		userService.registrarProducto(nombre, producto);
-		model.addAttribute("usuario", userService.getUsuario(nombre));
+	public ModelAndView aniadirProducto(Model model, HttpServletRequest request, String producto) {
+		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
+		userService.registrarProducto(nombre, producto);
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
