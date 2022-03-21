@@ -3,9 +3,12 @@ package org.filetransfer.AnimalFriendsDad;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,19 +22,23 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-		animales.save(new Animal("Mono"));
-		animales.save(new Animal("Erizo"));
+		animales.save(new Animal("Mono",""));
+		animales.save(new Animal("Erizo",""));
 	}
 
 	@GetMapping("/newAnimal")
-	public String deleteAnimal() {
+	public String creeateAnimal(Model model, HttpServletRequest request) {
+		
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
 		return "new_animal";
 	}
 
 	@PostMapping("/animal/new")
 	public String newAnimal(Animal animal) {
 		animales.save(animal);
-
 		return "saved_animal";
 	}
 

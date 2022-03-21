@@ -19,13 +19,16 @@
 		<div class="contenedor-form" style="padding-top:10px;">
 			<div class="toggle">
 				<div class="inline-buttons">
-					<a><input type='text' name='nombre' /></a>
-
+					<p>Animal: </p>
 					<form action="animal/new" method="post">
-						<p>Animal: </p>
+					
 						<input type='text' name='tipo' />
+						
+						<textarea name='descripcion' rows=5 cols=40>
+						Describe tu animal </textarea>
 
 						<input type='submit' value='Save' />
+						<input type="hidden" name="_csrf" value="{{token}}"/>
 					</form>
 				</div>
 			</div>

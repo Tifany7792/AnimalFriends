@@ -13,11 +13,11 @@ public class AnimalService {
 	@Autowired
 	private RepositorioAnimales animales;
 
-	public boolean registrarAnimal(String tipo) {
+	public boolean registrarAnimal(String tipo, String descripcion) {
 		Optional<Animal> a = animales.findByTipo(tipo);
 		Animal miAnimal;
 		if (!a.isPresent()) {
-			miAnimal = new Animal(tipo);
+			miAnimal = new Animal(tipo, descripcion);
 			animales.save(miAnimal);
 			return true;
 		} else {

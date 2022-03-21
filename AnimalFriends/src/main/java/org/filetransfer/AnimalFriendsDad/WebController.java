@@ -129,8 +129,10 @@ public class WebController {
 	
 
 	@PostMapping("/aniadirMascota")
-	public ModelAndView aniadirMascota(Model model, String masc, String nombre) {
-		userService.registrarMascota(nombre, masc);
+	public ModelAndView aniadirMascota(Model model,HttpServletRequest request, String tipo, String descripcion) {
+		String nombre = request.getUserPrincipal().getName();
+		
+		userService.registrarMascota(nombre, tipo, descripcion);
 		model.addAttribute("usuario", userService.getUsuario(nombre));
 		Usuarios u = userService.getUsuario(nombre);
 		model.addAttribute("usuario", u);

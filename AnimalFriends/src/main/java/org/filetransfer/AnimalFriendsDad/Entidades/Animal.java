@@ -19,10 +19,10 @@ public class Animal {
 		
 	}
 	
-	public Animal(String tipo) {
+	public Animal(String tipo, String descripcion) {
 		super();
 		this.tipo = tipo;
-		this.descripcion = " ";
+		this.descripcion = descripcion;
 	}
 	
 	public long getId() {

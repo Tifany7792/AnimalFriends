@@ -119,13 +119,13 @@ public class UserService {
 	}
 
 	
-	public boolean registrarMascota(String user, String tipo) {
+	public boolean registrarMascota(String user, String tipo, String descripcion) {
 		Optional<Animal> a = mascotas.findByTipo(tipo);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Animal animal;
 		Usuarios usuario;
 		if (!a.isPresent()) {
-			animal = new Animal(tipo);
+			animal = new Animal(tipo, descripcion);
 			mascotas.save(animal);
 		}else {
 			animal = a.get();
