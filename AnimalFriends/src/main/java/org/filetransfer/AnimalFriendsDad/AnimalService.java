@@ -1,5 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import java.sql.Blob;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,11 +14,11 @@ public class AnimalService {
 	@Autowired
 	private RepositorioAnimales animales;
 
-	public boolean registrarAnimal(String tipo, String descripcion) {
+	public boolean registrarAnimal(String tipo, String descripcion,Blob imagen) {
 		Optional<Animal> a = animales.findByTipo(tipo);
 		Animal miAnimal;
 		if (!a.isPresent()) {
-			miAnimal = new Animal(tipo, descripcion);
+			miAnimal = new Animal(tipo, descripcion,imagen);
 			animales.save(miAnimal);
 			return true;
 		} else {

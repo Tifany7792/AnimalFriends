@@ -1,40 +1,40 @@
+<!DOCTYPE html>
 <html lang="es">
 
-	<head>
-		<meta name="viewport" content="width=device-width" />
-		<title>Nueva Localización</title>
-		<link href="paginassecundarias.css" rel="stylesheet" />
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>Nueva Localización</title>
+	<link href="estilos.css" rel="stylesheet" />
 
+</head>
 
-	<body>
-		<div class="container body-content">
-			<div class="header">
+<body>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
+	</div>
 
-				<h1>¡Animal Friends!</h1>
-				<h1>Añadir Localización</h1>
+	<div class="contenedor-form">
+		<div class="toggle">
+			<a href="/"> Volver</a>
+		</div>
+		<div class="formulario">
+			<h2>Crear Localización</h2>
+			<form method='post' action="animal/new">
 
-			</div>
+				<p>Localización: </p>
 
-			<div class="contenedor-form" style="padding-top:10px;">
-				<div class="toggle">
-					<div class="inline-buttons">
-						<form action="/localizacion/new" method="post">
-							<p>Lugar: </p>
-							<input type='text' name='nombreSitio' />
-							<textarea name='tipo' rows=5 cols=40>
-							Descripción del lugar </textarea>
-					
-							<input type='submit' value='Save' />
-							<input type="hidden" name="_csrf" value="{{token}}"/>
-						</form>
-					</div>
-				</div>
-			</div>
+				<input type='text' name='tipo' />
+
+				<textarea name='descripcion' placeholder=" Descripción del lugar" rows=5 cols=54.8></textarea>
+				<br>
+
+				<input type='submit' value='Crear Localización' />
+				<input type="hidden" name="_csrf" value="{{token}}" />
+			</form>
 		</div>
 
+	</div>
 
+</body>
 
-	</body>
-
-	</html>
+</html>

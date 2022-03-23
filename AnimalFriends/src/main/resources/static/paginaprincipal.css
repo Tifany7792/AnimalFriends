@@ -20,6 +20,7 @@ img {
 	width: 350px;
 	object-fit: cover;
 	margin: auto;
+	border:10px;
 
 	align-items: center;
 	text-align: center;

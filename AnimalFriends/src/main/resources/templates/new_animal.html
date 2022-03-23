@@ -1,38 +1,45 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta charset="UTF-8">
 	<title>Nuevo Animal</title>
-	<link href="paginassecundarias.css" rel="stylesheet" />
+	<link href="estilos.css" rel="stylesheet" />
+
 </head>
 
-
 <body>
-	<div class="container body-content">
-		<div class="header">
 
-			<h1>¡Animal Friends!</h1>
-			<h1>Crear Animal</h1>
-
-		</div>
-
-		<div class="contenedor-form" style="padding-top:10px;">
-			<div class="toggle">
-				<div class="inline-buttons">
-					<p>Animal: </p>
-					<form action="animal/new" method="post">
-					
-						<input type='text' name='tipo' />
-						
-						<textarea name='descripcion' rows=5 cols=40>
-						Describe tu animal </textarea>
-
-						<input type='submit' value='Save' />
-						<input type="hidden" name="_csrf" value="{{token}}"/>
-					</form>
-				</div>
-			</div>
-		</div>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
 	</div>
+
+	<div class="contenedor-form">
+		<div class="toggle">
+			<a href="/"> Volver</a>
+		</div>
+		<div class="formulario">
+			<h2>Crear Animal</h2>
+			<form method='post' action="animal/new">
+
+				<p>Animal: </p>
+
+				<input type='text' name='tipo' />
+
+				<textarea name='descripcion' placeholder=" Descripción del animal" rows=5 cols=54.8></textarea>
+				<br>
+
+				<form action="../raw/" method="POST" enctype="multipart/formdata">
+					<input type="file" name="nombre" />
+					
+					<input type='submit' name="nombre-animal" value='Crear Animal' />
+				</form>
+				<input type="hidden" name="_csrf" value="{{token}}" />
+			</form>
+		</div>
+
+	</div>
+
+</body>
 
 </html>

@@ -1,6 +1,10 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
+import org.hibernate.engine.jdbc.BlobProxy;
+
+import java.io.IOException;
+import java.net.URI;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -8,12 +12,15 @@ import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class AnimalController {
@@ -22,8 +29,8 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-		animales.save(new Animal("Mono",""));
-		animales.save(new Animal("Erizo",""));
+		//animales.save(new Animal("Mono",""));
+		//animales.save(new Animal("Erizo",""));
 	}
 
 	@GetMapping("/newAnimal")
@@ -48,6 +55,19 @@ public class AnimalController {
 
 		return "list_animals";
 	}
+	
+	
+/*
+	@PostMapping("/{id}/image")
+	public ResponseEntity<Object> uploadImage(@PathVariable long id, @RequestParam MultipartFile imageFile)
+			throws IOException {
+		Animal animal = animales.findById(id).orElseThrow();
+		URI location = fromCurrentRequest().build().toUri();
+		animal.setImage(location.toString());
+		animal.setImageFile(BlobProxy.generateProxy(imageFile.getInputStream(), imageFile.getSize()));
+		animales.save(animal);
+		return ResponseEntity.created(location).build();
+	}*/
 
 	@GetMapping("/animal/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {

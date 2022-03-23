@@ -1,37 +1,40 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta charset="UTF-8">
 	<title>Nuevo Producto</title>
-	<link href="paginassecundarias.css" rel="stylesheet" />
+	<link href="estilos.css" rel="stylesheet" />
+
 </head>
 
-
 <body>
-	<div class="container body-content">
-		<div class="header">
-
-			<h1>¡Animal Friends!</h1>
-			<h1>Añadir Producto</h1>
-
-		</div>
-
-		<div class="contenedor-form" style="padding-top:10px;">
-			<div class="toggle">
-				<div class="inline-buttons">
-
-					<form action="/producto/new" method="post">
-						<p>Producto: </p>
-						<input type='text' name='nombre' />
-						<textarea name='tipo' rows=5 cols=40>
-						Descripción del producto </textarea>
-
-						<input type='submit' value='Save' />
-						<input type="hidden" name="_csrf" value="{{token}}"/>
-					</form>
-				</div>
-			</div>
-		</div>
+	<div class="header">
+		<h1>¡Animal Friends!</h1>
 	</div>
+
+	<div class="contenedor-form">
+		<div class="toggle">
+			<a href="/"> Volver</a>
+		</div>
+		<div class="formulario">
+			<h2>Crear Producto</h2>
+			<form method='post' action="animal/new">
+
+				<p>Producto: </p>
+
+				<input type='text' name='tipo' />
+
+				<textarea name='descripcion' placeholder=" Descripción del producto" rows=5 cols=54.8></textarea>
+				<br>
+
+				<input type='submit' value='Crear Producto' />
+				<input type="hidden" name="_csrf" value="{{token}}" />
+			</form>
+		</div>
+
+	</div>
+
+</body>
 
 </html>

@@ -1,38 +1,38 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta name="viewport" content="width=device-width" />
-	<title>Animales vista</title>
-	<link href="paginassecundarias.css" rel="stylesheet" />
+	<meta charset="UTF-8">
+	<title>Ver Animal</title>
+	<link href="paginaprincipal.css" rel="stylesheet" />
+
 </head>
 
-
 <body>
-	<div class="container body-content">
 
-		<div class="header">
+	<div class="header">
 
-			<h1>¡Animal Friends!</h1>
+		<h1>¡Animal Friends!</h1>
 
-		</div>
+	</div>
 
-		<div class="contenedor-form" style="padding-top:10px;">
-			<div class="toggle">
-				<div class="inline-buttons">
-					<p>Animal: {{animal.tipo}}</p>
+	<div class="contenedor-form">
+		<div class="toggle">
+			
+				<p>Animal: {{animal.tipo}}</p>
 
-					<p>Descripción: {{animal.descripcion}}</p>
+				<p>Descripción: {{animal.descripcion}}</p>
 
 
-					<a href="/animal/{{animal.Id}}/delete">Borrar animal</a>
+				<a href="/animal/{{animal.Id}}/delete">Borrar animal</a>
 
-					<br>
+				<br>
 
-					<a href="/animales">Volver</a>
-				</div>
-			</div>
+				<a href="/animales">Volver</a>
+			
 		</div>
 	</div>
+
 </body>
 
 </html>
