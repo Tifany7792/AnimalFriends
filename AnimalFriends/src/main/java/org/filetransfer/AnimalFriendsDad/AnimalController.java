@@ -3,6 +3,7 @@ package org.filetransfer.AnimalFriendsDad;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.hibernate.engine.jdbc.BlobProxy;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
@@ -27,14 +28,16 @@ public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
 
+
 	@PostConstruct
 	public void init() {
-		//animales.save(new Animal("Mono",""));
-		//animales.save(new Animal("Erizo",""));
+		File File = null;
+		animales.save(new Animal("Mono","", File));
+		animales.save(new Animal("erizo","",File));
 	}
 
 	@GetMapping("/newAnimal")
-	public String creeateAnimal(Model model, HttpServletRequest request) {
+	public String createAnimal(Model model, HttpServletRequest request) {
 		
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
@@ -44,18 +47,28 @@ public class AnimalController {
 	}
 
 	@PostMapping("/animal/new")
-	public String newAnimal(Animal animal) {
-		animales.save(animal);
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam File imageFile ) {
+		animales.save(new Animal(tipo, descripcion, imageFile));
+		System.out.println ("aaa");
+		System.out.println (imageFile);
 		return "saved_animal";
 	}
 
 	@GetMapping("/animales")
-	public String verAnimales(Model model) {
+	public String verAnimales(Model model, HttpServletRequest request) {
 		model.addAttribute("animales", animales.findAll());
-
+		model.addAttribute("permiso", permiso(request));
 		return "list_animals";
 	}
 	
+	private boolean permiso( HttpServletRequest request) {
+		if (request.getUserPrincipal() == null) {
+			return false;
+		}else {
+			request.isUserInRole("ADMIN");
+		}
+		return false;
+	}
 	
 /*
 	@PostMapping("/{id}/image")

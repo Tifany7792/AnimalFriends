@@ -4,6 +4,8 @@ import java.io.File;
 
 import javax.persistence.*;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -27,11 +29,11 @@ public class Animal {
 
 	}
 
-	public Animal(String tipo, String descripcion,File image) {
+	public Animal(String tipo, String descripcion, File imagen) {
 		super();
 		this.tipo = tipo;
 		this.descripcion = descripcion;
-		this.imageFile = image;
+		this.imageFile = imagen;
 	}
 
 	public long getId() {
@@ -73,7 +75,7 @@ public class Animal {
 
 	@Override
 	public String toString() {
-		return "Animal [tipo=" + tipo + ", descripcion=" + descripcion + "]";
+		return "Animal [tipo=" + tipo + ", descripcion=" + descripcion + "]" + "imagen=" + imageFile;
 	}
 
 }

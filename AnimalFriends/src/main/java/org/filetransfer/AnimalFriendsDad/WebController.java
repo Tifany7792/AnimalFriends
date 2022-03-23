@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -134,7 +135,7 @@ public class WebController {
 	
 
 	@PostMapping("/aniadirMascota")
-	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo,File imagen) {
+	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo, File imagen) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
 		userService.registrarMascota(nombre, tipo, "",imagen);
