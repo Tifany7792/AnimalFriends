@@ -1,6 +1,6 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
-import java.sql.Blob;
+import java.io.File;
 
 import javax.persistence.*;
 
@@ -21,13 +21,13 @@ public class Animal {
 
 	@Lob
 	@JsonIgnore
-	private Blob imageFile;
+	private File imageFile;
 
 	public Animal() {
 
 	}
 
-	public Animal(String tipo, String descripcion,Blob image) {
+	public Animal(String tipo, String descripcion,File image) {
 		super();
 		this.tipo = tipo;
 		this.descripcion = descripcion;
@@ -58,7 +58,7 @@ public class Animal {
 		this.descripcion = d;
 	}
 
-	public Blob getImageFile() {
+	public File getImageFile() {
 		return imageFile;
 	}
 	

@@ -1,7 +1,8 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import java.util.List;
-import java.sql.Blob;
+import java.io.File;
+
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
@@ -120,7 +121,7 @@ public class UserService {
 	}
 
 	
-	public boolean registrarMascota(String user, String tipo, String descripcion,Blob imagen) {
+	public boolean registrarMascota(String user, String tipo, String descripcion,File imagen) {
 		Optional<Animal> a = mascotas.findByTipo(tipo);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Animal animal;

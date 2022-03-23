@@ -1,7 +1,7 @@
 package org.filetransfer.AnimalFriendsDad;
 
 
-import java.sql.Blob;
+import java.io.File;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -134,7 +134,7 @@ public class WebController {
 	
 
 	@PostMapping("/aniadirMascota")
-	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo,Blob imagen) {
+	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo,File imagen) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
 		userService.registrarMascota(nombre, tipo, "",imagen);
