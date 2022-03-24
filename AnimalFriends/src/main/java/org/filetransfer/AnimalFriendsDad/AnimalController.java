@@ -31,9 +31,9 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-		File File = null;
-		animales.save(new Animal("Mono","", File));
-		animales.save(new Animal("erizo","",File));
+		
+		animales.save(new Animal("Mono","mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos", "capuchilo.jpg"));
+		animales.save(new Animal("erizo","mamifero de la familia de los topos, con el cuerpo cubierto de puas","erizo.jpg"));
 	}
 
 	@GetMapping("/animales/new")
@@ -47,7 +47,7 @@ public class AnimalController {
 	}
 
 	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam File imageFile ) {
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile ) {
 		animales.save(new Animal(tipo, descripcion, imageFile));
 		return "saved_animal";
 	}

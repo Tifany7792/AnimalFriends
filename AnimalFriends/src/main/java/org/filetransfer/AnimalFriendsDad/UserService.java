@@ -122,7 +122,7 @@ public class UserService {
 	}
 
 	
-	public boolean registrarMascota(String user, String tipo, String descripcion,File imagen) {
+	public boolean registrarMascota(String user, String tipo, String descripcion,String imagen) {
 		Optional<Animal> a = mascotas.findByTipo(tipo);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Animal animal;

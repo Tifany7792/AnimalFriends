@@ -15,7 +15,7 @@ public class AnimalService {
 	@Autowired
 	private RepositorioAnimales animales;
 
-	public boolean registrarAnimal(String tipo, String descripcion, File imagen) {
+	public boolean registrarAnimal(String tipo, String descripcion, String imagen) {
 		Optional<Animal> a = animales.findByTipo(tipo);
 		Animal miAnimal;
 		if (!a.isPresent()) {
