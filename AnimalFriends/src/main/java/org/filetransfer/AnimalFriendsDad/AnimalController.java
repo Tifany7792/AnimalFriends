@@ -20,10 +20,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-@Controller
+@RestController
 public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
@@ -48,10 +51,16 @@ public class AnimalController {
 		return "new_animal";
 	}
 
-	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile ) {
-		animales.save(new Animal(tipo, descripcion, imageFile));
-		return "saved_animal";
+	/*
+	 * @PostMapping("/animales/new/created") public String newAnimal(@RequestParam
+	 * String tipo, @RequestParam String descripcion, @RequestParam String imageFile
+	 * ) { animales.save(new Animal(tipo, descripcion, imageFile)); return
+	 * "saved_animal"; }
+	 */
+	
+	@PostMapping("/animales/new/created") public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile) { 
+		animales.save(new Animal(tipo, descripcion, imageFile)); 
+		return "saved_animal"; 
 	}
 
 	@GetMapping("/animales")
@@ -84,14 +93,34 @@ public class AnimalController {
 	
 	
 
+//	@GetMapping("/animales/{id}")
+//	public String showAnimal(Model model, @PathVariable long id) {
+//		Animal ani = animales.getById(id);
+//
+//		model.addAttribute("animal", ani);
+//
+//		return "show_animal";
+//	}
+	
 	@GetMapping("/animales/{id}")
-	public String showAnimal(Model model, @PathVariable long id) {
+	public  ResponseEntity<Animal> getAnimal(@PathVariable long id) {
 		Animal ani = animales.getById(id);
 
-		model.addAttribute("animal", ani);
-
-		return "show_animal";
+		if (ani != null) {
+			return ResponseEntity.ok(ani);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
 	}
+	
+	@PostMapping("/animales/")
+	public ResponseEntity<Animal> createAnimal(@RequestBody Animal ani) {
+		 animales.save(ani);
+		 URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(ani.getId()).toUri();
+		 return ResponseEntity.created(location).body(ani);
+		}
+
+	
 
 	@GetMapping("/animales/{id}/delete")
 	public String deleteAnimal(Model model, @PathVariable long id) {

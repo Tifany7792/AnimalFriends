@@ -1,14 +1,11 @@
 package org.filetransfer.AnimalFriendsDad.Entidades;
 
-import java.io.File;
-
 import javax.persistence.*;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
+@JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"})
 @Entity
 public class Animal {
 
