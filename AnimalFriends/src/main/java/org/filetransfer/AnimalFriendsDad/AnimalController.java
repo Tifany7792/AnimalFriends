@@ -51,12 +51,7 @@ public class AnimalController {
 		return "new_animal";
 	}
 
-	/*
-	 * @PostMapping("/animales/new/created") public String newAnimal(@RequestParam
-	 * String tipo, @RequestParam String descripcion, @RequestParam String imageFile
-	 * ) { animales.save(new Animal(tipo, descripcion, imageFile)); return
-	 * "saved_animal"; }
-	 */
+
 	
 	@PostMapping("/animales/new/created") public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile) { 
 		animales.save(new Animal(tipo, descripcion, imageFile)); 
@@ -93,32 +88,26 @@ public class AnimalController {
 	
 	
 
-//	@GetMapping("/animales/{id}")
-//	public String showAnimal(Model model, @PathVariable long id) {
-//		Animal ani = animales.getById(id);
-//
-//		model.addAttribute("animal", ani);
-//
-//		return "show_animal";
-//	}
-	
 	@GetMapping("/animales/{id}")
-	public  ResponseEntity<Animal> getAnimal(@PathVariable long id) {
+	public String showAnimal(Model model, @PathVariable long id) {
 		Animal ani = animales.getById(id);
 
-		if (ani != null) {
-			return ResponseEntity.ok(ani);
-		} else {
-			return ResponseEntity.notFound().build();
-		}
+		model.addAttribute("animal", ani);
+
+		return "show_animal";
 	}
 	
-	@PostMapping("/animales/")
-	public ResponseEntity<Animal> createAnimal(@RequestBody Animal ani) {
-		 animales.save(ani);
-		 URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(ani.getId()).toUri();
-		 return ResponseEntity.created(location).body(ani);
-		}
+//	@GetMapping("/animales/{id}")
+//	public  ResponseEntity<Animal> getAnimal(@PathVariable long id) {
+//		Animal ani = animales.getById(id);
+//
+//		if (ani != null) {
+//			return ResponseEntity.ok(ani);
+//		} else {
+//			return ResponseEntity.notFound().build();
+//		}
+//	}
+	
 
 	
 
