@@ -31,15 +31,11 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-<<<<<<< HEAD
+
 		
 		animales.save(new Animal("Mono","mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos", "capuchilo.jpg"));
 		animales.save(new Animal("erizo","mamifero de la familia de los topos, con el cuerpo cubierto de puas","erizo.jpg"));
-=======
 
-		animales.save(new Animal("Mono","", "capuchilo.jpg"));
-		animales.save(new Animal("erizo","","erizo.jpg"));
->>>>>>> branch 'versionBuena' of git@github.com:Tifany7792/animalfriends.git
 	}
 
 	@GetMapping("/animales/new")

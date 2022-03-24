@@ -1,4 +1,4 @@
-package org.filetransfer.AnimalFriendsDad;
+/*package org.filetransfer.AnimalFriendsDad;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
@@ -21,4 +21,4 @@ public class LoadDatabase {
 	      log.info("Preloading " + repository.save(new Usuarios("user1", "pass","ROLE_USER")));
 	    };
 	  }
-}
+}*/
