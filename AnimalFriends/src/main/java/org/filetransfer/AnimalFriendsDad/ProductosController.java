@@ -36,7 +36,7 @@ public class ProductosController {
 		return "list_productos";
 	}
 	
-	@GetMapping("/prod/{id}")
+	@GetMapping("/productos/{id}")
 	public String showProducto(Model model, @PathVariable long id) {
 
 		
@@ -47,7 +47,7 @@ public class ProductosController {
 		return "show_producto";
 	}
 	
-	@GetMapping("/prod/{id}/delete")
+	@GetMapping("/produsctos/{id}/delete")
 	public String deleteProducto(Model model, @PathVariable long id) {
 
 		
@@ -57,7 +57,7 @@ public class ProductosController {
 		return "deleted_producto";
 	}
 	
-	@GetMapping("/newProducto")
+	@GetMapping("/productos/new")
 	public String añadirProducto(Model model, HttpServletRequest request) {
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
@@ -66,7 +66,7 @@ public class ProductosController {
 		return "new_producto";
 	}
 	
-	@PostMapping("/producto/new")
+	@PostMapping("/productos/new/created")
 	public String newProducto(Productos prod) {
 
 		productos.save(prod);

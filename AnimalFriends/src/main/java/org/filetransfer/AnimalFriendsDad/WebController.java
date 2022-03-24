@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -72,7 +71,7 @@ public class WebController {
 		return "registerWeb";
 	}
 
-	@RequestMapping(value = "/registrarUsuari")
+	@RequestMapping(value = "/registrar/usuario")
 	public String registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
 			@RequestParam String pswRepeat, HttpSession session, HttpServletRequest request) {
 		System.out.println("Comprobando pass");
@@ -104,7 +103,7 @@ public class WebController {
 		}
 	}
 	
-	@GetMapping("/editarUsuario")
+	@GetMapping("/usuario/editar")
 	public String editarUsuario(Model model, HttpServletRequest request) {
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
@@ -114,7 +113,7 @@ public class WebController {
 	}
 	
 	
-	@GetMapping("/verUsuario")
+	@GetMapping("/usuario")
 	public String visualizarUsuario(Model model, HttpServletRequest request) {
 		
 		if(null != request.getUserPrincipal()) {
@@ -134,7 +133,7 @@ public class WebController {
 	}
 	
 
-	@PostMapping("/aniadirMascota")
+	@PostMapping("/usuario/editar/mascota")
 	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo, File imagen) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
@@ -147,7 +146,7 @@ public class WebController {
 		
 	}
 
-	@PostMapping("/aniadirReserva")
+	@PostMapping("/usuario/editar/reserva")
 	public ModelAndView aniadirReserva(Model model, HttpServletRequest request, String lugar) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
@@ -160,7 +159,7 @@ public class WebController {
 		
 	}
 
-	@PostMapping("/aniadirProducto")
+	@PostMapping("/usuario/editar/producto")
 	public ModelAndView aniadirProducto(Model model, HttpServletRequest request, String producto) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);

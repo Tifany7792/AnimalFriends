@@ -37,7 +37,7 @@ public class LocalizacionController {
 		return "list_localizaciones";
 	}
 	
-	@GetMapping("/local/{id}")
+	@GetMapping("/localizaciones/{id}")
 	public String showLocalizacion(Model model, @PathVariable long id) {
 
 		
@@ -48,7 +48,7 @@ public class LocalizacionController {
 		return "show_localizacion";
 	}
 	
-	@GetMapping("/local/{id}/delete")
+	@GetMapping("/localizaciones/{id}/delete")
 	public String deleteLocalizacion(Model model, @PathVariable long id) {
 
 		
@@ -58,7 +58,7 @@ public class LocalizacionController {
 		return "deleted_localizacion";
 	}
 	
-	@GetMapping("/newLocalizacion")
+	@GetMapping("/localizaciones/new")
 	public String añadirLocalizacion(Model model, HttpServletRequest request) {
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
@@ -67,7 +67,7 @@ public class LocalizacionController {
 		return "new_localizacion";
 	}
 	
-	@PostMapping("/localizacion/new")
+	@PostMapping("/localizacion/new/created")
 	public String newLocalizacion(Localizaciones loc) {
 
 		localizaciones.save(loc);

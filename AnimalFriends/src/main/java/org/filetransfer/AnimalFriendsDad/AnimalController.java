@@ -36,7 +36,7 @@ public class AnimalController {
 		animales.save(new Animal("erizo","",File));
 	}
 
-	@GetMapping("/newAnimal")
+	@GetMapping("/animales/new")
 	public String createAnimal(Model model, HttpServletRequest request) {
 		
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
@@ -46,11 +46,9 @@ public class AnimalController {
 		return "new_animal";
 	}
 
-	@PostMapping("/animal/new")
+	@PostMapping("/animales/new/created")
 	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam File imageFile ) {
 		animales.save(new Animal(tipo, descripcion, imageFile));
-		System.out.println ("aaa");
-		System.out.println (imageFile);
 		return "saved_animal";
 	}
 
@@ -82,7 +80,7 @@ public class AnimalController {
 		return ResponseEntity.created(location).build();
 	}*/
 
-	@GetMapping("/animal/{id}")
+	@GetMapping("/animales/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {
 		Animal ani = animales.getById(id);
 
@@ -91,7 +89,7 @@ public class AnimalController {
 		return "show_animal";
 	}
 
-	@GetMapping("/animal/{id}/delete")
+	@GetMapping("/animales/{id}/delete")
 	public String deleteAnimal(Model model, @PathVariable long id) {
 		animales.deleteById(id);
 
