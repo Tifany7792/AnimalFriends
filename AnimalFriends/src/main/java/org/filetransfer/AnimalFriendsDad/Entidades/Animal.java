@@ -23,13 +23,13 @@ public class Animal {
 
 	@Lob
 	@JsonIgnore
-	private File imageFile;
+	private String imageFile;
 
 	public Animal() {
 
 	}
 
-	public Animal(String tipo, String descripcion, File imagen) {
+	public Animal(String tipo, String descripcion, String imagen) {
 		super();
 		this.tipo = tipo;
 		this.descripcion = descripcion;
@@ -60,7 +60,7 @@ public class Animal {
 		this.descripcion = d;
 	}
 
-	public File getImageFile() {
+	public String getImageFile() {
 		return imageFile;
 	}
 	

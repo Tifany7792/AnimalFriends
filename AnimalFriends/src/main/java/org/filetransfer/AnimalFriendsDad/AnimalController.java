@@ -31,9 +31,9 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-		File File = null;
-		animales.save(new Animal("Mono","", File));
-		animales.save(new Animal("erizo","",File));
+
+		animales.save(new Animal("Mono","", "capuchilo.jpg"));
+		animales.save(new Animal("erizo","","erizo.jpg"));
 	}
 
 	@GetMapping("/animales/new")
@@ -47,7 +47,7 @@ public class AnimalController {
 	}
 
 	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam File imageFile ) {
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile ) {
 		animales.save(new Animal(tipo, descripcion, imageFile));
 		return "saved_animal";
 	}
@@ -55,7 +55,7 @@ public class AnimalController {
 	@GetMapping("/animales")
 	public String verAnimales(Model model, HttpServletRequest request) {
 		model.addAttribute("animales", animales.findAll());
-		model.addAttribute("permiso", permiso(request));
+		//model.addAttribute("permiso", permiso(request));
 		return "list_animals";
 	}
 	
@@ -79,6 +79,8 @@ public class AnimalController {
 		animales.save(animal);
 		return ResponseEntity.created(location).build();
 	}*/
+	
+	
 
 	@GetMapping("/animales/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {

@@ -134,7 +134,7 @@ public class WebController {
 	
 
 	@PostMapping("/usuario/editar/mascota")
-	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo, File imagen) {
+	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo, String imagen) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
 		userService.registrarMascota(nombre, tipo, "",imagen);
