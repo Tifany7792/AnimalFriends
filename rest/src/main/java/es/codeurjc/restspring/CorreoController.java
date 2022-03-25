@@ -13,7 +13,7 @@ public class CorreoController {
 	@Autowired
 	private Correo correo;
 	
-	@RequestMapping(method = RequestMethod.POST, value ="/usuarios/pedir")
+	@RequestMapping(method = RequestMethod.POST, value ="/usuarios/pedir/completar")
 	public String send(@RequestBody Usuarios user) {
 
 		try {
