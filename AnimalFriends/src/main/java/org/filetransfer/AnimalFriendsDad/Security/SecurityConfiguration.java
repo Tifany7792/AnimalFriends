@@ -75,8 +75,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/newLocalizacion").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers("/newProducto").hasAnyRole("ADMIN");
 		//paginas privadas -- se añaden automaticamente
-		http.authorizeRequests().anyRequest().authenticated();
-		
+		http.authorizeRequests().anyRequest().permitAll();		
 
 		
 		//  login

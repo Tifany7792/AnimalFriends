@@ -1,25 +1,23 @@
 package es.codeurjc.restspring;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 
-@Service
+@Component
 public class Correo {
-	
-	private JavaMailSender javaMailSender;
-	
-	public void enviarCorreo (Usuarios user) {
-		
-		SimpleMailMessage correo = new SimpleMailMessage();
-		correo.setTo(user.getCorreo());
-		correo.setSubject("Tu pedido");
-		String cuerpo = "Hola " + user.getNombre() +",\n"+ "Gracias por realizar tu pedido. "
-				+ "A continuación te enviamos una copia de los productos que has solicitado:\n"
-				+ user.getListaCompra().toString() + "\n" + "Esperamos verle de nuevo," +
-				"AnimalFriends";
-		correo.setText(cuerpo);
-		
-		javaMailSender.send(correo);
-	}
+
+    @Autowired
+    private JavaMailSender emailSender;
+
+    public void enviarCorreo(Usuarios u) {
+        SimpleMailMessage message = new SimpleMailMessage(); 
+        message.setFrom("noreply@baeldung.com");
+        message.setTo(u.getNombre()); 
+        message.setSubject("Su pedido"); 
+        message.setText("Gracias por confiar en nosotros. Copia del pedido: \n" + u.getListaCompra().toString());
+        emailSender.send(message);
+    }
 }
