@@ -24,6 +24,9 @@ public class Usuarios {
 
 	@Column(nullable = false)
 	private String password;
+	
+	@Column(nullable = false)
+	private String correo;
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
@@ -36,6 +39,7 @@ public class Usuarios {
 
 	@ManyToMany
 	private List<Productos> listaCompra;
+	
 
 	public Usuarios() {
 	};
@@ -50,6 +54,7 @@ public class Usuarios {
 		this.mascotas = a;
 		List<Productos> c = null;
 		this.listaCompra = c;
+		this.correo = "jositote2000@gmail.com";
 	}
 
 
@@ -64,6 +69,7 @@ public class Usuarios {
 		this.mascotas = a;
 		List<Productos> c = null;
 		this.listaCompra = c;
+		this.correo = "jositote2000@gmail.com";
 	}
 	
 	/*public Usuarios(String nombre, String password, String rolUser, String rolAdmin) {
@@ -92,6 +98,7 @@ public class Usuarios {
 		this.mascotas = a;
 		List<Productos> c = null;
 		this.listaCompra = c;
+		this.correo = "jositote2000@gmail.com";
 	}
 
 	public List<String> getRoles() {
@@ -160,6 +167,15 @@ public class Usuarios {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+	
+
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
 	@Override
