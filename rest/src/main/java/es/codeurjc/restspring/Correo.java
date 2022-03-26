@@ -11,15 +11,15 @@ public class Correo {
 	
 	public void enviarCorreo (Usuarios user) {
 		
-		SimpleMailMessage mail = new SimpleMailMessage();
-		mail.setTo(user.getCorreo());
-		mail.setSubject("Tu pedido");
+		SimpleMailMessage correo = new SimpleMailMessage();
+		correo.setTo(user.getCorreo());
+		correo.setSubject("Tu pedido");
 		String cuerpo = "Hola " + user.getNombre() +",\n"+ "Gracias por realizar tu pedido. "
 				+ "A continuación te enviamos una copia de los productos que has solicitado:\n"
 				+ user.getListaCompra().toString() + "\n" + "Esperamos verle de nuevo," +
 				"AnimalFriends";
-		mail.setText(cuerpo);
+		correo.setText(cuerpo);
 		
-		javaMailSender.send(mail);
+		javaMailSender.send(correo);
 	}
 }

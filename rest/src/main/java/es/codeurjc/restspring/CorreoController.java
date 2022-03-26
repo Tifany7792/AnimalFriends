@@ -14,14 +14,14 @@ public class CorreoController {
 	private Correo correo;
 	
 	@RequestMapping(method = RequestMethod.POST, value ="/usuarios/pedir/completar")
-	public String send(@RequestBody Usuarios user) {
+	public int send(@RequestBody Usuarios user) {
 
 		try {
 			correo.enviarCorreo(user);
 		} catch (MailException mailException) {
-			return "Error";
+			return 1;
 		}
-		return "Tu pedido ha sido realizado con exito";
+		return 0;
 	}
 	
 }
