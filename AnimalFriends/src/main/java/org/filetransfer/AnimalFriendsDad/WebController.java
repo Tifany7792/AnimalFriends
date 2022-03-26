@@ -137,7 +137,7 @@ public class WebController {
 		String name = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(name);
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("https://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
 		
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas",u.getMascotas());
