@@ -2,7 +2,7 @@ package org.filetransfer.AnimalFriendsDad;
 
 
 
-
+import org.springframework.web.client.RestTemplate;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -132,6 +132,20 @@ public class WebController {
 		}
 	}
 	
+	@GetMapping ("/usuario/pedir")
+	public String pedir(Model model, HttpServletRequest request) {
+		String name = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(name);
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.postForEntity("https://127.0.0.1:8443//usuario/pedir/completar", u, int.class);
+		
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas",u.getMascotas());
+		model.addAttribute("reservas",u.getReservas());
+		model.addAttribute("compra",u.getListaCompra());
+		return "show_usuario";
+		
+	}
 	
 	
 
