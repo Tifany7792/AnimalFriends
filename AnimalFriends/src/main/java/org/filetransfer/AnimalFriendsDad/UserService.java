@@ -164,6 +164,21 @@ public class UserService {
 		return true;
 	}
 	
+	public boolean comprarProducto(String user, String producto) {
+		Optional<Productos> p = listaCompra.findByNombre(producto);
+		Optional<Usuarios> u = usuarios.findByNombre(user);
+		Usuarios usuario;
+		if (u.isPresent()) {
+			usuario = u.get();
+			usuario.addProducto(p.get());
+			listaCompra.save(p.get());
+			return true;
+		}else {
+			return false;
+		}
+	
+	}
+	
 	public boolean registrarReserva(String user, String lugar) {
 		Optional<Localizaciones> l = reservas.findByNombreSitio(lugar);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
