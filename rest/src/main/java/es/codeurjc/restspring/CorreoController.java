@@ -16,10 +16,11 @@ public class CorreoController {
 	
 	@PostMapping("/usuarios/pedir/completar")
 	public int send(@RequestBody(required=true) Usuarios user) {
-
+		System.out.println("enviando");
 		try {
 			correo.enviarCorreo(user);
 		} catch (MailException mailException) {
+			System.out.println(mailException);
 			return 1;
 		}
 		return 0;

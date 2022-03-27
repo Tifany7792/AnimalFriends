@@ -14,10 +14,11 @@ public class Correo {
 
     public void enviarCorreo(Usuarios u) {
         SimpleMailMessage message = new SimpleMailMessage(); 
-        message.setFrom("noreply@baeldung.com");
-        message.setTo(u.getNombre()); 
+        message.setFrom("animalfriendsdad@gmail.com");
+        message.setTo(u.getCorreo()); 
         message.setSubject("Su pedido"); 
         message.setText("Gracias por confiar en nosotros. Copia del pedido: \n" + u.getListaCompra().toString());
         emailSender.send(message);
+        System.out.println("Enviado");
     }
 }

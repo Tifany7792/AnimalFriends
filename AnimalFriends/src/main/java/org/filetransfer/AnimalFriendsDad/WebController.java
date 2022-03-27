@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
@@ -132,12 +133,13 @@ public class WebController {
 		}
 	}
 	
-	@PostMapping ("/usuario/pedir")
+	@GetMapping ("/usuario/pedir")
 	public String pedir(Model model, HttpServletRequest request) {
 		String name = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(name);
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
+		ResponseEntity<Usuarios> a = restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, Usuarios.class);
+		System.out.println(a);
 		
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas",u.getMascotas());
