@@ -5,9 +5,11 @@ import java.security.SecureRandom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -70,11 +72,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
 		http.authorizeRequests().antMatchers("/logout").permitAll();
 		
-		http.authorizeRequests().antMatchers("/animales/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers("/localizaciones/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers("/produsctos/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers("/newLocalizacion").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers("/newProducto").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/animales/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/localizaciones/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/produsctos/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/newLocalizacion").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/newProducto").hasAnyRole("ADMIN");
 		//paginas privadas -- se añaden automaticamente
 		http.authorizeRequests().anyRequest().permitAll();		
 
@@ -91,7 +93,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.logout().logoutSuccessUrl("/");
 		
 		// Disable CSRF at the moment
-		//http.csrf().disable();
+		/*http.csrf().disable();
+		
+		
+		  // Enable Basic Authentication
+        http.httpBasic();
+    		
+        // Disable Form login Authentication
+        http.formLogin().disable();
+
+        // Avoid creating session (because every request has credentials) 
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		*/
 	}
 		
 	@Override
