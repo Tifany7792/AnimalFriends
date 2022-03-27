@@ -33,9 +33,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		//Paginas publicas -- añadir todas las paginas publicas
 		http.authorizeRequests().antMatchers("/").permitAll();
 		http.authorizeRequests().antMatchers("/principal").permitAll();
+		http.authorizeRequests().antMatchers("/principal1").permitAll();
 		
 		http.authorizeRequests().antMatchers("/login").permitAll();
 		http.authorizeRequests().antMatchers("/loginUsuario").permitAll();
+		
+		http.authorizeRequests().antMatchers("/registrar").permitAll();
+		http.authorizeRequests().antMatchers("/registrarUsuario").permitAll();
+		http.authorizeRequests().antMatchers("/registrarUsuari").permitAll();
+		http.authorizeRequests().antMatchers("/registerWeb").permitAll();
 		
 		http.authorizeRequests().antMatchers("/animales").permitAll();
 		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
@@ -47,10 +53,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		http.authorizeRequests().antMatchers("/plantilla.css").permitAll();
 		http.authorizeRequests().antMatchers("/estilos.css").permitAll();
-		http.authorizeRequests().antMatchers("/fondo.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/indexPrueba").permitAll();
 		http.authorizeRequests().antMatchers("/principal.css").permitAll();
-		http.authorizeRequests().antMatchers("/principal1").permitAll();
 		http.authorizeRequests().antMatchers("/animales.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/hoteles.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/collares.jpg").permitAll();
@@ -60,11 +64,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/piensosgatos.jpg").permitAll();
 		http.authorizeRequests().antMatchers("/paginassecundarias.css").permitAll();
 		http.authorizeRequests().antMatchers("/paginaprincipal.css").permitAll();
+		http.authorizeRequests().antMatchers("/fondo.jpg").permitAll();
+		
+		http.authorizeRequests().antMatchers("/animales/new").permitAll();
+		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
 		http.authorizeRequests().antMatchers("/logout").permitAll();
 		
 		
-		http.authorizeRequests().antMatchers("/animales/new").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers("/animales/new/created").hasAnyRole("ADMIN");
+		
 		http.authorizeRequests().antMatchers("/newLocalizacion").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers("/newProducto").hasAnyRole("ADMIN");
 		//paginas privadas -- se añaden automaticamente
@@ -77,11 +84,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.formLogin().passwordParameter("psw");
 		http.formLogin().defaultSuccessUrl("/");
 		http.formLogin().failureUrl("/login");
-		
-		http.authorizeRequests().antMatchers("/registrar").permitAll();
-		http.authorizeRequests().antMatchers("/registrarUsuario").permitAll();
-		http.authorizeRequests().antMatchers("/registrarUsuari").permitAll();
-		http.authorizeRequests().antMatchers("/registerWeb").permitAll();
 
 		// Logout
 		http.logout().logoutUrl("/logout");

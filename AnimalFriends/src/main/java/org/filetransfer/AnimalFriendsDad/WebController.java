@@ -82,7 +82,12 @@ public class WebController {
 			if (result) {
 				System.out.println("result = true");
 				model.addAttribute("sesion", true);
-				return "/principal1";
+				if(null != request.getUserPrincipal()) {
+
+					return "/principal1";
+				}else {
+					return "/login";
+				}
 			} else {
 				model.addAttribute("nombreUsado", true);
 

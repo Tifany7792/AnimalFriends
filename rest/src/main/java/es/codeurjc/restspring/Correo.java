@@ -17,7 +17,7 @@ public class Correo {
         message.setFrom("animalfriendsdad@gmail.com");
         message.setTo(u.getCorreo()); 
         message.setSubject("Su pedido"); 
-        message.setText("Gracias por confiar en nosotros. Copia del pedido: \n" + u.getListaCompra().toString());
+        message.setText("¡AnimalFriends!\n"+"Gracias por confiar en nosotros. Copia del pedido: \n" + u.getListaCompra().toString());
         emailSender.send(message);
         System.out.println("Enviado");
     }

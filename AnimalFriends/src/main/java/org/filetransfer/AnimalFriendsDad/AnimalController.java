@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
@@ -31,62 +32,58 @@ public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
 
-
 	@PostConstruct
 	public void init() {
 
-		
-		animales.save(new Animal("Mono","mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos", "capuchilo.jpg"));
-		animales.save(new Animal("erizo","mamifero de la familia de los topos, con el cuerpo cubierto de puas","erizo.jpg"));
+		animales.save(new Animal("Mono", "mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos",
+				"capuchilo.jpg"));
+		animales.save(new Animal("erizo", "mamifero de la familia de los topos, con el cuerpo cubierto de puas",
+				"erizo.jpg"));
 
 	}
 
-	@GetMapping("/animales/new")
-	public String createAnimal(Model model, HttpServletRequest request) {
-		
-		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-		if (token != null) {
-			model.addAttribute("token", token.getToken());
-		}
-		return "new_animal";
-	}
+	/*
+	 * @GetMapping("/animales/new") public String createAnimal(Model model,
+	 * HttpServletRequest request) {
+	 * 
+	 * CsrfToken token = (CsrfToken) request.getAttribute("_csrf"); if (token !=
+	 * null) { model.addAttribute("token", token.getToken()); } return "new_animal";
+	 * }
+	 */
 
-
-	
-	@PostMapping("/animales/new/created") public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, @RequestParam String imageFile) { 
-		animales.save(new Animal(tipo, descripcion, imageFile)); 
-		return "saved_animal"; 
+	@PostMapping("/animales/new/created")
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion,
+			@RequestParam String imageFile) {
+		animales.save(new Animal(tipo, descripcion, imageFile));
+		return "saved_animal";
 	}
 
 	@GetMapping("/animales")
 	public String verAnimales(Model model, HttpServletRequest request) {
 		model.addAttribute("animales", animales.findAll());
-		//model.addAttribute("permiso", permiso(request));
+		// model.addAttribute("permiso", permiso(request));
 		return "list_animals";
 	}
-	
-	private boolean permiso( HttpServletRequest request) {
+
+	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
 			return false;
-		}else {
+		} else {
 			request.isUserInRole("ADMIN");
 		}
 		return false;
 	}
-	
-/*
-	@PostMapping("/{id}/image")
-	public ResponseEntity<Object> uploadImage(@PathVariable long id, @RequestParam MultipartFile imageFile)
-			throws IOException {
-		Animal animal = animales.findById(id).orElseThrow();
-		URI location = fromCurrentRequest().build().toUri();
-		animal.setImage(location.toString());
-		animal.setImageFile(BlobProxy.generateProxy(imageFile.getInputStream(), imageFile.getSize()));
-		animales.save(animal);
-		return ResponseEntity.created(location).build();
-	}*/
-	
-	
+
+	/*
+	 * @PostMapping("/{id}/image") public ResponseEntity<Object>
+	 * uploadImage(@PathVariable long id, @RequestParam MultipartFile imageFile)
+	 * throws IOException { Animal animal = animales.findById(id).orElseThrow(); URI
+	 * location = fromCurrentRequest().build().toUri();
+	 * animal.setImage(location.toString());
+	 * animal.setImageFile(BlobProxy.generateProxy(imageFile.getInputStream(),
+	 * imageFile.getSize())); animales.save(animal); return
+	 * ResponseEntity.created(location).build(); }
+	 */
 
 	@GetMapping("/animales/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {
@@ -96,7 +93,7 @@ public class AnimalController {
 
 		return "show_animal";
 	}
-	
+
 //	@GetMapping("/animales/{id}")
 //	public  ResponseEntity<Animal> getAnimal(@PathVariable long id) {
 //		Animal ani = animales.getById(id);
@@ -107,9 +104,14 @@ public class AnimalController {
 //			return ResponseEntity.notFound().build();
 //		}
 //	}
-	
 
-	
+	/*@PostMapping("/animales/new")
+	public ResponseEntity<Animal> createLocalizacion(@RequestBody Animal ani) {
+		animales.save(ani);
+		URI animal = ServletUriComponentsBuilder.fromCurrentRequest().path("/created").buildAndExpand(ani.getId())
+				.toUri();
+		return ResponseEntity.created(animal).body(ani);
+	}*/
 
 	@GetMapping("/animales/{id}/delete")
 	public String deleteAnimal(Model model, @PathVariable long id) {
