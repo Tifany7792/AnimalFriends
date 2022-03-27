@@ -22,4 +22,6 @@ public interface RepositorioUsuarios extends CrudRepository <Usuarios, Long> {
 	public List<Animal> findByMascotasTipo(Long id);
 	
 	public List<Productos> findByListaCompraNombre(Long id);
+	
+	public Usuarios findByCorreo(String email);
 }
