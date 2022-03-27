@@ -70,8 +70,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
 		http.authorizeRequests().antMatchers("/logout").permitAll();
 		
-		
-		
+		http.authorizeRequests().antMatchers("/animales/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers("/localizaciones/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers("/produsctos/{id}/delete").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers("/newLocalizacion").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers("/newProducto").hasAnyRole("ADMIN");
 		//paginas privadas -- se añaden automaticamente
