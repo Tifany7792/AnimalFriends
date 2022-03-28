@@ -84,7 +84,7 @@ public class WebController {
 			if (result) {
 				
 				model.addAttribute("sesion", false);
-				return "/principal1";
+				return "redirect:/";
 				
 			} else {
 				model.addAttribute("nombreUsado", true);
