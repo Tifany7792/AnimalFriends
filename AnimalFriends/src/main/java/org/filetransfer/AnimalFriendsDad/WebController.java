@@ -195,19 +195,4 @@ public class WebController {
 		
 	}
 	
-	@PostMapping("/usuario/comprar/producto")
-	public ModelAndView comprarProducto(Model model, HttpServletRequest request, String producto) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		userService.comprarProducto(nombre, producto);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return new ModelAndView("show_usuario");
-		
-	}
-	
-
-
 }

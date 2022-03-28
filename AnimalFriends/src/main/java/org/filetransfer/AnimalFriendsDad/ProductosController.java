@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
+import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @Controller
@@ -26,6 +28,8 @@ public class ProductosController {
 	@Autowired
 	private RepositorioProductos productos;
 	
+	@Autowired
+	private UserService userService;
 	
 	@PostConstruct
     public void init() {
@@ -86,6 +90,21 @@ public class ProductosController {
 		productos.save(prod);
 		
 		return "saved_producto";
+	}
+	
+	
+	@PostMapping("/productos/{id}/añadir")
+	public ModelAndView comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		Productos prod = productos.getById(id);
+		userService.añadirProducto(u, prod);
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas",u.getMascotas());
+		model.addAttribute("reservas",u.getReservas());
+		model.addAttribute("compra",u.getListaCompra());
+		return new ModelAndView("show_usuario");
+		
 	}
 	
 }
