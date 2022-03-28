@@ -22,12 +22,14 @@
 					<p>Nombre Usuario: {{usuario.nombre}}</p>
 					<br>
 					<p>Mascotas: {{#mascotas}}{{tipo}}, {{/mascotas}}</p>
+					<a href="/usuario/eliminarMascotas"> Eliminar mascotas </a>
 					<br>
 					<p>Reservas: {{#reservas}}{{nombreSitio}}, {{/reservas}}</p>
+					<a href="/usuario/eliminarReservas"> Eliminar reservas </a>
 					<br>
 					<p>Lista de la compra: {{#compra}}{{nombre}}, {{/compra}}</p>
+					<a href="/usuario/eliminarListaCompra"> Eliminar carrito </a>
 					<a href="/usuario/pedir"> Realizar pedido </a>
-					<a href="/usuario/editar"> Editar un usuario</a>
 					<a href="/">Volver</a>
 				</div>
 			</div>

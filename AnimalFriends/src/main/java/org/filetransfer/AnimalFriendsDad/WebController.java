@@ -124,14 +124,7 @@ public class WebController {
 		
 		if(null != request.getUserPrincipal()) {
 			
-		
-			String name = request.getUserPrincipal().getName();
-			Usuarios u = userService.getUsuario(name);
-			
-			model.addAttribute("usuario", u);
-			model.addAttribute("mascotas",u.getMascotas());
-			model.addAttribute("reservas",u.getReservas());
-			model.addAttribute("compra",u.getListaCompra());
+			mostrarDatos(model, request);
 			return "show_usuario";
 		}else {
 			return "/login";
@@ -140,59 +133,57 @@ public class WebController {
 	
 	@GetMapping ("/usuario/pedir")
 	public String pedir(Model model, HttpServletRequest request) {
+		
 		String name = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(name);
-		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<Usuarios> a = restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, Usuarios.class);
-		System.out.println(a);
 		
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, Usuarios.class);
+		
+		mostrarDatos(model, request);
 		return "show_usuario";
 		
 	}
 	
 	
 
-	@PostMapping("/usuario/editar/mascota")
-	public ModelAndView aniadirMascota(Model model, HttpServletRequest request, String tipo, String imagen) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		userService.registrarMascota(nombre, tipo, "",imagen);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+	@PostMapping("/usuario/eliminarMascotas")
+	public ModelAndView eliminarMascotas(Model model, HttpServletRequest request, String tipo, String imagen) {
+		userService.eliminarMascotas(dameUsuario(request));
+		mostrarDatos(model, request);
 		return new ModelAndView("show_usuario");
 		
 	}
 
-	@PostMapping("/usuario/editar/reserva")
-	public ModelAndView aniadirReserva(Model model, HttpServletRequest request, String lugar) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		userService.registrarReserva(nombre, lugar);
-		model.addAttribute("usuario", u);;
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return new ModelAndView("show_usuario");
+	@PostMapping("/usuario/eliminarReservas")
+	public String eliminarReservas(Model model, HttpServletRequest request) {
+		userService.eliminarReservas(dameUsuario(request));
+		mostrarDatos(model, request);
+		return ("show_usuario");
 		
 	}
 
-	@PostMapping("/usuario/editar/producto")
-	public ModelAndView aniadirProducto(Model model, HttpServletRequest request, String producto) {
+	@PostMapping("/usuario/eliminarListaCompra")
+	public String eliminarListaCompra(Model model, HttpServletRequest request) {
+		userService.eliminarListaCompra(dameUsuario(request));
+		mostrarDatos(model, request);
+		return ("show_usuario");
+		
+	}
+	
+	private void mostrarDatos(Model model, HttpServletRequest request) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
-		userService.registrarProducto(nombre, producto);
 		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return new ModelAndView("show_usuario");
-		
+		model.addAttribute("mascotas", u.getMascotas());
+		model.addAttribute("reservas", u.getReservas());
+		model.addAttribute("compra", u.getListaCompra());
+	}
+	
+	private Usuarios dameUsuario(HttpServletRequest request) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		return u;
 	}
 	
 }
