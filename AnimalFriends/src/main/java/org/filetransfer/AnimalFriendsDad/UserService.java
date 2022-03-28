@@ -40,9 +40,6 @@ public class UserService {
 	
 	
 	
-	private Animal animal;
-	
-	
 	@PostConstruct
 	private void addAdmin() {
 		Usuarios aux = new Usuarios("admin", "admin");
