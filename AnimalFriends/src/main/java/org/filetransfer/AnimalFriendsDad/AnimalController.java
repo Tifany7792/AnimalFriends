@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-@RestController
+@Controller
 public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
@@ -61,7 +61,7 @@ public class AnimalController {
 	@GetMapping("/animales")
 	public String verAnimales(Model model, HttpServletRequest request) {
 		model.addAttribute("animales", animales.findAll());
-		// model.addAttribute("permiso", permiso(request));
+		model.addAttribute("permiso", permiso(request));
 		return "list_animals";
 	}
 

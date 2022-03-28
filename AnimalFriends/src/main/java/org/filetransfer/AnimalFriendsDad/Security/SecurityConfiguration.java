@@ -53,15 +53,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/animales/{id}/delete").hasAnyRole("ADMIN");
 				
 		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
-		http.authorizeRequests().antMatchers("/locales/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers("/localizaciones/{{id}}").permitAll();
 		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/localizaciones/{id}/delete").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new/created").hasAnyRole("ADMIN");
 		
 		http.authorizeRequests().antMatchers("/productos").permitAll();
 		http.authorizeRequests().antMatchers("/productos/{{id}}").permitAll();
-		http.authorizeRequests().antMatchers("/productos/{id}/añadir").hasAnyRole("USER");
-		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/produsctos/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers("/productos/{{id}}/añadir").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/productos/{{id}}/delete").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/productos/new").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/productos/new/createed").hasAnyRole("ADMIN");
 		
