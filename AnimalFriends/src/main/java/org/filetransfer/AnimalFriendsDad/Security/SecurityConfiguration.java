@@ -39,6 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		http.authorizeRequests().antMatchers("/login").permitAll();
 		http.authorizeRequests().antMatchers("/loginUsuario").permitAll();
+		http.authorizeRequests().antMatchers("/logout").permitAll();
 		
 		http.authorizeRequests().antMatchers("/registrar").permitAll();
 		http.authorizeRequests().antMatchers("/registrarUsuario").permitAll();
@@ -46,13 +47,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/registerWeb").permitAll();
 		
 		http.authorizeRequests().antMatchers("/animales").permitAll();
-		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
-		http.authorizeRequests().antMatchers("/productos").permitAll();
-		
 		http.authorizeRequests().antMatchers("/animales/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers("/animales/new").permitAll();
+		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/animales/{id}/delete").hasAnyRole("ADMIN");
+				
+		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
 		http.authorizeRequests().antMatchers("/locales/{{id}}").permitAll();
-		http.authorizeRequests().antMatchers("/productos/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/localizaciones/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new/created").hasAnyRole("ADMIN");
 		
+		http.authorizeRequests().antMatchers("/productos").permitAll();
+		http.authorizeRequests().antMatchers("/productos/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers("/productos/{id}/añadir").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/produsctos/{id}/delete").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/productos/new").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/productos/new/createed").hasAnyRole("ADMIN");
+		
+	
 		http.authorizeRequests().antMatchers("/plantilla.css").permitAll();
 		http.authorizeRequests().antMatchers("/estilos.css").permitAll();
 		http.authorizeRequests().antMatchers("/indexPrueba").permitAll();
@@ -68,17 +81,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/paginaprincipal.css").permitAll();
 		http.authorizeRequests().antMatchers("/fondo.jpg").permitAll();
 		
-		http.authorizeRequests().antMatchers("/animales/new").permitAll();
-		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
-		http.authorizeRequests().antMatchers("/logout").permitAll();
 		
-		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/animales/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/localizaciones/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/produsctos/{id}/delete").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers(HttpMethod.POST,"/newLocalizacion").hasAnyRole("ADMIN");
-		http.authorizeRequests().antMatchers(HttpMethod.POST,"/newProducto").hasAnyRole("ADMIN");
+		
 		//paginas privadas -- se añaden automaticamente
-		http.authorizeRequests().anyRequest().permitAll();		
+		http.authorizeRequests().anyRequest().authenticated();	
 
 		
 		//  login
@@ -87,7 +93,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.formLogin().passwordParameter("psw");
 		http.formLogin().defaultSuccessUrl("/");
 		http.formLogin().failureUrl("/login");
-
+		
 		// Logout
 		http.logout().logoutUrl("/logout");
 		http.logout().logoutSuccessUrl("/");
