@@ -172,6 +172,12 @@ public class UserService {
 		return true;
 	}
 	
+	public boolean añadirLocalizacion(Usuarios u, Localizaciones l) {
+		u.addReserva(l);
+		reservas.save(l);
+		return true;
+	}
+	
 	public boolean registrarReserva(String user, String lugar) {
 		Optional<Localizaciones> l = reservas.findByNombreSitio(lugar);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
