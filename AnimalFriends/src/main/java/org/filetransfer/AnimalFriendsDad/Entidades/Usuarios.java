@@ -62,7 +62,7 @@ public class Usuarios {
 		super();
 		this.nombre = nombre;
 		this.password = password;
-		//this.roles = List.of(roles);
+		this.roles = List.of(roles);
 		List<Localizaciones> l = null;
 		this.reservas = l;
 		List<Animal> a = null;
