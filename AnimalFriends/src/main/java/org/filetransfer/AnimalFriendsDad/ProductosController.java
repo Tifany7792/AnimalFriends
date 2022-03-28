@@ -93,8 +93,8 @@ public class ProductosController {
 	}
 	
 	
-	@PostMapping("/productos/{id}/añadir")
-	public ModelAndView comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
+	@GetMapping("/productos/{id}/añadir")
+	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
 		Productos prod = productos.getById(id);
@@ -103,7 +103,7 @@ public class ProductosController {
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
 		model.addAttribute("compra",u.getListaCompra());
-		return new ModelAndView("show_usuario");
+		return("show_usuario");
 		
 	}
 	
