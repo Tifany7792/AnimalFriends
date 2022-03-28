@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
+import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
@@ -31,6 +32,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
+	
+	@Autowired
+	private UserService userService;
 
 	@PostConstruct
 	public void init() {
@@ -119,4 +123,21 @@ public class AnimalController {
 
 		return "deleted_animal";
 	}
+	
+	@GetMapping("/animales/{id}/añadir")
+	public String hacerReserva(Model model, HttpServletRequest request, @PathVariable long id) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		Animal a = animales.getById(id);
+		userService.añadirMascota(u, a);
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas",u.getMascotas());
+		model.addAttribute("reservas",u.getReservas());
+		model.addAttribute("compra",u.getListaCompra());
+		return "redirect:/usuario";
+		
+	}
+	
+	
+	
 }

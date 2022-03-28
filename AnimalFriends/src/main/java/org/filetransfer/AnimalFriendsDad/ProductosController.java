@@ -39,10 +39,10 @@ public class ProductosController {
 	
 	
 	@GetMapping("/productos")
-	public String verProductos(Model model) {
+	public String verProductos(Model model, HttpServletRequest request) {
 		
 		model.addAttribute("prod", productos.findAll());
-		
+		model.addAttribute("permiso", permiso(request));
 		return "list_productos";
 	}
 	
@@ -103,8 +103,16 @@ public class ProductosController {
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
 		model.addAttribute("compra",u.getListaCompra());
-		return("show_usuario");
+		return "redirect:/usuario";
 		
 	}
 	
+	private boolean permiso(HttpServletRequest request) {
+		if (request.getUserPrincipal() == null) {
+			return false;
+		} else {
+			request.isUserInRole("ADMIN");
+		}
+		return false;
+	}
 }
