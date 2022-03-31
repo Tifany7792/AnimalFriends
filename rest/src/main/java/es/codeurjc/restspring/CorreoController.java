@@ -15,15 +15,28 @@ public class CorreoController {
 	private Correo correo;
 	
 	@PostMapping("/usuarios/pedir/completar")
-	public int send(@RequestBody(required=true) Usuarios user) {
+	public int sendPedido(@RequestBody(required=true) Usuarios user) {
 		System.out.println("enviando");
 		try {
-			correo.enviarCorreo(user);
+			correo.enviarPedido(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
 			return 1;
 		}
 		return 0;
 	}
+	
+	@PostMapping("/usuarios/reservar/completar")
+	public int sendReserva(@RequestBody(required=true) Usuarios user) {
+		System.out.println("enviando");
+		try {
+			correo.enviarReserva(user);
+		} catch (MailException mailException) {
+			System.out.println(mailException);
+			return 1;
+		}
+		return 0;
+	}
+	
 	
 }

@@ -145,6 +145,19 @@ public class WebController {
 		
 	}
 	
+	@GetMapping ("/usuario/reseervar")
+	public String reservar(Model model, HttpServletRequest request) {
+		
+		String name = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(name);
+		
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, Usuarios.class);
+		
+		mostrarDatos(model, request);
+		return "show_usuario";
+		
+	}
 	
 
 	@PostMapping("/usuario/eliminarMascotas")
