@@ -37,10 +37,10 @@ public class LocalizacionController {
 	}
 
 	@GetMapping("/localizaciones")
-	public String verLocalizaciones(Model model) {
+	public String verLocalizaciones(Model model, HttpServletRequest request) {
 
 		model.addAttribute("local", localizaciones.findAll());
-
+		model.addAttribute("permiso", permiso(request));
 		return "list_localizaciones";
 	}
 
@@ -105,12 +105,12 @@ public class LocalizacionController {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
 		Localizaciones loc = localizaciones.getById(id);
-		userService.añadirLocalizacion(u, loc);
+		userService.añadirReserva(u, loc);
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
 		model.addAttribute("compra",u.getListaCompra());
-		return("show_usuario");
+		return "redirect:/usuario";
 		
 	}
 

@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -32,8 +33,9 @@ public class WebController {
 	
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
+		
 		model.addAttribute("sesion", null != request.getUserPrincipal());
-		System.out.println("principal");
+		
 		return "principal1";
 	}
 
@@ -63,7 +65,7 @@ public class WebController {
 
 	@GetMapping("/registrar")
 	public String goToRegister(Model model, HttpServletRequest request) {
-		System.out.println("registrar");
+		
 		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 		if (token != null) {
 			model.addAttribute("token", token.getToken());
@@ -71,23 +73,19 @@ public class WebController {
 		
 		return "registerWeb";
 	}
-
+	
 	@RequestMapping(value = "/registrar/usuario")
 	public String registrar(Model model, @RequestParam String nombre, @RequestParam String psw,
 			@RequestParam String pswRepeat, HttpSession session, HttpServletRequest request) {
-		System.out.println("Comprobando pass");
+		
 		if (psw.equals(pswRepeat)) {
-			System.out.println("Creando usuario");
+			
 			boolean result = userService.registrar(nombre, passwordEncoder.encode(psw));
 			if (result) {
-				System.out.println("result = true");
-				model.addAttribute("sesion", true);
-				if(null != request.getUserPrincipal()) {
-
-					return "/principal1";
-				}else {
-					return "/login";
-				}
+				
+				model.addAttribute("sesion", false);
+				return "redirect:/";
+				
 			} else {
 				model.addAttribute("nombreUsado", true);
 
@@ -99,12 +97,14 @@ public class WebController {
 				return "registerWeb";
 			}
 		} else {
+			
 			CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
 			if (token != null) {
 				model.addAttribute("token", token.getToken());
 			}
 			
 			model.addAttribute("contrasenaIncorrecta", true);
+			
 			return "registerWeb";
 		}
 	}
@@ -145,6 +145,19 @@ public class WebController {
 		
 	}
 	
+	@GetMapping ("/usuario/reseervar")
+	public String reservar(Model model, HttpServletRequest request) {
+		
+		String name = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(name);
+		
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, Usuarios.class);
+		
+		mostrarDatos(model, request);
+		return "show_usuario";
+		
+	}
 	
 
 	@PostMapping("/usuario/eliminarMascotas")

@@ -40,9 +40,6 @@ public class UserService {
 	
 	
 	
-	private Animal animal;
-	
-	
 	@PostConstruct
 	private void addAdmin() {
 		Usuarios aux = new Usuarios("admin", "admin");
@@ -168,13 +165,15 @@ public class UserService {
 	
 	public boolean añadirProducto(Usuarios u, Productos p) {
 		u.addProducto(p);
-		listaCompra.save(p);
 		return true;
 	}
 	
-	public boolean añadirLocalizacion(Usuarios u, Localizaciones l) {
+	public boolean añadirReserva(Usuarios u, Localizaciones l) {
 		u.addReserva(l);
-		reservas.save(l);
+		return true;
+	}
+	public boolean añadirMascota(Usuarios u, Animal a) {
+		u.addMascotas(a);
 		return true;
 	}
 	

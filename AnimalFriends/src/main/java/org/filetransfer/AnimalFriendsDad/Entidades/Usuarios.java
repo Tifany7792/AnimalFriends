@@ -48,6 +48,8 @@ public class Usuarios {
 		super();
 		this.nombre = n;
 		this.password = p;
+		String r = "USER";
+		this.roles = List.of(r);
 		List<Localizaciones> l = null;
 		this.reservas = l;
 		List<Animal> a = null;
@@ -62,7 +64,7 @@ public class Usuarios {
 		super();
 		this.nombre = nombre;
 		this.password = password;
-		//this.roles = List.of(roles);
+		this.roles = List.of(roles);
 		List<Localizaciones> l = null;
 		this.reservas = l;
 		List<Animal> a = null;
