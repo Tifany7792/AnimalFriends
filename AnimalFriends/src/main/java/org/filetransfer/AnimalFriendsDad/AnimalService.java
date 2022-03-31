@@ -1,6 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import java.io.File;
+//import java.io.File;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.multipart.MultipartFile;
+//import org.springframework.web.multipart.MultipartFile;
 
 public class AnimalService {
 

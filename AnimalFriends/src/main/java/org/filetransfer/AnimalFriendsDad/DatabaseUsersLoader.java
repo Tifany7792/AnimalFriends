@@ -1,6 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
-import javax.annotation.PostConstruct;
+//import javax.annotation.PostConstruct;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
@@ -11,13 +11,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 
 @Configuration
 public class DatabaseUsersLoader {
 
-	@Autowired
-	private RepositorioUsuarios usuarios;
+	//@Autowired
+	//private RepositorioUsuarios usuarios;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;

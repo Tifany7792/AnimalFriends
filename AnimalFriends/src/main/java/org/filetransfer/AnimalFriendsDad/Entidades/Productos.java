@@ -20,10 +20,11 @@ public class Productos {
 	@Column
 	private String user;
 	
-	public Productos(String nombre, String tipo) {
+	public Productos(String nombre, String tipo, String user) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
+		this.user = user;
 	}
 	
 	public Productos() {

@@ -1,26 +1,26 @@
 package org.filetransfer.AnimalFriendsDad;
 
 
-import java.net.URI;
+//import java.net.URI;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+//import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+//import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.servlet.ModelAndView;
+//import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @Controller
 public class ProductosController {
@@ -33,8 +33,8 @@ public class ProductosController {
 	
 	@PostConstruct
     public void init() {
-		productos.save(new Productos("Pelota de goma", "Juguete"));
-		productos.save(new Productos("Comida gato", "Comida"));
+		productos.save(new Productos("Pelota de goma", "Juguete","admin"));
+		productos.save(new Productos("Comida gato", "Comida","admin"));
     }
 	
 	
@@ -48,7 +48,6 @@ public class ProductosController {
 	
 	@GetMapping("/productos/{id}")
 	public String showProducto(Model model, @PathVariable long id) {
-
 		
 		Productos prod = productos.getById(id);
 		

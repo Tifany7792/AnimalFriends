@@ -20,7 +20,7 @@
 		<div class="contenedor-form" style="padding-top:10px;">
 			<div class="toggle">
 				<div class="inline-buttons">
-					{{/permiso}}
+					{{#permiso}}
 					<a href="localizaciones/new">Nueva localizacion</a>
 					{{/permiso}}
 					<a href="/">Volver</a>
@@ -32,8 +32,13 @@
 			<div class="toggle">
 
 				{{#local}}
+
+				<a href="localizaciones/{{id}}">{{nombreSitio}}, {{tipo}}</a><br>
+				<a href="localizacion/{{id}}/añadir"> Añadir a la cesta </a>
+
 				<a href="localizaciones/{{id}}">{{nombreSitio}}, {{tipo}}</a>
 				<a href="localizaciones/{{id}}/añadir"> Añadir reserva </a>
+
 				<br>
 				{{/local}}
 
