@@ -35,7 +35,7 @@ public class ProductService {
 		Optional<Productos> a = productos.findByTipo(nombre);
 
 		if (!a.isPresent()) {
-			miProducto = new Productos(nombre, tipo);
+			miProducto = new Productos(nombre, tipo,a.get().getUser());
 			productos.save(miProducto);
 			return true;
 		} else {

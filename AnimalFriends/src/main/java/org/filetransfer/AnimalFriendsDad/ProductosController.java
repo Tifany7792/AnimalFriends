@@ -33,8 +33,8 @@ public class ProductosController {
 	
 	@PostConstruct
     public void init() {
-		productos.save(new Productos("Pelota de goma", "Juguete"));
-		productos.save(new Productos("Comida gato", "Comida"));
+		productos.save(new Productos("Pelota de goma", "Juguete","admin"));
+		productos.save(new Productos("Comida gato", "Comida","admin"));
     }
 	
 	
@@ -48,7 +48,6 @@ public class ProductosController {
 	
 	@GetMapping("/productos/{id}")
 	public String showProducto(Model model, @PathVariable long id) {
-
 		
 		Productos prod = productos.getById(id);
 		
