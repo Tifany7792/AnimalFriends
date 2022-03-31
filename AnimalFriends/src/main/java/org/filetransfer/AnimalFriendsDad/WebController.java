@@ -145,7 +145,7 @@ public class WebController {
 		
 	}
 	
-	@GetMapping ("/usuario/reseervar")
+	@GetMapping ("/usuario/reservar")
 	public String reservar(Model model, HttpServletRequest request) {
 		
 		String name = request.getUserPrincipal().getName();
