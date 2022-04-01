@@ -10,7 +10,6 @@ import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
@@ -18,9 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class WebController {
@@ -60,7 +57,7 @@ public class WebController {
 			e.printStackTrace();
 		}
 		model.addAttribute("sesion", null != request.getUserPrincipal());
-		return "/principal1";
+		return "redirect:/";
 	}
 
 	@GetMapping("/registrar")
@@ -108,16 +105,7 @@ public class WebController {
 			return "registerWeb";
 		}
 	}
-	
-	@GetMapping("/usuario/editar")
-	public String editarUsuario(Model model, HttpServletRequest request) {
-		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-		if (token != null) {
-			model.addAttribute("token", token.getToken());
-		}
-		return "edit_usuario";
-	}
-	
+		
 	
 	@GetMapping("/usuario")
 	public String visualizarUsuario(Model model, HttpServletRequest request) {
@@ -127,15 +115,15 @@ public class WebController {
 			mostrarDatos(model, request);
 			return "show_usuario";
 		}else {
-			return "/login";
+			return "redirect:/login";
 		}
 	}
 	
 	@GetMapping ("/usuario/pedir")
 	public String pedir(Model model, HttpServletRequest request) {
 		
-		String name = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(name);
+		
+		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, Usuarios.class);
@@ -148,8 +136,7 @@ public class WebController {
 	@GetMapping ("/usuario/reservar")
 	public String reservar(Model model, HttpServletRequest request) {
 		
-		String name = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(name);
+		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, Usuarios.class);
@@ -161,10 +148,10 @@ public class WebController {
 	
 
 	@PostMapping("/usuario/eliminarMascotas")
-	public ModelAndView eliminarMascotas(Model model, HttpServletRequest request, String tipo, String imagen) {
+	public String eliminarMascotas(Model model, HttpServletRequest request, String tipo, String imagen) {
 		userService.eliminarMascotas(dameUsuario(request));
 		mostrarDatos(model, request);
-		return new ModelAndView("show_usuario");
+		return ("show_usuario");
 		
 	}
 
