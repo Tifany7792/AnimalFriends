@@ -99,7 +99,6 @@ public class LocalizacionController {
 		Usuarios u = dameUsuario (request);
 		Localizaciones loc = localizaciones.getById(id);
 		userService.añadirReserva(u, loc);
-		u.addReserva(loc);
 		mostrarDatos(model, request);
 		return "show_usuario";
 		
