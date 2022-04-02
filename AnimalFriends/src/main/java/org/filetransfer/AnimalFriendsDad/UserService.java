@@ -164,6 +164,7 @@ public class UserService {
 		return true;
 	}
 	
+   
 	public boolean añadirProducto(Usuarios u, Productos p) {
 		u.addProducto(p);
 		return true;
@@ -173,10 +174,15 @@ public class UserService {
 		u.addReserva(l);
 		return true;
 	}
-	public boolean añadirMascota(Usuarios u, Animal a) {
+	/*public boolean añadirMascota(Usuarios u, Animal a) {
 		u.addMascotas(a);
 		return true;
+	}*/
+	
+	public boolean añadirMascota(Usuarios u, Animal a) {
+		return u.RegistrarMascota(a);
 	}
+	
 	
 	public boolean registrarReserva(String user, String lugar) {
 		Optional<Localizaciones> l = reservas.findByNombreSitio(lugar);

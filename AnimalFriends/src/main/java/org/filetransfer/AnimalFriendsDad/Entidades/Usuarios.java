@@ -178,6 +178,19 @@ public class Usuarios {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+	
+	
+	
+	public boolean RegistrarMascota(Animal m){
+        boolean insertado = false;
+        for(Animal a : getMascotas()){
+            if(mascotas.equals(m))
+                return insertado;
+        }
+        insertado = mascotas.add(m);
+        return insertado;
+    }
+	
 
 	@Override
 	public String toString() {

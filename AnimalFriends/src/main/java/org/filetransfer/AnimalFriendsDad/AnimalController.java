@@ -90,15 +90,14 @@ public class AnimalController {
 	}
 	
 	@GetMapping("/animales/{id}/añadir")
-	public String hacerReserva(Model model, HttpServletRequest request, @PathVariable long id) {
+	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
 		Animal a = animales.getById(id);
-		userService.añadirMascota(u, a);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
+		userService.getUsuario(nombre).addMascotas(a);
+		model.addAttribute("usuario", userService.getUsuario(nombre));
+		model.addAttribute("mascotas",userService.getUsuario(nombre).getMascotas());
+		model.addAttribute("reservas",userService.getUsuario(nombre).getReservas());
+		model.addAttribute("compra",userService.getUsuario(nombre).getListaCompra());
 		return "show_usuario";
 		
 	}

@@ -2,9 +2,13 @@ package org.filetransfer.AnimalFriendsDad;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
+
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
+import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
@@ -21,6 +25,9 @@ public class ProductosController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private RepositorioUsuarios usuarios;
 	
 	@PostConstruct
     public void init() {
@@ -80,8 +87,28 @@ public class ProductosController {
 		return "saved_producto";
 	}
 	
+	public boolean añadirProducto(Usuarios u, Productos p) {
+		u.addProducto(p);
+		return true;
+	}
+	
 	
 	@GetMapping("/productos/{id}/añadir")
+	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = usuarios.findByNombre(nombre).get();
+		Productos prod = productos.getById(id);
+		usuarios.findByNombre(nombre).get().addProducto(prod);
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas",u.getMascotas());
+		model.addAttribute("reservas",u.getReservas());
+		model.addAttribute("compra",u.getListaCompra());
+		return "show_usuario";
+		
+	}
+	
+	
+	/*@GetMapping("/productos/{id}/añadir")
 	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = userService.getUsuario(nombre);
@@ -93,7 +120,7 @@ public class ProductosController {
 		model.addAttribute("compra",u.getListaCompra());
 		return "show_usuario";
 		
-	}
+	}*/
 	
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
