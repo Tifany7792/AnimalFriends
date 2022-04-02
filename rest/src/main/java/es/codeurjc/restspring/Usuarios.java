@@ -60,19 +60,6 @@ public class Usuarios {
 		this.listaCompra = c;
 	}
 	
-	/*public Usuarios(String nombre, String password, String rolUser, String rolAdmin) {
-		super();
-		this.nombre = nombre;
-		this.password = password;
-		this.roles.add(rolUser);
-		this.roles.add(rolAdmin);
-		List<Localizaciones> l = null;
-		this.reservas = l;
-		List<Animal> a = null;
-		this.mascotas = a;
-		List<Productos> c = null;
-		this.listaCompra = c;
-	}*/
 
 
 	public Usuarios(String nombre, String password, List<String> roles) {

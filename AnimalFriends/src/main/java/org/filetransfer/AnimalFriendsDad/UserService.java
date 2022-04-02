@@ -150,6 +150,7 @@ public class UserService {
 		if (!p.isPresent()) {
 			prod = new Productos(producto,"generico",u.get().getNombre());
 			listaCompra.save(prod);
+			u.get().addProducto(prod);
 		}else {
 			prod = p.get();
 		}
@@ -185,6 +186,7 @@ public class UserService {
 		if (!l.isPresent()) {
 			local = new Localizaciones(lugar,"generico");
 			reservas.save(local);
+			u.get().addReserva(local);
 		}else {
 			local = l.get();
 		}
