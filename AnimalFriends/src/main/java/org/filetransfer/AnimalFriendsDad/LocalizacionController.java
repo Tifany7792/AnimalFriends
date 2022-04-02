@@ -12,6 +12,7 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.csrf.CsrfToken;
 //import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,13 +45,6 @@ public class LocalizacionController {
 		return "list_localizaciones";
 	}
 
-	@PostMapping("/localizaciones/new")
-	public ResponseEntity<Localizaciones> createLocalizacion(@RequestBody Localizaciones loc) {
-		localizaciones.save(loc);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/created").buildAndExpand(loc.getId())
-				.toUri();
-		return ResponseEntity.created(location).body(loc);
-	}
 
 	@GetMapping("/localizaciones/{id}")
 	public String showLocalizacion(Model model, @PathVariable long id) {
@@ -81,37 +75,53 @@ public class LocalizacionController {
 		return false;
 	}
 	
-
-
-//	@GetMapping("/localizaciones/new")
-//	public String añadirLocalizacion(Model model, HttpServletRequest request) {
-//		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-//		if (token != null) {
-//			model.addAttribute("token", token.getToken());
-//		}
-//		return "new_localizacion";
-//	}
+	@GetMapping("/localizaciones/new")
+	public String añadirLocalizacion(Model model, HttpServletRequest request) {
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
+		return "new_localizacion";
+	}
 
 	@PostMapping("/localizacion/new/created")
-	public String newLocalizacion(Localizaciones loc) {
+	public String newLocalizacion(Localizaciones loc, HttpServletRequest request) {
 
 		localizaciones.save(loc);
-
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		if (permiso(request)) {
+			u.addReserva(loc);
+		}
+		
 		return "saved_localizacion";
 	}
 	
 	@GetMapping("/localizacion/{id}/añadir")
 	public String hacerReserva(Model model, HttpServletRequest request, @PathVariable long id) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
+		Usuarios u = dameUsuario (request);
 		Localizaciones loc = localizaciones.getById(id);
 		userService.añadirReserva(u, loc);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return "redirect:/usuario";
+		u.addReserva(loc);
+		mostrarDatos(model, request);
+		return "show_usuario";
 		
 	}
 
+	
+	private void mostrarDatos(Model model, HttpServletRequest request) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas", u.getMascotas());
+		model.addAttribute("reservas", u.getReservas());
+		model.addAttribute("compra", u.getListaCompra());
+	}
+	
+	private Usuarios dameUsuario(HttpServletRequest request) {
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		return u;
+	}
+	
 }

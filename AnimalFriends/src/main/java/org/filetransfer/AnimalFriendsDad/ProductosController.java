@@ -68,9 +68,14 @@ public class ProductosController {
 	
 	
 	@PostMapping("/productos/new/created")
-	public String newProducto(Productos prod) {
+	public String newProducto(Productos prod, HttpServletRequest request) {
 
 		productos.save(prod);
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		if (permiso(request)) {
+			u.addProducto(prod);
+		}
 		
 		return "saved_producto";
 	}
@@ -86,7 +91,7 @@ public class ProductosController {
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
 		model.addAttribute("compra",u.getListaCompra());
-		return "redirect:/usuario";
+		return "show_usuario";
 		
 	}
 	
