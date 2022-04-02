@@ -45,15 +45,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/usuario/eliminarMascotas").hasAnyRole("USER");
 		http.authorizeRequests().antMatchers("/usuario/eliminarReservas").hasAnyRole("USER");
 		http.authorizeRequests().antMatchers("/usuario/eliminarListaCompra").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers("/usuario/pedir").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers("/usuario/reservar").hasAnyRole("USER");
 		
 		http.authorizeRequests().antMatchers("/animales").permitAll();
 		http.authorizeRequests().antMatchers("/animales/{{id}}").permitAll();
-		http.authorizeRequests().antMatchers("/animales/new").permitAll();
-		http.authorizeRequests().antMatchers("/animales/new/created").permitAll();
+		http.authorizeRequests().antMatchers("/animales/{{id}}/añadir").hasAnyRole("USER");
+		http.authorizeRequests().antMatchers("/animales/new").hasAnyRole("ADMIN");
+		http.authorizeRequests().antMatchers("/animales/new/created").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/animales/{id}/delete").hasAnyRole("ADMIN");
 				
 		http.authorizeRequests().antMatchers("/localizaciones").permitAll();
 		http.authorizeRequests().antMatchers("/localizaciones/{{id}}").permitAll();
+		http.authorizeRequests().antMatchers("/localizaciones/{{id}}/añadir").hasAnyRole("USER");
 		http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/localizaciones/{id}/delete").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new").hasAnyRole("ADMIN");
 		http.authorizeRequests().antMatchers(HttpMethod.POST,"/localizaciones/new/created").hasAnyRole("ADMIN");

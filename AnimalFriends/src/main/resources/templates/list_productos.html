@@ -28,19 +28,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="contenedor" style="padding-top:10px;">
-			<div class="toggle">
-				{{#prod}}
-				<a href="productos/{{id}}">{{nombre}}, {{tipo}}</a>
-				<a href="productos/{{id}}/añadir"> Añadir a la cesta </a>
-				<br>
-				{{/prod}}
-
-				{{^prod}}
-				<p>No hay productos</p>
-				{{/prod}}
-			</div>
+		<div class="row justify-content-start" style="padding-top:10px;">
+			{{#prod}}
+			<a href="productos/{{id}}">{{nombre}}, {{tipo}}</a>
+			<a href="productos/{{id}}/añadir"> Añadir a la cesta </a>
+			<br>
+			{{/prod}}
 		</div>
+		{{^prod}}
+		<p>No hay productos</p>
+		{{/prod}}
+			
+		
+		
 	</div>
 
 

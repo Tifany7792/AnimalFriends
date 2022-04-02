@@ -45,8 +45,13 @@ public class AnimalController {
 
 	@PostMapping("/animales/new/created")
 	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion,
-			@RequestParam String imageFile) {
-		animales.save(new Animal(tipo, descripcion, imageFile));
+			@RequestParam String imageFile, HttpServletRequest request) {
+		Animal a = animales.save(new Animal(tipo, descripcion, imageFile));
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = userService.getUsuario(nombre);
+		if (u.getRoles().contains("ADMIN")) {
+			u.addMascotas(a);
+		}
 		return "saved_animal";
 	}
 
@@ -60,10 +65,9 @@ public class AnimalController {
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
 			return false;
-		} else {
-			request.isUserInRole("ADMIN");
 		}
-		return false;
+		
+		return request.isUserInRole("ADMIN");
 	}
 
 
@@ -95,7 +99,7 @@ public class AnimalController {
 		model.addAttribute("mascotas",u.getMascotas());
 		model.addAttribute("reservas",u.getReservas());
 		model.addAttribute("compra",u.getListaCompra());
-		return "redirect:/usuario";
+		return "show_usuario";
 		
 	}
 	

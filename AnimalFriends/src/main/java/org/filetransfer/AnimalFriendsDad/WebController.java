@@ -45,7 +45,6 @@ public class WebController {
 		}
 		
 		model.addAttribute("incorrecto", false);
-		//return "loginWeb";
 		return "indexPrueba";
 	}
 	
@@ -147,7 +146,7 @@ public class WebController {
 	}
 	
 
-	@PostMapping("/usuario/eliminarMascotas")
+	@GetMapping("/usuario/eliminarMascotas")
 	public String eliminarMascotas(Model model, HttpServletRequest request, String tipo, String imagen) {
 		userService.eliminarMascotas(dameUsuario(request));
 		mostrarDatos(model, request);
@@ -155,7 +154,7 @@ public class WebController {
 		
 	}
 
-	@PostMapping("/usuario/eliminarReservas")
+	@GetMapping("/usuario/eliminarReservas")
 	public String eliminarReservas(Model model, HttpServletRequest request) {
 		userService.eliminarReservas(dameUsuario(request));
 		mostrarDatos(model, request);
@@ -163,7 +162,7 @@ public class WebController {
 		
 	}
 
-	@PostMapping("/usuario/eliminarListaCompra")
+	@GetMapping("/usuario/eliminarListaCompra")
 	public String eliminarListaCompra(Model model, HttpServletRequest request) {
 		userService.eliminarListaCompra(dameUsuario(request));
 		mostrarDatos(model, request);

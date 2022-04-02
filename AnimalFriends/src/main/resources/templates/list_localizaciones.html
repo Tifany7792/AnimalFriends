@@ -28,25 +28,21 @@
 			</div>
 		</div>
 		
-		<div class="contenedor" style="padding-top:10px;">
-			<div class="toggle">
-
+		
+		<div class="row justify-content-start" style="padding-top:10px;">
 				{{#local}}
 
 				<a href="localizaciones/{{id}}">{{nombreSitio}}, {{tipo}}</a><br>
-				<a href="localizacion/{{id}}/añadir"> Añadir a la cesta </a>
-
-				<a href="localizaciones/{{id}}">{{nombreSitio}}, {{tipo}}</a>
-				<a href="localizaciones/{{id}}/añadir"> Añadir reserva </a>
-
+				<a href="localizacion/{{id}}/añadir"> Añadir reserva </a>
+		
 				<br>
 				{{/local}}
+		</div>
+		{{^local}}
+		<a>No hay localizaciones</a>
+		{{/local}}
 
-				{{^local}}
-				<a>No hay localizaciones</a>
-				{{/local}}
-
-			</div>
+			
 		</div>
 </body>
 
