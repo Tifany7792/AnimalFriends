@@ -20,7 +20,7 @@
 		</div>
 		<div class="formulario">
 			<h2>Crear Animal</h2>
-			<form method='post' action="animales/new/created" enctype="multipart/formdata">
+			<form method='post' action="/animales/new/created">
 
 				<p>Animal: </p>
 
@@ -29,7 +29,7 @@
 				<textarea name='descripcion' placeholder=" Descripción del animal" rows=5 cols=54.8></textarea>
 				<br>
 
-				<input type="file" name="imageFile" id="fileId" onchange="imageUploaded()" />
+				<input type='text' name='imageFile' />
 				<br><br>
 
 				<input type='submit' name="nombre-animal" value='Crear Animal' />

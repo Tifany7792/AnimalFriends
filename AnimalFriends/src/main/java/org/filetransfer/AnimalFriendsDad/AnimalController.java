@@ -65,10 +65,9 @@ public class AnimalController {
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
 			return false;
-		} else {
-			request.isUserInRole("ADMIN");
 		}
-		return false;
+		
+		return request.isUserInRole("ADMIN");
 	}
 
 

@@ -17,9 +17,7 @@ public class Animal {
 	private String tipo;
 	@Column
 	private String descripcion;
-
-	@Lob
-	@JsonIgnore
+	
 	private String imageFile;
 
 	public Animal() {
