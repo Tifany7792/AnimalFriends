@@ -35,12 +35,6 @@ public class Animal {
 		this.usuario =user;
 	}
 
-	public Animal(String tipo, String descripcion, String imagen) {
-		super();
-		this.tipo = tipo;
-		this.descripcion = descripcion;
-		this.imageFile = imagen;
-	}
 
 	public long getId() {
 		return this.Id;

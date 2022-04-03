@@ -1,6 +1,10 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
+
+import java.util.Optional;
+
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
@@ -27,14 +31,16 @@ public class AnimalController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private RepositorioUsuarios usuarios;
 
 	@PostConstruct
 	public void init() {
-
-		animales.save(new Animal("Mono", "mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos",
-				"capuchilo.jpg"));
-		animales.save(new Animal("erizo", "mamifero de la familia de los topos, con el cuerpo cubierto de puas",
-				"erizo.jpg"));
+		Optional<Usuarios> u = usuarios.findByNombre("admin");
+		
+		animales.save(new Animal("Mono",u.get(), "mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos"));
+		animales.save(new Animal("erizo",u.get(), "mamifero de la familia de los topos, con el cuerpo cubierto de puas"));
 
 	}
 
@@ -71,13 +77,13 @@ public class AnimalController {
 	 
 
 	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion,
-			@RequestParam String imageFile, HttpServletRequest request) {
-		Animal a = animales.save(new Animal(tipo, descripcion, imageFile));
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		if (u.getRoles().contains("ADMIN")) {
-			u.addMascotas(a);
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion,HttpServletRequest request) {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado=userService.getUsuario(uloggeado.getUsername());
+		Animal a = animales.save(new Animal(tipo,userIniciado, descripcion));
+		if (userIniciado.getRoles().contains("ADMIN")) {
+			userIniciado.addMascotas(a);
 		}
 		return "saved_animal";
 	}
