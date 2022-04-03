@@ -121,10 +121,10 @@ Compras (productos con descuentos)
 ----------------------------
 ### 1.- COMPILACIÓN DE PROYECTO
 
-Primero debemos compilar el proyecto del servicio interno, debemos realizarlo dando botón derecho sobre raíz del proyecto y elegimos: Run as --> Maven build...
+Primero debemos compilar el proyecto del servicio interno, debemos realizarlo dando botón derecho sobre raíz del proyecto y elegimos: 'Run as --> Maven build...'
 Una vez arrancado, nos aparecerá una ventana en la cual debemos poner package en la línea que está señalada con Goals.
 Una vez le demos a run, estaremos atentos a la consola hasta que aparezca BUILD SUCCESS que determinará que hemos terminado, unas líneas más arriba nos aparece el directorio donde se ha guardado nuestro archivo .jar.
-Por defecto sera: carpetaProyecto\target\nombreProyecto.jar
+Por defecto sera: ´carpetaProyecto\target\nombreProyecto.jar´
 
 Ahora compilaremos la aplicación principal. Para ello primero tendremos que ejecutar el servicio interno o si no nos fallará.
 Repetimos los mismo pasos, pero con el proyecto de la aplicación principal.
