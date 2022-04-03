@@ -24,11 +24,22 @@ public class AnimalService {
 		Optional<Usuarios> u = usuarios.findByNombre(nombre);
 		Animal miAnimal;
 		if (!a.isPresent()) {
-			miAnimal = new Animal(tipo,u.get(), descripcion);
+			miAnimal = new Animal(tipo,descripcion);
 			animales.save(miAnimal);
 			return true;
 		} else {
 			miAnimal = null;
+			return false;
+		}
+	}
+	
+	public boolean existeAnimal(String tipo) {
+		Optional<Animal> a = animales.findByTipo(tipo);
+		if(a.isPresent()) {
+			return true;
+		}
+		else
+		{
 			return false;
 		}
 	}

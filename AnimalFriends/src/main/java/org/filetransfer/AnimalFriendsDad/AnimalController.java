@@ -3,6 +3,7 @@ package org.filetransfer.AnimalFriendsDad;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
@@ -55,6 +56,25 @@ public class AnimalController {
 		}
 		return "new_animal";
 	}
+	
+	/*@RequestMapping("/animales/new")
+	public String añadirMascota(Model model, @RequestParam String tipo) {
+		
+		if(!animalService.existeAnimal(tipo)) {
+			Animal mascota=new Animal(tipo,animalService.getAnimal(tipo).getDescripcion());
+			animalService.guardarAnimal(mascota);
+					
+		}else {
+			List<Animal> mascotas = animalService.getAllAnimals();
+			model.addAttribute("mascotas",mascotas);
+			return "show_usuario";
+		}
+		
+		List<Animal> mascotas = animalService.getAllAnimals();
+		model.addAttribute("mascotas",mascotas);
+		
+		return "show_usuario";
+	}*/
 
 	@RequestMapping("/animales/new")
 	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {

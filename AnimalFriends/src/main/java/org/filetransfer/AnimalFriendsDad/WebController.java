@@ -10,6 +10,8 @@ import javax.servlet.http.HttpSession;
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,9 @@ public class WebController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private AnimalService animalService;
 	
 	@GetMapping("/")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
@@ -169,6 +174,26 @@ public class WebController {
 		mostrarDatos(model, request);
 		return ("show_usuario");
 		
+	}
+	
+	@RequestMapping("/animales/new")
+	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
+
+		Usuarios user = userService.getUsuario(nombre);
+
+		// HAY Q UE OBTENER EL USUARIO QUE HA INICIADO SESION
+
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+
+		if (nombre != "") {
+			Animal ani = new Animal(tipo, userIniciado, descripcion);
+			user.addMascotas(ani);
+			animalService.guardarAnimal(ani);
+		}
+		model.addAttribute("mascotas", user.getMascotas());
+		return "show_usuario";
 	}
 	
 	
