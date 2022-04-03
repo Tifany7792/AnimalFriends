@@ -4,7 +4,6 @@ package org.filetransfer.AnimalFriendsDad;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +27,15 @@ public class AnimalService {
 		}
 	}
 
+	public void guardarAnimal(Animal animal) {
+
+		animales.save(animal);
+
+	}
 
 	public List<Animal> getAllAnimals() {
 		return animales.findAll();
 	}
-
 
 	public Animal getAnimal(long id) {
 		Optional<Animal> aux = animales.findById(id);
@@ -41,7 +44,7 @@ public class AnimalService {
 		else
 			return null;
 	}
-	
+
 	public Animal getAnimal(String name) {
 		Optional<Animal> aux = animales.findByTipo(name);
 		if (aux.isPresent())

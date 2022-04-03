@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Productos {
@@ -20,11 +21,34 @@ public class Productos {
 	@Column
 	private String user;
 	
+	@ManyToOne
+	private Usuarios usuario;
+	
+	public Usuarios getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuarios usuario) {
+		this.usuario = usuario;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public Productos(String nombre, String tipo, String user) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.user = user;
+	}
+	
+	public Productos(String nombre,Usuarios user, String tipo) {
+		super();
+		this.nombre = nombre;
+		this.tipo = tipo;
+		this.usuario = user;
+		
 	}
 	
 	public Productos() {

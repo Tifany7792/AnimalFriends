@@ -171,7 +171,6 @@ public class WebController {
 		
 	}
 	
-
 	
 	private void mostrarDatos(Model model, HttpServletRequest request) {
 		String nombre = request.getUserPrincipal().getName();

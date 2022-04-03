@@ -14,6 +14,17 @@ public class Localizaciones {
 	@Column
 	private String tipo;
 	
+	@ManyToOne
+	private Usuarios usuario;
+	
+	public Usuarios getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuarios usuario) {
+		this.usuario = usuario;
+	}
+
 	public Localizaciones() {
 		
 	}
@@ -22,6 +33,13 @@ public class Localizaciones {
 		super();
 		this.nombreSitio = nombreSitio;
 		this.tipo = tipo;
+	}
+	
+	public Localizaciones(String nombreSitio,Usuarios user, String tipo) {
+		super();
+		this.nombreSitio = nombreSitio;
+		this.tipo = tipo;
+		this.usuario = user;
 	}
 
 

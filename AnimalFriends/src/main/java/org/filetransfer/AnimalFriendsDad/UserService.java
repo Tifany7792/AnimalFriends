@@ -19,8 +19,10 @@ import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 //import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
+import org.springframework.web.server.ResponseStatusException;
 //import org.springframework.web.multipart.MultipartFile;
 
 @Component
@@ -105,7 +107,7 @@ public class UserService {
 		if (usu.isPresent())
 			return usu.get();
 		else
-			return null;
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El usuario '"+nombre+"' no está registrado");
 	}
 	
 	public List<Animal> getMascotas(long id){
