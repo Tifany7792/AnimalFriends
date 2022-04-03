@@ -150,7 +150,7 @@ public class UserService {
 		Productos prod;
 		Usuarios usuario;
 		if (!p.isPresent()) {
-			prod = new Productos(producto,"generico",u.get().getNombre());
+			prod = new Productos(producto,"generico",u.get());
 			listaCompra.save(prod);
 			u.get().addProducto(prod);
 		}else {

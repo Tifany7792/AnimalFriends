@@ -25,63 +25,63 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
-	
+
 	@Autowired
 	private AnimalService animalService;
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private RepositorioUsuarios usuarios;
 
 	@PostConstruct
 	public void init() {
 		Optional<Usuarios> u = usuarios.findByNombre("admin");
-		
-		animales.save(new Animal("Mono",u.get(), "mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos"));
-		animales.save(new Animal("erizo",u.get(), "mamifero de la familia de los topos, con el cuerpo cubierto de puas"));
+
+		animales.save(new Animal("Mono", u.get(),
+				"mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos"));
+		animales.save(
+				new Animal("erizo", u.get(), "mamifero de la familia de los topos, con el cuerpo cubierto de puas"));
 
 	}
 
-	
-	 @GetMapping("/animales/new") 
-	 public String createAnimal(Model model, HttpServletRequest request) {
-	 
-	 CsrfToken token = (CsrfToken) request.getAttribute("_csrf"); 
-	 if (token !=null) { 
-		 model.addAttribute("token", token.getToken()); 
-	 } 
-	 return "new_animal";
-	 }
-	 
-	 @RequestMapping("/animales/new")
-		public String añadirMascota(Model model, @RequestParam String nombre,String tipo,String descripcion) {
-			
-			Usuarios user = userService.getUsuario(nombre);
-			
-			//HAY Q	UE OBTENER EL USUARIO QUE HA INICIADO SESION
-			
-			Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			UserDetails uloggeado = (UserDetails) principal;		
-			Usuarios userIniciado=userService.getUsuario(uloggeado.getUsername());
-			
-			if(nombre!="") {
-				Animal ani=new Animal(tipo,userIniciado,descripcion);
-				user.addMascotas(ani);
-				animalService.guardarAnimal(ani);
-			}
-			model.addAttribute("mascotas",user.getMascotas());
-			return "show_usuario";
-		}
-	 
+	@GetMapping("/animales/new")
+	public String createAnimal(Model model, HttpServletRequest request) {
 
-	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion,HttpServletRequest request) {
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
+		return "new_animal";
+	}
+
+	@RequestMapping("/animales/new")
+	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
+
+		Usuarios user = userService.getUsuario(nombre);
+
+		// HAY Q UE OBTENER EL USUARIO QUE HA INICIADO SESION
+
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado=userService.getUsuario(uloggeado.getUsername());
-		Animal a = animales.save(new Animal(tipo,userIniciado, descripcion));
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+
+		if (nombre != "") {
+			Animal ani = new Animal(tipo, userIniciado, descripcion);
+			user.addMascotas(ani);
+			animalService.guardarAnimal(ani);
+		}
+		model.addAttribute("mascotas", user.getMascotas());
+		return "show_usuario";
+	}
+
+	@PostMapping("/animales/new/created")
+	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, HttpServletRequest request) {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		Animal a = animales.save(new Animal(tipo, userIniciado, descripcion));
 		if (userIniciado.getRoles().contains("ADMIN")) {
 			userIniciado.addMascotas(a);
 		}
@@ -99,10 +99,9 @@ public class AnimalController {
 		if (request.getUserPrincipal() == null) {
 			return false;
 		}
-		
+
 		return request.isUserInRole("ADMIN");
 	}
-
 
 	@GetMapping("/animales/{id}")
 	public String showAnimal(Model model, @PathVariable long id) {
@@ -113,28 +112,24 @@ public class AnimalController {
 		return "show_animal";
 	}
 
-
-
 	@GetMapping("/animales/{id}/delete")
 	public String deleteAnimal(Model model, @PathVariable long id) {
 		animales.deleteById(id);
 
 		return "deleted_animal";
 	}
-	
+
 	@GetMapping("/animales/{id}/añadir")
 	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
 		Animal a = animales.getById(id);
 		userService.getUsuario(nombre).addMascotas(a);
 		model.addAttribute("usuario", userService.getUsuario(nombre));
-		model.addAttribute("mascotas",userService.getUsuario(nombre).getMascotas());
-		model.addAttribute("reservas",userService.getUsuario(nombre).getReservas());
-		model.addAttribute("compra",userService.getUsuario(nombre).getListaCompra());
+		model.addAttribute("mascotas", userService.getUsuario(nombre).getMascotas());
+		model.addAttribute("reservas", userService.getUsuario(nombre).getReservas());
+		model.addAttribute("compra", userService.getUsuario(nombre).getListaCompra());
 		return "show_usuario";
-		
+
 	}
-	
-	
-	
+
 }

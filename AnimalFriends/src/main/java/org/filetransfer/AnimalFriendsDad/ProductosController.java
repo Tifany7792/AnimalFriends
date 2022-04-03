@@ -1,5 +1,7 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import java.util.Optional;
+
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
@@ -31,8 +33,10 @@ public class ProductosController {
 	
 	@PostConstruct
     public void init() {
-		productos.save(new Productos("Pelota de goma", "Juguete","admin"));
-		productos.save(new Productos("Comida gato", "Comida","admin"));
+		
+		Optional<Usuarios> u = usuarios.findByNombre("admin");
+		productos.save(new Productos("Pelota de goma","Juguete",u.get()));
+		productos.save(new Productos("Comida gato", "Comida",u.get()));
     }
 	
 	
