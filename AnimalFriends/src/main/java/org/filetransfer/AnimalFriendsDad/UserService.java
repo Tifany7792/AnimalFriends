@@ -1,5 +1,6 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import java.util.ArrayList;
 import java.util.List;
 //import java.io.File;
 
@@ -19,8 +20,12 @@ import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 //import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.server.ResponseStatusException;
 //import org.springframework.web.multipart.MultipartFile;
@@ -35,13 +40,11 @@ public class UserService {
 	private RepositorioAnimales mascotas;
 	@Autowired
 	private RepositorioLocalizaciones reservas;
-	@Autowired 
+	@Autowired
 	private RepositorioProductos listaCompra;
 
 	private Usuarios miUsuario;
-	
-	
-	
+
 	@PostConstruct
 	private void addAdmin() {
 		Usuarios aux = new Usuarios("admin", "admin");
@@ -92,7 +95,6 @@ public class UserService {
 	public Usuarios getMiUsuario() {
 		return miUsuario;
 	}
-	
 
 	public Usuarios getUsuario(long id) {
 		Optional<Usuarios> usu = usuarios.findById(id);
@@ -101,106 +103,103 @@ public class UserService {
 		else
 			return null;
 	}
-	
+
 	public Usuarios getUsuario(String nombre) {
 		Optional<Usuarios> usu = usuarios.findByNombre(nombre);
 		if (usu.isPresent())
 			return usu.get();
 		else
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El usuario '"+nombre+"' no está registrado");
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El usuario '" + nombre + "' no está registrado");
 	}
-	
-	public List<Animal> getMascotas(long id){
+
+	public List<Animal> getMascotas(long id) {
 		return usuarios.findByMascotasTipo(id);
 	}
-	
-	public List<Localizaciones> getReservas(long id){
+
+	public List<Localizaciones> getReservas(long id) {
 		return usuarios.findByReservasNombreSitio(id);
 	}
-	
-	public List<Productos> getListaCompra(long id){
+
+	public List<Productos> getListaCompra(long id) {
 		return usuarios.findByListaCompraNombre(id);
 	}
 
-	
 	public boolean registrarMascota(String user, String tipo, String descripcion) {
 		Optional<Animal> a = mascotas.findByTipo(tipo);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Animal animal;
 		Usuarios usuario;
 		if (!a.isPresent()) {
-			animal = new Animal(tipo,u.get(), descripcion);
+			animal = new Animal(tipo, u.get(), descripcion);
 			mascotas.save(animal);
-		}else {
+		} else {
 			animal = a.get();
 		}
 		if (!u.isPresent()) {
-			usuario = new Usuarios(user,"0000");
-		}else {
+			usuario = new Usuarios(user, "0000");
+		} else {
 			usuario = u.get();
 		}
 		usuario.addMascotas(animal);
 		usuarios.save(usuario);
 		return true;
 	}
-	
+
 	public boolean registrarProducto(String user, String producto) {
 		Optional<Productos> p = listaCompra.findByNombre(producto);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Productos prod;
 		Usuarios usuario;
 		if (!p.isPresent()) {
-			prod = new Productos(producto,"generico",u.get().getNombre());
+			prod = new Productos(producto, "generico", u.get().getNombre());
 			listaCompra.save(prod);
 			u.get().addProducto(prod);
-		}else {
+		} else {
 			prod = p.get();
 		}
 		if (!u.isPresent()) {
-			usuario = new Usuarios(user,"0000");
-		}else {
+			usuario = new Usuarios(user, "0000");
+		} else {
 			usuario = u.get();
 		}
 		usuario.addProducto(prod);
 		usuarios.save(usuario);
 		return true;
 	}
-	
-   
+
 	public boolean añadirProducto(Usuarios u, Productos p) {
 		u.addProducto(p);
 		return true;
 	}
-	
+
 	public boolean añadirReserva(Usuarios u, Localizaciones l) {
 		u.addReserva(l);
 		return true;
 	}
-	/*public boolean añadirMascota(Usuarios u, Animal a) {
-		u.addMascotas(a);
-		return true;
-	}*/
-	
+	/*
+	 * public boolean añadirMascota(Usuarios u, Animal a) { u.addMascotas(a); return
+	 * true; }
+	 */
+
 	public boolean añadirMascota(Usuarios u, Animal a) {
 		return u.RegistrarMascota(a);
 	}
-	
-	
+
 	public boolean registrarReserva(String user, String lugar) {
 		Optional<Localizaciones> l = reservas.findByNombreSitio(lugar);
 		Optional<Usuarios> u = usuarios.findByNombre(user);
 		Localizaciones local;
 		Usuarios usuario;
 		if (!l.isPresent()) {
-			local = new Localizaciones(lugar,"generico");
+			local = new Localizaciones(lugar, "generico");
 			reservas.save(local);
 			u.get().addReserva(local);
-		}else {
+		} else {
 			local = l.get();
 		}
 		if (!u.isPresent()) {
-			usuario = new Usuarios(user,"0000");
-		}else {
+			usuario = new Usuarios(user, "0000");
+		} else {
 			usuario = u.get();
 		}
 		usuario.addReserva(local);
@@ -217,9 +216,44 @@ public class UserService {
 		u.setListaCompra(null);
 		return true;
 	}
-	
+
 	public boolean eliminarMascotas(Usuarios u) {
 		u.setMascotas(null);
 		return true;
 	}
+
+	public void enviarMailReserva(Usuarios usuario) {
+
+		String url = "http://localhost:8080/usuarios/reservar/completar";
+
+		HttpHeaders header = new HttpHeaders();
+		header.setContentType(MediaType.APPLICATION_JSON);
+
+		List<String> body = new ArrayList<>();
+		body.add(usuario.getNombre());
+		body.add(usuario.getCorreo());
+
+		HttpEntity<List> entity = new HttpEntity<>(body, header);
+		new RestTemplate().postForEntity(url, entity, String.class);
+
+		Thread.currentThread().interrupt();
+	}
+	
+	public void enviarMailPedido(Usuarios usuario) {
+
+		String url = "http://localhost:8080/usuarios/pedir/completar";
+
+		HttpHeaders header = new HttpHeaders();
+		header.setContentType(MediaType.APPLICATION_JSON);
+
+		List<String> body = new ArrayList<>();
+		body.add(usuario.getNombre());
+		body.add(usuario.getCorreo());
+
+		HttpEntity<List> entity = new HttpEntity<>(body, header);
+		new RestTemplate().postForEntity(url, entity, String.class);
+
+		Thread.currentThread().interrupt();
+	}
+
 }

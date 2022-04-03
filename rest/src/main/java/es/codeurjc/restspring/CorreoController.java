@@ -1,6 +1,7 @@
 package es.codeurjc.restspring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,27 +16,25 @@ public class CorreoController {
 	private Correo correo;
 	
 	@PostMapping("/usuarios/pedir/completar")
-	public int sendPedido(@RequestBody(required=true) Usuarios user) {
+	public ResponseEntity<String> sendPedido(@RequestBody(required=true) Usuarios user) {
 		System.out.println("enviando");
 		try {
 			correo.enviarPedido(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
-			return 1;
 		}
-		return 0;
+		return  ResponseEntity.ok("Correo notificación pedido realizado");
 	}
 	
 	@PostMapping("/usuarios/reservar/completar")
-	public int sendReserva(@RequestBody(required=true) Usuarios user) {
+	public ResponseEntity<String> sendReserva(@RequestBody(required=true) Usuarios user) {
 		System.out.println("enviando");
 		try {
 			correo.enviarReserva(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
-			return 1;
 		}
-		return 0;
+		return  ResponseEntity.ok("Correo notificación reserva realizada");
 	}
 	
 	
