@@ -36,11 +36,11 @@ public class Productos {
 		this.id = id;
 	}
 
-	public Productos(String nombre, String tipo, Usuarios user) {
+	public Productos(String nombre, String tipo, String user) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
-		this.usuario = user;
+		this.user = user;
 	}
 	
 	public Productos(String nombre,Usuarios user, String tipo) {
@@ -48,7 +48,6 @@ public class Productos {
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.usuario = user;
-		
 	}
 	
 	public Productos() {

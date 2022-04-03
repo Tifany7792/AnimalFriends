@@ -3,10 +3,13 @@ package org.filetransfer.AnimalFriendsDad;
 import java.util.List;
 import java.util.Optional;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class LocalizacionService {
 	@Autowired
 	private RepositorioLocalizaciones localizaciones;
@@ -41,6 +44,12 @@ public class LocalizacionService {
 			miLocalizacion = null;
 			return false;
 		}
+	}
+	
+	public void guardarLocalizacion(Localizaciones loc) {
+
+		localizaciones.save(loc);
+
 	}
 
 	public void logout() {

@@ -38,12 +38,10 @@ public class AnimalController {
 
 	@PostConstruct
 	public void init() {
-		Optional<Usuarios> u = usuarios.findByNombre("admin");
-
-		animales.save(new Animal("Mono", u.get(),
+		animales.save(new Animal("Mono",
 				"mono pequeño, en peligro de extinción, que come bichos y pequeños mamiferos"));
 		animales.save(
-				new Animal("erizo", u.get(), "mamifero de la familia de los topos, con el cuerpo cubierto de puas"));
+				new Animal("erizo", "mamifero de la familia de los topos, con el cuerpo cubierto de puas"));
 
 	}
 
@@ -76,25 +74,34 @@ public class AnimalController {
 		return "show_usuario";
 	}*/
 
-	@RequestMapping("/animales/new")
-	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
-
-		Usuarios user = userService.getUsuario(nombre);
-
-		// HAY Q UE OBTENER EL USUARIO QUE HA INICIADO SESION
-
+	@RequestMapping("/animales/{id}/añadir")
+	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
+		
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		UserDetails uloggeado = (UserDetails) principal;
 		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-
+		String nombre = userIniciado.getNombre();
+		
 		if (nombre != "") {
-			Animal ani = new Animal(tipo, userIniciado, descripcion);
-			user.addMascotas(ani);
+			Animal ani = animales.getById(id);
+			userIniciado.addMascotas(ani);
 			animalService.guardarAnimal(ani);
 		}
-		model.addAttribute("mascotas", user.getMascotas());
+		mostrarDatos(model, request);
 		return "show_usuario";
 	}
+	
+	private void mostrarDatos(Model model, HttpServletRequest request) {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios u = userService.getUsuario(uloggeado.getUsername());
+		
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas", u.getMascotas());
+		model.addAttribute("reservas", u.getReservas());
+		model.addAttribute("compra", u.getListaCompra());
+	}
+	
 
 	@PostMapping("/animales/new/created")
 	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, HttpServletRequest request) {
@@ -139,7 +146,7 @@ public class AnimalController {
 		return "deleted_animal";
 	}
 
-	@GetMapping("/animales/{id}/añadir")
+	/*@GetMapping("/animales/{id}/añadir")
 	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
 		Animal a = animales.getById(id);
@@ -150,6 +157,6 @@ public class AnimalController {
 		model.addAttribute("compra", userService.getUsuario(nombre).getListaCompra());
 		return "show_usuario";
 
-	}
+	}*/
 
 }

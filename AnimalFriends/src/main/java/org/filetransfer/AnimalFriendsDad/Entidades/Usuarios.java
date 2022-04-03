@@ -33,13 +33,13 @@ public class Usuarios {
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
 
-	@OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
+	@OneToMany
 	private List<Localizaciones> reservas;
 
-	@OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
+	@OneToMany
 	private List<Animal> mascotas;
 
-	@OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL)
+	@OneToMany
 	private List<Productos> listaCompra;
 
 	public Usuarios() {

@@ -12,12 +12,15 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ProductosController {
@@ -29,14 +32,16 @@ public class ProductosController {
 	private UserService userService;
 	
 	@Autowired
+	private ProductService prodService;
+	
+	@Autowired
 	private RepositorioUsuarios usuarios;
 	
 	@PostConstruct
     public void init() {
 		
-		Optional<Usuarios> u = usuarios.findByNombre("admin");
-		productos.save(new Productos("Pelota de goma","Juguete",u.get()));
-		productos.save(new Productos("Comida gato", "Comida",u.get()));
+		productos.save(new Productos("Pelota de goma","Juguete","admin"));
+		productos.save(new Productos("Comida gato", "Comida","admin"));
     }
 	
 	
@@ -97,7 +102,7 @@ public class ProductosController {
 	}
 	
 	
-	@GetMapping("/productos/{id}/añadir")
+	/*@GetMapping("/productos/{id}/añadir")
 	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();
 		Usuarios u = usuarios.findByNombre(nombre).get();
@@ -109,6 +114,33 @@ public class ProductosController {
 		model.addAttribute("compra",u.getListaCompra());
 		return "show_usuario";
 		
+	}*/
+	
+	@RequestMapping("/productos/{id}/añadir")
+	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
+			
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		String nombre = userIniciado.getNombre();
+		if (nombre != "") {
+			Productos p = productos.getById(id);
+			userIniciado.addProducto(p);
+			prodService.guardarProducto(p);
+		}
+		mostrarDatos(model, request);
+		return "show_usuario";
+	}
+	
+	private void mostrarDatos(Model model, HttpServletRequest request) {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios u = userService.getUsuario(uloggeado.getUsername());
+		
+		model.addAttribute("usuario", u);
+		model.addAttribute("mascotas", u.getMascotas());
+		model.addAttribute("reservas", u.getReservas());
+		model.addAttribute("compra", u.getListaCompra());
 	}
 	
 	

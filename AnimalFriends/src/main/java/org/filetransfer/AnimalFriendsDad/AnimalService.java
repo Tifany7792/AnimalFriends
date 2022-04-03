@@ -10,7 +10,9 @@ import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AnimalService {
 
 	@Autowired

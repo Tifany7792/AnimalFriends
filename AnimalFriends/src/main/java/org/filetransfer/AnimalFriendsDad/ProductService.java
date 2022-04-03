@@ -8,7 +8,9 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductService {
 
 	@Autowired
@@ -40,7 +42,7 @@ public class ProductService {
 		Optional<Productos> a = productos.findByTipo(nombre);
 
 		if (!a.isPresent()) {
-			miProducto = new Productos(nombre, tipo,a.get().getUsuario());
+			miProducto = new Productos(nombre, tipo,a.get().getUsuario().getNombre());
 			productos.save(miProducto);
 			return true;
 		} else {
