@@ -137,63 +137,53 @@ Debemos instalar una máquina virtual, en nuestro caso hemos usado virtualBox la
 
 Instalaremos JRE necesario para ejecutar nuestra aplicación.
 
-Abriremos una consola y pondremos el siguiente comando: sudo apt update
+Abriremos una consola y pondremos el siguiente comando: `sudo apt update`
 
 Una vez realizado ese paso, vamos a comprobar si tenemos Java mediante la sentencia: java -version. Debería salirnos un mensaje de que dicho comando no ha sido encontrado, si no, entonces ya lo tendremos instalado y podremos saltar este paso.
 
-Instalamos JRE predeterminado con el comando: sudo apt install default-jre
+Instalamos JRE predeterminado con el comando: `sudo apt install default-jre`
 
-Para comprobar que ya sí tenemos Java instalado, ejecutamos el comando java -version.
+Para comprobar que ya sí tenemos Java instalado, ejecutamos el comando: `java -version`.
 
 Ahora instalaremos mysql server y msql workbench de la siguiente manera:
 
 Instalaremos primero mysql server con el siguiente comando:
-sudo apt-get install mysql-server
+`sudo apt-get install mysql-server`
 
 Una vez instalado, comprobaremos que se ha hecho correctamente con:
-sudo mysql
+`sudo mysql`
 
 Si nos muestra la versión de MySQL y nos aparece mysql > , es que se habrá instalado correctamente.
-
 En caso de que no sea así, se recomienda ejecutar de nuevo el comando sudo apt-get update y volver a repetir lo anterior.
-
 Ahora instalaremos el banco de trabajo para facilitar el manejo de la base de datos. 
 Este será un entorno gráfico de MySQL. Lo instalamos mediante el comando: 
-sudo snap install mysql-workbench-community
+`sudo snap install mysql-workbench-community`
 
 Ahora tenemos que establecer la contraseña usada en las propiedades del proyecto de la aplicación principal para acceder a la BD. Para ello accederemos a mysql con privilegios de administrador: 
-sudo mysql -u root -p
+`sudo mysql -u root -p`
 
 Una vez dentro de la consola de mysql, introducimos los siguientes comandos:
-use mysql
+`use mysql
 SELECT User, Host, plugin FROM mysql.user;
 UPDATE user SET plugin='mysql_native_password' WHERE User='root';
-FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;`
 
 De esta manera estamos cambiando la manera que tiene mysql de autentificar el acceso a las bases de datos.
-
 Para acabar salimos de la consola de mysql con el comando exit.
-
-Ahora hay que generar la contraseña de la base de datos, con el siguiente comando.  mysqladmin -u root password [password]
+Ahora hay que generar la contraseña de la base de datos, con el siguiente comando:  `mysqladmin -u root password [password]`
 (En [password] poner la contraseña que se ha establecido en application.properties en la sentencia spring.datasource.password.)
 
 Finalmente, para evitar un error a la hora de conectarnos a la base de datos, tendremos que otorgar los permisos ssh necesarios para que funcionen correctamente. 
-
 Lo haremos con los siguientes comandos: 
-snap connect mysql-workbench-community:password-manager-service 
-snap connect mysql-workbench-community:ssh-keys
+`snap connect mysql-workbench-community:password-manager-service` 
+`snap connect mysql-workbench-community:ssh-keys`
 
 Finalmente tendremos instalado y operativo mysql en nuestra máquina virtual, lista para ejecutar la aplicación.
-
 Tenemos que abrir los puertos para acceder a la aplicacion desde otra maquina.
-
 Como se especifica que en la maquina virtual solo tenemos que estar ejecutando la aplicacion, accederemos a ella desde nuestra maquina principal. 
 Para ello tenemos que abrir los puertos y conectarlos. 
-
 En el administrador de VirtualBox, accederemos a la configuración de nuestra máquina virtual.En la ventana de configuración accedemos a Red --> Avanzadas --> y clickamos en reenvío de puertos.
-
 Añadimos una nueva regla clickando en el simbolo + de la derecha y en Puerto Anfitrión y Puerto Invitado ponemos 8443, que es el puerto establecido en la aplicación para https.
-
 Ponemos el nombre que queramos a la regla y clickamos en aceptar.
 
 ### 3.-EJECUTAMOS LAS APLICACIONES
@@ -201,7 +191,7 @@ Ponemos el nombre que queramos a la regla y clickamos en aceptar.
 Una vez que tenemos los archivos ejecutables en nuestra máquina virtual, vamos a abrir dos consolas en el directorio que se encuentran estos ficheros.
 
 Primero tendremos que ejecutar el servicio interno con el comando: 
-java -jar nombreficheroServicioInterno.jar
+`java -jar nombreficheroServicioInterno.jar`
 Vemos que se estará ejecutando correctamente y hacemos lo mismo con la aplicación principal.
 
 Una vez ejecutando ambos programas en la máquina virtual, abriremos un navegador en otra máquina y accederemos a la aplicación mediante la dirección (en nuestro caso) https://localhost:8443 . Y ya podremos navegar por ella.
