@@ -85,7 +85,26 @@ public class AnimalController {
 		return "redirect:/usuario";
 	}
 	
+	@RequestMapping("/animales/new")
+	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
 
+		Usuarios user = userService.getUsuario(nombre);
+
+		// HAY QUE OBTENER EL USUARIO QUE HA INICIADO SESION
+
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+
+		if (nombre != "") {
+			Animal ani = new Animal(tipo, userIniciado, descripcion);
+			user.addMascotas(ani);
+			animalService.guardarAnimal(ani);
+		}
+		model.addAttribute("mascotas", user.getMascotas());
+		return "show_usuario";
+	}
+	
 	@PostMapping("/animales/new/created")
 	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, HttpServletRequest request) {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

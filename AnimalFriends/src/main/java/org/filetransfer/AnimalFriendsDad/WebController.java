@@ -161,53 +161,29 @@ public class WebController {
 	
 
 	@GetMapping("/usuario/eliminarMascotas")
-	public String eliminarMascotas(Model model, HttpServletRequest request, String tipo, String imagen) {
+	public String eliminarMascotas(Model model, HttpServletRequest request) {
 		userService.eliminarMascotas(dameUsuario(request));
-		mostrarDatos(model, request);
-		return ("show_usuario");
+		return "redirect:/usuario";
 		
 	}
 
 	@GetMapping("/usuario/eliminarReservas")
 	public String eliminarReservas(Model model, HttpServletRequest request) {
 		userService.eliminarReservas(dameUsuario(request));
-		mostrarDatos(model, request);
-		return ("show_usuario");
+		return "redirect:/usuario";
 		
 	}
 
 	@GetMapping("/usuario/eliminarListaCompra")
 	public String eliminarListaCompra(Model model, HttpServletRequest request) {
 		userService.eliminarListaCompra(dameUsuario(request));
-		mostrarDatos(model, request);
-		return ("show_usuario");
+		return "redirect:/usuario";
 		
-	}
-	
-	@RequestMapping("/animales/new")
-	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
-
-		Usuarios user = userService.getUsuario(nombre);
-
-		// HAY Q UE OBTENER EL USUARIO QUE HA INICIADO SESION
-
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-
-		if (nombre != "") {
-			Animal ani = new Animal(tipo, userIniciado, descripcion);
-			user.addMascotas(ani);
-			animalService.guardarAnimal(ani);
-		}
-		model.addAttribute("mascotas", user.getMascotas());
-		return "show_usuario";
 	}
 	
 	
 	private void mostrarDatos(Model model, HttpServletRequest request) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
+		Usuarios u = dameUsuario(request);
 		model.addAttribute("usuario", u);
 		model.addAttribute("mascotas", u.getMascotas());
 		model.addAttribute("reservas", u.getReservas());
