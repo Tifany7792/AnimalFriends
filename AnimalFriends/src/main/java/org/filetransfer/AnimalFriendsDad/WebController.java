@@ -133,8 +133,7 @@ public class WebController {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
 		
-		
-		return "redirect:/usuario";
+		return "redirect:/gracias";
 		
 	}
 	
@@ -146,8 +145,17 @@ public class WebController {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, int.class);
 		
-		mostrarDatos(model, request);
-		return "show_usuario";
+		
+		return "redirect:/gracias";
+		
+	}
+	
+	@GetMapping ("gracias")
+	public String gracias(Model model, HttpServletRequest request) {
+		
+		Usuarios u = dameUsuario(request);
+		model.addAttribute("usuario", u);
+		return "gracias";
 		
 	}
 	
