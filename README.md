@@ -144,7 +144,7 @@ Abriremos una consola y pondremos el siguiente comando: `sudo apt update`
 
 Una vez realizado ese paso, vamos a comprobar si tenemos Java mediante la sentencia: java -version. Debería salirnos un mensaje de que dicho comando no ha sido encontrado, si no, entonces ya lo tendremos instalado y podremos saltar este paso.
 
-Instalamos JRE predeterminado con el comando: `sudo apt install default-jre`
+Instalamos JRE predeterminado con el comando: `sudo apt install openjdk-11-jre-headless`
 
 Para comprobar que ya sí tenemos Java instalado, ejecutamos el comando: `java -version`.
 
@@ -197,7 +197,7 @@ Primero tendremos que ejecutar el servicio interno con el comando:
 `java -jar nombreficheroServicioInterno.jar`
 Vemos que se estará ejecutando correctamente y hacemos lo mismo con la aplicación principal.
 
-Una vez ejecutando ambos programas en la máquina virtual, abriremos un navegador en otra máquina y accederemos a la aplicación mediante la dirección (en nuestro caso) https://localhost:8443 . Y ya podremos navegar por ella.
+Una vez ejecutando ambos programas en la máquina virtual, abriremos un navegador en otra máquina y accederemos a la aplicación mediante la dirección (en nuestro caso) https://localhost:8443/home . Y ya podremos navegar por ella.
 
 
 ## Pantallas de la aplicacion
