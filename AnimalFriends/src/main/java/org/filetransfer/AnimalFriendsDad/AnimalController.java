@@ -90,12 +90,6 @@ public class AnimalController {
 
 		Usuarios user = userService.getUsuario(nombre);
 
-		// HAY QUE OBTENER EL USUARIO QUE HA INICIADO SESION
-
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-
 		if (nombre != "") {
 			Animal ani = new Animal(tipo, descripcion);
 			user.addMascotas(ani);

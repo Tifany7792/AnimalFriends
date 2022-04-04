@@ -142,7 +142,6 @@ public class WebController {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, int.class);
 		
-		
 		return "redirect:/gracias";
 		
 	}

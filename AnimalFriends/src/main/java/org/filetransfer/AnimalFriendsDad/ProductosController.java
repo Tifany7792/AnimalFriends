@@ -34,8 +34,6 @@ public class ProductosController {
 	@Autowired
 	private ProductService prodService;
 	
-	@Autowired
-	private RepositorioUsuarios usuarios;
 	
 	@PostConstruct
     public void init() {
