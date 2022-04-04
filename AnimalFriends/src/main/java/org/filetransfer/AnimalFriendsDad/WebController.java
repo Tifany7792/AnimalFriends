@@ -133,8 +133,8 @@ public class WebController {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
 		
-		mostrarDatos(model, request);
-		return "show_usuario";
+		
+		return "redirect:/usuario";
 		
 	}
 	

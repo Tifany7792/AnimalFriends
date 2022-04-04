@@ -128,22 +128,10 @@ public class ProductosController {
 			userIniciado.addProducto(p);
 			prodService.guardarProducto(p);
 		}
-		mostrarDatos(model, request);
-		return "show_usuario";
+		return "redirect:/usuario";
 	}
 	
-	private void mostrarDatos(Model model, HttpServletRequest request) {
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios u = userService.getUsuario(uloggeado.getUsername());
-		
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas", u.getMascotas());
-		model.addAttribute("reservas", u.getReservas());
-		model.addAttribute("compra", u.getListaCompra());
-	}
-	
-	
+
 	/*@GetMapping("/productos/{id}/añadir")
 	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 		String nombre = request.getUserPrincipal().getName();

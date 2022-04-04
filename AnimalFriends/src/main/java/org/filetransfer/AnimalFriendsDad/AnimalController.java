@@ -82,19 +82,7 @@ public class AnimalController {
 			userIniciado.addMascotas(ani);
 			animalService.guardarAnimal(ani);
 		}
-		mostrarDatos(model, request);
-		return "show_usuario";
-	}
-	
-	private void mostrarDatos(Model model, HttpServletRequest request) {
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios u = userService.getUsuario(uloggeado.getUsername());
-		
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas", u.getMascotas());
-		model.addAttribute("reservas", u.getReservas());
-		model.addAttribute("compra", u.getListaCompra());
+		return "redirect:/usuario";
 	}
 	
 

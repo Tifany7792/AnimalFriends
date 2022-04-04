@@ -124,25 +124,8 @@ public class LocalizacionController {
 			userIniciado.addReserva(l);
 			locaService.guardarLocalizacion(l);
 		}
-		mostrarDatos(model, request);
-		return "show_usuario";
+		return "redirect:/usuario";
 	}
 	
-	private void mostrarDatos(Model model, HttpServletRequest request) {
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios u = userService.getUsuario(uloggeado.getUsername());
-		
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas", u.getMascotas());
-		model.addAttribute("reservas", u.getReservas());
-		model.addAttribute("compra", u.getListaCompra());
-	}
-	
-	private Usuarios dameUsuario(HttpServletRequest request) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		return u;
-	}
 	
 }
