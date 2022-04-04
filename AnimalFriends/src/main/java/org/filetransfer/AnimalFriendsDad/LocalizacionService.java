@@ -71,5 +71,17 @@ public class LocalizacionService {
 		else
 			return null;
 	}
+	
+	public void borrarLocalizacion(Localizaciones loc) {
+
+		localizaciones.delete(loc);
+
+	}
+	
+	public void borrarLocalizaciones() {
+		localizaciones.deleteAll();
+	}
+	
+	
 
 }

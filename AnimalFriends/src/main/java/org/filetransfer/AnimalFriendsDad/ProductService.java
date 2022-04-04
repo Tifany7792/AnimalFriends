@@ -3,6 +3,7 @@ package org.filetransfer.AnimalFriendsDad;
 import java.util.List;
 import java.util.Optional;
 
+import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,16 @@ public class ProductService {
 			return aux.get();
 		else
 			return null;
+	}
+	
+	public void borrarProducto(Productos pro) {
+
+		productos.delete(pro);
+
+	}
+	
+	public void borrarProductos() {
+		productos.deleteAll();
 	}
 
 }

@@ -50,6 +50,16 @@ public class AnimalController {
 		return "new_animal";
 	}
 	
+	@GetMapping("/animales/delete")
+	public String deleteAnimal(Model model, HttpServletRequest request) {
+
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+		if (token != null) {
+			model.addAttribute("token", token.getToken());
+		}
+		return "deleted_animal";
+	}
+	
 	/*@RequestMapping("/animales/new")
 	public String añadirMascota(Model model, @RequestParam String tipo) {
 		
@@ -84,6 +94,23 @@ public class AnimalController {
 		}
 		return "redirect:/usuario";
 	}
+	
+	@RequestMapping("/animales/{id}/delete")
+	public String borrarMascotas(Model model, HttpServletRequest request, @PathVariable long id) {
+		
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		String nombre = userIniciado.getNombre();
+		
+		if (nombre != "") {
+			Animal ani = animales.getById(id);
+			userIniciado.deleteMascotas(ani);
+			animalService.borrarAnimal(ani);
+		}
+		return "redirect:/usuario";
+	}
+	
 	
 	@RequestMapping("/animales/new")
 	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
@@ -141,18 +168,23 @@ public class AnimalController {
 
 		return "deleted_animal";
 	}
-
-	/*@GetMapping("/animales/{id}/añadir")
-	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
-		String nombre = request.getUserPrincipal().getName();
-		Animal a = animales.getById(id);
-		userService.getUsuario(nombre).addMascotas(a);
-		model.addAttribute("usuario", userService.getUsuario(nombre));
-		model.addAttribute("mascotas", userService.getUsuario(nombre).getMascotas());
-		model.addAttribute("reservas", userService.getUsuario(nombre).getReservas());
-		model.addAttribute("compra", userService.getUsuario(nombre).getListaCompra());
-		return "show_usuario";
-
-	}*/
+	
+	@RequestMapping("/animales/delete")
+	public String borrarMascotas(Model model, HttpServletRequest request) {
+		
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		String nombre = userIniciado.getNombre();
+		
+		if (nombre != "") {
+			userIniciado.deleteMascotas();
+			animalService.borrarAnimales();
+		}
+		init();
+		return "redirect:/usuario";
+	}
+	
+	
 
 }

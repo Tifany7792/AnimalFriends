@@ -117,6 +117,36 @@ public class Usuarios {
 			this.mascotas.add(m);
 		}
 	}
+	
+	public void deleteMascotas(Animal m) {
+		if (mascotas.contains(m)) {
+			this.mascotas.remove(m);
+		}
+	}
+	
+	public void deleteProductos(Productos p) {
+		if (listaCompra.contains(p)) {
+			this.mascotas.remove(p);
+		}
+	}
+	
+	public void deleteReservas(Localizaciones l) {
+		if (reservas.contains(l)) {
+			this.reservas.remove(l);
+		}
+	}
+	
+	public void deleteReservas() {
+		this.reservas.removeAll(reservas);
+	}
+	
+	public void deleteMascotas() {
+		this.mascotas.removeAll(mascotas);
+	}
+	
+	public void deletePedidos() {
+		this.listaCompra.removeAll(listaCompra);
+	}
 
 	public List<String> getRoles() {
 		return roles;

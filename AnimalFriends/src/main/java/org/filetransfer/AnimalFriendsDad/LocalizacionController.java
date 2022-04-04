@@ -127,5 +127,21 @@ public class LocalizacionController {
 		return "redirect:/usuario";
 	}
 	
+	@RequestMapping("/localizaciones/delete")
+	public String borrarPedido(Model model, HttpServletRequest request) {
+		
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		String nombre = userIniciado.getNombre();
+		
+		if (nombre != "") {
+			userIniciado.deleteReservas();
+			locaService.borrarLocalizaciones();
+		}
+		init();
+		return "redirect:/usuario";
+	}
+	
 	
 }

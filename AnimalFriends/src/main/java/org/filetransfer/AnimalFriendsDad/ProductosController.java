@@ -61,7 +61,7 @@ public class ProductosController {
 		return "show_producto";
 	}
 	
-	@GetMapping("/produsctos/{id}/delete")
+	@GetMapping("/productos/{id}/delete")
 	public String deleteProducto(Model model, @PathVariable long id) {
 
 		
@@ -99,21 +99,6 @@ public class ProductosController {
 		return true;
 	}
 	
-	
-	/*@GetMapping("/productos/{id}/añadir")
-	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = usuarios.findByNombre(nombre).get();
-		Productos prod = productos.getById(id);
-		usuarios.findByNombre(nombre).get().addProducto(prod);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return "show_usuario";
-		
-	}*/
-	
 	@RequestMapping("/productos/{id}/añadir")
 	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 			
@@ -129,20 +114,21 @@ public class ProductosController {
 		return "redirect:/usuario";
 	}
 	
-
-	/*@GetMapping("/productos/{id}/añadir")
-	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
-		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
-		Productos prod = productos.getById(id);
-		userService.añadirProducto(u, prod);
-		model.addAttribute("usuario", u);
-		model.addAttribute("mascotas",u.getMascotas());
-		model.addAttribute("reservas",u.getReservas());
-		model.addAttribute("compra",u.getListaCompra());
-		return "show_usuario";
+	@RequestMapping("/productos/delete")
+	public String borrarPedido(Model model, HttpServletRequest request) {
 		
-	}*/
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails uloggeado = (UserDetails) principal;
+		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
+		String nombre = userIniciado.getNombre();
+		
+		if (nombre != "") {
+			userIniciado.deletePedidos();
+			prodService.borrarProductos();
+		}
+		init();
+		return "redirect:/usuario";
+	}
 	
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {

@@ -155,28 +155,6 @@ public class WebController {
 		
 	}
 	
-
-	@GetMapping("/usuario/eliminarMascotas")
-	public String eliminarMascotas(Model model, HttpServletRequest request) {
-		userService.eliminarMascotas(dameUsuario(request));
-		return "redirect:/usuario";
-		
-	}
-
-	@GetMapping("/usuario/eliminarReservas")
-	public String eliminarReservas(Model model, HttpServletRequest request) {
-		userService.eliminarReservas(dameUsuario(request));
-		return "redirect:/usuario";
-		
-	}
-
-	@GetMapping("/usuario/eliminarListaCompra")
-	public String eliminarListaCompra(Model model, HttpServletRequest request) {
-		userService.eliminarListaCompra(dameUsuario(request));
-		return "redirect:/usuario";
-		
-	}
-	
 	
 	private void mostrarDatos(Model model, HttpServletRequest request) {
 		Usuarios u = dameUsuario(request);

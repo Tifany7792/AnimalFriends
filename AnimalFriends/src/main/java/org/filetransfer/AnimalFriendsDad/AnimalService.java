@@ -18,10 +18,10 @@ public class AnimalService {
 
 	public boolean registrarAnimal(String tipo, String descripcion, String nombre) {
 		Optional<Animal> a = animales.findByTipo(tipo);
-		
+
 		Animal miAnimal;
 		if (!a.isPresent()) {
-			miAnimal = new Animal(tipo,descripcion);
+			miAnimal = new Animal(tipo, descripcion);
 			animales.save(miAnimal);
 			return true;
 		} else {
@@ -29,14 +29,12 @@ public class AnimalService {
 			return false;
 		}
 	}
-	
+
 	public boolean existeAnimal(String tipo) {
 		Optional<Animal> a = animales.findByTipo(tipo);
-		if(a.isPresent()) {
+		if (a.isPresent()) {
 			return true;
-		}
-		else
-		{
+		} else {
 			return false;
 		}
 	}
@@ -65,6 +63,16 @@ public class AnimalService {
 			return aux.get();
 		else
 			return null;
+	}
+	
+	public void borrarAnimales() {
+		animales.deleteAll();
+	}
+
+	public void borrarAnimal(Animal animal) {
+
+		animales.delete(animal);
+
 	}
 
 }

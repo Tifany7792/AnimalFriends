@@ -176,10 +176,6 @@ public class UserService {
 		u.addReserva(l);
 		return true;
 	}
-	/*
-	 * public boolean añadirMascota(Usuarios u, Animal a) { u.addMascotas(a); return
-	 * true; }
-	 */
 
 	public boolean añadirMascota(Usuarios u, Animal a) {
 		return u.RegistrarMascota(a);
@@ -204,21 +200,6 @@ public class UserService {
 		}
 		usuario.addReserva(local);
 		usuarios.save(usuario);
-		return true;
-	}
-
-	public boolean eliminarReservas(Usuarios u) {
-		u.setReservas(null);
-		return true;
-	}
-
-	public boolean eliminarListaCompra(Usuarios u) {
-		u.setListaCompra(null);
-		return true;
-	}
-
-	public boolean eliminarMascotas(Usuarios u) {
-		u.setMascotas(null);
 		return true;
 	}
 
