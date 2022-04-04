@@ -16,25 +16,27 @@ public class CorreoController {
 	private Correo correo;
 	
 	@PostMapping("/usuarios/pedir/completar")
-	public ResponseEntity<String> sendPedido(@RequestBody(required=true) Usuarios user) {
+	public int sendPedido(@RequestBody(required=true) Usuarios user) {
 		System.out.println("enviando");
 		try {
 			correo.enviarPedido(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
+			return 1;
 		}
-		return  ResponseEntity.ok("Correo notificación pedido realizado");
+		return  0;
 	}
 	
 	@PostMapping("/usuarios/reservar/completar")
-	public ResponseEntity<String> sendReserva(@RequestBody(required=true) Usuarios user) {
+	public int sendReserva(@RequestBody(required=true) Usuarios user) {
 		System.out.println("enviando");
 		try {
 			correo.enviarReserva(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
+			return 1;
 		}
-		return  ResponseEntity.ok("Correo notificación reserva realizada");
+		return  0;
 	}
 	
 	

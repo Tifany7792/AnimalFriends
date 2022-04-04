@@ -131,7 +131,7 @@ public class WebController {
 		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, Usuarios.class);
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
 		
 		mostrarDatos(model, request);
 		return "show_usuario";
@@ -144,7 +144,7 @@ public class WebController {
 		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, Usuarios.class);
+		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, int.class);
 		
 		mostrarDatos(model, request);
 		return "show_usuario";
