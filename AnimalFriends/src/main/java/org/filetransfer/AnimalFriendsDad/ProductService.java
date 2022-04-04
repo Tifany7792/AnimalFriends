@@ -3,10 +3,8 @@ package org.filetransfer.AnimalFriendsDad;
 import java.util.List;
 import java.util.Optional;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioProductos;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +16,6 @@ public class ProductService {
 
 	private Productos miProducto;
 	
-	@Autowired
-	private RepositorioUsuarios usuarios;
-
 
 	public boolean login(String tipo, String usuario) {
 		Optional<Productos> a = productos.findByTipo(tipo);

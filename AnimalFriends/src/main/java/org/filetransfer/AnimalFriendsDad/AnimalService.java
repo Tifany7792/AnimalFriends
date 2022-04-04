@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.web.multipart.MultipartFile;
 import org.springframework.stereotype.Service;
@@ -17,13 +15,10 @@ public class AnimalService {
 
 	@Autowired
 	private RepositorioAnimales animales;
-	
-	@Autowired
-	private RepositorioUsuarios usuarios;
 
 	public boolean registrarAnimal(String tipo, String descripcion, String nombre) {
 		Optional<Animal> a = animales.findByTipo(tipo);
-		Optional<Usuarios> u = usuarios.findByNombre(nombre);
+		
 		Animal miAnimal;
 		if (!a.isPresent()) {
 			miAnimal = new Animal(tipo,descripcion);

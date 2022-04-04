@@ -2,7 +2,6 @@ package org.filetransfer.AnimalFriendsDad.Entidades;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"})

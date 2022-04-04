@@ -1,10 +1,7 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
-import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 
-import java.util.List;
-import java.util.Optional;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -33,8 +30,6 @@ public class AnimalController {
 	@Autowired
 	private UserService userService;
 
-	@Autowired
-	private RepositorioUsuarios usuarios;
 
 	@PostConstruct
 	public void init() {

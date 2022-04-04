@@ -239,7 +239,7 @@ public class UserService {
 		Thread.currentThread().interrupt();
 	}
 	
-	public void enviarMailPedido(Usuarios usuario) {
+	/*public void enviarMailPedido(Usuarios usuario) {
 
 		String url = "http://localhost:8080/usuarios/pedir/completar";
 
@@ -254,6 +254,6 @@ public class UserService {
 		new RestTemplate().postForEntity(url, entity, String.class);
 
 		Thread.currentThread().interrupt();
-	}
+	}*/
 
 }
