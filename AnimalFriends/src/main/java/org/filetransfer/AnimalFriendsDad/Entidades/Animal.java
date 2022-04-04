@@ -17,9 +17,6 @@ public class Animal {
 	@Column
 	private String descripcion;
 	
-	@ManyToOne
-	private Usuarios usuario;
-	
 	private String imageFile;
 
 	public Animal() {
@@ -31,19 +28,8 @@ public class Animal {
 		this.tipo = tipo;
 		this.descripcion = des;
 		this.imageFile = "tipo"+".jpg";
-		//this.usuario =user;
 	}
 	
-	public Animal(String tipo,Usuarios user,String des) {
-		super();
-		this.tipo = tipo;
-		this.descripcion = des;
-		this.imageFile = "tipo"+".jpg";
-		this.usuario =user;
-	}
-
-
-
 	public long getId() {
 		return this.Id;
 	}

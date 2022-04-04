@@ -97,7 +97,7 @@ public class AnimalController {
 		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
 
 		if (nombre != "") {
-			Animal ani = new Animal(tipo, userIniciado, descripcion);
+			Animal ani = new Animal(tipo, descripcion);
 			user.addMascotas(ani);
 			animalService.guardarAnimal(ani);
 		}
@@ -110,7 +110,7 @@ public class AnimalController {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		UserDetails uloggeado = (UserDetails) principal;
 		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		Animal a = animales.save(new Animal(tipo, userIniciado, descripcion));
+		Animal a = animales.save(new Animal(tipo, descripcion));
 		if (userIniciado.getRoles().contains("ADMIN")) {
 			userIniciado.addMascotas(a);
 		}

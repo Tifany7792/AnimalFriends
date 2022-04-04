@@ -18,36 +18,17 @@ public class Productos {
 	private String nombre;
 	@Column
 	private String tipo;
-	@Column
-	private String user;
 	
-	@ManyToOne
-	private Usuarios usuario;
-	
-	public Usuarios getUsuario() {
-		return usuario;
-	}
 
-	public void setUsuario(Usuarios usuario) {
-		this.usuario = usuario;
-	}
 
 	public void setId(long id) {
 		this.id = id;
 	}
 
-	public Productos(String nombre, String tipo, String user) {
+	public Productos(String nombre, String tipo) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
-		this.user = user;
-	}
-	
-	public Productos(String nombre,Usuarios user, String tipo) {
-		super();
-		this.nombre = nombre;
-		this.tipo = tipo;
-		this.usuario = user;
 	}
 	
 	public Productos() {
@@ -71,12 +52,6 @@ public class Productos {
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-	public String getUser() {
-		return this.user;
-	}
-	public void setUser(String user) {
-		this.user = user;
 	}
 
 	@Override

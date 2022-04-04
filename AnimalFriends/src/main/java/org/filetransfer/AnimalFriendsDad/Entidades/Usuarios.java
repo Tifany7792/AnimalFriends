@@ -7,6 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import java.util.ArrayList;
@@ -31,13 +32,13 @@ public class Usuarios {
 	@ElementCollection(fetch = FetchType.EAGER)
 	private List<String> roles;
 
-	@OneToMany
+	@ManyToMany
 	private List<Localizaciones> reservas;
 
-	@OneToMany
+	@ManyToMany
 	private List<Animal> mascotas;
 
-	@OneToMany
+	@ManyToMany
 	private List<Productos> listaCompra;
 
 	public Usuarios() {
@@ -74,7 +75,7 @@ public class Usuarios {
 		this.listaCompra = new ArrayList<Productos>();
 		this.mascotas = new ArrayList<Animal>();
 		this.reservas = new ArrayList<Localizaciones>();
-		this.correo = "estefaniadominguez7792@hotmail.com";
+		this.correo = "jositote2000@gmail.com";
 	}
 
 	public Usuarios(String nombre, String password, List<String> roles, String email) {

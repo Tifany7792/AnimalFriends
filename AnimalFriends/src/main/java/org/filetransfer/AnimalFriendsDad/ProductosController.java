@@ -40,8 +40,8 @@ public class ProductosController {
 	@PostConstruct
     public void init() {
 		
-		productos.save(new Productos("Pelota de goma","Juguete","admin"));
-		productos.save(new Productos("Comida gato", "Comida","admin"));
+		productos.save(new Productos("Pelota de goma","Juguete"));
+		productos.save(new Productos("Comida gato", "Comida"));
     }
 	
 	

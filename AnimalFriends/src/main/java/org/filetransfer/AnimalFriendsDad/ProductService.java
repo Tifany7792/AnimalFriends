@@ -15,29 +15,12 @@ public class ProductService {
 	private RepositorioProductos productos;
 
 	private Productos miProducto;
-	
-
-	public boolean login(String tipo, String usuario) {
-		Optional<Productos> a = productos.findByTipo(tipo);
-
-		if (a.isPresent()) {
-			if (a.get().getUser().equals(usuario)) {
-				miProducto = a.get();
-				return true;
-			} else {
-				miProducto = null;
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}
 
 	public boolean registrarProducto(String tipo, String nombre) {
 		Optional<Productos> a = productos.findByTipo(nombre);
 
 		if (!a.isPresent()) {
-			miProducto = new Productos(nombre, tipo,a.get().getUsuario().getNombre());
+			miProducto = new Productos(nombre, tipo);
 			productos.save(miProducto);
 			return true;
 		} else {

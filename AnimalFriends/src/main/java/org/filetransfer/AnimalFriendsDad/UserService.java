@@ -130,7 +130,7 @@ public class UserService {
 		Animal animal;
 		Usuarios usuario;
 		if (!a.isPresent()) {
-			animal = new Animal(tipo, u.get(), descripcion);
+			animal = new Animal(tipo, descripcion);
 			mascotas.save(animal);
 		} else {
 			animal = a.get();
@@ -151,7 +151,7 @@ public class UserService {
 		Productos prod;
 		Usuarios usuario;
 		if (!p.isPresent()) {
-			prod = new Productos(producto, "generico", u.get().getNombre());
+			prod = new Productos(producto, "generico");
 			listaCompra.save(prod);
 			u.get().addProducto(prod);
 		} else {
@@ -191,7 +191,7 @@ public class UserService {
 		Localizaciones local;
 		Usuarios usuario;
 		if (!l.isPresent()) {
-			local = new Localizaciones(lugar, "generico");
+			local = new Localizaciones(lugar, "generico");	
 			reservas.save(local);
 			u.get().addReserva(local);
 		} else {

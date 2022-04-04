@@ -13,5 +13,4 @@ public interface RepositorioProductos extends JpaRepository<Productos,Long>{
 	Optional<Productos> findByTipo(String tipo);
 	Optional<Productos> findById(Long id);
 	Optional<Productos> findByNombre(String nombre);
-	List<Productos> findByUsuario(Usuarios user);
 }
