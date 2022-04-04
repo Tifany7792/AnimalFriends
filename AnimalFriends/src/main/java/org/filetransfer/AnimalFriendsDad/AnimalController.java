@@ -50,15 +50,7 @@ public class AnimalController {
 		return "new_animal";
 	}
 	
-	@GetMapping("/animales/delete")
-	public String deleteAnimal(Model model, HttpServletRequest request) {
-
-		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-		if (token != null) {
-			model.addAttribute("token", token.getToken());
-		}
-		return "deleted_animal";
-	}
+	
 	
 	/*@RequestMapping("/animales/new")
 	public String añadirMascota(Model model, @RequestParam String tipo) {
@@ -108,7 +100,7 @@ public class AnimalController {
 			userIniciado.deleteMascotas(ani);
 			animalService.borrarAnimal(ani);
 		}
-		return "redirect:/usuario";
+		return "deleted_animal";
 	}
 	
 	
