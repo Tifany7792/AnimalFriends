@@ -36,7 +36,7 @@ public class WebController {
 		
 		model.addAttribute("sesion", null != request.getUserPrincipal());
 		
-		return "principal1";
+		return "principal";
 	}
 
 	@GetMapping("/login")
