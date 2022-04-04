@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	 protected void configure(HttpSecurity http) throws Exception {
 		
 		//Paginas publicas -- añadir todas las paginas publicas
-		http.authorizeRequests().antMatchers("/").permitAll();
+		http.authorizeRequests().antMatchers("/home").permitAll();
 		http.authorizeRequests().antMatchers("/principal").permitAll();
 		http.authorizeRequests().antMatchers("/principal1").permitAll();
 		
@@ -95,12 +95,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.formLogin().loginPage("/login");
 		http.formLogin().usernameParameter("nombre");
 		http.formLogin().passwordParameter("psw");
-		http.formLogin().defaultSuccessUrl("/");
+		http.formLogin().defaultSuccessUrl("/home");
 		http.formLogin().failureUrl("/login");
 		
 		// Logout
 		http.logout().logoutUrl("/logout");
-		http.logout().logoutSuccessUrl("/");
+		http.logout().logoutSuccessUrl("/home");
 		
 		// Disable CSRF at the moment
 		/*http.csrf().disable();
