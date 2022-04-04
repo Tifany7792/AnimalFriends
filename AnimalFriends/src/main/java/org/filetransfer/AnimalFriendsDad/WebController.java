@@ -31,7 +31,7 @@ public class WebController {
 	@Autowired
 	private UserService userService;
 	
-	@GetMapping("/")
+	@GetMapping("/home")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
 		
 		model.addAttribute("sesion", null != request.getUserPrincipal());
@@ -59,7 +59,7 @@ public class WebController {
 			e.printStackTrace();
 		}
 		model.addAttribute("sesion", null != request.getUserPrincipal());
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 	@GetMapping("/registrar")
@@ -83,7 +83,7 @@ public class WebController {
 			if (result) {
 				
 				model.addAttribute("sesion", false);
-				return "redirect:/";
+				return "redirect:/home";
 				
 			} else {
 				model.addAttribute("nombreUsado", true);
