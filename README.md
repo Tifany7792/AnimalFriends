@@ -117,6 +117,9 @@ Compras (productos con descuentos)
 14. Editar un usuario (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
 
+
+# FASE 2
+---------
 ## CREACIÓN ARCHIVO JAR
 ----------------------------
 ### 1.- COMPILACIÓN DE PROYECTO
@@ -197,4 +200,31 @@ Vemos que se estará ejecutando correctamente y hacemos lo mismo con la aplicaci
 Una vez ejecutando ambos programas en la máquina virtual, abriremos un navegador en otra máquina y accederemos a la aplicación mediante la dirección (en nuestro caso) https://localhost:8443 . Y ya podremos navegar por ella.
 
 
+## Pantallas de la aplicacion
 
+Se han realizado pequeños cambios respecto a las pantallas de la fase dos, sobre todo añadiendo alguna modificación más en el css y añadiendo vistas de usuario/administrador
+
+1. Pantalla de inicio (Público vs Privado)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/home.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/homeLogged.jpg)
+
+2. Inicio de sesión (Público) 
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/login.jpg)
+
+3. Registro (Público)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/register.jpg)
+
+4. Ver Animales (Público/Usuario vs Admin)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listAnimals.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listAnimalsAdmin.jpg)
+
+5. Ver localizaciones (Público/Usuario vs Admin)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listLocations.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listLocationsAdmin.jpg)
+
+6. Ver Productos (Público/Usuario vs Admin)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listProducts.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/listProductsAdmin.jpg)
+
+7. Ver un usuario (Privado)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/showUsuario.jpg)
