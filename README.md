@@ -231,3 +231,8 @@ Se han realizado pequeños cambios respecto a las pantallas de la fase dos, sobr
 
 7. Ver un usuario (Privado)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/showUsuario.jpg)
+
+
+## Diagrama de clases y templates
+
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/diagrama.jpg)
