@@ -181,6 +181,9 @@ Lo haremos con los siguientes comandos:
 `snap connect mysql-workbench-community:password-manager-service` 
 `snap connect mysql-workbench-community:ssh-keys`
 
+Dado que la base de datos utiliza un schema de nombre animalfriends, tendremos que ejecutar dentro de mysql el comando:
+`CREATE SCHEMA animalfriends`
+
 Finalmente tendremos instalado y operativo mysql en nuestra máquina virtual, lista para ejecutar la aplicación.
 Tenemos que abrir los puertos para acceder a la aplicacion desde otra maquina.
 Como se especifica que en la maquina virtual solo tenemos que estar ejecutando la aplicacion, accederemos a ella desde nuestra maquina principal. 
