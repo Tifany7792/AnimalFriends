@@ -118,7 +118,7 @@ Compras (productos con descuentos)
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
 
 
-# FASE 2
+# FASE 3
 ---------
 ## CREACIÓN ARCHIVO JAR
 ----------------------------
