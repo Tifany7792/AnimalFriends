@@ -203,38 +203,4 @@ public class UserService {
 		return true;
 	}
 
-	public void enviarMailReserva(Usuarios usuario) {
-
-		String url = "http://localhost:8080/usuarios/reservar/completar";
-
-		HttpHeaders header = new HttpHeaders();
-		header.setContentType(MediaType.APPLICATION_JSON);
-
-		List<String> body = new ArrayList<>();
-		body.add(usuario.getNombre());
-		body.add(usuario.getCorreo());
-
-		HttpEntity<List> entity = new HttpEntity<>(body, header);
-		new RestTemplate().postForEntity(url, entity, String.class);
-
-		Thread.currentThread().interrupt();
-	}
-	
-	/*public void enviarMailPedido(Usuarios usuario) {
-
-		String url = "http://localhost:8080/usuarios/pedir/completar";
-
-		HttpHeaders header = new HttpHeaders();
-		header.setContentType(MediaType.APPLICATION_JSON);
-
-		List<String> body = new ArrayList<>();
-		body.add(usuario.getNombre());
-		body.add(usuario.getCorreo());
-
-		HttpEntity<List> entity = new HttpEntity<>(body, header);
-		new RestTemplate().postForEntity(url, entity, String.class);
-
-		Thread.currentThread().interrupt();
-	}*/
-
 }

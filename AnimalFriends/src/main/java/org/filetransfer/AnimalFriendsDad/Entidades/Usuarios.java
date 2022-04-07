@@ -41,8 +41,7 @@ public class Usuarios {
 	private List<Productos> listaCompra;
 
 	public Usuarios() {
-	};
-
+	}
 	public Usuarios(String n, String p) {
 		super();
 		this.nombre = n;
@@ -126,7 +125,7 @@ public class Usuarios {
 	
 	public void deleteProductos(Productos p) {
 		if (listaCompra.contains(p)) {
-			this.mascotas.remove(p);
+			this.listaCompra.remove(p);
 		}
 	}
 	

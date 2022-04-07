@@ -1,7 +1,5 @@
 package org.filetransfer.AnimalFriendsDad;
 
-
-
 import org.springframework.web.client.RestTemplate;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
