@@ -15,7 +15,7 @@ services:
     image: mysql:5.6
     environment:
       - MYSQL_ROOT_PASSWORD=pass
-      - MYSQL_DATABASE=anuncios
+      - MYSQL_DATABASE=animalfriends
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
       timeout: 30s
