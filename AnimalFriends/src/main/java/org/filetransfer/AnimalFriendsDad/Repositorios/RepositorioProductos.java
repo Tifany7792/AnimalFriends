@@ -3,10 +3,7 @@ package org.filetransfer.AnimalFriendsDad.Repositorios;
 import java.util.List;
 import java.util.Optional;
 
-import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
-import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
-import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;

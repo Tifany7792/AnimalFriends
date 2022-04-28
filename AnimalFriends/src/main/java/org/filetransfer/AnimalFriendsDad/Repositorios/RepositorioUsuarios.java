@@ -12,29 +12,20 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.repository.CrudRepository;
 
-@CacheConfig(cacheNames="usuarios")
 public interface RepositorioUsuarios extends CrudRepository <Usuarios, Long> {
 
-	
-	@CachePut
 	public Optional<Usuarios> findByNombre(String nombre);
 	//public Usuarios findByNombre(String nombre);
 	
-	@CachePut
 	public Optional<Usuarios> findById(Long id);
 	
-	@CachePut
 	public List<Localizaciones> findByReservasNombreSitio(Long id);
 	
-	@CachePut
 	public List<Animal> findByMascotasTipo(Long id);
 	
-	@CachePut
 	public List<Productos> findByListaCompraNombre(Long id);
 	
-	@CachePut
 	public Usuarios findByCorreo(String email);
 	
-	@CachePut
 	List<Usuarios> findAll();
 }

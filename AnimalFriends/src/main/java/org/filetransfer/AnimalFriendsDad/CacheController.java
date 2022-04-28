@@ -36,11 +36,5 @@ public class CacheController {
 		ConcurrentMapCache cache = (ConcurrentMapCache) cacheMgr.getCache("productos");
 		return cache.getNativeCache();
 	}
-	@RequestMapping(value="/cache/usuarios", method=RequestMethod.GET)
-	public Map<Object, Object> getCacheContentU() {
-		ConcurrentMapCacheManager cacheMgr = (ConcurrentMapCacheManager) cacheManager;
-		ConcurrentMapCache cache = (ConcurrentMapCache) cacheMgr.getCache("usuarios");
-		return cache.getNativeCache();
-	}
 	
 }
