@@ -23,7 +23,7 @@ public class AnimalFriendsApplication {
 	@Bean
 	public CacheManager cacheManager() {
 		LOG.info("Activating cache...");
-		return new ConcurrentMapCacheManager("animales");
+		return new ConcurrentMapCacheManager("animales","localizaciones","usuarios","productos");
 	}
 	
 

@@ -12,7 +12,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.repository.CrudRepository;
 
-@CacheConfig(cacheNames="animales")
+@CacheConfig(cacheNames="usuarios")
 public interface RepositorioUsuarios extends CrudRepository <Usuarios, Long> {
 
 	
