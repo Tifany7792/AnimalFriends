@@ -1,0 +1,9 @@
+FROM maven:3.8.5-openjdk-17 as builder
+COPY . /code/
+WORKDIR /code
+RUN mvn package -DskipTests=true
+
+FROM openjdk:11-jre
+COPY --from=builder /code/target/*.jar /usr/app/
+WORKDIR /usr/app
+CMD [ "java", "-jar", "app.jar" ]
