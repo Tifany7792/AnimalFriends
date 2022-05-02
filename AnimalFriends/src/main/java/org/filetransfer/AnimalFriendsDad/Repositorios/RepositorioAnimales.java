@@ -11,18 +11,18 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-//@CacheConfig(cacheNames="animales")
+@CacheConfig(cacheNames="animales")
 public interface RepositorioAnimales extends JpaRepository<Animal, Long>{
 	
-//	@CacheEvict(allEntries=true)
+	@CacheEvict(allEntries=true)
 	Animal save(Animal animal);
 	
-//	@CachePut
+	@CachePut
 	Optional<Animal> findByTipo(String tipo);
-//	@CachePut
+	@CachePut
 	Optional<Animal> findById(Long id);
 	
-//	@CachePut
+	@CachePut
 	List<Animal> findAll();
 	
 	

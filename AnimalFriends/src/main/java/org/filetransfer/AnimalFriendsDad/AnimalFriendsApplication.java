@@ -2,15 +2,20 @@ package org.filetransfer.AnimalFriendsDad;
 
 import java.util.Collections;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.session.hazelcast.config.annotation.web.http.EnableHazelcastHttpSession;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.JoinConfig;
 
-//@EnableCaching
+@EnableCaching
 @SpringBootApplication
 @EnableHazelcastHttpSession
 public class AnimalFriendsApplication {
@@ -35,12 +40,12 @@ public class AnimalFriendsApplication {
         return config;
     }
 	
-	//private static final Log LOG = LogFactory.getLog(AnimalFriendsApplication.class);
-//	@Bean
-//	public CacheManager cacheManager() {
-//		LOG.info("Activating cache...");
-//		return new ConcurrentMapCacheManager("animales","localizaciones","productos");
-//	}
+	private static final Log LOG = LogFactory.getLog(AnimalFriendsApplication.class);
+	@Bean
+	public CacheManager cacheManager() {
+		LOG.info("Activating cache...");
+		return new ConcurrentMapCacheManager("animales","localizaciones","productos");
+	}
 	
 
 }
