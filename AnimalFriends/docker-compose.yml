@@ -1,22 +1,25 @@
-version: "2.1"
+version: '3'
+
 services:
-  web:
-    build: .
+  docker-mysql:
+    container_name: basededatos
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'animalfriends'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'pass'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: 'pass'
     ports:
-      - "8080:8080"
-    links:
-      - db
+      - 3307:3306
+
+  app:
+    container_name: web1
+    image: jositote/animalfriends:latest
+    ports:
+       - 8444:8443
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
     depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db/animalfriends
-  db:
-    image: mysql:8.0
-    environment:
-      - MYSQL_ROOT_PASSWORD=pass
-      - MYSQL_DATABASE=animalfriends
-    healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 30s
-      retries: 10
+       - basededatos
