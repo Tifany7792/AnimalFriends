@@ -10,6 +10,7 @@ import org.filetransfer.AnimalFriendsDad.Entidades.Localizaciones;
 //import org.filetransfer.AnimalFriendsDad.Entidades.Productos;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioLocalizaciones;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -33,10 +34,8 @@ public class LocalizacionController {
 	private RepositorioLocalizaciones localizaciones;
 	
 	@Autowired
-	private UserService userService;
+	private RepositorioUsuarios repusu;
 	
-	@Autowired
-	private LocalizacionService locaService;
 
 	@PostConstruct
 	public void init() {
@@ -54,11 +53,12 @@ public class LocalizacionController {
 
 
 	@GetMapping("/localizaciones/{id}")
-	public String showLocalizacion(Model model, @PathVariable long id) {
+	public String showLocalizacion(Model model, HttpServletRequest request, @PathVariable long id) {
 
 		Localizaciones loc = localizaciones.getById(id);
 
 		model.addAttribute("local", loc);
+		model.addAttribute("permiso", permiso(request));
 
 		return "show_localizacion";
 	}
@@ -93,7 +93,7 @@ public class LocalizacionController {
 
 		localizaciones.save(loc);
 		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
+		Usuarios u = repusu.findByNombre(nombre).get();
 		if (permiso(request)) {
 			u.addReserva(loc);
 		}
@@ -101,45 +101,17 @@ public class LocalizacionController {
 		return "saved_localizacion";
 	}
 	
-	/*@GetMapping("/localizacion/{id}/añadir")
-	public String hacerReserva(Model model, HttpServletRequest request, @PathVariable long id) {
-		Usuarios u = dameUsuario (request);
-		Localizaciones loc = localizaciones.getById(id);
-		userService.añadirReserva(u, loc);
-		mostrarDatos(model, request);
-		return "show_usuario";
-		
-	}*/
-	
 	@RequestMapping("/localizacion/{id}/añadir")
 	public String hacerReserva(Model model, HttpServletRequest request, @PathVariable long id) {
 		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios userIniciado = repusu.findByNombre(nombre).get();
 		
 		if (nombre != "") {
 			Localizaciones l = localizaciones.getById(id);
 			userIniciado.addReserva(l);
-			locaService.guardarLocalizacion(l);
+			localizaciones.save(l);
 		}
-		return "redirect:/usuario";
-	}
-	
-	@RequestMapping("/localizaciones/delete")
-	public String borrarPedido(Model model, HttpServletRequest request) {
-		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
-		
-		if (nombre != "") {
-			userIniciado.deleteReservas();
-			locaService.borrarLocalizaciones();
-		}
-		init();
 		return "redirect:/usuario";
 	}
 	
