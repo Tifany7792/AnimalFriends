@@ -17,9 +17,7 @@ public interface RepositorioAnimales extends JpaRepository<Animal, Long>{
 	@CacheEvict(allEntries=true)
 	Animal save(Animal animal);
 	
-	@CachePut
 	Optional<Animal> findByTipo(String tipo);
-	@CachePut
 	Optional<Animal> findById(Long id);
 	
 	@CachePut

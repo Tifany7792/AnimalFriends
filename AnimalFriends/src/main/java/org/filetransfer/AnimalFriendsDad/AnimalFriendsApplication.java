@@ -17,7 +17,7 @@ import com.hazelcast.config.JoinConfig;
 
 @EnableCaching
 @SpringBootApplication
-@EnableHazelcastHttpSession
+//@EnableHazelcastHttpSession
 public class AnimalFriendsApplication {
 	
 	
@@ -27,24 +27,24 @@ public class AnimalFriendsApplication {
 		
 	}
 	
-	@Bean
-    public Config config() {
-
-        Config config = new Config();
-
-        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
-
-        joinConfig.getMulticastConfig().setEnabled(false);
-        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
-
-        return config;
-    }
+//	@Bean
+//    public Config config() {
+//
+//        Config config = new Config();
+//
+//        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
+//
+//        joinConfig.getMulticastConfig().setEnabled(false);
+//        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
+//
+//        return config;
+//    }
 	
 	private static final Log LOG = LogFactory.getLog(AnimalFriendsApplication.class);
 	@Bean
 	public CacheManager cacheManager() {
 		LOG.info("Activating cache...");
-		return new ConcurrentMapCacheManager("animales","localizaciones","productos");
+		return new ConcurrentMapCacheManager("animales");
 	}
 	
 

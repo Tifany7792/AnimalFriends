@@ -11,19 +11,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@CacheConfig(cacheNames="productos")
 public interface RepositorioProductos extends JpaRepository<Productos,Long>{
 	
-	@CacheEvict(allEntries=true)
 	Productos save(Productos producto);
 	
-	@CachePut
+
 	Optional<Productos> findByTipo(String tipo);
-	@CachePut
+
 	Optional<Productos> findById(Long id);
-	@CachePut
+
 	Optional<Productos> findByNombre(String nombre);
-	
-	@CachePut
 	List<Productos> findAll();
 }

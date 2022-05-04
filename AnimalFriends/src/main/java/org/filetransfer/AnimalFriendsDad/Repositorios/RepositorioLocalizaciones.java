@@ -10,22 +10,16 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-@CacheConfig(cacheNames="localizaciones")
 public interface RepositorioLocalizaciones extends JpaRepository<Localizaciones, Long> {
 	
-	@CacheEvict(allEntries=true)
 	Localizaciones save(Localizaciones localizacion);
 	
-	@CachePut
 	Optional<Localizaciones> findByTipo(String tipo);
 
-	@CachePut
 	Optional<Localizaciones> findByNombreSitio(String nombre);
 
-	@CachePut
 	Optional<Localizaciones> findById(Long id);
 	
-	@CachePut
 	List<Localizaciones> findAll();
 
 }
