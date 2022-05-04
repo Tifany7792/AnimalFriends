@@ -1,12 +1,16 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import org.springframework.web.client.RestTemplate;
+
+import java.security.Principal;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,7 +31,7 @@ public class WebController {
 	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
-	private UserService userService;
+	private RepositorioUsuarios repusu;
 	
 	@GetMapping("/home")
 	public String ventanaPrincipal(Model model, HttpServletRequest request) {
@@ -77,8 +81,8 @@ public class WebController {
 		
 		if (psw.equals(pswRepeat)) {
 			
-			boolean result = userService.registrar(nombre, passwordEncoder.encode(psw));
-			if (result) {
+			Usuarios result = repusu.save(new Usuarios(nombre, passwordEncoder.encode(psw))) ;
+			if (result != null) {
 				
 				model.addAttribute("sesion", false);
 				return "redirect:/home";
@@ -156,7 +160,7 @@ public class WebController {
 	
 	private void mostrarDatos(Model model, HttpServletRequest request) {
 		Usuarios u = dameUsuario(request);
-		model.addAttribute("usuario", u);
+		model.addAttribute("nombre", u.getNombre());
 		model.addAttribute("mascotas", u.getMascotas());
 		model.addAttribute("reservas", u.getReservas());
 		model.addAttribute("compra", u.getListaCompra());
@@ -164,7 +168,7 @@ public class WebController {
 	
 	private Usuarios dameUsuario(HttpServletRequest request) {
 		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
+		Usuarios u = repusu.findByNombre(nombre).get();
 		return u;
 	}
 	
