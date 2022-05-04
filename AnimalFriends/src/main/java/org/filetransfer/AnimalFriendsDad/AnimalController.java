@@ -112,5 +112,20 @@ public class AnimalController {
 
 		return "deleted_animal";
 	}	
+	
+	@RequestMapping("/animales/delete")
+	public String borrarMascotas(Model model, HttpServletRequest request) {
+		
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = repusu.findByNombre(nombre).get();
+		
+		if (nombre != "") {
+			u.deleteMascotas();
+			animales.deleteAll();
+		}
+		init();
+		return "redirect:/usuario";
+	}
+	
 
 }

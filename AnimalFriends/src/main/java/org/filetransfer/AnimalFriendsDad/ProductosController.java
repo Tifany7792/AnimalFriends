@@ -110,19 +110,19 @@ public class ProductosController {
 		return "redirect:/usuario";
 	}
 	
-//	@RequestMapping("/productos/delete")
-//	public String borrarPedido(Model model, HttpServletRequest request) {
-//		
-//		String nombre = request.getUserPrincipal().getName();
-//		Usuarios userIniciado = repusu.findByNombre(nombre).get();
-//		
-//		if (nombre != "") {
-//			userIniciado.deletePedidos();
-//			productos.deleteAll();
-//		}
-//		init();
-//		return "redirect:/usuario";
-//	}
+	@RequestMapping("/productos/delete")
+	public String borrarPedido(Model model, HttpServletRequest request) {
+		
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios userIniciado = repusu.findByNombre(nombre).get();
+		
+		if (nombre != "") {
+			userIniciado.deletePedidos();
+			productos.deleteAll();
+		}
+		init();
+		return "redirect:/usuario";
+	}
 	
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
