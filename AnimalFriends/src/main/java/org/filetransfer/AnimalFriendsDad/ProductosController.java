@@ -29,10 +29,7 @@ public class ProductosController {
 	private RepositorioProductos productos;
 	
 	@Autowired
-	private UserService userService;
-	
-	@Autowired
-	private ProductService prodService;
+	private RepositorioUsuarios repusu;
 	
 	
 	@PostConstruct
@@ -52,11 +49,12 @@ public class ProductosController {
 	}
 	
 	@GetMapping("/productos/{id}")
-	public String showProducto(Model model, @PathVariable long id) {
+	public String showProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 		
 		Productos prod = productos.getById(id);
 		
 		model.addAttribute("prod", prod);
+		model.addAttribute("permiso", permiso(request));
 
 		return "show_producto";
 	}
@@ -86,7 +84,7 @@ public class ProductosController {
 
 		productos.save(prod);
 		String nombre = request.getUserPrincipal().getName();
-		Usuarios u = userService.getUsuario(nombre);
+		Usuarios u = repusu.findByNombre(nombre).get();
 		if (permiso(request)) {
 			u.addProducto(prod);
 		}
@@ -102,33 +100,29 @@ public class ProductosController {
 	@RequestMapping("/productos/{id}/añadir")
 	public String comprarProducto(Model model, HttpServletRequest request, @PathVariable long id) {
 			
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios userIniciado = repusu.findByNombre(nombre).get();
 		if (nombre != "") {
 			Productos p = productos.getById(id);
 			userIniciado.addProducto(p);
-			prodService.guardarProducto(p);
+			productos.save(p);
 		}
 		return "redirect:/usuario";
 	}
 	
-	@RequestMapping("/productos/delete")
-	public String borrarPedido(Model model, HttpServletRequest request) {
-		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
-		
-		if (nombre != "") {
-			userIniciado.deletePedidos();
-			prodService.borrarProductos();
-		}
-		init();
-		return "redirect:/usuario";
-	}
+//	@RequestMapping("/productos/delete")
+//	public String borrarPedido(Model model, HttpServletRequest request) {
+//		
+//		String nombre = request.getUserPrincipal().getName();
+//		Usuarios userIniciado = repusu.findByNombre(nombre).get();
+//		
+//		if (nombre != "") {
+//			userIniciado.deletePedidos();
+//			productos.deleteAll();
+//		}
+//		init();
+//		return "redirect:/usuario";
+//	}
 	
 	private boolean permiso(HttpServletRequest request) {
 		if (request.getUserPrincipal() == null) {
