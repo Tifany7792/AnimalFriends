@@ -4,19 +4,8 @@ COPY /src /project/src
 COPY pom.xml /project/
 RUN mvn -B package -DskipTests=true
 
-FROM mysql
-COPY ./database/ /docker-entrypoint-initdb.d/
-
-FROM haproxy:1.7
-COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
-
-FROM openjdk:11-jre
-COPY --from=builder /code/target/*.jar /usr/app/
-WORKDIR /usr/app
-
 FROM openjdk:17-jdk-slim
 WORKDIR /usr/src/app/
 COPY --from=builder /project/target/*.jar /usr/src/app/app.jar
 EXPOSE 8443
-
 CMD [ "java", "-jar", "app.jar" ]
