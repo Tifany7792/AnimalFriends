@@ -3,6 +3,12 @@ COPY . /code/
 WORKDIR /code
 RUN mvn package -DskipTests=true
 
+FROM mysql
+COPY ./database/ /docker-entrypoint-initdb.d/
+
+FROM haproxy:1.7
+COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+
 FROM openjdk:11-jre
 COPY --from=builder /code/target/*.jar /usr/app/
 WORKDIR /usr/app
