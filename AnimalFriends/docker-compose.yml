@@ -13,14 +13,24 @@ services:
     ports:
       - 3307:3306
       
-  servicio-interno:
-    container_name: rest
+  servicio-interno1:
+    container_name: rest1
     image: jositote/rest:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
     depends_on:
       - animalfriends
+      
+  servicio-interno2:
+    container_name: rest2
+    image: jositote/rest:latest
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
+    depends_on:
+      - animalfriends
+  
 
   app:
     container_name: web1
@@ -28,6 +38,21 @@ services:
     ports:
        - 8444:8443
     environment:
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      DATABASE_LOAD: true
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
+    depends_on:
+       - basededatos
+       
+  app2:
+    container_name: web2
+    image: jositote/animalfriends:latest
+    ports:
+       - 8444:8443
+    environment:
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+      DATABASE_LOAD: false
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
     depends_on:
