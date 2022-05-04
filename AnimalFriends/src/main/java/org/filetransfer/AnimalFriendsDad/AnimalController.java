@@ -1,15 +1,13 @@
 package org.filetransfer.AnimalFriendsDad;
 
 import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioAnimales;
-
+import org.filetransfer.AnimalFriendsDad.Repositorios.RepositorioUsuarios;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import org.filetransfer.AnimalFriendsDad.Entidades.Animal;
 import org.filetransfer.AnimalFriendsDad.Entidades.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,18 +15,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AnimalController {
 	@Autowired
 	private RepositorioAnimales animales;
 
-	@Autowired
-	private AnimalService animalService;
 
 	@Autowired
-	private UserService userService;
+	private RepositorioUsuarios repusu;
 
 
 	@PostConstruct
@@ -51,81 +46,37 @@ public class AnimalController {
 	}
 	
 	
-	
-	/*@RequestMapping("/animales/new")
-	public String añadirMascota(Model model, @RequestParam String tipo) {
-		
-		if(!animalService.existeAnimal(tipo)) {
-			Animal mascota=new Animal(tipo,animalService.getAnimal(tipo).getDescripcion());
-			animalService.guardarAnimal(mascota);
-					
-		}else {
-			List<Animal> mascotas = animalService.getAllAnimals();
-			model.addAttribute("mascotas",mascotas);
-			return "show_usuario";
-		}
-		
-		List<Animal> mascotas = animalService.getAllAnimals();
-		model.addAttribute("mascotas",mascotas);
-		
-		return "show_usuario";
-	}*/
 
 	@RequestMapping("/animales/{id}/añadir")
 	public String tenerMascota(Model model, HttpServletRequest request, @PathVariable long id) {
 		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios userIniciado = repusu.findByNombre(nombre).get();
 		
 		if (nombre != "") {
 			Animal ani = animales.getById(id);
 			userIniciado.addMascotas(ani);
-			animalService.guardarAnimal(ani);
+			animales.save(ani);
 		}
 		return "redirect:/usuario";
 	}
 	
 	@RequestMapping("/animales/{id}/delete")
-	public String borrarMascotas(Model model, HttpServletRequest request, @PathVariable long id) {
+	public String borrarMascotas(Model model, @PathVariable long id) {
 		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
+		animales.deleteById(id);
 		
-		if (nombre != "") {
-			Animal ani = animales.getById(id);
-			userIniciado.deleteMascotas(ani);
-			animalService.borrarAnimal(ani);
-		}
 		return "deleted_animal";
 	}
 	
-	
-	@RequestMapping("/animales/new")
-	public String añadirMascota(Model model, @RequestParam String nombre, String tipo, String descripcion) {
-
-		Usuarios user = userService.getUsuario(nombre);
-
-		if (nombre != "") {
-			Animal ani = new Animal(tipo, descripcion);
-			user.addMascotas(ani);
-			animalService.guardarAnimal(ani);
-		}
-		model.addAttribute("mascotas", user.getMascotas());
-		return "show_usuario";
-	}
-	
 	@PostMapping("/animales/new/created")
-	public String newAnimal(@RequestParam String tipo, @RequestParam String descripcion, HttpServletRequest request) {
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		Animal a = animales.save(new Animal(tipo, descripcion));
-		if (userIniciado.getRoles().contains("ADMIN")) {
-			userIniciado.addMascotas(a);
+	public String newAnimal(Animal a, HttpServletRequest request) {
+		
+		animales.save(a);
+		String nombre = request.getUserPrincipal().getName();
+		Usuarios u = repusu.findByNombre(nombre).get();
+		if (permiso(request)) {
+			u.addMascotas(a);
 		}
 		return "saved_animal";
 	}
@@ -146,10 +97,11 @@ public class AnimalController {
 	}
 
 	@GetMapping("/animales/{id}")
-	public String showAnimal(Model model, @PathVariable long id) {
+	public String showAnimal(Model model, HttpServletRequest request, @PathVariable long id) {
 		Animal ani = animales.getById(id);
 
 		model.addAttribute("animal", ani);
+		model.addAttribute("permiso", permiso(request));
 
 		return "show_animal";
 	}
@@ -159,24 +111,6 @@ public class AnimalController {
 		animales.deleteById(id);
 
 		return "deleted_animal";
-	}
-	
-	@RequestMapping("/animales/delete")
-	public String borrarMascotas(Model model, HttpServletRequest request) {
-		
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		UserDetails uloggeado = (UserDetails) principal;
-		Usuarios userIniciado = userService.getUsuario(uloggeado.getUsername());
-		String nombre = userIniciado.getNombre();
-		
-		if (nombre != "") {
-			userIniciado.deleteMascotas();
-			animalService.borrarAnimales();
-		}
-		init();
-		return "redirect:/usuario";
-	}
-	
-	
+	}	
 
 }
