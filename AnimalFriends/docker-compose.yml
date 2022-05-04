@@ -15,7 +15,7 @@ services:
       
   servicio-interno1:
     container_name: rest1
-    image: jositote/rest:latest
+    image: jositote/correo:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
@@ -24,7 +24,7 @@ services:
       
   servicio-interno2:
     container_name: rest2
-    image: jositote/rest:latest
+    image: jositote/correo:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
