@@ -1,6 +1,8 @@
 package org.filetransfer.AnimalFriendsDad;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
@@ -17,7 +19,7 @@ import com.hazelcast.config.JoinConfig;
 
 @EnableCaching
 @SpringBootApplication
-//@EnableHazelcastHttpSession
+@EnableHazelcastHttpSession
 public class AnimalFriendsApplication {
 	
 	
@@ -26,19 +28,7 @@ public class AnimalFriendsApplication {
 		SpringApplication.run(AnimalFriendsApplication.class, args);
 		
 	}
-	
-//	@Bean
-//    public Config config() {
-//
-//        Config config = new Config();
-//
-//        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
-//
-//        joinConfig.getMulticastConfig().setEnabled(false);
-//        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
-//
-//        return config;
-//    }
+
 	
 	private static final Log LOG = LogFactory.getLog(AnimalFriendsApplication.class);
 	@Bean
