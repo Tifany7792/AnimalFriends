@@ -30,7 +30,6 @@ services:
     restart: always
     depends_on:
       - animalfriends
-  
 
   app:
     container_name: web1
@@ -49,7 +48,7 @@ services:
     container_name: web2
     image: jositote/animalfriends:latest
     ports:
-       - 8444:8443
+       - 8445:8444
     environment:
       SPRING_JPA_HIBERNATE_DDL_AUTO: none
       DATABASE_LOAD: false
@@ -57,3 +56,4 @@ services:
     restart: always
     depends_on:
        - basededatos
+       
