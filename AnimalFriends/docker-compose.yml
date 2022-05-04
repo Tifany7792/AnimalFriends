@@ -12,6 +12,15 @@ services:
       MYSQL_ROOT_PASSWORD: 'pass'
     ports:
       - 3307:3306
+      
+  servicio-interno:
+    container_name: rest
+    image: jositote/rest:latest
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
+    depends_on:
+      - animalfriends
 
   app:
     container_name: web1
