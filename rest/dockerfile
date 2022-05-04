@@ -1,9 +1,10 @@
-FROM maven:3.8.5-openjdk-17 as builder
-COPY . /code/
-WORKDIR /code
-RUN mvn package -DskipTests=true
+FROM maven:3.8.4-openjdk-17 as builder
+WORKDIR /project
+COPY /src /project/src
+COPY pom.xml /project/
+RUN mvn -B package -DskipTests=true
 
-FROM openjdk:11-jre
-COPY --from=builder /code/target/*.jar /usr/app/
-WORKDIR /usr/app
-CMD [ "java", "-jar", "app.jar" ]
+FROM openjdk:17-jdk-slim
+WORKDIR /usr/src/app/
+COPY --from=builder /project/target/*.jar /usr/src/app/correo.jar
+CMD [ "java", "-jar", "correo.jar" ]
