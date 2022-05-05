@@ -1,36 +1,6 @@
 version: '3'
 
 services:
-  docker-mysql:
-    container_name: basededatos
-    image: mysql:5.7
-    environment:
-      MYSQL_DATABASE: 'animalfriends'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'pass'
-      MYSQL_ROOT_HOST: '%'
-      MYSQL_ROOT_PASSWORD: 'pass'
-    ports:
-      - 3307:3306
-      
-  servicio-interno1:
-    container_name: rest1
-    image: jositote/correo:latest
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
-    restart: always
-    depends_on:
-      - animalfriends
-      
-  servicio-interno2:
-    container_name: rest2
-    image: jositote/correo:latest
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
-    restart: always
-    depends_on:
-      - animalfriends
-
   app:
     container_name: web1
     image: jositote/animalfriends:latest
@@ -56,4 +26,35 @@ services:
     restart: always
     depends_on:
        - basededatos
+       
+  docker-mysql:
+    container_name: basededatos
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'animalfriends'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'pass'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: 'pass'
+    ports:
+      - 3307:3306
+      
+  servicio-interno:
+    container_name: internalservice
+    image: jositote/correo:latest
+   
+  loadbalancer-web:
+    container_name: loadbalancer-web
+    build: ./haproxy
+    restart: always
+    ports:
+      - 443:443
+    depends_on:
+      - web1
+      - web2
+
+
+    
+
+       
        
