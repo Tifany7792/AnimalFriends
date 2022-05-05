@@ -268,9 +268,13 @@ para poder eliminar los restos de docker-compose up por si hiciesemos cambios, d
 Para poder usar haproxy hemos necesitado generar la clave pem, la cual hemos creado de la siguiente forma desde el escritorio:
 
 `openssl genrsa -aes128 -out animalfriends.key 1024`
+
 `openssl req -new -key animalfriends.key -x509 -out animalfriends.crt -days 365`
+
 `openssl req -new -nodes -newkey rsa:1024 -keyout animalfriends1.key -out animalfriends1.req -batch -subj "/C=DE/ST=Hamburg/L=Hamburg/O=Patrick CA/OU=router/CN=fritz.box" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:fritz.box,IP:127.0.0.1"))`
+
 `openssl x509 -req -in animalfriends1.req -CA animalfriends.crt -CAkey animalfriends.key -CAcreateserial -out animalfriends1.crt -days 3650 -sha256 -extfile <(printf "subjectAltName=DNS:fritz.box,IP:127.0.0.1")` 
+
 `cat animalfriends1.key > animalfriends1cert.pem 
 cat animalfriends1.crt >> animalfriends1cert.pem
 cat animalfriends.crt >> animalfriends1cert.pem`
