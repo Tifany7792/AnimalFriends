@@ -248,7 +248,7 @@ Se han realizado pequeños cambios respecto a las pantallas de la fase dos, sobr
 
 La web se comunica con el servicio interno utilizando 8080 del servicio interno [http](http://correo:8080/). Usa los métodos sendPedido y sendReserva.
 
-##Docker Compose
+## Docker Compose 
 
 En un entorno con Git y Docker Compose instalados, basta con asegurarse de que el puerto 8080 está libre y ejecutar lo siguiente:
 `git clone https://github.com/Tifany7792/animalfriends
