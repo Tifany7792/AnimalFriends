@@ -260,7 +260,7 @@ Para poder usar haproxy hemos necesitado generar la clave pem siguiendo los paso
 ## Diagrama de clases
 Se han añadido dos nuevas clases: CacheController.java y SessionConfiguration.java.
 Diagrama actualizado: 
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/diagramaf4.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/diagramaf4.png)
 ## Diagrama de Docker Compose
 
 ![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/uml-docker.png)
