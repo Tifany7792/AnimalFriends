@@ -57,65 +57,65 @@ Compras (productos con descuentos)
 ---------
 ## UML DE ENTIDADES PRINCIPALES 
 
-![Image text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/AnimalFriendsEntidades.png)
+![Image text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/AnimalFriendsEntidades.png)
 
 
 
 ## UML ENTIDAD - RELACIÓN
 
-![Image text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/relaciones.jpg)
+![Image text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/relaciones.jpg)
 
 ## DIAGRAMA DE RELACIONES
-![Image text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/diagramaRelaciones.png)
+![Image text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/diagramaRelaciones.png)
 
 ## DIAGRAMA DE NAVEGACIÓN
-![Image text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/diagramaNavegacion.jpg)
+![Image text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/diagramaNavegacion.jpg)
 
 
 ## CAPTURAS DE PANTALLA
 
 1. Pantalla de inicio: (Público) En esta pantalla podremos, loguearnos, registrarnos, o navegar para visualizar localizaciones, animales o productos.
 
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/inicio.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/inicio.png)
 
 2. Inicio de sesión (Público) 
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/iniciarSesion.png)
 
 3. Registro (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/Registrarse.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/Registrarse.png)
 
 4. Ver Animales (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/verAnimales.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/verAnimales.png)
 
 5. Ver datos del animal (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/datosAnimal.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/datosAnimal.png)
 
 6. Crear un animal (Privado)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/nuevoAnimal.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/nuevoAnimal.png)
 
 7. Ver localizaciones (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/verlocalizaciones.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/verlocalizaciones.png)
 
 8. Ver datos de la localizacion (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/datosLocalizacion.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/datosLocalizacion.png)
 
 9. Añadir localizacion (Privado)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/nuevaLocalizacion.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/nuevaLocalizacion.png)
 
 10. Ver Productos (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/verProductos.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/verProductos.png)
 
 11. Ver datos de un producto (Público)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/datosProducto.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/datosProducto.png)
 
 12. Añadir Producto (Privado)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/nuevoProducto.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/nuevoProducto.png)
 
 13. Ver un usuario (Privado)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/verUsuario.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/verUsuario.png)
 
 14. Editar un usuario (Privado)
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/capturas/editarUsuario.png)
 
 
 # FASE 3
@@ -277,6 +277,6 @@ cat animalfriends.crt >> animalfriends1cert.pem`
 
 ## Diagrama de clases
 No hemos realizado ninguna modificación en la estructura de clases.
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/programaFuncional/AnimalFriends/src/main/resources/raw/screen/diagrama.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/screen/diagrama.jpg)
 
 ## Diagrama de Docker Compose
