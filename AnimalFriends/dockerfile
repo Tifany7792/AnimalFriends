@@ -9,5 +9,3 @@ WORKDIR /usr/src/app/
 COPY --from=builder /project/target/*.jar /usr/src/app/app.jar
 EXPOSE 8443
 CMD [ "java", "-jar", "app.jar" ]
-
-

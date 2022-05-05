@@ -1,32 +1,6 @@
 version: '3'
 
 services:
-  app:
-    container_name: web1
-    image: jositote/animalfriends:latest
-    ports:
-       - 8444:8443
-    environment:
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      DATABASE_LOAD: true
-      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
-    restart: always
-    depends_on:
-       - basededatos
-       
-  app2:
-    container_name: web2
-    image: jositote/animalfriends:latest
-    ports:
-       - 8445:8444
-    environment:
-      SPRING_JPA_HIBERNATE_DDL_AUTO: none
-      DATABASE_LOAD: false
-      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
-    restart: always
-    depends_on:
-       - basededatos
-       
   docker-mysql:
     container_name: basededatos
     image: mysql:5.7
@@ -38,23 +12,31 @@ services:
       MYSQL_ROOT_PASSWORD: 'pass'
     ports:
       - 3307:3306
-      
-  servicio-interno:
-    container_name: internalservice
-    image: jositote/correo:latest
-   
-  loadbalancer-web:
-    container_name: loadbalancer-web
-    build: ./haproxy
-    restart: always
+
+  web1:
+    container_name: web1
+    image: jositote/animalfriends:latest
     ports:
-      - 443:443
+       - 8444:8443
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
     depends_on:
-      - web1
-      - web2
-
-
+       - basededatos
+       - correo
     
+  web2:
+    container_name: web2
+    image: jositote/animalfriends:latest
+    ports:
+       - 8445:8443
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
+    restart: always
+    depends_on:
+       - basededatos
+       - correo
 
-       
-       
+  correo:
+    container_name: correo
+    image: jositote/correo:latest

@@ -130,7 +130,7 @@ public class WebController {
 		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/pedir/completar", u, int.class);
+		restTemplate.postForEntity("http://correo:8080/usuarios/pedir/completar", u, int.class);
 		
 		return "redirect:/gracias";
 		
@@ -142,7 +142,7 @@ public class WebController {
 		Usuarios u = dameUsuario(request);
 		
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.postForEntity("http://127.0.0.1:8080/usuarios/reservar/completar", u, int.class);
+		restTemplate.postForEntity("http://correo:8080/usuarios/reservar/completar", u, int.class);
 		
 		return "redirect:/gracias";
 		
