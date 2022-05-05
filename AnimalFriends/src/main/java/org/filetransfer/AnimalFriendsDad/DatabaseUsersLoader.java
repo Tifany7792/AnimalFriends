@@ -16,8 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class DatabaseUsersLoader {
 
-	//@Autowired
-	//private RepositorioUsuarios usuarios;
+	@Autowired
+	private RepositorioUsuarios usuarios;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -28,8 +28,12 @@ public class DatabaseUsersLoader {
 	CommandLineRunner initDatabase(RepositorioUsuarios repository) {
 
 		return args -> {
-			log.info("Preloading " + repository.save(new Usuarios("user", passwordEncoder.encode("pass"), "USER")));
-			log.info("Preloading " + repository.save(new Usuarios("admin", passwordEncoder.encode("adminpass"), "USER", "ADMIN")));
+			if (usuarios.findByNombre("user") == null) {
+				log.info("Preloading " + repository.save(new Usuarios("user", passwordEncoder.encode("pass"), "USER")));
+			}
+			if (usuarios.findByNombre("user") == null) {
+				log.info("Preloading " + repository.save(new Usuarios("admin", passwordEncoder.encode("adminpass"), "USER", "ADMIN")));
+			}
 		};
 	}
 /*

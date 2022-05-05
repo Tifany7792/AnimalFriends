@@ -45,15 +45,7 @@ public class UserService {
 
 	private Usuarios miUsuario;
 
-	@PostConstruct
-	private void addAdmin() {
-		Usuarios aux = new Usuarios("admin", "admin");
-		Optional<Usuarios> u = usuarios.findByNombre(aux.getNombre());
 
-		if (!u.isPresent()) {
-			usuarios.save(aux);
-		}
-	}
 
 	public boolean login(String nombre, String password) {
 		Optional<Usuarios> u = usuarios.findByNombre(nombre);

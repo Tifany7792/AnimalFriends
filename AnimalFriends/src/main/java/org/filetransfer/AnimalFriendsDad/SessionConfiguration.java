@@ -21,25 +21,11 @@ import com.hazelcast.core.HazelcastInstance;
 @EnableHazelcastHttpSession
 public class SessionConfiguration {
 	
-	@Bean
-	@SpringSessionHazelcastInstance
-	public HazelcastInstance hazelcastInstance() {
-	    Config config = new Config();
-	    config.setClusterName("spring-session-cluster");
-
-	    AttributeConfig attributeConfig = new AttributeConfig()
-	            .setName(Hazelcast4IndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE)
-	            .setExtractorClassName(Hazelcast4PrincipalNameExtractor.class.getName());
-
-	    config.getMapConfig("127.0.0.1")
-	            .addAttributeConfig(attributeConfig).addIndexConfig(
-	            new IndexConfig(IndexType.HASH, Hazelcast4IndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE));
-
-	    SerializerConfig serializerConfig = new SerializerConfig();
-	    serializerConfig.setImplementation(new HazelcastSessionSerializer()).setTypeClass(MapSession.class);
-	    config.getSerializationConfig().addSerializerConfig(serializerConfig);
-
-	    return Hazelcast.newHazelcastInstance(config);
-	}
+    @Bean
+    public Config config(){
+        var config = new Config();
+        config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(true);
+        return config;
+    }
 }
 
