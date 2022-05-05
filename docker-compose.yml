@@ -10,14 +10,10 @@ services:
       MYSQL_PASSWORD: 'pass'
       MYSQL_ROOT_HOST: '%'
       MYSQL_ROOT_PASSWORD: 'pass'
-    ports:
-      - 3307:3306
 
   web1:
     container_name: web1
     image: jositote/animalfriends:latest
-    ports:
-       - 8444:8443
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
@@ -28,8 +24,6 @@ services:
   web2:
     container_name: web2
     image: jositote/animalfriends:latest
-    ports:
-       - 8445:8443
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/animalfriends
     restart: always
@@ -40,3 +34,14 @@ services:
   correo:
     container_name: correo
     image: jositote/correo:latest
+
+  balanceador:
+    container_name: hapro
+    image: jositote/haproxy:latest
+    restart: always
+    ports: 
+      - 80:80
+      - 443:443
+    depends_on:
+      - web1
+      - web2
