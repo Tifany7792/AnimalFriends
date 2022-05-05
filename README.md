@@ -246,16 +246,16 @@ Se han realizado pequeños cambios respecto a las pantallas de la fase dos, sobr
 
 ## Interfaz Servicio Interno
 
-La web se comunica con el servicio interno utilizando el puerto 8080 del servicio interno [http](http://correo:8080/), donde "correo" hace referencia al nombre del contenedor del servicio interno dockerizado.
+La web se comunica con el servicio interno utilizando el puerto 8080 del servicio interno [http://correo:8080/](http://correo:8080/), donde "correo" hace referencia al nombre del contenedor del servicio interno dockerizado.
 
 ## Docker Compose 
 
 Para ejecutar nuestra aplicación, basta con instalar docker, descargar el fichero "docker-compose.yml", ir a la carpeta donde se encuentra el archivo y ejecutar `docker-compose up`
-Una vez ejecutado `docker-compose up` podemos escribir [http](https://localhost/home) y nos llevará a la página inicial.
+Una vez ejecutado `docker-compose up` podemos escribir [https://localhost/home](https://localhost/home) y nos llevará a la página inicial.
 
 ## Haproxy
 
-Para poder usar haproxy hemos necesitado generar la clave pem siguiendo los pasos de la web [http](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy). Esto es necesario si se quiere probar a dockerizar el archivo haproxy.cfg. En caso de que no sea de interés, se puede saltar este paso.
+Para poder usar haproxy hemos necesitado generar la clave pem siguiendo los pasos de la web [https://serversforhackers.com/c/using-ssl-certificates-with-haproxy](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy). Esto es necesario si se quiere probar a dockerizar el archivo haproxy.cfg. En caso de que no sea de interés, se puede saltar este paso.
 
 ## Diagrama de clases
 Se han añadido dos nuevas clases: CacheController.java y SessionConfiguration.java.
