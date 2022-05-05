@@ -244,44 +244,22 @@ Se han realizado pequeños cambios respecto a las pantallas de la fase dos, sobr
 ## Video
 
 
-## Interfaz Servio Interno
+## Interfaz Servicio Interno
 
-La web se comunica con el servicio interno utilizando 8080 del servicio interno [http](http://correo:8080/). Usa los métodos sendPedido y sendReserva.
+La web se comunica con el servicio interno utilizando el puerto 8080 del servicio interno [http](http://correo:8080/), donde "correo" hace referencia al nombre del contenedor del servicio interno dockerizado.
 
 ## Docker Compose 
 
-En un entorno con Git y Docker Compose instalados, basta con asegurarse de que el puerto 8080 está libre y ejecutar lo siguiente:
-`git clone https://github.com/Tifany7792/animalfriends
- cd animalfriends
- docker-compose up
- `
-Una vez ejecutado `docker-compose up` basta con abrir la url correspondiente a nuestra web en dos expladores diferentes:
-[web1](https://localhost:8444) 
-[web2](https://localhost:8445)
-así podremos comprobar que funciona el balanceo de cargas.
- 
-para poder eliminar los restos de docker-compose up por si hiciesemos cambios, debemos usar el comando:
-`docker-compose down -v`
+Para ejecutar nuestra aplicación, basta con instalar docker, descargar el fichero "docker-compose.yml", ir a la carpeta donde se encuentra el archivo y ejecutar `docker-compose up`
+Una vez ejecutado `docker-compose up` podemos escribir [http](https://localhost/home) y nos llevará a la página inicial.
 
 ## Haproxy
 
-Para poder usar haproxy hemos necesitado generar la clave pem, la cual hemos creado de la siguiente forma desde el escritorio:
-
-`openssl genrsa -aes128 -out animalfriends.key 1024`
-
-`openssl req -new -key animalfriends.key -x509 -out animalfriends.crt -days 365`
-
-`openssl req -new -nodes -newkey rsa:1024 -keyout animalfriends1.key -out animalfriends1.req -batch -subj "/C=DE/ST=Hamburg/L=Hamburg/O=Patrick CA/OU=router/CN=fritz.box" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:fritz.box,IP:127.0.0.1"))`
-
-`openssl x509 -req -in animalfriends1.req -CA animalfriends.crt -CAkey animalfriends.key -CAcreateserial -out animalfriends1.crt -days 3650 -sha256 -extfile <(printf "subjectAltName=DNS:fritz.box,IP:127.0.0.1")` 
-
-`cat animalfriends1.key > animalfriends1cert.pem 
-cat animalfriends1.crt >> animalfriends1cert.pem
-cat animalfriends.crt >> animalfriends1cert.pem`
+Para poder usar haproxy hemos necesitado generar la clave pem siguiendo los pasos de la web [http](https://serversforhackers.com/c/using-ssl-certificates-with-haproxy). Esto es necesario si se quiere probar a dockerizar el archivo haproxy.cfg. En caso de que no sea de interés, se puede saltar este paso.
 
 ## Diagrama de clases
-No hemos realizado ninguna modificación en la estructura de clases.
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/screen/diagrama.jpg)
+Se han añadido dos nuevas clases: CacheController.java y SessionConfiguration.java.
+Diagrama actualizado: 
 
 ## Diagrama de Docker Compose
 
