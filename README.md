@@ -285,4 +285,4 @@ No hemos realizado ninguna modificación en la estructura de clases.
 
 ## Diagrama de Docker Compose
 
-![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/uml-docker.jpg)
+![Image_text](https://github.com/Tifany7792/animalfriends/blob/practicaDad/AnimalFriends/src/main/resources/raw/uml-docker.png)
